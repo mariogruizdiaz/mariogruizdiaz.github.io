@@ -35,7 +35,7 @@ export default class Routes extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="/" component={Theme1} />
             <Route exact path="/theme1" component={Theme1} />

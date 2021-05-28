@@ -1,9 +1,9 @@
 {
   "name": "adme",
-  "title": "Adme - The social media networks that pay money to the uses just by sharing photos",
+  "title": "Admin - The social media networks that pay money to the uses just by sharing photos",
   "version": "1.0.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://mariogruizdiaz.github.io/adme-online/",
   "main": "src/index.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
@@ -17,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,7 +46,6 @@
     "del": "^5.1.0",
     "eslint": "^6.8.0",
     "fancy-log": "^1.3.3",
-    "gh-pages": "^3.2.0",
     "gulp": "^4.0.2",
     "gulp-accessibility": "^3.1.1",
     "gulp-autoprefixer": "^7.0.1",
