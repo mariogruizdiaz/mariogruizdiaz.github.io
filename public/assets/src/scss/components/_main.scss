@@ -1,0 +1,32 @@
+//import all functions
+@import "components.bootstrap";
+
+//custom components
+ @import "components.preloader";
+@import "components.scroll-up";
+@import "components.header";
+@import "components.footer";
+@import "components.buttons";
+@import "components.animation";
+@import "components.icons";
+@import "components.social-icon";
+@import "components.page-header";
+
+
+//all custom block or section
+@import "hero-section/main";
+@import "promo-section/main";
+@import "about-section/main";
+@import "feature-section/main";
+@import "process-section/main";
+@import "call-to-action-section/main";
+@import "sereenshots-section/main";
+@import "review-section/main";
+@import "price-section/main";
+@import "faq-section/main";
+@import "team-section/main";
+@import "blog-section/main";
+@import "subscription-section/main";
+@import "contact-section/main";
+@import "customer-section/main";
+@import "single-pages/main";

@@ -1,0 +1,54 @@
+.shape-img-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  width: 269px;
+  height: auto;
+  max-height: 100%;
+  max-width: 15.7vw;
+}
+
+.group-shape-1, .group-shape-2, .group-shape-3{
+  position: absolute;
+  max-height: 100%;
+  right: auto;
+  animation-name: angry-animation;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.group-shape-1 {
+  left: 0;
+  top: 0;
+  bottom: auto;
+  margin-top: 120px;
+  margin-left: 50vw;
+}
+.group-shape-2 {
+  left: 9.2vw;
+  top: auto;
+  bottom: 10px;
+}
+
+@keyframes angry-animation {
+  0%{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  50%{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100%{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

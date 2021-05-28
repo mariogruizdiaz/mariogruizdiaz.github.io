@@ -1,0 +1,353 @@
+//main menu new style
+
+.header{
+
+  nav{
+    &.navbar{
+      padding: 0.3rem 1rem;
+      transition: $global-transition;
+      &.affix{
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  //navbar brand
+
+  .navbar-brand{
+    font-size: inherit;
+    height: auto;
+  }
+
+  .navbar-toggler{
+    &:focus{
+      outline: none;
+    }
+  }
+  //main menu
+  .menu{
+    li{
+      display: inline-block;
+      position: relative;
+      &:first-child{
+        margin-left: 0;
+      }
+      a{
+        font-size: 14px;
+        text-decoration: none;
+        padding: 22px 12px;
+        display: block;
+        transition: all 0.3s ease-in-out 0s;
+        color: $white;
+        opacity: 0.8;
+        &.dropdown-toggle{
+          &:after{
+            position: relative;
+            left: 2px;
+            vertical-align: middle;
+          }
+        }
+        &:hover{
+          opacity: 1;
+        }
+      }
+      &:hover>{
+        ul{
+          visibility: visible;
+          opacity: 1;
+          transform: translate(0,0);
+        }
+        a{
+          opacity: 1;
+        }
+      }
+    }
+
+    ul{
+      visibility: hidden;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      position: absolute;
+      left: 0;
+      background: $color-ui-01;
+      z-index: 9;
+      border-radius: 4px;
+      transform: translate(0,20px);
+      transition: all 0.3s ease-out;
+      -webkit-box-shadow: 0 4px 10px rgba(0,0,0,.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,.15);
+      &:after{
+        bottom: 100%;
+        left: 35px;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(255, 255, 255, 0);
+        border: solid transparent;
+        border-bottom-color: $color-ui-01;
+        border-width: 8px;
+        margin-left: -8px;
+      }
+      li{
+        display: block;
+        float: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        a{
+          text-transform: inherit;
+          font-weight: normal;
+          display: block;
+          color: $text-color-01;
+          padding: 8px 15px;
+          &.dropdown-toggle-inner{
+            &:after{
+              display: inline-block;
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "\f105";
+              margin-left: auto;
+              position: absolute;
+              right: 15px;
+              font-size: 12px;
+            }
+          }
+          &:hover{
+            color: $white;
+            background: $color-primary;
+          }
+        }
+        &:hover>a{
+          color: $white;
+          background: $color-primary;
+        }
+      }
+      ul{
+        left: 200px;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(20px,20px);
+        transition: all 0.2s ease-out;
+        &:after{
+          left: -8px;
+          top: 10px;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(255, 255, 255, 0);
+          border: solid transparent;
+          border-right-color: $color-ui-01;
+          border-width: 8px;
+        }
+      }
+
+    }
+
+  }
+
+  
+
+//  different color  header
+  .bg-transparent{
+    .navbar-toggler{
+      color: $white;
+    }
+  }
+
+  .custom-nav, .custom-nav-3{
+    &.affix{
+      background: $white;
+    }
+  }
+}
+//end header css
+.flag-select button span.flag-select__option{
+    padding: 0 !important;
+    margin: 0 !important;
+    span{
+        font-size: 14px !important;
+        text-decoration: none !important;
+        padding: 0 !important;
+        display: block !important;
+        transition: all 0.3s ease-in-out 0s !important;
+        color: $white !important;
+        opacity: 0.8 !important;
+        &:hover{
+            opacity: 1 !important;
+        }
+    }
+}
+
+.flag-select button{
+    &:after{
+        border-top: 5px solid #ffffff;
+        border-bottom: 0;
+    }
+    &:focus {
+        outline:0 !important;
+    }
+}
+
+.flag-select__btn[aria-expanded=true]:after {
+    border-top: 0 !important;
+    border-bottom: 5px solid #ffffff !important;
+}
+
+
+
+.menu li>ul ul:hover {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+.custom-nav.affix, .custom-nav-3.affix {
+  background: $white !important;
+
+}
+
+.custom-nav ul li a, .custom-nav-2.affix ul li a {
+  color: $white;
+}
+.custom-nav.affix ul li a {
+  color: $text-color-01;
+}
+
+.menu ul.sub-menu li:first-child a:hover,
+.menu ul.sub-menu li:last-child ul li:first-child a:hover{
+  border-radius: 4px 4px 0 0;
+}
+.menu ul.sub-menu li:last-child a:hover,
+.menu ul.sub-menu li:last-child ul li:last-child a:hover{
+  border-radius: 0 0 4px 4px;
+}
+.menu ul.sub-menu li:last-child ul li a:hover{
+  border-radius: 0;
+}
+.affix {
+  background: linear-gradient(75deg, darken($color-primary, 10%), darken($color-secondary, 10%)) !important;
+  -webkit-transition: padding 0.4s ease-out;
+  -moz-transition: padding 0.4s ease-out;
+  -o-transition: padding 0.4s ease-out;
+  transition: padding 0.4s ease-out;
+}
+
+.fixed-top{
+  top: auto;
+}
+.fixed-top.affix{
+  top: 0;
+}
+
+
+@media (min-width: 320px) and (max-width: 992px) {
+  .navbar.custom-nav-3, .navbar.custom-nav{
+    background: $white !important;
+  }
+  .navbar {
+    background: linear-gradient(75deg, darken($color-primary, 10%), darken($color-secondary, 10%)) !important;
+    padding: .45rem 1rem !important;
+  }
+  .menu li{
+    display: block;
+  }
+
+  .custom-nav.affix {
+    background: $white !important;
+    border-bottom: 1px solid$border-color;
+  }
+
+  .custom-nav ul li a {
+    color: $text-color-01 !important;
+  }
+
+  .white-bg.navbar .navbar-toggler span {
+    color: $color-secondary;
+  }
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  .menu ul {
+    top: 40px;
+  }
+
+  .menu li a {
+    padding: 8px 15px !important;
+  }
+
+  a.homer {
+    background: #374147;
+  }
+}
+
+@media (max-width: 767px) {
+  .header nav.navbar{
+    padding: 0.5rem 1rem;
+  }
+  nav {
+    margin: 0;
+    background: none;
+  }
+
+  .menu li {
+    display: block;
+    margin: 0;
+  }
+
+  .menu li a {
+    padding: 8px 15px !important;
+  }
+
+  .menu li a:hover,.menu li:hover>a {
+    background: $color-secondary;
+    color: $white;
+  }
+
+  .menu ul {
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: initial;
+  }
+
+  .menu li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    transform: initial;
+  }
+
+  .menu ul ul {
+    left: 0;
+    transform: initial;
+  }
+
+  .menu li>ul ul:hover {
+    transform: initial;
+  }
+}
+
+@media (max-width: 767px){
+  .header{
+    .menu ul ul {
+      left: 0;
+      transform: initial;
+    }
+    .menu ul ul:after{
+      display: none;
+    }
+  }
+}
