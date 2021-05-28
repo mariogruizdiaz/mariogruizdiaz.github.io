@@ -5,11 +5,6 @@ import ReactLanguageSelect from 'react-languages-select';
 import 'react-languages-select/css/react-languages-select.css';
 
 
-
-const languageOptions = [
-   { key: "English", text: "English", value: "EN" },
-   { key: "Spanish", text: "Spanish", value: "ES" }
-];
 const LanguageToggle = props => {
     const onSelectLanguage = (languageCode) => {
         props.setLanguage(languageCode);
