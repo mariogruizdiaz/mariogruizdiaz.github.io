@@ -1,5 +1,5 @@
 
-name: Build & deploy
+name: Build & Deploy
 
 on:
   push:
