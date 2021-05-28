@@ -1,0 +1,26 @@
+.discount-banner {
+  border: 6px dotted $color-secondary;
+  position: relative;
+  padding: 40px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  h2{
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+}
+
+.shape-bottom img.bottom-shape {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+}

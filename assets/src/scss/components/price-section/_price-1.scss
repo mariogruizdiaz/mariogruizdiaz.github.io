@@ -1,0 +1,112 @@
+//pricing style
+
+
+//pricing switcher
+.pricing-switch-wrap{
+  align-items: center;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0;
+  -webkit-tap-highlight-color: transparent;
+  justify-content: space-between;
+  span{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: $font-weight-bold;
+    font-family: $font-family-montserrat;
+    &.year-switch{
+      position: absolute;
+      top: 10px;
+      z-index: 1;
+      color: $color-primary;
+    }
+    &.beforeinput{
+      left: 33px;
+      &.text-success{
+        color: $white !important;
+      }
+    }
+    &.afterinput{
+      right: 40px;
+      &.text-success{
+        color: $white !important;
+      }
+    }
+  }
+  span.switch-icon{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 37px;
+    border: 1px solid $color-primary;
+    border-radius: 25px;
+    transition: all 0.3s linear;
+    margin: 0 15px;
+    background: $white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    &:after{
+      content: "";
+      position: absolute;
+      left: 4px;
+      width: 100px;
+      height: 35px;
+      background-color: $color-primary;
+      border-radius: 25px;
+      transform: translate3d(-6px, 0, 0);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  input:checked + .switch-icon:after{
+    transform: translate3d(95px, 0, 0);
+  }
+}
+
+//pricing package
+.single-pricing-pack{
+  transition: all 0.2s ease 0s;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+  border: none;
+  border-top: 4px solid transparent;
+  border-radius: 1rem;
+  .pricing-header{
+    .price{
+      font-size: 40px;
+      line-height: 45px;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-montserrat;
+      span{
+        font-size: 20px;
+      }
+    }
+  }
+  .pricing-content{
+    flex: 1 1 auto;
+    padding: 1.5rem;
+    .pricing-feature-list{
+      li{
+        font-size: 14px;
+        line-height: 30px;
+        span{
+          font-weight: $font-weight-bold;
+          font-family: $font-family-montserrat;
+          font-size: 13px;
+          color: darken($body-color, 15%);
+        }
+      }
+      li.text-deem{
+        opacity: $opacity-5;
+      }
+    }
+  }
+  &.popular-price{
+    box-shadow: 0 1rem 3rem rgba(31,45,61,.125)!important;
+    transform: translate(0, -5px);
+    border-top: 4px solid $color-secondary !important;
+  }
+  &:hover{
+    box-shadow: 0 1rem 3rem rgba(31,45,61,.125)!important;
+    transform: translate(0, -5px);
+    border-top: 4px solid $color-secondary;
+  }
+}

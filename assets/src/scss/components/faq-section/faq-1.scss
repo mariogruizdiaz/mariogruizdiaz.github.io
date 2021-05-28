@@ -1,0 +1,47 @@
+//accordion or faq style
+
+.faq-wrap{
+  .card{
+    border: 0;
+    .card-header{
+      padding: 0.95rem 1.25rem;
+      -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
+      border-radius: 4px 4px 0 0;
+      background: linear-gradient(75deg, darken($color-primary, 10%), darken($color-secondary, 10%));
+      margin-bottom: 0;
+      border: 1px solid $border-color;
+      h6{
+        color: $white;
+      }
+      &.collapsed{
+        background: transparent;
+        h6{
+          color: initial;
+        }
+        &:after{
+          content: "\f107";
+          transition: 0.5s;
+          color: initial;
+        }
+      }
+      &:after{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: initial;
+        content: "\f106";
+        float: right;
+        transition: 0.5s;
+        width: 30px;
+        text-align: center;
+        background: lighten($color-primary, 25%);
+        border-radius: 4px;
+      }
+    }
+    .card-body{
+      background: $color-ui-01;
+      border-radius: 0 0 4px 4px;
+    }
+  }
+
+}

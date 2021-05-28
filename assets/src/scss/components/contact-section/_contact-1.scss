@@ -1,0 +1,23 @@
+
+.contact-info-list{
+  li{
+    .contact-icon{
+      span{
+        border: 1px solid $color-primary;
+      }
+    }
+  }
+}
+
+
+//google map
+.google-map {
+  height: 100%;
+  margin-bottom: -8px;
+  iframe{
+    width: 100%;
+    border: 0;
+    -webkit-filter: grayscale(99%);
+    -webkit-backface-visibility: hidden;
+  }
+}

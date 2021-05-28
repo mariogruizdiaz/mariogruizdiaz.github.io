@@ -1,0 +1,37 @@
+.custom-pagination-nav{
+  ul{
+    li{
+      text-align: center;
+      margin-right: 10px;
+      &:focus, a:focus{
+        outline: none;
+        box-shadow: none;
+      }
+      a.page-link{
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+        border-radius: 100%;
+        padding: inherit;
+        font-family: $headings-font-family;
+        font-weight: $font-weight-semibold;
+        color: $color-secondary;
+        &:hover{
+          background: $color-secondary;
+          color: $white;
+        }
+      }
+      &.page-item:first-child .page-link,  &.page-item:last-child .page-link{
+        border: none;
+        background: transparent;
+        &:hover{
+          color: $color-secondary;
+        }
+      }
+      &.page-item.active .page-link{
+        background: $color-secondary;
+        border-color: $color-secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+/*sccreenshot css*/
+.screenshot-wrap {
+  position: relative;
+  .screenshot-frame {
+    background-image: url('../img/iphone-mask.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    width: 290px;
+    height: 513px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% + 0.5px);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 20px;
+  }
+  .screen-carousel{
+    .owl-item{
+      img{
+        -webkit-transform: scale(.85);
+        transform: scale(.85);
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.12);
+        border-radius: 30px;
+      }
+      &.active.center{
+        img{
+          -webkit-transform: scale(1);
+          transform: scale(1)
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1200px){
+  .screenshot-wrap{
+    .screenshot-frame{
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .screenshot-wrap{
+    .screen-carousel{
+      .owl-item{
+        img{
+         width: 65%;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
