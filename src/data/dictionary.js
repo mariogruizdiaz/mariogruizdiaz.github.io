@@ -248,7 +248,7 @@ module.exports = {
             q4Question: "¿Hay alguna otra forma de ganar dinero con Adme? 💸",
             q4Answer: "Si claro, nosotros lo llamamos 'Ingresos pasivos'. Una de las maneras es aumentando tu red de referidos, ya que de manera continuamente recibirás un porcentaje del dinero que ellos vayan ganando. Cualquier persona, sea referido directo o referido de tus referidos te harán ganar dinero. Sin importar que tan abajo en tu red se encuentren.",
             q5Question: "¿Por qué es tán importante en referir a mis amigos? 🏂",
-            q5Answer: "Porque cada persona que se suma a Adme estará debajo de uno y solo un referente directo. Por lo tanto si tus amigos son referidos por alguien más, pierdes la oportunidad de sumarlos a tu red y, por lo tanto, la de oportunudad de ganar dinero por el exito que ellos y su red debajo tengan.",
+            q5Answer: "Porque cada persona que se suma a Adme estará debajo de uno y solo un referente directo. Por lo tanto si tus amigos son referidos por alguien más, pierdes la oportunidad de sumarlos a tu red y, por lo tanto, la de oportunudad de ganar dinero por el exito que tengan ellos mismos su red debajo.",
             q6Question: "¿En que monedas me pagan? 🤝",
             q6Answer: "Adme permite recibir pagos en 6 moneras de Latino America, Dollar Americanos y Crypto monedas.",
         },
@@ -281,12 +281,12 @@ module.exports = {
         commingSoonInvestors: {
             title: "We're Coming Soon",
             subtitle: "El website de Adme para inversores esta siendo constriuido. Pronto tendrás toda la información para invertir en Adme, suscribase para recibir novedades.",
-            placeholder: "Ingrese su email",
+            placeholder: "Ingresá tu email",
         },
         commingSoonBrands: {
             title: "We're Coming Soon",
             subtitle: "El website de Adme para las Marcas y Agencias está siendo construido. Muy pronto tendrás toda la información sobre esta nueva propuesta de publicidad en Resdes Sociales, suscribase para recibir novedades.",
-            placeholder: "Ingrese su email",
+            placeholder: "Ingresá tu email",
         },
     }
 };
