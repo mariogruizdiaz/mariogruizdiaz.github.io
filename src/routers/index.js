@@ -33,10 +33,11 @@ import ContactUs from "../themes/contactUs";
 
 export default class Routes extends React.PureComponent {
   render() {
+      console.log("Hola", process.env.PUBLIC_URL);
     return (
       <React.Fragment>
         <Router basename={process.env.PUBLIC_URL}>
-          <Switch basename>
+          <Switch >
             <Route exact path={`/`} component={Theme1} />
             <Route exact path={`${process.env.PUBLIC_URL}/theme1`} component={Theme1} />
             <Route exact path={`${process.env.PUBLIC_URL}/theme2`} component={Theme2} />
