@@ -13,9 +13,10 @@
     "react-languages-select": "^1.0.20"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "PUBLIC_URL=/ && react-scripts build",
+    "start": "PUBLIC_URL=/ && npm run build && react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
+    "env": "PUBLIC_URL=/tr echo $PUBLIC_URL",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
