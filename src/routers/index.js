@@ -37,36 +37,36 @@ export default class Routes extends React.PureComponent {
     return (
       <React.Fragment>
         <Router basename={process.env.PUBLIC_URL}>
-          <Switch >
-            <Route exact path={`/`} component={Theme1} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme1`} component={Theme1} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme2`} component={Theme2} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme3`} component={Theme3} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme4`} component={Theme4} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme5`} component={Theme5} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme6`} component={Theme6} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme7`} component={Theme7} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme8`} component={Theme8} />
-            <Route exact path={`${process.env.PUBLIC_URL}/theme9`} component={Theme9} />
-            <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login} />
-            <Route exact path={`${process.env.PUBLIC_URL}/signup`} component={SignUp} />
-            <Route exact path={`${process.env.PUBLIC_URL}/resetPassword`} component={ResetPassword} />
-            <Route exact path={`${process.env.PUBLIC_URL}/faq`} component={Faq} />
-            <Route exact path={`${process.env.PUBLIC_URL}/404`} component={NotFound} />
-            <Route exact path={`${process.env.PUBLIC_URL}/comingSoon`} component={ComingSoon} />
-            <Route exact path={`${process.env.PUBLIC_URL}/comingSoonBrands`} component={ComingSoonBrands} />
-            <Route exact path={`${process.env.PUBLIC_URL}/comingSoonInvestors`} component={ComingSoonInvestors} />
-            <Route exact path={`${process.env.PUBLIC_URL}/thankYou`} component={ThankYou} />
-            <Route exact path={`${process.env.PUBLIC_URL}/team`} component={Team} />
-            <Route exact path={`${process.env.PUBLIC_URL}/singleTeam`} component={SingleTeam} />
-            <Route exact path={`${process.env.PUBLIC_URL}/blogDefault`} component={BlogDefault} />
-            <Route exact path={`${process.env.PUBLIC_URL}/blogNoSidebar`} component={BlogNoSidebar} />
-            <Route exact path={`${process.env.PUBLIC_URL}/blogLeftSidebar`} component={BlogLeftSidebar} />
-            <Route exact path={`${process.env.PUBLIC_URL}/blogRightSidebar`} component={BlogRightSidebar} />
-            <Route exact path={`${process.env.PUBLIC_URL}/blogSingleLeftSidebar`} component={BlogSingleLeftSidebar} />
-            <Route exact path={`${process.env.PUBLIC_URL}/blogSingleRightSidebar`} component={BlogSingleRightSidebar} />
-            <Route exact path={`${process.env.PUBLIC_URL}/aboutUs`} component={AboutUs} />
-            <Route exact path={`${process.env.PUBLIC_URL}/contactUs`} component={ContactUs} />
+          <Switch basename>
+            <Route exact path="/" component={Theme1} />
+            <Route exact path="/theme1" component={Theme1} />
+            <Route exact path="/theme2" component={Theme2} />
+            <Route exact path="/theme3" component={Theme3} />
+            <Route exact path="/theme4" component={Theme4} />
+            <Route exact path="/theme5" component={Theme5} />
+            <Route exact path="/theme6" component={Theme6} />
+            <Route exact path="/theme7" component={Theme7} />
+            <Route exact path="/theme8" component={Theme8} />
+            <Route exact path="/theme9" component={Theme9} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/resetPassword" component={ResetPassword} />
+            <Route exact path="/faq" component={Faq} />
+            <Route exact path="/404" component={NotFound} />
+            <Route exact path="/comingSoon" component={ComingSoon} />
+            <Route exact={false} path="/comingSoonBrands" component={ComingSoonBrands} />
+            <Route exact={false} path="/comingSoonInvestors" component={ComingSoonInvestors} />
+            <Route exact path="/thankYou" component={ThankYou} />
+            <Route exact path="/team" component={Team} />
+            <Route exact path="/singleTeam" component={SingleTeam} />
+            <Route exact path="/blogDefault" component={BlogDefault} />
+            <Route exact path="/blogNoSidebar" component={BlogNoSidebar} />
+            <Route exact path="/blogLeftSidebar" component={BlogLeftSidebar} />
+            <Route exact path="/blogRightSidebar" component={BlogRightSidebar} />
+            <Route exact path="/blogSingleLeftSidebar" component={BlogSingleLeftSidebar} />
+            <Route exact path="/blogSingleRightSidebar" component={BlogSingleRightSidebar} />
+            <Route exact path="/aboutUs" component={AboutUs} />
+            <Route exact path="/contactUs" component={ContactUs} />
           </Switch>
         </Router>
       </React.Fragment>
