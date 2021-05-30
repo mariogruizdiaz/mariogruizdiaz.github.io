@@ -33,7 +33,6 @@ import ContactUs from "../themes/contactUs";
 
 export default class Routes extends React.PureComponent {
   render() {
-      console.log("Hola", process.env.PUBLIC_URL);
     return (
       <React.Fragment>
         <Router basename={process.env.PUBLIC_URL}>
@@ -55,7 +54,7 @@ export default class Routes extends React.PureComponent {
             <Route exact path="/404" component={NotFound} />
             <Route exact path="/comingSoon" component={ComingSoon} />
             <Route path={`${process.env.PUBLIC_URL}/comingSoonBrands`} component={ComingSoonBrands} />
-            <Route path={`/comingSoonInvestors`} component={ComingSoonInvestors} />
+            <Route path="/comingSoonInvestors" component={ComingSoonInvestors} />
             <Route exact path="/thankYou" component={ThankYou} />
             <Route exact path="/team" component={Team} />
             <Route exact path="/singleTeam" component={SingleTeam} />
