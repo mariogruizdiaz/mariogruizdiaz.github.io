@@ -30,12 +30,15 @@ import BlogSingleLeftSidebar from "../themes/blogSingleLeftSidebar";
 import BlogSingleRightSidebar from "../themes/blogSingleRightSidebar";
 import AboutUs from "../themes/aboutUs";
 import ContactUs from "../themes/contactUs";
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
 
 export default class Routes extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename={process.env.PUBLIC_URL} history={history}>
           <Switch>
             <Route exact path="/" component={Theme1} />
             <Route exact path="/theme1" component={Theme1} />
