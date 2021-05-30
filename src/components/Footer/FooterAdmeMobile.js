@@ -120,7 +120,7 @@ class Footer extends React.Component {
                                     <a href="/#">{this.props.dictionary.footer.products.p1}</a>
                                 </li>
                                 <li>
-                                    <a href="/comingSoonBrands">{this.props.dictionary.footer.products.p2}</a>
+                                    <a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`}>{this.props.dictionary.footer.products.p2}</a>
                                 </li>
                             </ul>
                         </div>
@@ -128,13 +128,13 @@ class Footer extends React.Component {
                             <h6 className="text-uppercase">{this.props.dictionary.footer.company.title}</h6>
                             <ul>
                                 <li>
-                                    <a href="/#about">{this.props.dictionary.footer.company.section1}</a>
+                                    <a href="#about">{this.props.dictionary.footer.company.section1}</a>
                                 </li>
                                 <li>
-                                    <a href="/#testimonials">{this.props.dictionary.footer.company.section2}</a>
+                                    <a href="#testimonials">{this.props.dictionary.footer.company.section2}</a>
                                 </li>
                                 <li>
-                                    <a href="/comingSoonInvestors">{this.props.dictionary.footer.company.section3}</a>
+                                    <a href={`${process.env.PUBLIC_URL}/#comingSoonInvestors`}>{this.props.dictionary.footer.company.section3}</a>
                                 </li>
                             </ul>
                         </div>
@@ -142,7 +142,7 @@ class Footer extends React.Component {
                             <h6 className="text-uppercase">{this.props.dictionary.footer.support.title}</h6>
                             <ul>
                                 <li>
-                                    <a href="/#faq">{this.props.dictionary.footer.support.s1}</a>
+                                    <a href="#faq">{this.props.dictionary.footer.support.s1}</a>
                                 </li>
                             </ul>
                         </div>
