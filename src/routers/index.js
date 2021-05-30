@@ -37,7 +37,7 @@ export default class Routes extends React.PureComponent {
     return (
       <React.Fragment>
         <Router basename={process.env.PUBLIC_URL}>
-          <Switch basename>
+          <Switch basename={process.env.PUBLIC_URL}>
             <Route exact path="/" component={Theme1} />
             <Route exact path="/theme1" component={Theme1} />
             <Route exact path="/theme2" component={Theme2} />
@@ -54,8 +54,8 @@ export default class Routes extends React.PureComponent {
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/404" component={NotFound} />
             <Route exact path="/comingSoon" component={ComingSoon} />
-            <Route exact={false} path="/comingSoonBrands" component={ComingSoonBrands} />
-            <Route exact={false} path="/comingSoonInvestors" component={ComingSoonInvestors} />
+            <Route exact path="/comingSoonBrands" component={ComingSoonBrands} />
+            <Route exact path="/comingSoonInvestors" component={ComingSoonInvestors} />
             <Route exact path="/thankYou" component={ThankYou} />
             <Route exact path="/team" component={Team} />
             <Route exact path="/singleTeam" component={SingleTeam} />
