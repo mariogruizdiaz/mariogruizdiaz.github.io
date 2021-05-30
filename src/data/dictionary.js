@@ -259,7 +259,7 @@ module.exports = {
                 placeholder: "Ingresa tu mail",
             },
             corp: {
-                subtitle: "La plataforma de publicidad disrruptiva que llego para cambiar el paradigma de las publicaidad en redes sociales."
+                subtitle: "La plataforma de publicidad disrruptiva que llego para cambiar el paradigma de las publicidad en redes sociales."
             },
             products: {
                 title: "Productos",
