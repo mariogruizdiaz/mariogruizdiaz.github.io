@@ -8,7 +8,6 @@ import 'react-languages-select/css/react-languages-select.css';
 const LanguageToggle = props => {
     const onSelectLanguage = (languageCode) => {
         props.setLanguage(languageCode);
-        console.log(languageCode)
     };
     return (
         <div className="d-flex align-items-center mb-sm-0 ml-3">
