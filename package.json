@@ -13,7 +13,7 @@
     "react-languages-select": "^1.0.20"
   },
   "scripts": {
-    "start": "PUBLIC_URL=/ && npm run build && react-scripts start",
+    "start": "PUBLIC_URL=/ && npm run build && PUBLIC_URL=/ react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "env": "PUBLIC_URL=/tr echo $PUBLIC_URL",

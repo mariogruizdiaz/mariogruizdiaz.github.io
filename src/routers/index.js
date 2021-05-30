@@ -33,6 +33,7 @@ import ContactUs from "../themes/contactUs";
 
 export default class Routes extends React.PureComponent {
   render() {
+      console.log("Hola", process.env);
     return (
       <React.Fragment>
         <Router basename={process.env.PUBLIC_URL}>
