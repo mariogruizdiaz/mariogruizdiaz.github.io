@@ -256,7 +256,7 @@ module.exports = {
             subscribe: {
                 title: "Suscribete para probar Adme",
                 subtitle: "Y gana dinero mientras tanto",
-                placeholder: "Ingresa tu mail",
+                placeholder: "Ingresa tu email",
             },
             corp: {
                 subtitle: "La plataforma de publicidad disrruptiva que llego para cambiar el paradigma de las publicidad en redes sociales."
