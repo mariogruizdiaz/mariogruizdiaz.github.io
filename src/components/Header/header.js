@@ -23,9 +23,9 @@ class Header extends React.Component {
                             <li><a href="#about" className="page-scroll">{this.props.dictionary.header.menu.about}</a></li>
                             <li><a href="#process" className="page-scroll">{this.props.dictionary.header.menu.process}</a></li>
                             <li><a href="#features" className="page-scroll">{this.props.dictionary.header.menu.features}</a></li>
-                            <li><a href={`${process.env.PUBLIC_URL}/comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.brands}</a></li>
-                            <li><a href={`${process.env.PUBLIC_URL}/comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.agencies}</a></li>
-                            <li><a href={`${process.env.PUBLIC_URL}/comingSoonInvestors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li>
+                            <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.brands}</a></li>
+                            <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.agencies}</a></li>
+                            <li><a href={`${process.env.PUBLIC_URL}/#comingSoonInvestors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li>
                         </ul>
                         <LanguageToggle/>
                     </div>
