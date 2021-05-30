@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/adme-online/precache-manifest.b7473b0cf7c6d5002df2f2875ba5fcc4.js"
+  "/adme-online/precache-manifest.36ebfc36c2d25ab5f315b8d9fd976088.js"
 );
 
 self.addEventListener('message', (event) => {
