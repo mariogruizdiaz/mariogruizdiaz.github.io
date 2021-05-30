@@ -56,7 +56,7 @@ export default class Routes extends React.PureComponent {
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/404" component={NotFound} />
             <Route exact path="/comingSoon" component={ComingSoon} />
-            <Route path={`${process.env.PUBLIC_URL}/comingSoonBrands`} component={ComingSoonBrands} />
+            <Route exact path="/comingSoonBrands" component={ComingSoonBrands} />
             <Route path="/comingSoonInvestors" component={ComingSoonInvestors} />
             <Route exact path="/thankYou" component={ThankYou} />
             <Route exact path="/team" component={Team} />
