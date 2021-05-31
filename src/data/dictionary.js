@@ -254,7 +254,7 @@ module.exports = {
         },
         footer: {
             subscribe: {
-                title: "Suscribete para probar Adme",
+                title: "Suscribite para probar Adme",
                 subtitle: "Y gana dinero mientras tanto",
                 placeholder: "Ingresa tu email",
             },
