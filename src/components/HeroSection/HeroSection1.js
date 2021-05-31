@@ -77,7 +77,7 @@ class HeroSection extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section className="ptb-100 bg-image overflow-hidden" image-overlay="10">
+        <section id="hero" className="ptb-100 bg-image overflow-hidden" image-overlay="10">
             <div className="hero-bottom-shape-two" style={{
               backgroundImage: "url(assets/img/hero-bottom-shape-2.svg)",
               backgroundRepeat: "no-repeat",

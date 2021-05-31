@@ -117,7 +117,7 @@ class Footer extends React.Component {
                             <h6 className="text-uppercase">{this.props.dictionary.footer.products.title}</h6>
                             <ul>
                                 <li>
-                                    <a href="/" className="page-scroll">{this.props.dictionary.footer.products.p1}</a>
+                                    <a href="#hero" className="page-scroll">{this.props.dictionary.footer.products.p1}</a>
                                 </li>
                                 <li>
                                     <a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`}>{this.props.dictionary.footer.products.p2}</a>
