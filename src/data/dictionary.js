@@ -221,8 +221,8 @@ module.exports = {
             feature6Subtitle: "Cada vez que tus referidos o los referidos de tus referidos ganen dinero, vos también ganaras un porcentaje del mismo. 💰💰💰",
         },
         testimonials: {
-            title: "Lo que dicen los usuarios de Redes Sociales sobre Adme",
-            subtitle: "Adme entiende que todo usuario de redes sociales genera influencia de consumo a sus amigos y seguidores simplemente por compartir experiencias personales satisfactorias en las que aparecen productos, servicios y lugares. Entonces ¿por qué no permitir que las marcas paguen por dicha publicidad a los protagonistas de esta historia?",
+            title: "Lo que opina la gente sobre esta nueva propuesta",
+            subtitle: "El nuevo paradigma propuesto por Adme esta focalizado a satisfacer, principalmente, las nacesidades los los usuarios de redes sociales. Esto es lo que opinan sobre esta nueva propuesta!",
             testimonial1Name: "Giselle Yaccuzzy",
             testimonial1Title: "Usuario de Facebook e Instagram",
             testimonial1Testimony: "Es muy emocionante saber que llego una red social que entiende que al compartir una foto en mis redes sociales habituales, estoy influenciando a mis amigos y seguidores a que consuman los productos y servicios que aparecen en ella 😍",
