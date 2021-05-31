@@ -14,7 +14,7 @@ import Theme9 from "../themes/theme9";
 import Login from "../themes/login";
 import SignUp from "../themes/signup";
 import ResetPassword from "../themes/resetPassword";
-import Faq from "../themes/faq";
+// import Faq from "../themes/faq";
 import NotFound from "../themes/404";
 import ComingSoon from "../themes/comingSoon";
 import ComingSoonBrands from "../themes/comingSoonBrands";
@@ -30,15 +30,13 @@ import BlogSingleLeftSidebar from "../themes/blogSingleLeftSidebar";
 import BlogSingleRightSidebar from "../themes/blogSingleRightSidebar";
 import AboutUs from "../themes/aboutUs";
 import ContactUs from "../themes/contactUs";
-import { createBrowserHistory } from "history";
 
-const history = createBrowserHistory();
 
 export default class Routes extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
-        <Router basename={process.env.PUBLIC_URL} history={history}>
+        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="/" component={Theme1} />
             <Route exact path="/theme1" component={Theme1} />
@@ -53,11 +51,11 @@ export default class Routes extends React.PureComponent {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/resetPassword" component={ResetPassword} />
-            <Route exact path="/faq" component={Faq} />
+            {/* <Route exact path="/faq" component={Faq} /> */}
             <Route exact path="/404" component={NotFound} />
             <Route exact path="/comingSoon" component={ComingSoon} />
             <Route exact path="/comingSoonBrands" component={ComingSoonBrands} />
-            <Route path="/comingSoonInvestors" component={ComingSoonInvestors} />
+            <Route exact path="/comingSoonInvestors" component={ComingSoonInvestors} />
             <Route exact path="/thankYou" component={ThankYou} />
             <Route exact path="/team" component={Team} />
             <Route exact path="/singleTeam" component={SingleTeam} />
