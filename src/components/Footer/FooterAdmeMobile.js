@@ -80,7 +80,7 @@ class Footer extends React.Component {
             <div className="row">
                 <div className="col-md-12 col-lg-4 mb-4 mb-md-4 mb-sm-4 mb-lg-0">
                     <a href="/#" className="navbar-brand mb-2">
-                        <img src="assets/img/logo-white.png" alt="logo" className="img-fluid" />
+                        <img src="assets/img/adme-logo-name.png" alt="logo" className="img-fluid" />
                     </a>
                     <br />
                     <p>{this.props.dictionary.footer.corp.subtitle}</p>
