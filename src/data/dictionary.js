@@ -189,7 +189,7 @@ module.exports = {
             step1Subtitle: "Sacate una foto como usualmente lo haces.",
             step2Title: "Esponsorizala y compartila",
             step2Subtitle: "Antes de subirla en tus redes sociales habituales (Facebook, Instagram, Twitter y otras) esponsorizala con alguna campaña publicitaria relacionada a algún producto o servicio que aparecen en ella.",
-            step3Title: "Recive el pago",
+            step3Title: "Recibe el pago",
             step3Subtitle: "Una vez que tu foto es evaluada y aprobada, simplemente recibís el pago.",
         },
         passiveIncomes: {
