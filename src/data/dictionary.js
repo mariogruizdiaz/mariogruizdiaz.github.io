@@ -16,7 +16,7 @@ module.exports = {
         },
         hero: {
             title: "Adme, the social network that pays you for posting",
-            subtitle: "In Adme your an Influencer! Simply use the app to post on Facebook, Twitter, Instagram and receive the payment",
+            subtitle: "In Adme you are an Influencer! Simply use the app to post on Facebook, Twitter, Instagram and receive the payment",
             videoUrl: "https://www.youtube.com/watch?v=ZpkI--1X8UI",
         },
         about: {
