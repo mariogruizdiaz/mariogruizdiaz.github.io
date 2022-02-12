@@ -1,0 +1,46 @@
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+@import "settings.bootstrap";
+
+$spacing-unit: 10px;
+$spacing-sides: $spacing-unit * 2;
+$spacing-sides\@tablet: $spacing-unit * 3;
+$spacing-sides\@desktop: $spacing-unit * 3;
+
+$spacing-xs: $spacing-unit;
+$spacing-md: $spacing-unit * 2;
+$spacing-lg: $spacing-unit * 3;
+$spacing-xl: $spacing-unit * 4;
+
+
+// Font Weight
+$font-weight-regular:             400;
+$font-weight-medium:              500;
+$font-weight-semibold:            600;
+$font-weight-bold:                700;
+
+
+
+// Buttons + Forms
+$btn-focus-box-shadow:            none;
+$btn-active-box-shadow:           none;
+
+$input-btn-font-size:               0.838rem;
+
+
+// Border radius
+$global-radius: 4px;
+
+
+
+
+$headings-margin-bottom:      $font-size-base;
+
+
+$h1-font-size:                $font-size-base * 2.75;
+$h2-font-size:                $font-size-base * 2.35;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;

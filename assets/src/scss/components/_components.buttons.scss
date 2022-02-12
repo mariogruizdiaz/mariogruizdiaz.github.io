@@ -1,0 +1,1025 @@
+.btn {
+  position: relative;
+  font-family: $font-family-montserrat;
+  font-size: $input-btn-font-size;
+  font-weight: $font-weight-medium;
+  padding: .55em 1.735em;
+  line-height: 1.75em;
+  transition: $global-transition;
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2.5px;
+    margin-top: -2px;
+  }
+
+  &.active-primary {
+    &, &:hover, &:focus {
+      background-color: $white;
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+}
+.btn-rounded {
+  border-radius: 10rem;
+}
+.btn-circle {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 10rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &.btn-sm {
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  &.btn-xs {
+    width: 35px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+}
+.btn-animated:hover{
+  transform: translate(0, -3px);
+  -webkit-transform: translate(0, -3px);
+}
+.btn-xs {
+  font-size: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.btn-sm {
+  font-size: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.btn-lg {
+  font-size: $font-size-base;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.btn-light {
+  background-color: $color-ui-02;
+  border-color: darken($color-ui-02, 7%);
+  color: $text-color-03;
+
+  @include hover-focus() {
+    background-color: $color-ui-02;
+    border-color: darken($color-ui-02, 7%);
+  }
+}
+
+.btn-outline-light {
+  border-color: $gray-400;
+  color: $gray-600;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $gray-400;
+    border-color: $gray-400;
+  }
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.show > .btn-outline-light.dropdown-toggle {
+  background-color: $gray-300;
+  border-color: $gray-400;
+}
+
+// White button variant
+.btn-white {
+  background-color: #fff;
+  border-color: $color-ui-03;
+  color: rgba($text-color-02, .7);
+
+  @include hover-focus() {
+    border-color: $color-ui-04;
+    color: $text-color-02;
+  }
+
+  &:active,
+  &.active {
+    background-color: $color-ui-01;
+  }
+}
+
+// Icon only button variant
+.btn-icon {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &.btn-sm {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  &.btn-xs {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  svg {
+    margin: 0;
+  }
+}
+
+// Brand buttons
+.btn-brand-01 {
+  background-color: darken($color-brand-01, 5%);
+  border-color: darken($color-brand-01, 5%);
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($color-brand-01, 15%);
+    border-color: darken($color-brand-01, 15%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($color-brand-01, 0.6);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($color-brand-01, 0.9);
+    }
+  }
+}
+
+
+.btn-brand-02 {
+  background-color: $color-brand-02;
+  border-color: $color-brand-02;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($color-brand-02, 15%);
+    border-color: darken($color-brand-02, 15%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($color-brand-02, 0.6);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($color-brand-02, 0.9);
+    }
+  }
+}
+
+.btn-brand-03 {
+  background-color: $color-brand-03;
+  border-color: $color-brand-03;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($color-brand-03, 10%);
+    border-color: darken($color-brand-03, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($color-brand-03, 0.6);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($color-brand-03, 0.9);
+    }
+  }
+}
+
+
+//button outline
+.btn-outline-brand-01 {
+  border-color: $color-brand-01;
+  color: darken($color-brand-01, 5%);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($color-brand-01, 15%);
+    border-color: darken($color-brand-01, 15%);
+    color: $white;
+  }
+}
+.btn-outline-brand-02 {
+  border-color: $color-brand-02;
+  color:  $color-brand-02;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($color-brand-02, 15%);
+    border-color: darken($color-brand-02, 15%);
+    color: $white;
+  }
+}
+
+.btn-outline-brand-03 {
+  border-color: $color-brand-03;
+  color:  $color-brand-03;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($color-brand-03, 10%);
+    border-color: darken($color-brand-03, 10%);
+    color: $white;
+  }
+}
+
+// Uppercase button variant
+.btn-uppercase {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: $font-weight-semibold;
+  letter-spacing: .5px;
+  line-height: 1.75;
+
+  &.btn-sm {
+    font-size: 11px;
+    line-height: 1.773;
+  }
+
+  &.btn-xs {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+}
+
+// 3d button style
+.btn-brand-3d-01, .btn-brand-3d-02, .btn-brand-3d-03{
+  color: $white;
+  border: inherit;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn-brand-3d-01{
+  background-image: linear-gradient(0deg, darken($color-brand-01, 20%) 0%, lighten($color-brand-01, 0%) 100%);
+}
+.btn-brand-3d-02 {
+  background-image: linear-gradient(0deg, darken($color-brand-02, 0%) 0%, lighten($color-brand-02, 20%) 100%);
+}
+.btn-brand-3d-03 {
+  background-image: linear-gradient(0deg, darken($color-brand-03, 0%) 0%, lighten($color-brand-03, 20%) 100%);
+}
+.btn-brand-3d-01:before, .btn-brand-3d-02:before, .btn-brand-3d-03:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.btn-brand-3d-01:before {
+  background-image: linear-gradient(0deg, lighten($color-brand-01, 0%) 0%, darken($color-brand-01, 20%) 100%);
+}
+.btn-brand-3d-02:before {
+  background-image: linear-gradient(0deg, lighten($color-brand-02, 20%) 0%, darken($color-brand-02, 0%) 100%);
+}
+.btn-brand-3d-03:before {
+  background-image: linear-gradient(0deg, lighten($color-brand-03, 20%) 0%, darken($color-brand-03, 0%) 100%);
+}
+.btn-brand-3d-01:hover, .btn-brand-3d-02:hover, .btn-brand-3d-03:hover {
+  color: $white;
+}
+.btn-brand-3d-01:hover:before,.btn-brand-3d-02:hover:before, .btn-brand-3d-03:hover:before{
+  opacity: 1;
+}
+
+//download button
+.app-download-btn{
+    line-height: inherit;
+    .download-text{
+      line-height: initial;
+      h5{
+        font-size: 14px;
+        color: inherit;
+      }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px){
+  .action-btns{
+    a.btn{
+      margin-bottom: 15px;
+    }
+  }
+}
+
+//Social button
+.btn-facebook {
+  background-color: $facebook-color;
+  border-color: $facebook-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($facebook-color, 10%);
+    border-color: darken($facebook-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($facebook-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($facebook-color, 0.9);
+    }
+  }
+}
+.btn-twitter {
+  background-color: $twitter-color;
+  border-color: $twitter-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: lighten($twitter-color, 10%);
+    border-color: lighten($twitter-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($twitter-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($twitter-color, 0.9);
+    }
+  }
+}
+.btn-vk {
+  background-color: $vk-color;
+  border-color: $vk-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($vk-color, 10%);
+    border-color: darken($vk-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($vk-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($vk-color, 0.9);
+    }
+  }
+}
+.btn-google {
+  background-color: $googleplus-color;
+  border-color: $googleplus-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($googleplus-color, 10%);
+    border-color: darken($googleplus-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($googleplus-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($vk-color, 0.9);
+    }
+  }
+}
+.btn-instagram {
+  background-color: $instagram-color;
+  border-color: $instagram-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($instagram-color, 10%);
+    border-color: darken($instagram-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($instagram-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($instagram-color, 0.9);
+    }
+  }
+}
+
+.btn-pinterest {
+  background-color: $pinterest-color;
+  border-color: $pinterest-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($pinterest-color, 10%);
+    border-color: darken($pinterest-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($pinterest-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($pinterest-color, 0.9);
+    }
+  }
+}
+
+.btn-dribbble {
+  background-color: $dribbble-color;
+  border-color: $dribbble-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($dribbble-color, 10%);
+    border-color: darken($dribbble-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($dribbble-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($dribbble-color, 0.9);
+    }
+  }
+}
+
+.btn-behance {
+  background-color: $behance-color;
+  border-color: $behance-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($behance-color, 10%);
+    border-color: darken($behance-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($behance-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($behance-color, 0.9);
+    }
+  }
+}
+.btn-flickr {
+  background-color: $flickr-color;
+  border-color: $flickr-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($flickr-color, 10%);
+    border-color: darken($flickr-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($flickr-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($flickr-color, 0.9);
+    }
+  }
+}
+
+.btn-tumblr{
+  background-color: $tumblr-color;
+  border-color: $tumblr-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($tumblr-color, 10%);
+    border-color: darken($tumblr-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($tumblr-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($tumblr-color, 0.9);
+    }
+  }
+}
+
+.btn-linkedin {
+  background-color: $linkedin-color;
+  border-color: $linkedin-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($linkedin-color, 10%);
+    border-color: darken($linkedin-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($linkedin-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($linkedin-color, 0.9);
+    }
+  }
+}
+
+.btn-youtube {
+  background-color: $youtube-color;
+  border-color: $youtube-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($youtube-color, 10%);
+    border-color: darken($youtube-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($youtube-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($youtube-color, 0.9);
+    }
+  }
+}
+.btn-vimeo {
+  background-color: $vimeo-color;
+  border-color: $vimeo-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($vimeo-color, 10%);
+    border-color: darken($vimeo-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($vimeo-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($vimeo-color, 0.9);
+    }
+  }
+}
+.btn-stumbleupon {
+  background-color: $stumbleupon-color;
+  border-color: $stumbleupon-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($stumbleupon-color, 10%);
+    border-color: darken($stumbleupon-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($stumbleupon-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($stumbleupon-color, 0.9);
+    }
+  }
+}
+
+.btn-digg {
+  background-color: $digg-color;
+  border-color: $digg-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($digg-color, 10%);
+    border-color: darken($digg-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($digg-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($digg-color, 0.9);
+    }
+  }
+}
+
+.btn-rss {
+  background-color: $rss-color;
+  border-color: $rss-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($rss-color, 10%);
+    border-color: darken($rss-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($rss-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($rss-color, 0.9);
+    }
+  }
+}
+
+.btn-skype {
+  background-color: $skype-color;
+  border-color: $skype-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($skype-color, 10%);
+    border-color: darken($skype-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($skype-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($skype-color, 0.9);
+    }
+  }
+}
+.btn-dropbox {
+  background-color: $dropbox-color;
+  border-color: $dropbox-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($dropbox-color, 10%);
+    border-color: darken($dropbox-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($dropbox-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($dropbox-color, 0.9);
+    }
+  }
+}
+.btn-github {
+  background-color: $github-color;
+  border-color: $github-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($github-color, 10%);
+    border-color: darken($github-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($github-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($github-color, 0.9);
+    }
+  }
+}
+.btn-gitlab {
+  background-color: $gitlab-color;
+  border-color: $gitlab-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($gitlab-color, 10%);
+    border-color: darken($gitlab-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($gitlab-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($gitlab-color, 0.9);
+    }
+  }
+}
+.btn-reddit {
+  background-color: $reddit-color;
+  border-color: $reddit-color;
+  color: $white;
+
+  @include hover-focus() {
+    background-color: darken($reddit-color, 10%);
+    border-color: darken($reddit-color, 10%);
+    color: $white;
+  }
+  &.btn-transparent{
+    background-color: rgba($reddit-color, 0.7);
+    border-color: transparent;
+    color: $white;
+    @include hover-focus(){
+      background-color: rgba($reddit-color, 0.9);
+    }
+  }
+}
+
+
+.btn-outline-facebook {
+  background-color: transparent;
+  border-color: #4064ac;
+  color: #4064ac;
+
+  @include hover-focus() {
+    background-color: #4064ac;
+    border-color: #4064ac;
+    color: $white;
+  }
+}
+
+.btn-outline-twitter {
+  background-color: transparent;
+  border-color: #00a7e6;
+  color: #00a7e6;
+
+  @include hover-focus() {
+    background-color: #00a7e6;
+    border-color: #00a7e6;
+    color: $white;
+  }
+}
+
+
+.btn.facebook-bg,
+.btn.linkedin-bg,
+.btn.twitter-bg,
+.btn.instagram-bg,
+.btn.googleplus-bg,
+.btn.pinterest-bg,
+.btn.dribbble-bg,
+.btn.behance-bg,
+.btn.dark-bg {
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.btn.facebook-bg ,
+.btn.linkedin-bg ,
+.btn.twitter-bg ,
+.btn.instagram-bg ,
+.btn.googleplus-bg ,
+.btn.pinterest-bg ,
+.btn.dribbble-bg ,
+.btn.behance-bg,
+.btn.dark-bg  {
+  color: $white;
+}
+
+.btn.facebook-bg i,
+.btn.linkedin-bg i,
+.btn.twitter-bg i,
+.btn.instagram-bg i,
+.btn.googleplus-bg i,
+.btn.pinterest-bg i,
+.btn.dribbble-bg i,
+.btn.behance-bg i,
+.btn.dark-bg i {
+  color: $white;
+}
+
+.btn.facebook-bg:hover,
+.btn.linkedin-bg:hover,
+.btn.twitter-bg:hover,
+.btn.instagram-bg:hover,
+.btn.googleplus-bg:hover,
+.btn.pinterest-bg:hover,
+.btn.dribbble-bg:hover,
+.btn.behance-bg:hover,
+.btn.dark-bg:hover {
+  opacity: .9;
+}
+.facebook-color {
+  color: $facebook-color;
+}
+
+.twitter-color {
+  color: $twitter-color;
+}
+
+.googleplus-color {
+  color: $googleplus-color;
+}
+
+.instagram-color {
+  color: $instagram-color;
+}
+
+.pinterest-color {
+  color: $pinterest-color;
+}
+
+.dribbble-color {
+  color: $dribbble-color;
+}
+
+.behance-color {
+  color: $behance-color;
+}
+
+.linkedin-color{
+  color: $linkedin-color;
+}
+.facebook-bg {
+  background: $facebook-color;
+  color: $white;
+}
+
+.twitter-bg {
+  background: $twitter-color;
+  color: $white;
+}
+
+.googleplus-bg {
+  background: $googleplus-color;
+  color: $white;
+}
+
+.instagram-bg {
+  background: $instagram-color;
+  color: $white;
+}
+
+.pinterest-bg {
+  background: $pinterest-color;
+  color: $white;
+}
+
+.dribbble-bg {
+  background: $dribbble-color;
+  color: $white;
+}
+
+.behance-bg {
+  background: $behance-color;
+  color: $white;
+}
+
+.linkedin-bg {
+  background: $linkedin-color;
+  color: $white;
+}
+
+//icon btn
+.icon-btn {
+  padding-left: 4.57142857em;
+  i{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 13px;
+    border-radius: 6px 0 0 6px;
+    line-height: 38px;
+  }
+}
+
+//button with icon and hover effect
+
+.icon-btn-hover{
+  border-radius: 0.3125rem;
+  -webkit-border-radius: 0.3125rem;
+  -moz-border-radius: 0.3125rem;
+  border: none;
+  overflow: hidden;
+  text-decoration: none!important;
+  line-height: 3.11714286em;
+  padding: 0 0 0 3.58571429em;
+  width: 14.375rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  transition: all 0.2s ease-in-out 0s;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+  i{
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    width: 3.125rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 13px;
+    border-radius: 4px 0 0 4px;
+    line-height: inherit;
+  }
+  &:hover{
+    padding: 0;
+    i{
+      left: -3.125rem;
+    }
+  }
+  &.hover-style-1{
+    border-radius: 0.3125rem;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    border: none;
+    overflow: hidden;
+    width: 14.375rem;
+    line-height: 3.11714286em;
+    padding: 0 3.125rem 0 0;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+    i{
+      left: auto;
+      right: 0 !important;
+      top: 0;
+    }
+    &:hover{
+      padding: 0;
+      i{
+        right: -3.125rem !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//for demo
+.demo-components {
+  font-size: 0.875rem;
+  letter-spacing: normal;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid rgba(72, 94, 144, 0.16);
+  position: relative;
+  border-radius: 4px;
+}
+
+.demo-components::before {
+  content: attr(data-label);
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: 30px;
+  font-size: 12px;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-montserrat;
+  text-transform: uppercase;
+  background-color: inherit;
+  color: $color-ui-04;
+  padding: 0 5px;
+}
+
+@media (min-width: 992px) {
+  .demo-components {
+    padding: 30px;
+  }
+}
+
+.button-elements {
+  button, a.btn {
+    margin: 0 5px 10px 0;
+  }
+}

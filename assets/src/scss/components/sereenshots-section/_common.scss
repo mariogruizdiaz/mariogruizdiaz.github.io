@@ -1,0 +1,33 @@
+// owl dot indicator css
+.dot-indicator.owl-theme{
+    button{
+      &.owl-dot{
+        span{
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          box-sizing: border-box;
+          background: $color-ui-04;
+          border-radius: 50%;
+          -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+          transition: 0.3s;
+        }
+        &:focus{
+          border: none;
+          outline: none;
+        }
+        &.active{
+          span{
+            background: $color-accent;
+            border: 2px solid transparent;
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+    .owl-nav.disabled + .owl-dots{
+      margin-top: 20px;
+    }
+}

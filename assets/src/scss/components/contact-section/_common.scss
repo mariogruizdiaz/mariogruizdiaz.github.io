@@ -1,0 +1,66 @@
+
+
+//login signup form
+.login-signup-form{
+  .form-group{
+    position: relative;
+    label{
+      font-size: 14px;
+      font-weight: $font-weight-medium;
+      font-family: $headings-font-family;
+      margin-bottom: 0;
+    }
+    .input-group{
+      .input-icon{
+        position: absolute;
+        z-index: 4;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        span{
+          padding: 16px;
+          position: absolute;
+          color: $color-ui-04;
+        }
+      }
+      .textarea-icon{
+        span{
+          padding: 11px 16px;
+        }
+      }
+      .form-control{
+        text-indent: 32px;
+        &:focus{
+          outline: none;
+          border-color: $color-ui-03;
+          z-index: 0;
+        }
+        &:not(:first-child){
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+
+input::-webkit-input-placeholder {
+  position: relative;
+  top: -1.6px;
+}
+
+input:-ms-input-placeholder {
+  position: relative;
+  top: -1.6px;
+}
+
+input::-ms-input-placeholder {
+  position: relative;
+  top: -1.6px;
+}
+
+input::placeholder {
+  position: relative;
+  top: -1.6px;
+}

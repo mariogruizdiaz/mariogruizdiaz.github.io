@@ -1,0 +1,44 @@
+//promo section css
+.promo-one-single {
+  position: relative;
+  display: block;
+  transition: $global-transition;
+  a{
+    text-decoration: none;
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+    color: $white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.12);
+  }
+  &:hover{
+    background: linear-gradient(75deg, darken($color-primary, 10%), darken($color-secondary, 10%)) !important;
+    color: $white;
+    h5{
+      color: $white !important;
+    }
+    a{
+      transition: $global-transition;
+      &:hover{
+        background: $color-accent !important;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
