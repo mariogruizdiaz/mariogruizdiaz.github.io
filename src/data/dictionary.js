@@ -161,7 +161,7 @@ module.exports = {
         },
         hero: {
             title: "Adme, la red social que te paga simplemente por postear",
-            subtitle: "En Adme vos sos un Influencer. Usá la app para postear en Facebook, Twitter e Instagram y recibi tú pago cada vez que lo hagas",
+            subtitle: "En Adme sos un Influencer. Usá la app para postear en Facebook, Twitter e Instagram y recibi tú pago cada vez que lo hagas",
             videoUrl: "https://www.youtube.com/watch?v=ZpkI--1X8UI",
         },
         about: {
