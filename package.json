@@ -3,7 +3,7 @@
   "title": "Adme - The social network that pays money to the uses just by sharing photos",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://mariogruizdiaz.github.io/adme-online/",
+  "homepage": "https://mariogruizdiaz.github.io/",
   "main": "src/index.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
