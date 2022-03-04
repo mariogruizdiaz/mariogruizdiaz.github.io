@@ -166,7 +166,7 @@ module.exports = {
                 personalityDescription: "",
                 phone: "+54 911 5139-4412",
                 email: "julio.aranda@adme.com.ar",
-                picturePath: "gaston.jpg"
+                picturePath: "gaston500x500.jpg"
             },
             alex: {
                 role: "Quality Assurance",
@@ -345,7 +345,7 @@ module.exports = {
                 personalityDescription: "",
                 phone: "+54 911 5139-4412",
                 email: "julio.aranda@adme.com.ar",
-                picturePath: "gaston.jpg"
+                picturePath: "gaston500x500.jpg"
             },
             alex: {
                 role: "Quality Assurance",
