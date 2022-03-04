@@ -143,6 +143,40 @@ module.exports = {
             subtitle: "The Adme website for Brands and Agencies is under construction. We'll be here soon with our new awesome site, subscribe to be notified.",
             placeholder: "Enter your email",
         },
+        team: {
+            gaston: {
+                role: "Co-Founder",
+                roleDescription: "Gaston and his brother, Mario Ruiz Diaz are the Co-Founder of the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "gaston@adme.com.ar",
+                picturePath: "gaston500x500.jpg"
+            },
+            mario: {
+                role: "Co-Founder",
+                roleDescription: "Mario and his brother, Gastón Ruiz Diaz are the Co-Founder of the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "gaston@adme.com.ar",
+                picturePath: "gaston.jpg"
+            },
+            yulian: {
+                role: "Software Engineer",
+                roleDescription: "Julio is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 5139-4412",
+                email: "julio.aranda@adme.com.ar",
+                picturePath: "gaston.jpg"
+            },
+            alex: {
+                role: "Quality Assurance",
+                roleDescription: "Julio is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "gaston@adme.com.ar",
+                picturePath: "gaston.jpg"
+            },
+        }
     },
     es: {
         general: {
@@ -288,5 +322,39 @@ module.exports = {
             subtitle: "El website de Adme para las Marcas y Agencias está siendo construido. Muy pronto tendrás toda la información sobre esta nueva propuesta de publicidad en Resdes Sociales, suscribase para recibir novedades.",
             placeholder: "Ingresá tu email",
         },
+        team: {
+            gaston: {
+                role: "Cofundador",
+                roleDescription: "Gaston y su hermano, Mario Ruiz Diaz son los fundadores de la nueva generacion en redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "gaston@adme.com.ar",
+                picturePath: "gaston500x500.jpg"
+            },
+            mario: {
+                role: "Cofundador",
+                roleDescription: "Mario y su hermano, Mario Ruiz Diaz son los fundadores de la nueva generacion en redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "gaston@adme.com.ar",
+                picturePath: "gaston.jpg"
+            },
+            yulian: {
+                role: "Ingeniero de Software",
+                roleDescription: "Julio es uno de los responsables que está creando esta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 5139-4412",
+                email: "julio.aranda@adme.com.ar",
+                picturePath: "gaston.jpg"
+            },
+            alex: {
+                role: "Quality Assurance",
+                roleDescription: "Alexander es uno de los responsables que está creando esta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "gaston@adme.com.ar",
+                picturePath: "gaston.jpg"
+            }
+        }
     }
 };

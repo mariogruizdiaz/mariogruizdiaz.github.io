@@ -22,7 +22,7 @@ class Breadcrumb extends Component {
                         <div className="custom-breadcrumb">
                             <ol className="breadcrumb pl-0 mb-0 bg-transparent">
                                 <li className="breadcrumb-item"><a href="/#">Home</a></li>
-                                <li className="breadcrumb-item"><a href="/#">Pages</a></li>
+                                <li className="breadcrumb-item"><a href="/#">Team</a></li>
                                 <li className="breadcrumb-item active">{this.props.name}</li>
                             </ol>
                         </div>

@@ -18,6 +18,7 @@ import ResetPassword from "../themes/resetPassword";
 import NotFound from "../themes/404";
 import ComingSoon from "../themes/comingSoon";
 import ComingSoonBrands from "../themes/comingSoonBrands";
+import GastonRuizDiaz from "../themes/gastonruizdiaz";
 import ComingSoonInvestors from "../themes/comingSoonInvestors";
 import ThankYou from "../themes/thankYou";
 import Team from "../themes/team";
@@ -39,6 +40,7 @@ export default class Routes extends React.PureComponent {
         <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="/" component={Theme1} />
+            <Route exact path="/gastonruizdiaz" component={GastonRuizDiaz} />
             <Route exact path="/theme1" component={Theme1} />
             <Route exact path="/theme2" component={Theme2} />
             <Route exact path="/theme3" component={Theme3} />
