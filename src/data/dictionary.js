@@ -184,7 +184,7 @@ module.exports = {
             ios: {
                 install: {
                     title: "iOS Guide",
-                    subTitle: "Step by step guide to get Adme wroking in yor IPhone",
+                    subTitle: "Step by step guide to get Adme working in yor IPhone",
                     smallCard: {
                         title: "Install adme app in Iphone",
                         subtitle: "Step by Step instalation guide to start using adme app in Iphone.",
