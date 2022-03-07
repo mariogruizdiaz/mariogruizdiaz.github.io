@@ -104,7 +104,7 @@ class HeroSection extends React.Component {
                                         </a>
                                     </li>
                                     <li className="list-inline-item">
-                                        <a href="/#" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
+                                        <a href="/#/androidInstallGuide" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
                                             <span className="fab fa-google-play icon-size-sm mr-3 color-primary"></span>
                                             <div className="download-text text-left">
                                                 <small>{this.props.dictionary.general.downloadFrom}</small>
