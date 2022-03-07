@@ -440,7 +440,7 @@ module.exports = {
             },
             ios: {
                 install: {
-                    title: "Guis de instalación para iOS",
+                    title: "Guía de instalación para iOS",
                     subTitle: "Guia paso a paso para tener funcionando Adme en tu IPHone",
                     smallCard: {
                         title: "Instalacion de Adme en Iphone",
