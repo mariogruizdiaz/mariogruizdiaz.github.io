@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import HeaderTeam from "../../components/Header/headerTeam";
 import HeroSection from "../../components/HeroSection/HeroSectionInnerPageGuides";
@@ -12,8 +13,8 @@ class Theme extends Component {
       <React.Fragment>
         <HeaderTeam />
         <div className="main">
-          <HeroSection pageTitle={"Get ready to earn money with Adme"} />
-          <Breadcrumb name={"User Guides"} />
+          <HeroSection pageTitle={this.props.dictionary.guides.title} />
+          <Breadcrumb name={this.props.dictionary.guides.breadcrumbTitle} />
           <DefaultGiudeGrid />
         </div>
         <Footer withoutNewsletter={true} />
@@ -22,4 +23,6 @@ class Theme extends Component {
   }
 }
 
-export default Theme;
+export default connect(state => ({
+    dictionary: state.i18n.dictionary
+}))(Theme);

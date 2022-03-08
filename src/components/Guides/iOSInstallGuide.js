@@ -38,7 +38,7 @@ class iOSInstallGuide extends React.Component {
                                             <li>{this.props.dictionary.guides.ios.install.step1.subSteps.d}</li>
                                         </ul>
                                         <div className="action-btns mt-4">
-                                            <a href="#adme" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.ios.install.buttons.next}</a>
+                                            <a href="#adme" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -60,21 +60,21 @@ class iOSInstallGuide extends React.Component {
                         </div>
                         <div className="container">
                             <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
-                                <div className="col-sm-5 col-md-5 col-lg-4">
-                                    <div className="about-content-right">
-                                        <img src="assets/img/guides/ios/login.jpeg" alt="about us" className="img-fluid" />
-                                    </div>
-                                </div>
                                 <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
                                     <div className="about-content-left">
                                         <h2>{this.props.dictionary.guides.ios.install.step2.title}</h2>
                                         <p>{this.props.dictionary.guides.ios.install.step2.subtitle}</p>
                                         <ul className="dot-circle pt-3">
-                                            <li>{this.props.dictionary.guides.ios.install.step2.subSteps.a}  <a href="https://expo.io/@marioruizdiaz/adme-mobile?release-channel=qa" className="btn btn-brand-03 btn-rounded mr-3">{this.props.dictionary.guides.ios.install.buttons.downloadNow} <i className="fas fa-cloud-download-alt pl-2"></i></a></li>
+                                            <li>{this.props.dictionary.guides.ios.install.step2.subSteps.a}  <a href="https://expo.io/@marioruizdiaz/adme-mobile?release-channel=qa" className="btn btn-brand-03 btn-rounded mr-3">{this.props.dictionary.guides.buttons.downloadNow} <i className="fas fa-cloud-download-alt pl-2"></i></a></li>
                                         </ul>
                                         <div className="action-btns mt-4">
-                                            <a href="#adme-signup" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.ios.install.buttons.next}</a>
+                                            <a href="#adme-signup" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
                                         </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/ios/login.jpeg" alt="about us" className="img-fluid" />
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ class iOSInstallGuide extends React.Component {
                                             <li>{this.props.dictionary.guides.ios.install.step3.subSteps.b}</li>
                                         </ul>
                                         <div className="action-btns mt-4">
-                                            <a href="#adme-fb-link" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.ios.install.buttons.next}</a>
+                                            <a href="#adme-fb-link" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -122,11 +122,6 @@ class iOSInstallGuide extends React.Component {
                         </div>
                         <div className="container">
                             <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
-                                <div className="col-sm-5 col-md-5 col-lg-4">
-                                    <div className="about-content-right">
-                                        <img src="assets/img/guides/ios/link.jpeg" alt="about us" className="img-fluid" />
-                                    </div>
-                                </div>
                                 <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
                                     <div className="about-content-left">
                                         <h2>{this.props.dictionary.guides.ios.install.step4.title}</h2>
@@ -138,11 +133,15 @@ class iOSInstallGuide extends React.Component {
                                             <li>{this.props.dictionary.guides.ios.install.step4.subSteps.d}</li>
                                         </ul>
                                         <div className="action-btns mt-4">
-                                            <a href="#adme-basics" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.ios.install.buttons.next}</a>
+                                            <a href="#adme-basics" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
                                         </div>
                                     </div>
                                 </div>
-
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/ios/link.jpeg" alt="about us" className="img-fluid" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -166,7 +165,7 @@ class iOSInstallGuide extends React.Component {
                                             <li>{this.props.dictionary.guides.ios.install.step5.subSteps.c}</li>
                                         </ul>
                                         <div className="action-btns mt-4">
-                                            <a href="#adme-end" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.ios.install.buttons.next}</a>
+                                            <a href="#adme-end" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -188,18 +187,17 @@ class iOSInstallGuide extends React.Component {
                         </div>
                         <div className="container">
                             <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
-                                <div className="col-sm-5 col-md-5 col-lg-4">
-                                    <div className="about-content-right">
-                                        <img src="assets/img/guides/ios/dashboard.jpeg" alt="about us" className="img-fluid" />
-                                    </div>
-                                </div>
                                 <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
                                     <div className="about-content-left">
                                         <h2>{this.props.dictionary.guides.ios.install.step6.title}</h2>
                                         <p>{this.props.dictionary.guides.ios.install.step6.subtitle}</p>
                                     </div>
                                 </div>
-
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/ios/dashboard.jpeg" alt="about us" className="img-fluid" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>

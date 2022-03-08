@@ -7,7 +7,7 @@ import Breadcrumb from "../../components/GuideIOSBreadcrumb";
 import IOSInstallGuide from "../../components/Guides/iOSInstallGuide";
 import Footer from "../../components/Footer/FooterAdmeMobile";
 
-class GastonTheme extends Component {
+class iOSInstallGuideTheme extends Component {
   render() {
     return (
       <React.Fragment>
@@ -23,9 +23,7 @@ class GastonTheme extends Component {
   }
 }
 
-// export default GastonTheme;
-
 
 export default connect(state => ({
     dictionary: state.i18n.dictionary
-}))(GastonTheme);
+}))(iOSInstallGuideTheme);

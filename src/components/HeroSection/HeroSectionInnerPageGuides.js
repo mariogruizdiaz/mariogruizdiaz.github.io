@@ -38,5 +38,5 @@ class HeroSectionInnerPageGuides extends React.Component {
 }
 
 export default connect(state => ({
-  state
+    dictionary: state.i18n.dictionary
 }))(HeroSectionInnerPageGuides);

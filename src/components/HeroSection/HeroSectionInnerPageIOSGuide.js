@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-class HeroSectionInnerPageGuides extends React.Component {
+class HeroSectionInnerPageIOSGuide extends React.Component {
   constructor(props) {
     super(props);
     
@@ -39,4 +39,4 @@ class HeroSectionInnerPageGuides extends React.Component {
 
 export default connect(state => ({
   state
-}))(HeroSectionInnerPageGuides);
+}))(HeroSectionInnerPageIOSGuide);

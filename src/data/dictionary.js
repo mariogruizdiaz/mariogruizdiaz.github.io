@@ -178,6 +178,8 @@ module.exports = {
             },
         },
         guides: {
+            title: "Get ready to make money with Adme",
+            breadcrumbTitle: "Guides",
             grid: {
 
             },
@@ -191,7 +193,7 @@ module.exports = {
                         
                     },
                     step1: {
-                        title: "Install Expo Go from the Apple Store",
+                        title: "1. Install Expo Go from the Apple Store",
                         subtitle: "We are usgin Expo Go to let you start tesging Adme app before launching it to the Apple Store.",
                         subSteps: {
                             a: "Open the Apple Store.",
@@ -201,14 +203,14 @@ module.exports = {
                         }
                     },
                     step2: {
-                        title: "Install Adme app",
+                        title: "2. Install Adme app",
                         subtitle: "We are usgin Expo Go to let you start tesging Adme app before launching it to the Apple Store.",
                         subSteps: {
                             a: "It is time to install it..."
                         }
                     },
                     step3: {
-                        title: "Sign Up",
+                        title: "3. Sign Up",
                         subtitle: "Since this is the first time you are going to use Adme, it required to create an user account",
                         subSteps: {
                             a: "Touch the \"Sign Up\" button.",
@@ -216,7 +218,7 @@ module.exports = {
                         }
                     },
                     step4: {
-                        title: "Link your Facebook account",
+                        title: "4. Link your Facebook account",
                         subtitle: "In order to start posting in your Facebook account, it is needed to link your account",
                         subSteps: {
                             a: "Touch the Facebook switch",
@@ -226,7 +228,7 @@ module.exports = {
                         }
                     },
                     step5: {
-                        title: "Basic information",
+                        title: "5. Basic information",
                         subtitle: "In order to let you get Advertising Campaign according to your preferences, it is needed to complete the following info",
                         subSteps: {
                             a: "Fill the Categories of interest, Gender, Country, State and City",
@@ -236,7 +238,7 @@ module.exports = {
                         }
                     },
                     step6: {
-                        title: "Congrats!",
+                        title: "6. Congrats!",
                         subtitle: "You are ready to start making money with Adme!",
                         subSteps: {
                             a: "",
@@ -244,14 +246,14 @@ module.exports = {
                             c: "",
                             d: ""
                         }
-                    },
-                    buttons: {
-                        readMore: "Read more",
-                        next: "Next",
-                        downloadNow: "Download Now"
                     }
 
                 }
+            },
+            buttons: {
+                readMore: "Read more",
+                next: "Next",
+                downloadNow: "Download Now"
             }
 
         }
@@ -435,6 +437,8 @@ module.exports = {
             }
         },
         guides: {
+            title: "Todo lo que necesitas para comenzar a monetizar con Adme",
+            breadcrumbTitle: "Guias",
             grid: {
 
             },
@@ -448,7 +452,7 @@ module.exports = {
                         
                     },
                     step1: {
-                        title: "Instalar la app Expo Go desde el Apple Store",
+                        title: "1. Instalar la app Expo Go desde el Apple Store",
                         subtitle: "Usamos la app \"Expo Go\" para permitirte ser parte del programa de Beta Testing antes de publicarla oficialmente en el Apple Store.",
                         subSteps: {
                             a: "Abrir el Apple Store.",
@@ -458,14 +462,14 @@ module.exports = {
                         }
                     },
                     step2: {
-                        title: "Instalar la app de Adme",
+                        title: "2. Instalar la app de Adme",
                         subtitle: "Teniendo Expo Go instalada, ya podes instalar Adme",
                         subSteps: {
                             a: "Llegó el momento de instalarla..."
                         }
                     },
                     step3: {
-                        title: "Sign Up",
+                        title: "3. Sign Up",
                         subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta",
                         subSteps: {
                             a: "Tocá el botón \"Sign Up\".",
@@ -473,7 +477,7 @@ module.exports = {
                         }
                     },
                     step4: {
-                        title: "Linkeo de tu cuenta de Facebook",
+                        title: "4. Linkeo de tu cuenta de Facebook",
                         subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tus muro de Facebook, es necesario que linkees tu cuenta",
                         subSteps: {
                             a: "Toca el botón de Facebook",
@@ -483,7 +487,7 @@ module.exports = {
                         }
                     },
                     step5: {
-                        title: "Informacion Básica",
+                        title: "5. Informacion Básica",
                         subtitle: "Con el objetivo de hacerte llegar campañas publicitarias especificas a tus intereses, es necesario que completes la siguiente información",
                         subSteps: {
                             a: "Completar los campos: Categories of interest, Gender, Country, State and City",
@@ -493,7 +497,7 @@ module.exports = {
                         }
                     },
                     step6: {
-                        title: "Felicitaciones!",
+                        title: "6. Felicitaciones!",
                         subtitle: "Ya estas listo para comenzar a ganar dinero con Adme!",
                         subSteps: {
                             a: "",
@@ -501,14 +505,14 @@ module.exports = {
                             c: "",
                             d: ""
                         }
-                    },
-                    buttons: {
-                        readMore: "Read more",
-                        next: "Next",
-                        downloadNow: "Download Now"
                     }
 
                 }
+            },
+            buttons: {
+                readMore: "Ir a la guia",
+                next: "Siguiente",
+                downloadNow: "Descargar"
             }
 
         }

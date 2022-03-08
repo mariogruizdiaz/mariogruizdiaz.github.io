@@ -41,7 +41,7 @@ class DefaultGiudeGrid extends Component {
                                 </div>
                                 <h3 className="h5 mb-2 card-title"><a href="/#">{this.props.dictionary.guides.ios.install.smallCard.title}</a></h3>
                                 <p className="card-text">{this.props.dictionary.guides.ios.install.smallCard.subtitle}</p>
-                                <a href="/#/iosInstallGuide" className="detail-link">{this.props.dictionary.guides.ios.install.buttons.readMore} <span className="ti-arrow-right"></span></a>
+                                <a href="/#/iosInstallGuide" className="detail-link">{this.props.dictionary.guides.buttons.readMore} <span className="ti-arrow-right"></span></a>
                             </div>
                         </div>
                     </div>
