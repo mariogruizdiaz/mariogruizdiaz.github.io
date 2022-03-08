@@ -23,7 +23,7 @@ class GastonTheme extends Component {
             role={this.props.dictionary.team.gaston.role}
             picturePath={this.props.dictionary.team.gaston.picturePath}/>
         </div>
-        <Footer withoutNewsletter={true} />
+        {/* <Footer withoutNewsletter={true} /> */}
       </React.Fragment>
     );
   }
