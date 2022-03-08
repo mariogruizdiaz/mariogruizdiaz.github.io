@@ -4,24 +4,19 @@ import { connect } from "react-redux";
 import HeaderTeam from "../../components/Header/headerTeam";
 import Hero from "../../components/HeroSection/HeroSectionInnerPage";
 import Breadcrumb from "../../components/Breadcrumb";
-import SingleTeamMember from "../../components/TeamMember/teamMember";
+
+import AndroidInstallGuide from "../../components/Guides/androidInstallGuide";
 import Footer from "../../components/Footer/FooterAdmeMobile";
 
-class GastonTheme extends Component {
+class androidInstallGuideTheme extends Component {
   render() {
     return (
       <React.Fragment>
         <HeaderTeam />
         <div className="main">
-          <Hero pageTitle={"Gaston Ruiz Diaz"} roleDescription={this.props.dictionary.team.gaston.roleDescription} />
-          <Breadcrumb name={"Gaston Ruiz Diaz"} />
-          <SingleTeamMember
-            email={this.props.dictionary.team.gaston.email}
-            phone={this.props.dictionary.team.gaston.phone}
-            firstName={"Gastón"}
-            lastName={"Ruiz Diaz"}
-            role={this.props.dictionary.team.gaston.role}
-            picturePath={this.props.dictionary.team.gaston.picturePath}/>
+          <Hero pageTitle={this.props.dictionary.guides.android.install.title} roleDescription={this.props.dictionary.guides.android.install.subTitle} />
+          <Breadcrumb name={"Install in Android"} />
+          <AndroidInstallGuide />
         </div>
         <Footer withoutNewsletter={true} />
       </React.Fragment>
@@ -34,4 +29,4 @@ class GastonTheme extends Component {
 
 export default connect(state => ({
     dictionary: state.i18n.dictionary
-}))(GastonTheme);
+}))(androidInstallGuideTheme);
