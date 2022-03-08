@@ -193,7 +193,7 @@ module.exports = {
                         
                     },
                     step1: {
-                        title: "1. Install Expo Go from the Apple Store",
+                        title: "1. Install Expo Go from Apple Store",
                         subtitle: "We are usgin Expo Go to let you start tesging Adme app before launching it to the Apple Store.",
                         subSteps: {
                             a: "Open the Apple Store.",
@@ -206,7 +206,8 @@ module.exports = {
                         title: "2. Install Adme app",
                         subtitle: "We are usgin Expo Go to let you start tesging Adme app before launching it to the Apple Store.",
                         subSteps: {
-                            a: "It is time to install it..."
+                            a: "It is time to install it...",
+                            b: "Then press 'Open in  Expo Go' button."
                         }
                     },
                     step3: {
@@ -214,24 +215,96 @@ module.exports = {
                         subtitle: "Since this is the first time you are going to use Adme, it required to create an user account",
                         subSteps: {
                             a: "Touch the \"Sign Up\" button.",
-                            b: "Enter the following code \"9CD4CD95\" and press next."
+                            b: "Enter the following code \"9CD4CD95\" and press next.",
+                            c: "Define an e-mail.",
+                            d: "Insert a password for Adme."
                         }
                     },
                     step4: {
                         title: "4. Link your Facebook account",
                         subtitle: "In order to start posting in your Facebook account, it is needed to link your account",
                         subSteps: {
-                            a: "Touch the Facebook switch",
-                            b: "Scroll down the Terms and Conditions, check yes and press Continue",
-                            c: "Enter your email and password that you use to login in Facebook",
-                            d: "If the application required a verification code, please take a look your email inbox to copy it from there and paste here"
+                            a: "Touch the Facebook switch.",
+                            b: "Scroll down the Terms and Conditions, check yes and press Continue.",
+                            c: "Enter your email and password that you use to login in Facebook.",
+                            d: "If the application required a verification code, please take a look your email inbox to copy it from there and paste here."
+                        }
+                    },
+                    step5: {
+                        title: "5. Basic information",
+                        subtitle: "In order to let you get Advertising Campaign according to your preferences, it is needed to complete the following info.",
+                        subSteps: {
+                            a: "Fill the Categories of interest, Gender, Country, State and City.",
+                            b: "Touch the ✅ button.",
+                            c: "And finally, touch the home button 🏠",
+                            d: ""
+                        }
+                    },
+                    step6: {
+                        title: "6. Congrats!",
+                        subtitle: "You are ready to start making money with Adme!",
+                        subSteps: {
+                            a: "",
+                            b: "",
+                            c: "",
+                            d: ""
+                        }
+                    }
+
+                }
+            },
+            android: {
+                install: {
+                    title: "Android Guide",
+                    subTitle: "Step by step guide to get Adme working in yor Android Phone.",
+                    smallCard: {
+                        title: "Install adme app in Android.",
+                        subtitle: "Step by Step instalation guide to start using adme app in Android.",
+                        
+                    },
+                    step1: {
+                        title: "1. Install Expo from Play Store.",
+                        subtitle: "We are using Expo to let you start tesging Adme app before launching it to the Play Store.",
+                        subSteps: {
+                            a: "Use this link  ",
+                            b: "You can also open the Play Store and search the 'Expo'.",
+                            c: "Install and open it.",
+                            d: "Press \"Got it\" if the \"Hello there, friend\" message pops up."
+                        }
+                    },
+                    step2: {
+                        title: "2. Install Adme app.",
+                        subtitle: "We are usgin Expo to let you start tesging Adme app before launching it to the Play Store.",
+                        subSteps: {
+                            a: "It is time to install it...",
+                            b: "Then press 'Open in  Expo Go' button."
+                        }
+                    },
+                    step3: {
+                        title: "3. Sign Up",
+                        subtitle: "Since this is the first time you are going to use Adme, it required to create an user account",
+                        subSteps: {
+                            a: "Touch the \"Sign Up\" button.",
+                            b: "Enter the following code \"9CD4CD95\" and press next.",
+                            c: "Define an e-mail.",
+                            d: "Insert a password for Adme."
+                        }
+                    },
+                    step4: {
+                        title: "4. Link your Facebook account",
+                        subtitle: "In order to start posting in your Facebook account, it is needed to link your account",
+                        subSteps: {
+                            a: "Touch the Facebook switch.",
+                            b: "Scroll down the Terms and Conditions, check yes and press Continue.",
+                            c: "Enter your email and password that you use to login in Facebook.",
+                            d: "If the application required a verification code, please take a look your email inbox to copy it from there and paste here."
                         }
                     },
                     step5: {
                         title: "5. Basic information",
                         subtitle: "In order to let you get Advertising Campaign according to your preferences, it is needed to complete the following info",
                         subSteps: {
-                            a: "Fill the Categories of interest, Gender, Country, State and City",
+                            a: "Fill the Categories of interest, Gender, Country, State and City.",
                             b: "Touch the ✅ button.",
                             c: "And finally, touch the home button 🏠",
                             d: ""
@@ -455,9 +528,9 @@ module.exports = {
                         title: "1. Instalar la app Expo Go desde el Apple Store",
                         subtitle: "Usamos la app \"Expo Go\" para permitirte ser parte del programa de Beta Testing antes de publicarla oficialmente en el Apple Store.",
                         subSteps: {
-                            a: "Abrir el Apple Store.",
-                            b: "Buscar la app Expo Go.",
-                            c: "Instalarla y Abrirla",
+                            a: "Usar el siguiente enlace  ",
+                            b: "Tambien poder abrir el Apple Store y buscar la app 'Expo Go'.",
+                            c: "Instalarla y Abrirla.",
                             d: "Tocar \"Got it\" si el mensaje aparece el siguiente \"Hello there, friend\"."
                         }
                     },
@@ -465,7 +538,8 @@ module.exports = {
                         title: "2. Instalar la app de Adme",
                         subtitle: "Teniendo Expo Go instalada, ya podes instalar Adme",
                         subSteps: {
-                            a: "Llegó el momento de instalarla..."
+                            a: "Llegó el momento de instalarla...",
+                            b: "Luego presiona el botón 'Open in  Expo Go'."
                         }
                     },
                     step3: {
@@ -473,7 +547,9 @@ module.exports = {
                         subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta",
                         subSteps: {
                             a: "Tocá el botón \"Sign Up\".",
-                            b: "Ingresá el siguiente código \"9CD4CD95\" y tocá el botón \"next\"."
+                            b: "Ingresá el siguiente código \"9CD4CD95\" y tocá el botón \"next\".",
+                            c: "Define un correo electrónico.",
+                            d: "Ingresa una password para Adme."
                         }
                     },
                     step4: {
@@ -490,9 +566,79 @@ module.exports = {
                         title: "5. Informacion Básica",
                         subtitle: "Con el objetivo de hacerte llegar campañas publicitarias especificas a tus intereses, es necesario que completes la siguiente información",
                         subSteps: {
-                            a: "Completar los campos: Categories of interest, Gender, Country, State and City",
+                            a: "Completar los campos: Categories of interest, Gender, Country, State and City.",
                             b: "Tocar el botón ✅ para guardar los cambios.",
-                            c: "Finalmente, tocá el boton 🏠 para ir a la pantalla principal de Adme",
+                            c: "Finalmente, tocá el boton 🏠 para ir a la pantalla principal de Adme.",
+                            d: ""
+                        }
+                    },
+                    step6: {
+                        title: "6. Felicitaciones!",
+                        subtitle: "Ya estas listo para comenzar a ganar dinero con Adme!",
+                        subSteps: {
+                            a: "",
+                            b: "",
+                            c: "",
+                            d: ""
+                        }
+                    }
+
+                }
+            },
+            android: {
+                install: {
+                    title: "Guía de instalación para Android",
+                    subTitle: "Guia paso a paso para tener funcionando Adme en tu Movil Android",
+                    smallCard: {
+                        title: "Instalacion de Adme en Android",
+                        subtitle: "Guia paso a paso para poder instalar la app en tu Iphone",
+                        
+                    },
+                    step1: {
+                        title: "1. Instalar la app Expo desde el Play Store",
+                        subtitle: "Usamos la app \"Expo Go\" para permitirte ser parte del programa de Beta Testing antes de publicarla oficialmente en el Play Store.",
+                        subSteps: {
+                            a: "Usar el siguiente enlace  ",
+                            b: "También poder abrir el Play Store y buscar la app 'Expo'.",
+                            c: "Instalarla y Abrirla.",
+                            d: "Tocar \"Got it\" si el mensaje aparece el siguiente \"Hello there, friend\"."
+                        }
+                    },
+                    step2: {
+                        title: "2. Instalar la app de Adme",
+                        subtitle: "Teniendo Expo Go instalada, ya podes instalar Adme",
+                        subSteps: {
+                            a: "Llegó el momento de instalarla...",
+                            b: "Luego presiona el botón 'Open in  Expo Go'."
+                        }
+                    },
+                    step3: {
+                        title: "3. Sign Up",
+                        subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta",
+                        subSteps: {
+                            a: "Tocá el botón \"Sign Up\".",
+                            b: "Ingresá el siguiente código \"9CD4CD95\" y tocá el botón \"next\".",
+                            c: "Define un correo electrónico.",
+                            d: "Ingresa una password para Adme."
+                        }
+                    },
+                    step4: {
+                        title: "4. Linkeo de tu cuenta de Facebook",
+                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tus muro de Facebook, es necesario que linkees tu cuenta",
+                        subSteps: {
+                            a: "Toca el botón de Facebook.",
+                            b: "Desplazate hasta el final de la pantalla y tocá continuar.",
+                            c: "Ingresa tu mail y password que usar para ingresar a Facebook.",
+                            d: "Si la aplicación te pide que ingreses un codigo de validacion, el mismo lo encontraras en tu bandeja de entrada del mail utilizado. Copialo y pagalo en el campo disponible."
+                        }
+                    },
+                    step5: {
+                        title: "5. Informacion Básica",
+                        subtitle: "Con el objetivo de hacerte llegar campañas publicitarias especificas a tus intereses, es necesario que completes la siguiente información",
+                        subSteps: {
+                            a: "Completar los campos: Categories of interest, Gender, Country, State and City.",
+                            b: "Tocar el botón ✅ para guardar los cambios.",
+                            c: "Finalmente, tocá el boton 🏠 para ir a la pantalla principal de Adme.",
                             d: ""
                         }
                     },

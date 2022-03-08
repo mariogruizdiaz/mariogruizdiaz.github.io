@@ -32,7 +32,7 @@ class iOSInstallGuide extends React.Component {
                                         <h2>{this.props.dictionary.guides.ios.install.step1.title}</h2>
                                         <p>{this.props.dictionary.guides.ios.install.step1.subtitle}</p>
                                         <ul className="dot-circle pt-3">
-                                            <li>{this.props.dictionary.guides.ios.install.step1.subSteps.a}</li>
+                                            <li>{this.props.dictionary.guides.ios.install.step1.subSteps.a}<a href="https://apps.apple.com/us/app/expo-go/id982107779" className="btn btn-brand-03 btn-rounded mr-3">Expo Go</a></li>
                                             <li>{this.props.dictionary.guides.ios.install.step1.subSteps.b}</li>
                                             <li>{this.props.dictionary.guides.ios.install.step1.subSteps.c}</li>
                                             <li>{this.props.dictionary.guides.ios.install.step1.subSteps.d}</li>
@@ -66,6 +66,7 @@ class iOSInstallGuide extends React.Component {
                                         <p>{this.props.dictionary.guides.ios.install.step2.subtitle}</p>
                                         <ul className="dot-circle pt-3">
                                             <li>{this.props.dictionary.guides.ios.install.step2.subSteps.a}  <a href="https://expo.io/@marioruizdiaz/adme-mobile?release-channel=qa" className="btn btn-brand-03 btn-rounded mr-3">{this.props.dictionary.guides.buttons.downloadNow} <i className="fas fa-cloud-download-alt pl-2"></i></a></li>
+                                            <li>{this.props.dictionary.guides.ios.install.step2.subSteps.b}</li>
                                         </ul>
                                         <div className="action-btns mt-4">
                                             <a href="#adme-signup" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
@@ -98,6 +99,8 @@ class iOSInstallGuide extends React.Component {
                                         <ul className="dot-circle pt-3">
                                             <li>{this.props.dictionary.guides.ios.install.step3.subSteps.a}</li>
                                             <li>{this.props.dictionary.guides.ios.install.step3.subSteps.b}</li>
+                                            <li>{this.props.dictionary.guides.ios.install.step3.subSteps.c}</li>
+                                            <li>{this.props.dictionary.guides.ios.install.step3.subSteps.d}</li>
                                         </ul>
                                         <div className="action-btns mt-4">
                                             <a href="#adme-fb-link" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>

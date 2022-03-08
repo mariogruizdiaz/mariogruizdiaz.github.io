@@ -1,6 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
 
-class iOSInstallGuide extends React.Component {
+class androidInstallGuide extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -15,75 +16,200 @@ class iOSInstallGuide extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section id="about" className="ptb-100 gray-light-bg ">
-            <div className="container">
-                <div className="row align-items-center justify-content-between">
-                    <div className="col-md-12 col-lg-6">
-                        <div className="feature-contents section-heading">
-                            <h2>The Most Useful Resource Created For Designers</h2>
-                            <p>Objectively deliver professional value with diverse web-readiness.
-                                Collaboratively transition wireless customer service without goal-oriented catalysts for
-                                change. Collaboratively.</p>
-
-                            <ul className="vertical-list-with-icon py-3">
-                                <li className="d-flex align-items-start">
-                                    <div className="mt-2 bg-white shadow-sm rounded p-3 mr-3">
-                                        <img src="assets/img/image-icon-1.png" width="30" alt="prevention" />
+        <div className="overflow-hidden">
+                    <section id="expo" className="about-us ptb-100 background-shape-img position-relative">
+                        <div className="animated-shape-wrap">
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                        </div>
+                        <div className="container">
+                            <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                                <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
+                                    <div className="about-content-left">
+                                        <h2>{this.props.dictionary.guides.android.install.step1.title}</h2>
+                                        <p>{this.props.dictionary.guides.android.install.step1.subtitle}</p>
+                                        <ul className="dot-circle pt-3">
+                                            <li>{this.props.dictionary.guides.android.install.step1.subSteps.a} <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US" className="btn btn-brand-03 btn-rounded mr-3">Expo</a></li>
+                                            <li>{this.props.dictionary.guides.android.install.step1.subSteps.b}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step1.subSteps.c}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step1.subSteps.d}</li>
+                                        </ul>
+                                        <div className="action-btns mt-4">
+                                            <a href="#adme" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
+                                        </div>
                                     </div>
-                                    <div className="vertical-list-info">
-                                        <strong>Search Engine/Browsing</strong>
-                                        <p>A web application, when it works well, gathers amounts of information about your business through of different metrics.</p>
+                                </div>
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/android/expo.jpeg" alt="about us" className="img-fluid" />
                                     </div>
-                                </li>
-                                <li className="d-flex align-items-start">
-                                    <div className="mt-2 bg-white shadow-sm rounded p-3 mr-3">
-                                        <img src="assets/img/image-icon-2.png" width="30" alt="prevention" />
-                                    </div>
-                                    <div className="vertical-list-info">
-                                        <strong>Notification system</strong>
-                                        <p>Changes don’t always happen when you are looking for it. You could be out to lunch, playing golf on the weekend.</p>
-                                    </div>
-                                </li>
-                                <li className="d-flex align-items-start">
-                                    <div className="mt-2 bg-white shadow-sm rounded p-3 mr-3">
-                                        <img src="assets/img/image-icon-3.png" width="30" alt="prevention" />
-                                    </div>
-                                    <div className="vertical-list-info">
-                                        <strong>Mobile Friendly</strong>
-                                        <p>People are not chained to desktops or laptops anymore. People rely on smart phones and tablets to help them navigate.</p>
-                                    </div>
-                                </li>
-                                <li className="d-flex align-items-start">
-                                    <div className="mt-2 bg-white shadow-sm rounded p-3 mr-3">
-                                        <img src="assets/img/image-icon-4.png" width="30" alt="prevention" />
-                                    </div>
-                                    <div className="vertical-list-info">
-                                        <strong>User rights management</strong>
-                                        <p>Your app will be used by a host of different people and for different reasons. For this reason, maintaining user.</p>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <div className="action-btns mt-3">
-                                <a href="/#" className="btn btn-brand-02 mr-3">Get Start Now</a>
-                                <a href="/#" className="btn btn-outline-brand-02">Learn More</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-md-6 col-lg-6">
-                        <div className="mask-image">
-                            <img src="assets/img/about1.jpg" className="img-fluid" alt="about" />
-                            <div className="item-icon video-promo-content">
-                                <a href="https://www.youtube.com/watch?v=9No-FiEInLA" className="popup-youtube video-play-icon text-center m-auto"><span className="ti-control-play"></span> </a>
+                    </section>
+                    <section id="adme" className="about-us ptb-100 background-shape-img position-relative">
+                        <div className="animated-shape-wrap">
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                        </div>
+                        <div className="container">
+                            <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                                <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
+                                    <div className="about-content-left">
+                                        <h2>{this.props.dictionary.guides.android.install.step2.title}</h2>
+                                        <p>{this.props.dictionary.guides.android.install.step2.subtitle}</p>
+                                        <ul className="dot-circle pt-3">
+                                            <li>{this.props.dictionary.guides.android.install.step2.subSteps.a}  <a href="https://expo.io/@marioruizdiaz/adme-mobile?release-channel=qa" className="btn btn-brand-03 btn-rounded mr-3">{this.props.dictionary.guides.buttons.downloadNow} <i className="fas fa-cloud-download-alt pl-2"></i></a></li>
+                                            <li>{this.props.dictionary.guides.android.install.step2.subSteps.b}</li>
+                                        </ul>
+                                        <div className="action-btns mt-4">
+                                            <a href="#adme-signup" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/ios/login.jpeg" alt="about us" className="img-fluid" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+                    <section id="adme-signup" className="about-us ptb-100 background-shape-img position-relative">
+                        <div className="animated-shape-wrap">
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                        </div>
+                        <div className="container">
+
+                            <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                                <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
+                                    <div className="about-content-left">
+                                        <h2>{this.props.dictionary.guides.android.install.step3.title}</h2>
+                                        <p>{this.props.dictionary.guides.android.install.step3.subtitle}</p>
+                                        <ul className="dot-circle pt-3">
+                                            <li>{this.props.dictionary.guides.android.install.step3.subSteps.a}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step3.subSteps.b}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step3.subSteps.c}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step3.subSteps.d}</li>
+                                        </ul>
+                                        <div className="action-btns mt-4">
+                                            <a href="#adme-fb-link" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/ios/referentCode.jpeg" alt="about us" className="img-fluid" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="adme-fb-link" className="about-us ptb-100 background-shape-img position-relative">
+                        <div className="animated-shape-wrap">
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                        </div>
+                        <div className="container">
+                            <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                                <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
+                                    <div className="about-content-left">
+                                        <h2>{this.props.dictionary.guides.android.install.step4.title}</h2>
+                                        <p>{this.props.dictionary.guides.android.install.step4.subtitle}</p>
+                                        <ul className="dot-circle pt-3">
+                                            <li>{this.props.dictionary.guides.android.install.step4.subSteps.a}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step4.subSteps.b}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step4.subSteps.c}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step4.subSteps.d}</li>
+                                        </ul>
+                                        <div className="action-btns mt-4">
+                                            <a href="#adme-basics" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/ios/link.jpeg" alt="about us" className="img-fluid" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="adme-basics" className="about-us ptb-100 background-shape-img position-relative">
+                        <div className="animated-shape-wrap">
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                        </div>
+                        <div className="container">
+                            <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                                <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
+                                    <div className="about-content-left">
+                                        <h2>{this.props.dictionary.guides.android.install.step5.title}</h2>
+                                        <p>{this.props.dictionary.guides.android.install.step5.subtitle}</p>
+                                        <ul className="dot-circle pt-3">
+                                            <li>{this.props.dictionary.guides.android.install.step5.subSteps.a}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step5.subSteps.b}</li>
+                                            <li>{this.props.dictionary.guides.android.install.step5.subSteps.c}</li>
+                                        </ul>
+                                        <div className="action-btns mt-4">
+                                            <a href="#adme-end" className="btn btn-brand-02 mr-3 page-scroll">{this.props.dictionary.guides.buttons.next}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/ios/basics.jpeg" alt="about us" className="img-fluid" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="adme-end" className="about-us ptb-100 background-shape-img position-relative">
+                        <div className="animated-shape-wrap">
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                            <div className="animated-shape-item"></div>
+                        </div>
+                        <div className="container">
+                            <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                                <div className="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
+                                    <div className="about-content-left">
+                                        <h2>{this.props.dictionary.guides.android.install.step6.title}</h2>
+                                        <p>{this.props.dictionary.guides.android.install.step6.subtitle}</p>
+                                    </div>
+                                </div>
+                                <div className="col-sm-5 col-md-5 col-lg-4">
+                                    <div className="about-content-right">
+                                        <img src="assets/img/guides/ios/dashboard.jpeg" alt="about us" className="img-fluid" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </div>
-        </section>
       </React.Fragment>
     );
   }
 }
 
-export default iOSInstallGuide;
+export default connect(state => ({
+    dictionary: state.i18n.dictionary
+}))(androidInstallGuide);

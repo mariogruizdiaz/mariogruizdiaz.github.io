@@ -65,9 +65,9 @@ class DefaultGiudeGrid extends Component {
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 className="h5 mb-2 card-title"><a href="/#/androidInstallGuide">Install adme app in Android</a></h3>
+                                <h3 className="h5 mb-2 card-title"><a href="/#/androidInstallGuide">{this.props.dictionary.guides.ios.install.smallCard.title}</a></h3>
                                 <p className="card-text">Step by Step instalation guide to start using adme app in android phones.</p>
-                                <a href="/#/androidInstallGuide" className="detail-link">Read more <span className="ti-arrow-right"></span></a>
+                                <a href="/#/androidInstallGuide" className="detail-link">{this.props.dictionary.guides.buttons.readMore}<span className="ti-arrow-right"></span></a>
                             </div>
                         </div>
                     </div>
