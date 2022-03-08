@@ -23,6 +23,9 @@ class Footer extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    console.log(this.state.email);
+
+    window.open(`https://api.whatsapp.com/send?phone=5491124065989&text=I%20want%20to%20test%20Adme.%20My%20email%20is%20${this.state.email}`, "_blank");
     // get action
     const subscribeAction = subscribe(this.state);
 

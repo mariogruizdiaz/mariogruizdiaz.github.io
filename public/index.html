@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,17 @@
 
     <!-- SEO Meta description -->
     <meta name="description"
-          content="Apdash app landing page template or product landing page template helps you easily create websites for your app or product,  landing page template form promotion and many more.">
+        content="Apdash app landing page template or product landing page template helps you easily create websites for your app or product,  landing page template form promotion and many more.">
     <meta name="author" content="ThemeTags">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-    <meta property="og:site_name" content=""/> <!-- website name -->
-    <meta property="og:site" content=""/> <!-- website link -->
-    <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-    <meta property="og:description" content=""/> <!-- description shown in the actual shared post -->
-    <meta property="og:image" content=""/> <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content=""/> <!-- where do you want your post to link to -->
-    <meta property="og:type" content="article"/>
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -35,22 +36,22 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <!--preloader start-->
-  <div id="preloader">
-      <div class="preloader-wrap">
-          <img src="assets/img/logo-color.png" alt="logo" class="img-fluid" />
-          <div class="thecube">
-              <div class="cube c1"></div>
-              <div class="cube c2"></div>
-              <div class="cube c4"></div>
-              <div class="cube c3"></div>
-          </div>
-      </div>
-  </div>
-  <!--preloader end-->
-  <div id="root"></div>
-  <!--
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!--preloader start-->
+    <div id="preloader">
+        <div class="preloader-wrap">
+            <img src="assets/img/logo-color.png" alt="logo" class="img-fluid" />
+            <div class="thecube">
+                <div class="cube c1"></div>
+                <div class="cube c2"></div>
+                <div class="cube c4"></div>
+                <div class="cube c3"></div>
+            </div>
+        </div>
+    </div>
+    <!--preloader end-->
+    <div id="root"></div>
+    <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -61,23 +62,59 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
-  <!--scroll bottom to top button start-->
-  <div class="scroll-top scroll-to-target primary-bg text-white" data-target="html">
-      <span class="fas fa-hand-point-up"></span>
-  </div>
-  <!--scroll bottom to top button end-->
-  <!--build:js-->
-  <script src="assets/js/vendors/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/vendors/popper.min.js"></script>
-  <script src="assets/js/vendors/bootstrap.min.js"></script>
-  <script src="assets/js/vendors/jquery.easing.min.js"></script>
-  <script src="assets/js/vendors/owl.carousel.min.js"></script>
-  <script src="assets/js/vendors/countdown.min.js"></script>
-  <script src="assets/js/vendors/jquery.waypoints.min.js"></script>
-  <script src="assets/js/vendors/jquery.rcounterup.js"></script>
-  <script src="assets/js/vendors/magnific-popup.min.js"></script>
-  <script src="assets/js/app.js"></script>
-  <!--endbuild-->
+    <!--scroll bottom to top button start-->
+    <div class="scroll-top scroll-to-target primary-bg text-white" data-target="html">
+        <span class="fas fa-hand-point-up"></span>
+    </div>
+    <!--scroll bottom to top button end-->
+    <!--build:js-->
+    <script src="assets/js/vendors/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/vendors/popper.min.js"></script>
+    <script src="assets/js/vendors/bootstrap.min.js"></script>
+    <script src="assets/js/vendors/jquery.easing.min.js"></script>
+    <script src="assets/js/vendors/owl.carousel.min.js"></script>
+    <script src="assets/js/vendors/countdown.min.js"></script>
+    <script src="assets/js/vendors/jquery.waypoints.min.js"></script>
+    <script src="assets/js/vendors/jquery.rcounterup.js"></script>
+    <script src="assets/js/vendors/magnific-popup.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?10303';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var options = {
+      "enabled":true,
+      "chatButtonSetting":{
+          "backgroundColor":"#4dc247",
+          "ctaText":"",
+          "borderRadius":"25",
+          "marginLeft":"0",
+          "marginBottom":"50",
+          "marginRight":"50",
+          "position":"right"
+      },
+      "brandSetting":{
+          "brandName":"Adme",
+          "brandSubTitle":"The social media that pays you for your posts",
+          "brandImg":"https://firebasestorage.googleapis.com/v0/b/influencers-26672.appspot.com/o/Adme-logo.jpeg?alt=media&token=976f41e3-917d-4d85-af72-101c29ae52a4",
+          "welcomeText":"Hi there!\nHow can I help you?\n\nHola!\nComo te podemos ayudar?",
+          "messageText":"Hello Adme!!! I would like to make money with this app 😍😍",
+          "backgroundColor":"#811cd4",
+          "ctaText":"Start Chat",
+          "borderRadius":"25",
+          "autoShow":false,
+          "phoneNumber":"5491124065989"
+      }
+    };
+        s.onload = function() {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    </script>
+    <!--endbuild-->
 </body>
 
 </html>
