@@ -186,10 +186,10 @@ module.exports = {
             ios: {
                 install: {
                     title: "iOS Guide",
-                    subTitle: "Step by step guide to get Adme working in yor IPhone",
+                    subTitle: "Step by step guide to get Adme working in yor iPhone",
                     smallCard: {
-                        title: "Install adme app in Iphone",
-                        subtitle: "Step by Step instalation guide to start using adme app in Iphone.",
+                        title: "Install adme app in iPhone",
+                        subtitle: "Step by Step instalation guide to start using adme app in iPhone.",
                         
                     },
                     step1: {
@@ -370,7 +370,7 @@ module.exports = {
         },
         process: {
             title: "Ganar dinero con Adme es muy sencillo",
-            subtitle: "Adme pone a tus disposicion las campañas publicitarias de las marcas que buscan personas como vos para promocionar sus productos y servicios.",
+            subtitle: "Adme pone a tu disposición las campañas publicitarias de las marcas que buscan personas como vos para promocionar sus productos y servicios.",
             stepsImage: "assets/img/adme-mobile-processes-es.png",
             step1Title: "Selfie",
             step1Subtitle: "Sacate una foto como usualmente lo haces.",
@@ -381,11 +381,11 @@ module.exports = {
         },
         passiveIncomes: {
             title: "Ingresos pasivos",
-            subtitle: "Con Adme no solo ganás dinero por subir tus fotos, sino que tambien ganás dinero de manera pasiva.",
+            subtitle: "Con Adme no solo ganás dinero por subir tus fotos, sino que también ganás dinero de manera pasiva.",
             method1Title: "El Mejor Programa De Referidos",
-            method1Subtitle: "Toda persona que se sume a Adme gracias a tu invitacion, o a la invitacion de tus invitados, conformaran tu clan. Y lo bueno es que todos ellos (sin importar que tan profundo estén en tu red de referidos) te harán ganar dinero, ya que Adme te recompenza con un porcetaje de sus ganancias, cada vez que suceda.",
-            method2Title: "El exito de tus posts",
-            method2Subtitle: "Despues de recibir el pago por compartir una foto, seguiras recibiendo dinero de acuerdo al exito de la misma entre tus amigos y seguidores. Adme tambien te paga por cada like, comentario y otras reacciones.",
+            method1Subtitle: "Toda persona que se sume a Adme gracias a tu invitación, o a la invitación de tus invitados, conformarán tu clan. Y lo bueno es que todos ellos (sin importar que tan profundo estén en tu red de referidos) te harán ganar dinero, ya que Adme te recompenza con un porcetaje de sus ganancias, cada vez que suceda.",
+            method2Title: "El éxito de tus posts",
+            method2Subtitle: "Después de recibir el pago por compartir una foto, seguiras recibiendo dinero de acuerdo al éxito de la misma entre tus amigos y seguidores. Adme también te paga por cada like, comentario y otras reacciones.",
             method3Title: "",
             method3Subtitle: "",
             method4Title: "",
@@ -393,27 +393,27 @@ module.exports = {
         },
         features: {
             title: "Funcionalidades de Adme",
-            subtitle: "Adme es la primer plataforma que cree que todo usuario de redes sociales es un influencer. Es por ésta reazón que Adme transforma los benefícios que las marcas obtinen por las influencis de tus fotos en recompenzas monetarias al protagornista de toda esta historia, vos 🤟",
+            subtitle: "Adme es la primer plataforma que cree que todo usuario de redes sociales es un influencer. Es por ésta razón que Adme transforma los benefícios que las marcas obtinen por las influencis de tus fotos en recompenzas monetarias al protagonista de toda ésta historia, vos 🤟",
             feature1Title: "Una sola app para todas tus redes sociales",
             feature1Subtitle: "Con la app de Adme puedes postear al mismo tiempo en todas tus redes sociales habituales. 📱",
             feature2Title: "Fotos espponsorizadas",
-            feature2Subtitle: "Si la foto que estas por postear contiene algun producto, servicio o lugar, entonces podrías esponsorizarla con una comapañ publicitaria relacionada. 💰💰💰",
+            feature2Subtitle: "Si la foto que estás por postear contiene algún producto, servicio o lugar, entonces podrías esponsorizarla con una comapañ publicitaria relacionada. 💰💰💰",
             feature3Title: "Fotos a pedido",
-            feature3Subtitle: "También podes crear fotos seguiendo las especificaciones de alguna campaña publicitaria que creas apropieada para vos. 💰💰💰",
+            feature3Subtitle: "También podés crear fotos seguiendo las especificaciones de alguna campaña publicitaria que creas apropieada para vos. 💰💰💰",
             feature4Title: "Compartir Spot publicitarios",
-            feature4Subtitle: "Tambien podrias ganar dinero simplemente compartiendo un spot publicitario creado por la marca. 💰💰💰",
+            feature4Subtitle: "También podrías ganar dinero simplemente compartiendo un spot publicitario creado por la marca. 💰💰💰",
             feature5Title: "Mas likes, mas ganancias",
             feature5Subtitle: "Después de ganar dinero por postear una foto sponsorizada, continueas incrementando tus ganancias por el éxito de la misma. 💰💰💰",
             feature6Title: "Ingresos pasivos desde tu red de referidos",
             feature6Subtitle: "Cada vez que tus referidos o los referidos de tus referidos ganen dinero, vos también ganaras un porcentaje del mismo. 💰💰💰",
         },
         testimonials: {
-            title: "Lo que opina la gente sobre esta nueva propuesta",
-            subtitle: "El nuevo paradigma propuesto por Adme esta focalizado a satisfacer, principalmente, las nacesidades los los usuarios de redes sociales. Esto es lo que opinan sobre esta nueva propuesta!",
+            title: "Lo que opina la gente sobre ésta nueva propuesta",
+            subtitle: "El nuevo paradigma propuesto por Adme está focalizado a satisfacer, principalmente, las nacesidades los los usuarios de redes sociales. Esto es lo que opinan sobre ésta nueva propuesta!",
             testimonial1Name: "Giselle Yaccuzzy",
             testimonial1Title: "Usuario de Facebook e Instagram",
-            testimonial1Testimony: "Es muy emocionante saber que llego una red social que entiende que al compartir una foto en mis redes sociales habituales, estoy influenciando a mis amigos y seguidores a que consuman los productos y servicios que aparecen en ella 😍",
-            testimonial2Name: "Maria Fernanda Iglesias",
+            testimonial1Testimony: "Es muy emocionante saber que llegó una red social que entiende que al compartir una foto en mis redes sociales habituales, estoy influenciando a mis amigos y seguidores a que consuman los productos y servicios que aparecen en ella 😍",
+            testimonial2Name: "María Fernanda Iglesias",
             testimonial2Title: "Actriz. (@marifernandai) • Instagram",
             testimonial2Testimony: "",
             testimonial3Name: "Gonzalo Abadie",
@@ -427,15 +427,15 @@ module.exports = {
             title: "Preguntas Frecuentes",
             subtitle: "Sabemos que cuesta entender que una red social le pague a sus usuarios, pero es así. Adme lo hace! Si aún tienes preguntas, contactanos!",
             q1Question: "¿Me pagan si uso mis redes sociales habituales? 💵",
-            q1Answer: "Sí, tenes que seguir usando tus redes sociales habituales. Adme te permite linkear tus cuentas de Facebook, Twitter e Instagram (y otras en el futuro) para que puedas postear desde una unica app. Ademas de la oportunidad de recibir dinero por esponsorizarlas con campañas publicitarias.",
+            q1Answer: "Sí, tenés que seguir usando tus redes sociales habituales. Adme te permite linkear tus cuentas de Facebook, Twitter e Instagram (y otras en el futuro) para que puedas postear desde una unica app. Ademas de la oportunidad de recibir dinero por esponsorizarlas con campañas publicitarias.",
             q2Question: "¿Es importante la calidad de mis posteos? ✅ 💰",
             q2Answer: "Si, es muy importante, porque para recibir el pago por una foto, la misma debe ser validada y aprobada, primero, por el Departamento de Calidad de Adme y finalmente por el Departamento de Calidad de marca dueña de la campaña publicitaria.",
             q3Question: "¿Importa si mis fotos reciben reacciones? 👍 😱 🤩 🤪 ❤️",
-            q3Answer: "Claro que sí importa, ya que Adme no solo te paga por postar fotos en tus redes sociales, sino que tambien te paga por el éxito que las mísmas consigan entre tus amigos y seguidores. Lo cual es medido por la reacciones que éstas consigan.",
+            q3Answer: "Claro que sí importa, ya que Adme no solo te paga por postar fotos en tus redes sociales, sino que también te paga por el éxito que las mísmas consigan entre tus amigos y seguidores. Lo cual es medido por la reacciones que éstas consigan.",
             q4Question: "¿Hay alguna otra forma de ganar dinero con Adme? 💸",
             q4Answer: "Si claro, nosotros lo llamamos 'Ingresos pasivos'. Una de las maneras es aumentando tu red de referidos, ya que de manera continuamente recibirás un porcentaje del dinero que ellos vayan ganando. Cualquier persona, sea referido directo o referido de tus referidos te harán ganar dinero. Sin importar que tan abajo en tu red se encuentren.",
             q5Question: "¿Por qué es tán importante en referir a mis amigos? 🏂",
-            q5Answer: "Porque cada persona que se suma a Adme estará debajo de uno y solo un referente directo. Por lo tanto si tus amigos son referidos por alguien más, pierdes la oportunidad de sumarlos a tu red y, por lo tanto, la de oportunudad de ganar dinero por el exito que tengan ellos mismos su red debajo.",
+            q5Answer: "Porque cada persona que se suma a Adme estará debajo de uno y solo un referente directo. Por lo tanto si tus amigos son referidos por alguien más, pierdes la oportunidad de sumarlos a tu red y, por lo tanto, la de oportunudad de ganar dinero por el éxito que tengan ellos mismos su red debajo.",
             q6Question: "¿En que monedas me pagan? 🤝",
             q6Answer: "Adme permite recibir pagos en 6 moneras de Latino America, Dollar Americanos y Crypto monedas.",
         },
@@ -446,7 +446,7 @@ module.exports = {
                 placeholder: "Ingresa tu email",
             },
             corp: {
-                subtitle: "La plataforma de publicidad disrruptiva que llego para cambiar el paradigma de las publicidad en redes sociales."
+                subtitle: "La plataforma de publicidad disrruptiva que llegó para cambiar el paradigma de las publicidad en redes sociales."
             },
             products: {
                 title: "Productos",
@@ -463,22 +463,22 @@ module.exports = {
                 title: "Soporte",
                 s1: "FAQ",
             },
-            rights: "Adme, Todos los derechos estan reservados"
+            rights: "Adme, Todos los derechos están reservados"
         },
         commingSoonInvestors: {
             title: "We're Coming Soon",
-            subtitle: "El website de Adme para inversores esta siendo constriuido. Pronto tendrás toda la información para invertir en Adme, suscribase para recibir novedades.",
+            subtitle: "El website de Adme para inversores está siendo construido. Pronto tendrás toda la información para invertir en Adme, suscribase para recibir novedades.",
             placeholder: "Ingresá tu email",
         },
         commingSoonBrands: {
             title: "We're Coming Soon",
-            subtitle: "El website de Adme para las Marcas y Agencias está siendo construido. Muy pronto tendrás toda la información sobre esta nueva propuesta de publicidad en Resdes Sociales, suscribase para recibir novedades.",
+            subtitle: "El website de Adme para las Marcas y Agencias está siendo construido. Muy pronto tendrás toda la información sobre ésta nueva propuesta de publicidad en Resdes Sociales, suscribase para recibir novedades.",
             placeholder: "Ingresá tu email",
         },
         team: {
             gaston: {
                 role: "Cofundador",
-                roleDescription: "Gaston y su hermano, Mario Ruiz Diaz son los fundadores de la nueva generacion en redes sociales, Adme",
+                roleDescription: "Gastón y su hermano, Mario Ruiz Diaz son los fundadores de la nueva generación en redes sociales, Adme",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "gaston@adme.com.ar",
@@ -486,15 +486,15 @@ module.exports = {
             },
             mario: {
                 role: "Cofundador",
-                roleDescription: "Mario y su hermano, Mario Ruiz Diaz son los fundadores de la nueva generacion en redes sociales, Adme",
+                roleDescription: "Mario y su hermano, Gastón Ruiz Diaz son los fundadores de la nueva generación en redes sociales, Adme",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
-                email: "gaston@adme.com.ar",
+                email: "mario@adme.com.ar",
                 picturePath: "gaston.jpg"
             },
             yulian: {
                 role: "Ingeniero de Software",
-                roleDescription: "Julio es uno de los responsables que está creando esta nueva generación de redes sociales, Adme",
+                roleDescription: "Yulian es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
                 personalityDescription: "",
                 phone: "+54 911 5139-4412",
                 email: "julio.aranda@adme.com.ar",
@@ -502,10 +502,9 @@ module.exports = {
             },
             alex: {
                 role: "Quality Assurance",
-                roleDescription: "Alexander es uno de los responsables que está creando esta nueva generación de redes sociales, Adme",
+                roleDescription: "Alexander es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
                 personalityDescription: "",
-                phone: "+54 911 4085-1807",
-                email: "gaston@adme.com.ar",
+                phone: "+54 911 4085-1807",                email: "alex@adme.com.ar",
                 picturePath: "gaston.jpg"
             }
         },
@@ -518,10 +517,10 @@ module.exports = {
             ios: {
                 install: {
                     title: "Guía de instalación para iOS",
-                    subTitle: "Guia paso a paso para tener funcionando Adme en tu IPHone",
+                    subTitle: "Guía paso a paso para tener funcionando Adme en tu iPhone",
                     smallCard: {
-                        title: "Instalacion de Adme en Iphone",
-                        subtitle: "Guia paso a paso para poder instalar la app en tu Iphone",
+                        title: "Instalación de Adme en iPhone",
+                        subtitle: "Guía paso a paso para poder instalar la app en tu iPhone",
                         
                     },
                     step1: {
@@ -529,14 +528,14 @@ module.exports = {
                         subtitle: "Usamos la app \"Expo Go\" para permitirte ser parte del programa de Beta Testing antes de publicarla oficialmente en el Apple Store.",
                         subSteps: {
                             a: "Usar el siguiente enlace  ",
-                            b: "Tambien poder abrir el Apple Store y buscar la app 'Expo Go'.",
+                            b: "También poder abrir el Apple Store y buscar la app 'Expo Go'.",
                             c: "Instalarla y Abrirla.",
                             d: "Tocar \"Got it\" si el mensaje aparece el siguiente \"Hello there, friend\"."
                         }
                     },
                     step2: {
                         title: "2. Instalar la app de Adme",
-                        subtitle: "Teniendo Expo Go instalada, ya podes instalar Adme",
+                        subtitle: "Teniendo Expo Go instalada, ya podés instalar Adme",
                         subSteps: {
                             a: "Llegó el momento de instalarla...",
                             b: "Luego presiona el botón 'Open in  Expo Go'."
@@ -547,34 +546,34 @@ module.exports = {
                         subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta",
                         subSteps: {
                             a: "Tocá el botón \"Sign Up\".",
-                            b: "Ingresá el siguiente código \"9CD4CD95\" y tocá el botón \"next\".",
-                            c: "Define un correo electrónico.",
+                            b: "Ingresá el siguiente código \"9CD4CD95\" y toca el botón \"next\".",
+                            c: "Define un e-mail.",
                             d: "Ingresa una password para Adme."
                         }
                     },
                     step4: {
                         title: "4. Linkeo de tu cuenta de Facebook",
-                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tus muro de Facebook, es necesario que linkees tu cuenta",
+                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tu muro de Facebook, es necesario que linkees tu cuenta",
                         subSteps: {
                             a: "Toca el botón de Facebook",
                             b: "Desplazate hasta el final de la pantalla y tocá continuar",
                             c: "Ingresa tu mail y password que usar para ingresar a Facebook",
-                            d: "Si la aplicación te pide que ingreses un codigo de validacion, el mismo lo encontraras en tu bandeja de entrada del mail utilizado. Copialo y pagalo en el campo disponible"
+                            d: "Si la aplicación te pide que ingreses un código de validación, el mismo lo encontrarás en tu bandeja de entrada del mail utilizado. Copialo y pagalo en el campo disponible"
                         }
                     },
                     step5: {
-                        title: "5. Informacion Básica",
-                        subtitle: "Con el objetivo de hacerte llegar campañas publicitarias especificas a tus intereses, es necesario que completes la siguiente información",
+                        title: "5. Información Básica",
+                        subtitle: "Con el objetivo de hacerte llegar campañas publicitarias específicas a tus intereses, es necesario que completes la siguiente información",
                         subSteps: {
                             a: "Completar los campos: Categories of interest, Gender, Country, State and City.",
                             b: "Tocar el botón ✅ para guardar los cambios.",
-                            c: "Finalmente, tocá el boton 🏠 para ir a la pantalla principal de Adme.",
+                            c: "Finalmente, tocá el botón 🏠 para ir a la pantalla principal de Adme.",
                             d: ""
                         }
                     },
                     step6: {
                         title: "6. Felicitaciones!",
-                        subtitle: "Ya estas listo para comenzar a ganar dinero con Adme!",
+                        subtitle: "Ya estás listo para comenzar a ganar dinero con Adme!",
                         subSteps: {
                             a: "",
                             b: "",
@@ -588,10 +587,10 @@ module.exports = {
             android: {
                 install: {
                     title: "Guía de instalación para Android",
-                    subTitle: "Guia paso a paso para tener funcionando Adme en tu Movil Android",
+                    subTitle: "Guía paso a paso para tener funcionando Adme en tu Móvil Android",
                     smallCard: {
-                        title: "Instalacion de Adme en Android",
-                        subtitle: "Guia paso a paso para poder instalar la app en tu Iphone",
+                        title: "Instalación de Adme en Android",
+                        subtitle: "Guía paso a paso para poder instalar la app en tu Android",
                         
                     },
                     step1: {
@@ -606,7 +605,7 @@ module.exports = {
                     },
                     step2: {
                         title: "2. Instalar la app de Adme",
-                        subtitle: "Teniendo Expo Go instalada, ya podes instalar Adme",
+                        subtitle: "Teniendo Expo Go instalada, ya podés instalar Adme",
                         subSteps: {
                             a: "Llegó el momento de instalarla...",
                             b: "Luego presiona el botón 'Open in  Expo Go'."
@@ -618,33 +617,33 @@ module.exports = {
                         subSteps: {
                             a: "Tocá el botón \"Sign Up\".",
                             b: "Ingresá el siguiente código \"9CD4CD95\" y tocá el botón \"next\".",
-                            c: "Define un correo electrónico.",
+                            c: "Define un e-mail.",
                             d: "Ingresa una password para Adme."
                         }
                     },
                     step4: {
                         title: "4. Linkeo de tu cuenta de Facebook",
-                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tus muro de Facebook, es necesario que linkees tu cuenta",
+                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tu muro de Facebook, es necesario que linkees tu cuenta",
                         subSteps: {
                             a: "Toca el botón de Facebook.",
                             b: "Desplazate hasta el final de la pantalla y tocá continuar.",
                             c: "Ingresa tu mail y password que usar para ingresar a Facebook.",
-                            d: "Si la aplicación te pide que ingreses un codigo de validacion, el mismo lo encontraras en tu bandeja de entrada del mail utilizado. Copialo y pagalo en el campo disponible."
+                            d: "Si la aplicación te pide que ingreses un código de validación, el mismo lo encontrarás en tu bandeja de entrada del mail utilizado. Copialo y pagalo en el campo disponible."
                         }
                     },
                     step5: {
-                        title: "5. Informacion Básica",
-                        subtitle: "Con el objetivo de hacerte llegar campañas publicitarias especificas a tus intereses, es necesario que completes la siguiente información",
+                        title: "5. Información Básica",
+                        subtitle: "Con el objetivo de hacerte llegar campañas publicitarias específicas a tus intereses, es necesario que completes la siguiente información",
                         subSteps: {
                             a: "Completar los campos: Categories of interest, Gender, Country, State and City.",
                             b: "Tocar el botón ✅ para guardar los cambios.",
-                            c: "Finalmente, tocá el boton 🏠 para ir a la pantalla principal de Adme.",
+                            c: "Finalmente, tocá el botón 🏠 para ir a la pantalla principal de Adme.",
                             d: ""
                         }
                     },
                     step6: {
                         title: "6. Felicitaciones!",
-                        subtitle: "Ya estas listo para comenzar a ganar dinero con Adme!",
+                        subtitle: "Ya estás listo para comenzar a ganar dinero con Adme!",
                         subSteps: {
                             a: "",
                             b: "",
@@ -656,7 +655,7 @@ module.exports = {
                 }
             },
             buttons: {
-                readMore: "Ir a la guia",
+                readMore: "Ir a la guía",
                 next: "Siguiente",
                 downloadNow: "Descargar"
             }
