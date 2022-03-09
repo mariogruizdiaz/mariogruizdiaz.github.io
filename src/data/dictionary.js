@@ -528,9 +528,9 @@ module.exports = {
                         subtitle: "Usamos la app \"Expo Go\" para permitirte ser parte del programa de Beta Testing antes de publicarla oficialmente en el Apple Store.",
                         subSteps: {
                             a: "Usar el siguiente enlace  ",
-                            b: "También poder abrir el Apple Store y buscar la app 'Expo Go'.",
+                            b: "También podes abrir el Apple Store y buscar la app 'Expo Go'.",
                             c: "Instalarla y Abrirla.",
-                            d: "Tocar \"Got it\" si el mensaje aparece el siguiente \"Hello there, friend\"."
+                            d: "Tocar \"Got it\" si aparece el siguiente mensaje: \"Hello there, friend\"."
                         }
                     },
                     step2: {
@@ -543,7 +543,7 @@ module.exports = {
                     },
                     step3: {
                         title: "3. Sign Up",
-                        subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta",
+                        subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta.",
                         subSteps: {
                             a: "Tocá el botón \"Sign Up\".",
                             b: "Ingresá el siguiente código \"9CD4CD95\" y toca el botón \"next\".",
@@ -553,12 +553,12 @@ module.exports = {
                     },
                     step4: {
                         title: "4. Linkeo de tu cuenta de Facebook",
-                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tu muro de Facebook, es necesario que linkees tu cuenta",
+                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tu muro de Facebook, es necesario que linkees tu cuenta.",
                         subSteps: {
                             a: "Toca el botón de Facebook",
                             b: "Desplazate hasta el final de la pantalla y tocá continuar",
                             c: "Ingresa tu mail y password que usar para ingresar a Facebook",
-                            d: "Si la aplicación te pide que ingreses un código de validación, el mismo lo encontrarás en tu bandeja de entrada del mail utilizado. Copialo y pagalo en el campo disponible"
+                            d: "Si la aplicación te pide que ingreses un código de validación, el mismo lo encontrarás en tu bandeja de entrada del mail utilizado. Copialo y pegalo en el campo disponible"
                         }
                     },
                     step5: {
@@ -598,9 +598,9 @@ module.exports = {
                         subtitle: "Usamos la app \"Expo Go\" para permitirte ser parte del programa de Beta Testing antes de publicarla oficialmente en el Play Store.",
                         subSteps: {
                             a: "Usar el siguiente enlace  ",
-                            b: "También poder abrir el Play Store y buscar la app 'Expo'.",
+                            b: "También podes abrir el Play Store y buscar la app 'Expo'.",
                             c: "Instalarla y Abrirla.",
-                            d: "Tocar \"Got it\" si el mensaje aparece el siguiente \"Hello there, friend\"."
+                            d: "Tocar \"Got it\" si aparece el siguiente mensaje: \"Hello there, friend\"."
                         }
                     },
                     step2: {
@@ -613,7 +613,7 @@ module.exports = {
                     },
                     step3: {
                         title: "3. Sign Up",
-                        subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta",
+                        subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta.",
                         subSteps: {
                             a: "Tocá el botón \"Sign Up\".",
                             b: "Ingresá el siguiente código \"9CD4CD95\" y tocá el botón \"next\".",
@@ -623,12 +623,12 @@ module.exports = {
                     },
                     step4: {
                         title: "4. Linkeo de tu cuenta de Facebook",
-                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tu muro de Facebook, es necesario que linkees tu cuenta",
+                        subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tu muro de Facebook, es necesario que linkees tu cuenta.",
                         subSteps: {
                             a: "Toca el botón de Facebook.",
                             b: "Desplazate hasta el final de la pantalla y tocá continuar.",
                             c: "Ingresa tu mail y password que usar para ingresar a Facebook.",
-                            d: "Si la aplicación te pide que ingreses un código de validación, el mismo lo encontrarás en tu bandeja de entrada del mail utilizado. Copialo y pagalo en el campo disponible."
+                            d: "Si la aplicación te pide que ingreses un código de validación, el mismo lo encontrarás en tu bandeja de entrada del mail utilizado. Copialo y pegalo en el campo disponible."
                         }
                     },
                     step5: {
