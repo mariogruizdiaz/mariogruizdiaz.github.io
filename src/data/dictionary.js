@@ -193,7 +193,18 @@ module.exports = {
                         
                     },
                     step1: {
-                        title: "1. Install Expo Go from Apple Store",
+                        title: "1. Create an account in Expo ",
+                        subtitle: "",
+                        subSteps: {
+                            a: "Go to ",
+                            b: "Create an account by using a valid email",
+                            c: "Now, you should receive a new email from 'Expo Support' with the subject 'Welcome to Expo!'",
+                            d: "Open it and click on 'Verify your email' link",
+                            e: "Expo will redirect you to the web site. Well done!!! "
+                        }
+                    },
+                    step2: {
+                        title: "2. Install Expo Go from Apple Store",
                         subtitle: "We are usgin Expo Go to let you start tesging Adme app before launching it to the Apple Store.",
                         subSteps: {
                             a: "Open the Apple Store.",
@@ -202,16 +213,27 @@ module.exports = {
                             d: "Press \"Got it\" if the \"Hello there, friend\" message pops up."
                         }
                     },
-                    step2: {
-                        title: "2. Install Adme app",
+                    step3: {
+                        title: "3. Request permission to Download Adme ",
+                        subtitle: "",
+                        subSteps: {
+                            a: "Contact Adme support to request access to the email you used at step 1",
+                            b: "Once, Adme support notice you that you had granted access, look for an new email from Expo with the subject 'Welcome to marioruizdiaz'",
+                            c: "Enter to the email and press the button 'Join marioruizdiaz'",
+                            d: "Press 'Log in to Continue' button",
+                            e: "'Log in' by using the email and password you chose in step 1"
+                        }
+                    },
+                    step4: {
+                        title: "4. Install Adme app",
                         subtitle: "We are usgin Expo Go to let you start tesging Adme app before launching it to the Apple Store.",
                         subSteps: {
                             a: "It is time to install it...",
                             b: "Then press 'Open in  Expo Go' button."
                         }
                     },
-                    step3: {
-                        title: "3. Sign Up",
+                    step5: {
+                        title: "5. Sign Up",
                         subtitle: "Since this is the first time you are going to use Adme, it required to create an user account",
                         subSteps: {
                             a: "Touch the \"Sign Up\" button.",
@@ -220,8 +242,8 @@ module.exports = {
                             d: "Insert a password for Adme."
                         }
                     },
-                    step4: {
-                        title: "4. Link your Facebook account",
+                    step6: {
+                        title: "6. Link your Facebook account",
                         subtitle: "In order to start posting in your Facebook account, it is needed to link your account",
                         subSteps: {
                             a: "Touch the Facebook switch.",
@@ -230,8 +252,8 @@ module.exports = {
                             d: "If the application required a verification code, please take a look your email inbox to copy it from there and paste here."
                         }
                     },
-                    step5: {
-                        title: "5. Basic information",
+                    step7: {
+                        title: "7. Basic information",
                         subtitle: "In order to let you get Advertising Campaign according to your preferences, it is needed to complete the following info.",
                         subSteps: {
                             a: "Fill the Categories of interest, Gender, Country, State and City.",
@@ -240,8 +262,8 @@ module.exports = {
                             d: ""
                         }
                     },
-                    step6: {
-                        title: "6. Congrats!",
+                    step8: {
+                        title: "8. Congrats!",
                         subtitle: "You are ready to start making money with Adme!",
                         subSteps: {
                             a: "",
@@ -524,7 +546,18 @@ module.exports = {
                         
                     },
                     step1: {
-                        title: "1. Instalar la app Expo Go desde el Apple Store",
+                        title: "1. Crea una cuenta en Expo",
+                        subtitle: "",
+                        subSteps: {
+                            a: "Ingresa a ",
+                            b: "Crea una cuenta usando un e-mail válido",
+                            c: "Recibirás un e-mail de 'Expo Support' con el asunto 'Welcome to Expo!'",
+                            d: "Abrilo y clickeá el link 'Verify your email'",
+                            e: "Expo te redireccionará a la web. Excelente!!! "
+                        }
+                    },
+                    step2: {
+                        title: "2. Instalar la app Expo Go desde el Apple Store",
                         subtitle: "Usamos la app \"Expo Go\" para permitirte ser parte del programa de Beta Testing antes de publicarla oficialmente en el Apple Store.",
                         subSteps: {
                             a: "Usar el siguiente enlace  ",
@@ -533,16 +566,27 @@ module.exports = {
                             d: "Tocar \"Got it\" si aparece el siguiente mensaje: \"Hello there, friend\"."
                         }
                     },
-                    step2: {
-                        title: "2. Instalar la app de Adme",
+                    step3: {
+                        title: "3. Solicitá acceso para descargar Adme. ",
+                        subtitle: "",
+                        subSteps: {
+                            a: "Contactá al soporte de Adme y solicitá acceso para el e-mail que usaste en el paso 1",
+                            b: "Luego, el soporte de Adme te informará que ya tienes acceso. Busca un nuevo e-mail de Expo con el asunto 'Welcome to marioruizdiaz'",
+                            c: "Abrilo y clickeá el botón 'Join marioruizdiaz'",
+                            d: "Presiona el botón 'Log in to Continue'",
+                            e: "Hacé 'Log in' usando el e-mail y password elegidos en el paso 1"
+                        }
+                    },
+                    step4: {
+                        title: "4. Instalar la app de Adme",
                         subtitle: "Teniendo Expo Go instalada, ya podés instalar Adme",
                         subSteps: {
                             a: "Llegó el momento de instalarla...",
                             b: "Luego presiona el botón 'Open in  Expo Go'."
                         }
                     },
-                    step3: {
-                        title: "3. Sign Up",
+                    step5: {
+                        title: "5. Sign Up",
                         subtitle: "Como es la primera vez que vas a usar Adme, es necesario crear una cuenta.",
                         subSteps: {
                             a: "Tocá el botón \"Sign Up\".",
@@ -551,8 +595,8 @@ module.exports = {
                             d: "Ingresa una password para Adme."
                         }
                     },
-                    step4: {
-                        title: "4. Linkeo de tu cuenta de Facebook",
+                    step6: {
+                        title: "6. Linkeo de tu cuenta de Facebook",
                         subtitle: "Con el objetivo de permitirle a Adme que cree contenido en tu muro de Facebook, es necesario que linkees tu cuenta.",
                         subSteps: {
                             a: "Toca el botón de Facebook",
@@ -561,8 +605,8 @@ module.exports = {
                             d: "Si la aplicación te pide que ingreses un código de validación, el mismo lo encontrarás en tu bandeja de entrada del mail utilizado. Copialo y pegalo en el campo disponible"
                         }
                     },
-                    step5: {
-                        title: "5. Información Básica",
+                    step7: {
+                        title: "7. Información Básica",
                         subtitle: "Con el objetivo de hacerte llegar campañas publicitarias específicas a tus intereses, es necesario que completes la siguiente información",
                         subSteps: {
                             a: "Completar los campos: Categories of interest, Gender, Country, State and City.",
@@ -571,8 +615,8 @@ module.exports = {
                             d: ""
                         }
                     },
-                    step6: {
-                        title: "6. Felicitaciones!",
+                    step8: {
+                        title: "8. Felicitaciones!",
                         subtitle: "Ya estás listo para comenzar a ganar dinero con Adme!",
                         subSteps: {
                             a: "",
