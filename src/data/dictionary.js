@@ -592,7 +592,7 @@ module.exports = {
                             a: "Tocá el botón \"Sign Up\".",
                             b: "Ingresá el siguiente código \"9CD4CD95\" y toca el botón \"next\".",
                             c: "Define un e-mail.",
-                            d: "Ingresa una password para Adme."
+                            d: "Ingresa una password para Adme. (Min. 6 caracteres. Debe contener al menos una letra mayúscula, una minúscula y hasta dos números consecutivos)" 
                         }
                     },
                     step6: {
@@ -662,7 +662,7 @@ module.exports = {
                             a: "Tocá el botón \"Sign Up\".",
                             b: "Ingresá el siguiente código \"9CD4CD95\" y tocá el botón \"next\".",
                             c: "Define un e-mail.",
-                            d: "Ingresa una password para Adme."
+                            d: "Ingresa una password para Adme. (Min. 6 caracteres. Debe contener al menos una letra mayúscula, una minúscula y hasta dos números consecutivos)"
                         }
                     },
                     step4: {
