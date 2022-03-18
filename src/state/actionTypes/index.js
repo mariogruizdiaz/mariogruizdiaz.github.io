@@ -1,0 +1,8 @@
+
+
+export const actionTypes = {
+    LOGIN: "LOGIN",
+    LOGIN_SUCCESS: "LOGIN_SUCCESS",
+    LOGIN_UNSUCCESS: "LOGIN_UNSUCCESS",
+    LOGIN_FAIL: "LOGIN_FAIL",
+};
