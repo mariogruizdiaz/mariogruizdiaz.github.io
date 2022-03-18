@@ -1,4 +1,4 @@
-import { put, takeLatest, takeEvery } from "redux-saga/effects";
+import { put, takeLatest } from "redux-saga/effects";
 
 import * as actionTypes from "../actionTypes";
 import admeApi from "../APIs/adme";
@@ -32,39 +32,9 @@ function* genericQuery(action) {
     }
 }
 
-const genericSubscriptionResolver = function* genericResolver(action) {
-    const command = yield admeApi.genericSubscriptionCommand(action);
-    try {
-        yield command.subscriber(action, command);
-    } catch (e) {
-        console.log(`Error executing ${action.type}. Command: ${JSON.stringify(command)}`, e);
-        yield put(command.onFailure({errors: JSON.stringify(e)}));
-    }
-};
-
-const genericUnsubscriptionResolver = function* genericResolver(action) {
-    const command = yield admeApi.genericUnsubscriptionCommand(action);
-    try {
-        yield command.unsubscriber(action, command);
-    } catch (e) {
-        console.log(`Error executing ${action.type}. Command: ${JSON.stringify(command)}`, e);
-        yield put(command.onFailure({errors: JSON.stringify(e)}));
-    }
-};
-
-const UnsubscriptionAllResolver = function* genericResolver(action) {
-    const command = yield admeApi.genericUnsubscriptionAllCommand(action);
-    try {
-        yield command.unsubscriber(action, command);
-    } catch (e) {
-        console.log(`Error executing ${action.type}. Command: ${JSON.stringify(command)}`, e);
-        yield put(command.onFailure({errors: JSON.stringify(e)}));
-    }
-};
-
 
 export default function* userIdentity() {
-    yield takeLatest(actionTypes.VALIDATE_TOKEN, genericMutation);
-    yield takeLatest(actionTypes.FETCH_CATEGORIES, genericQuery);
+    // yield takeLatest(actionTypes.VALIDATE_TOKEN, genericMutation);
+    // yield takeLatest(actionTypes.FETCH_CATEGORIES, genericQuery);
     
 }

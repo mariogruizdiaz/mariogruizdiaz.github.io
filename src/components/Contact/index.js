@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { submitContact } from "../../actions/index";
-import _data from "../../data";
+import _data from "../../state/data";
 
 class Contact extends Component {
   constructor(props) {

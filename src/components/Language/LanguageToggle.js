@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { SET_LANGUAGE } from "../../constants/types";
+import { actionTypes } from "../../state/actionTypes";
 import ReactLanguageSelect from 'react-languages-select';
 import 'react-languages-select/css/react-languages-select.css';
 
@@ -23,7 +23,7 @@ const LanguageToggle = props => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    setLanguage: language => dispatch({ type: SET_LANGUAGE, language })
+    setLanguage: language => dispatch({ type: actionTypes.SET_LANGUAGE, language })
  });
  const mapStateToProps = state => {
     return { language: state.language };

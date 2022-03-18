@@ -1,5 +1,5 @@
 import React from "react";
-import _data from "../../data";
+import _data from "../../state/data";
 
 export default class Pricing extends React.Component {
   constructor(props) {

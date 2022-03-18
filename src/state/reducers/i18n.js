@@ -1,5 +1,5 @@
-import { SET_LANGUAGE } from '../constants/types.js';
 import dictionary from '../data/dictionary';
+import { actionTypes } from "../actionTypes";
 
 const defaulState = {
     language: "es",
@@ -8,7 +8,7 @@ const defaulState = {
 
 export default function languageReducer(state = defaulState, action) {
     switch (action.type) {
-       case SET_LANGUAGE:
+       case actionTypes.SET_LANGUAGE:
           let x = {
               ...state,
               language: action.language,
