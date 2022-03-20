@@ -1,6 +1,5 @@
 import { genericResolver} from "./genericResolver";
 import { consecuentActionsByAction } from "../../actions";
-import * as globalModels from "influencers-models";
 
 import { actionTypes} from "../../actionTypes";
 

@@ -1,10 +1,11 @@
 import { actionTypes } from "../actionTypes";
+import { commonStatuses } from "../models/common";
   
   const initialState = {
     api: {
       host: null,
       port: null,
-      fetchingStatus: "none"
+      fetchingStatus: commonStatuses.none
     }
   };
   
@@ -15,7 +16,7 @@ import { actionTypes } from "../actionTypes";
           ...state,
           api: {
             ...state.api,
-            fetchingStatus: "fetching"
+            fetchingStatus: commonStatuses.loading
           }
         };
       }
@@ -25,7 +26,7 @@ import { actionTypes } from "../actionTypes";
           api: {
             host: action.payload.data.host,
             port: action.payload.data.port,
-            fetchingStatus: "fetched"
+            fetchingStatus: commonStatuses.loaded
           }
         };
       }
@@ -35,7 +36,7 @@ import { actionTypes } from "../actionTypes";
           ...state,
           api: {
             ...state.api,
-            fetchingStatus: "failed"
+            fetchingStatus: commonStatuses.failed
           }
         };
       }

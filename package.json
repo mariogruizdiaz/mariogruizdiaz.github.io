@@ -11,6 +11,7 @@
     "graphql-request": "^4.1.0",
     "influencers-models": "^1.1.75",
     "jquery": "^3.5.1",
+    "moment": "^2.29.1",
     "popper.js": "^1.16.1",
     "react-languages-select": "^1.0.20",
     "redux-saga": "^1.1.3"

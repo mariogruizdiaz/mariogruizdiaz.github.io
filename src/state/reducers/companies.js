@@ -6,25 +6,25 @@ const initialState = {
     companies: {
         items: [],
         pageIndex: -1,
-        status: commonStatuses.none,
-        statusDescription: commonStatusesDescriptions[commonStatuses.none],
+        fetchStatus: commonStatuses.none,
+        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
     },
     selectedCompany: {
-        status: commonStatuses.none,
-        statusDescription: commonStatusesDescriptions[commonStatuses.none],
+        fetchStatus: commonStatuses.none,
+        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
         campaigns: {
             items: [],
             pageIndex: -1,
-            status: commonStatuses.none,
-            statusDescription: commonStatusesDescriptions[commonStatuses.none],
+            fetchStatus: commonStatuses.none,
+            fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
         },
     },
     selectedCampaign: {
         advertisements: {
             items: [],
             pageIndex: -1,
-            status: commonStatuses.none,
-            statusDescription: commonStatusesDescriptions[commonStatuses.none],
+            fetchStatus: commonStatuses.none,
+            fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
         },
     }
 };
@@ -36,8 +36,8 @@ export default (state = initialState, action) => {
                 ...initialState,
                 companies: {
                     ...initialState.companies,
-                    status: commonStatuses.loading,
-                    statusDescription: commonStatusesDescriptions[commonStatuses.loading],
+                    fetchStatus: commonStatuses.loading,
+                    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
                 }
             };
         }
@@ -47,8 +47,8 @@ export default (state = initialState, action) => {
                 companies: {
                     ...state.companies,
                     items: action.payload.data,
-                    status: commonStatuses.loaded,
-                    statusDescription: commonStatusesDescriptions[commonStatuses.loaded],
+                    fetchStatus: commonStatuses.loaded,
+                    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
                 },
             };
         }
@@ -59,8 +59,8 @@ export default (state = initialState, action) => {
                 companies: {
                     items: [],
                     pageIndex: -1,
-                    status: commonStatuses.failed,
-                    statusDescription: commonStatusesDescriptions[commonStatuses.failed],
+                    fetchStatus: commonStatuses.failed,
+                    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
 
                 }
             };
@@ -70,22 +70,27 @@ export default (state = initialState, action) => {
                 ...state,
                 selectedCompany: {
                     ...state.selectedCompany,
-                    status: commonStatuses.loading,
-                    statusDescription: commonStatusesDescriptions[commonStatuses.loading],
+                    fetchStatus: commonStatuses.loading,
+                    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
 
                 }
             };
         }
         case actionTypes.FETCH_COMPANY_SUCCESS: {
-            return {
-                ...state,
-                selectedCompany: {
-                    ...state.selectedCompany,
-                    ...action.payload.data,
-                    status: commonStatuses.loaded,
-                    statusDescription: commonStatusesDescriptions[commonStatuses.loaded],
-                },
-            };
+            if (action.payload.data && action.payload.data.length === 1) {
+                return {
+                    ...state,
+                    selectedCompany: {
+                        ...state.selectedCompany,
+                        ...action.payload.data[0],
+                        fetchStatus: commonStatuses.loaded,
+                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
+                    },
+                };
+            } else {
+                return state;
+            }
+
         }
         case actionTypes.FETCH_COMPANY_FAIL:
         case actionTypes.FETCH_COMPANY_UNSUCCESS: {
@@ -93,8 +98,8 @@ export default (state = initialState, action) => {
                 ...state,
                 selectedCompany: {
                     ...state.selectedCompany,
-                    status: commonStatuses.failed,
-                    statusDescription: commonStatusesDescriptions[commonStatuses.failed],
+                    fetchStatus: commonStatuses.failed,
+                    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
                 }
             };
         }
@@ -106,8 +111,8 @@ export default (state = initialState, action) => {
                     campaigns: {
                         items: [],
                         pageIndex: -1,
-                        status: commonStatuses.loading,
-                        statusDescription: commonStatusesDescriptions[commonStatuses.loading],
+                        fetchStatus: commonStatuses.loading,
+                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
                     }
                 }
             };
@@ -120,8 +125,8 @@ export default (state = initialState, action) => {
                     campaigns: {
                         items: action.payload.data,
                         pageIndex: -1,
-                        status: commonStatuses.loaded,
-                        statusDescription: commonStatusesDescriptions[commonStatuses.loaded],
+                        fetchStatus: commonStatuses.loaded,
+                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
                     }
                 }
             };
@@ -135,8 +140,8 @@ export default (state = initialState, action) => {
                     campaigns: {
                         items: [],
                         pageIndex: -1,
-                        status: commonStatuses.failed,
-                        statusDescription: commonStatusesDescriptions[commonStatuses.failed],
+                        fetchStatus: commonStatuses.failed,
+                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
                     }
                 }
             };
@@ -145,12 +150,12 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 selectedCampaign: {
-                    ...action.payload.data,
+                    ...action.payload,
                     advertisements: {
                         items: [],
                         pageIndex: -1,
-                        status: commonStatuses.loaded,
-                        statusDescription: commonStatusesDescriptions[commonStatuses.loaded],
+                        fetchStatus: commonStatuses.none,
+                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
                     }
                 }
             };
@@ -163,8 +168,8 @@ export default (state = initialState, action) => {
                     advertisements: {
                         items: [],
                         pageIndex: -1,
-                        status: commonStatuses.loading,
-                        statusDescription: commonStatusesDescriptions[commonStatuses.loading],
+                        fetchStatus: commonStatuses.loading,
+                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
                     }
                 }
             };
@@ -177,8 +182,8 @@ export default (state = initialState, action) => {
                     advertisements: {
                         items: action.payload.data,
                         pageIndex: -1,
-                        status: commonStatuses.loaded,
-                        statusDescription: commonStatusesDescriptions[commonStatuses.loaded],
+                        fetchStatus: commonStatuses.loaded,
+                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
                     }
                 }
             };
@@ -192,8 +197,8 @@ export default (state = initialState, action) => {
                     advertisements: {
                         items: [],
                         pageIndex: -1,
-                        status: commonStatuses.failed,
-                        statusDescription: commonStatusesDescriptions[commonStatuses.failed],
+                        fetchStatus: commonStatuses.failed,
+                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
                     }
                 }
             };
@@ -218,8 +223,8 @@ export default (state = initialState, action) => {
                                     posts: {
                                         items: [],
                                         pageIndex: -1,
-                                        status: commonStatuses.loading,
-                                        statusDescription: commonStatusesDescriptions[commonStatuses.loading],
+                                        fetchStatus: commonStatuses.loading,
+                                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
 
                                     }
                                 };
@@ -251,9 +256,9 @@ export default (state = initialState, action) => {
                                         posts: {
                                             items: action.payload.data,
                                             pageIndex: -1,
-                                            status: commonStatuses.loaded,
-                                            statusDescription: commonStatusesDescriptions[commonStatuses.loaded],
-    
+                                            fetchStatus: commonStatuses.loaded,
+                                            fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
+
                                         }
                                     };
                                 }
@@ -288,8 +293,8 @@ export default (state = initialState, action) => {
                                     posts: {
                                         items: [],
                                         pageIndex: -1,
-                                        status: commonStatuses.failed,
-                                        statusDescription: commonStatusesDescriptions[commonStatuses.failed],
+                                        fetchStatus: commonStatuses.failed,
+                                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
 
                                     }
                                 };

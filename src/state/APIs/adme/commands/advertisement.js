@@ -1,57 +1,12 @@
-// @flow
-const createAdvertisement = `
-mutation createAdvertisement(
-    $campaignId: ID
-    $caption: String
-    $personId: ID!
-    $multimediaUri: String
-    $taggedPeople: [inputTaggedPeopleType],
-    $socialMediaTarget: [PlatformTypes]!
-    $bannerIncluded: Boolean
-    $watermarkIncluded: Boolean
-    $linkIncluded: Boolean
-    $mentionToCompanyIncluded: Boolean
-    $hashtagIncluded: Boolean,
-    $mentionToOtherIncluded: Boolean
-    $productUsageIncluded: Boolean
-    $productUsageOficialIncluded: Boolean
-    $sponsored: Boolean!
-){
-  createAdvertisement(
-    campaignId: $campaignId,
-    caption: $caption,
-    personId:$personId,
-    multimediaUri:$multimediaUri,
-    taggedPeople: $taggedPeople,
-    socialMediaTarget: $socialMediaTarget,
-    bannerIncluded: $bannerIncluded,
-    watermarkIncluded: $watermarkIncluded,
-    linkIncluded: $linkIncluded,
-    mentionToCompanyIncluded: $mentionToCompanyIncluded,
-    hashtagIncluded: $hashtagIncluded,
-    mentionToOtherIncluded: $mentionToOtherIncluded,
-    productUsageIncluded: $productUsageIncluded,
-    productUsageOficialIncluded: $productUsageOficialIncluded,
-    sponsored: $sponsored,
-    status: WaitingForPlatformAudit
-  ){
-    success,
-    data,
-    error{
-      path,
-      message
-    }
-  }
-}
-`;
 
-const fetchNonSponsoredAdvertisements = `
-query spotAds(
-    $personId: ID!
+import * as globalModels from "influencers-models";
+
+const fetchAdvertisingByCampaignId = `
+query fetchAdvertisingByCampaignId(
+    $${globalModels.advertisementFields.campaignId}: ID!
 ){
   advertisements(
-    personId: $personId,
-    campaignType: null
+    ${globalModels.advertisementFields.campaignId}: $${globalModels.advertisementFields.campaignId}
   ){
     _id,
     campaignId,
@@ -84,6 +39,14 @@ query spotAds(
     moneyAvailable,
     moneyEarned,
     advertisementPrice,
+    resourceFramePrice,
+    resourceHashtagPrice,
+    resourceWebSitePrice,
+    resourceTagMentionMePrice,
+    resourceSealPrice,
+    resourceTagMentionPeoplePrice,
+    resourceProductUsagePrice,
+    resourceUsageOfficialPrice,
     socialMediaTarget,
     facebookStatus,
     instagramStatus,
@@ -136,331 +99,16 @@ query spotAds(
     instagramHashtagCount,
     instagramPrintCount,
     instagramCommentCount,
-    resourceFramePrice, 
-    resourceHashtagPrice, 
-    resourceWebSitePrice, 
-    resourceTagMentionMePrice, 
-    resourceSealPrice, 
-    resourceTagMentionPeoplePrice, 
-    resourceProductUsagePrice, 
-    resourceUsageOfficialPrice    
-  }
-}
-`;
-
-const fetchSpotAdvertisements = `
-query spotAds(
-    $personId: ID!
-){
-  advertisements(
-    personId: $personId,
-    campaignType: Spot
-  ){
-    _id,
-    campaignId,
-    campaignName,
-    companyName,
-    companyLogo,
-    campaignType,
-    companyId,
-    active,
-    multimediaUri,
-    sponsored,
-    caption,
-    status,
-    rejectionReason,
-    platformScore,
-    custumerScore,
-    creationDt,
-    bannerIncluded,
-    taggedPeople{username},
-    watermarkIncluded,
-    linkIncluded,
-    mentionToCompanyIncluded,
-    hashtagIncluded,
-    mentionToOtherIncluded,
-    productUsageIncluded,
-    productUsageOficialIncluded,
-    engagementVelocityExpected,
-    engagementVelocityReal,
-    budgetFreezed,
-    moneyAvailable,
-    moneyEarned,
-    advertisementPrice,
-    resourceFramePrice,
-    resourceHashtagPrice,
-    resourceWebSitePrice,
-    resourceTagMentionMePrice,
-    resourceSealPrice,
-    resourceTagMentionPeoplePrice,
-    resourceProductUsagePrice,
-    resourceUsageOfficialPrice,
-    socialMediaTarget,
-    facebookStatus,
-    instagramStatus,
-    twitterStatus,
-    tagPrice,
-    tagCount,
-    likePrice,
-    likeCount,
-    sharedPrice,
-    sharedCount,
-    linkPrice,
-    linkCount,
-    printPrice,
-    printCount,
-    mentionPrice,
-    mentionCount,
-    hashtagPrice,
-    hashtagCount,
-    commentPrice,
-    commentCount,
-    notSponsoredTagCount,
-    notSponsoredLikeCount,
-    notSponsoredSharedCount,
-    notSponsoredLinkCount,
-    notSponsoredPrintCount,
-    notSponsoredMentionCount,
-    notSponsoredHashtagCount,
-    notSponsoredCommentCount,
-    facebookLikeCount,
-    facebookLinkCount,
-    facebookTagCount,
-    facebookSharedCount,
-    facebookMentionCount,
-    facebookHashtagCount,
-    facebookPrintCount,
-    facebookCommentCount,
-    twitterLikeCount,
-    twitterLinkCount,
-    twitterTagCount,
-    twitterSharedCount,
-    twitterMentionCount,
-    twitterHashtagCount,
-    twitterPrintCount,
-    twitterCommentCount,
-    instagramLikeCount,
-    instagramLinkCount,
-    instagramTagCount,
-    instagramSharedCount,
-    instagramMentionCount,
-    instagramHashtagCount,
-    instagramPrintCount,
-    instagramCommentCount
-  }
-}
-`;
-
-const fetchSponsorshipAdvertisements = `
-query spotAds(
-    $personId: ID!
-){
-  advertisements(
-    personId: $personId,
-    campaignType: Sponsorship
-  ){
-    _id,
-    campaignId,
-    campaignName,
-    companyName,
-    companyLogo,
-    campaignType,
-    companyId,
-    active,
-    multimediaUri,
-    sponsored,
-    caption,
-    status,
-    rejectionReason,
-    platformScore,
-    custumerScore,
-    creationDt,
-    bannerIncluded,
-    taggedPeople{username},
-    watermarkIncluded,
-    linkIncluded,
-    mentionToCompanyIncluded,
-    hashtagIncluded,
-    mentionToOtherIncluded,
-    productUsageIncluded,
-    productUsageOficialIncluded,
-    engagementVelocityExpected,
-    engagementVelocityReal,
-    budgetFreezed,
-    moneyAvailable,
-    moneyEarned,
-    advertisementPrice,
-    resourceFramePrice,
-    resourceHashtagPrice,
-    resourceWebSitePrice,
-    resourceTagMentionMePrice,
-    resourceSealPrice,
-    resourceTagMentionPeoplePrice,
-    resourceProductUsagePrice,
-    resourceUsageOfficialPrice,
-    socialMediaTarget,
-    facebookStatus,
-    instagramStatus,
-    twitterStatus,
-    tagPrice,
-    tagCount,
-    likePrice,
-    likeCount,
-    sharedPrice,
-    sharedCount,
-    linkPrice,
-    linkCount,
-    printPrice,
-    printCount,
-    mentionPrice,
-    mentionCount,
-    hashtagPrice,
-    hashtagCount,
-    commentPrice,
-    commentCount,
-    notSponsoredTagCount,
-    notSponsoredLikeCount,
-    notSponsoredSharedCount,
-    notSponsoredLinkCount,
-    notSponsoredPrintCount,
-    notSponsoredMentionCount,
-    notSponsoredHashtagCount,
-    notSponsoredCommentCount,
-    facebookLikeCount,
-    facebookLinkCount,
-    facebookTagCount,
-    facebookSharedCount,
-    facebookMentionCount,
-    facebookHashtagCount,
-    facebookPrintCount,
-    facebookCommentCount,
-    twitterLikeCount,
-    twitterLinkCount,
-    twitterTagCount,
-    twitterSharedCount,
-    twitterMentionCount,
-    twitterHashtagCount,
-    twitterPrintCount,
-    twitterCommentCount,
-    instagramLikeCount,
-    instagramLinkCount,
-    instagramTagCount,
-    instagramSharedCount,
-    instagramMentionCount,
-    instagramHashtagCount,
-    instagramPrintCount,
-    instagramCommentCount
-  }
-}
-`;
-
-const fetchAdvertisingAdvertisements = `
-query spotAds(
-    $personId: ID!
-){
-  advertisements(
-    personId: $personId,
-    campaignType: Advertising
-  ){
-    _id,
-    campaignId,
-    campaignName,
-    companyName,
-    companyLogo,
-    campaignType,
-    companyId,
-    active,
-    multimediaUri,
-    sponsored,
-    caption,
-    status,
-    rejectionReason,
-    platformScore,
-    custumerScore,
-    creationDt,
-    bannerIncluded,
-    taggedPeople{username},
-    watermarkIncluded,
-    linkIncluded,
-    mentionToCompanyIncluded,
-    hashtagIncluded,
-    mentionToOtherIncluded,
-    productUsageIncluded,
-    productUsageOficialIncluded,
-    engagementVelocityExpected,
-    engagementVelocityReal,
-    budgetFreezed,
-    moneyAvailable,
-    moneyEarned,
-    advertisementPrice,
-    resourceFramePrice,
-    resourceHashtagPrice,
-    resourceWebSitePrice,
-    resourceTagMentionMePrice,
-    resourceSealPrice,
-    resourceTagMentionPeoplePrice,
-    resourceProductUsagePrice,
-    resourceUsageOfficialPrice,
-    socialMediaTarget,
-    facebookStatus,
-    instagramStatus,
-    twitterStatus,
-    tagPrice,
-    tagCount,
-    likePrice,
-    likeCount,
-    sharedPrice,
-    sharedCount,
-    linkPrice,
-    linkCount,
-    printPrice,
-    printCount,
-    mentionPrice,
-    mentionCount,
-    hashtagPrice,
-    hashtagCount,
-    commentPrice,
-    commentCount,
-    notSponsoredTagCount,
-    notSponsoredLikeCount,
-    notSponsoredSharedCount,
-    notSponsoredLinkCount,
-    notSponsoredPrintCount,
-    notSponsoredMentionCount,
-    notSponsoredHashtagCount,
-    notSponsoredCommentCount,
-    facebookLikeCount,
-    facebookLinkCount,
-    facebookTagCount,
-    facebookSharedCount,
-    facebookMentionCount,
-    facebookHashtagCount,
-    facebookPrintCount,
-    facebookCommentCount,
-    twitterLikeCount,
-    twitterLinkCount,
-    twitterTagCount,
-    twitterSharedCount,
-    twitterMentionCount,
-    twitterHashtagCount,
-    twitterPrintCount,
-    twitterCommentCount,
-    instagramLikeCount,
-    instagramLinkCount,
-    instagramTagCount,
-    instagramSharedCount,
-    instagramMentionCount,
-    instagramHashtagCount,
-    instagramPrintCount,
-    instagramCommentCount 
+    resources{
+      hashtag{
+        enabled,
+        value
+      }
+    }
   }
 }
 `;
 
 export default {
-    createAdvertisement,
-    fetchSpotAdvertisements,
-    fetchSponsorshipAdvertisements,
-    fetchAdvertisingAdvertisements,
-    fetchNonSponsoredAdvertisements
+    fetchAdvertisingByCampaignId
 };

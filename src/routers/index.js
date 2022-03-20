@@ -1,6 +1,11 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
+import { connect } from "react-redux";
+import { genericAction } from "../state/actions";
+import { bindActionCreators } from "redux";
+import { actionTypes } from "../state/actionTypes";
+
 // importing all the themes
 import Theme1 from "../themes/theme1";
 import Theme2 from "../themes/theme2";
@@ -23,6 +28,9 @@ import JulioAranda from "../themes/julioaranda";
 import Guides from "../themes/guides/guides";
 import iOSInstallGuide from "../themes/guides/iOSInstallGuide";
 import androidInstallGuide from "../themes/guides/androidInstallGuide";
+import Companies from "../themes/results/companies";
+import Company from "../themes/results/company";
+import Campaign from "../themes/results/campaign";
 import ComingSoonInvestors from "../themes/comingSoonInvestors";
 import ThankYou from "../themes/thankYou";
 import Team from "../themes/team";
@@ -37,7 +45,10 @@ import AboutUs from "../themes/aboutUs";
 import ContactUs from "../themes/contactUs";
 
 
-export default class Routes extends React.PureComponent {
+class Routes extends React.PureComponent {
+    componentDidMount() {
+        this.props.genericAction(actionTypes.FETCH_API_REFERENCES, {});
+    }
   render() {
     return (
       <React.Fragment>
@@ -49,6 +60,9 @@ export default class Routes extends React.PureComponent {
             <Route exact path="/guides" component={Guides} />
             <Route exact path="/iOSInstallGuide" component={iOSInstallGuide} />
             <Route exact path="/androidInstallGuide" component={androidInstallGuide} />
+            <Route exact path="/companies" component={Companies} />
+            <Route exact path="/companies/:companyId" component={Company} />
+            <Route exact path="/campaign" component={Campaign} />
             <Route exact path="/theme1" component={Theme1} />
             <Route exact path="/theme2" component={Theme2} />
             <Route exact path="/theme3" component={Theme3} />
@@ -83,3 +97,15 @@ export default class Routes extends React.PureComponent {
     );
   }
 }
+
+function mapStateToProps(state) {
+    return {};
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        genericAction: bindActionCreators(genericAction, dispatch)
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Routes);
