@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { postQuote } from "../../actions/index";
-import _data from "../../data";
+import _data from "../../state/data";
 
 class HeroSection extends React.Component {
   constructor(props) {

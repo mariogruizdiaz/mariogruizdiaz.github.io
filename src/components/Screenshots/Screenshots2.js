@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import _data from "../../data";
+import _data from "../../state/data";
 
 class Screenshots extends React.Component {
   constructor(props) {
