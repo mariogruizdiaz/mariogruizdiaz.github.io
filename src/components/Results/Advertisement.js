@@ -42,11 +42,12 @@ class Advertisement extends Component {
     };
 
     render() {
+        const hastRef = `https://www.facebook.com/hashtag/${this.props.hashtagValue.replace('#', '')}`;
         return (
             <React.Fragment>
                 <article className="post">
-                    <h2 className="post-title"><a href={`https://www.facebook.com/hashtag/${this.props.hashtagValue.replace('#', '')}`} target="_blank">{`${this.props.hashtagValue} `}</a><a>{this.props.caption}</a></h2>
-                    <div className="post-preview"><a><img src={this.props.multimediaUri} alt="post" /></a></div>
+                    <h2 className="post-title"><a href={hastRef} >{`${this.props.hashtagValue} `}</a>{this.props.caption}</h2>
+                    <div className="post-preview"><img src={this.props.multimediaUri} alt="post" /></div>
                     <div className="post-wrapper">
                         <div className="post-header">
                             <ul className="post-meta">
@@ -54,7 +55,7 @@ class Advertisement extends Component {
                                 {/* <li><a >{this.props.likeCount} Likes</a></li>
                                 <li><a >{this.props.commentCount} Comments</a></li> */}
                                 <li className="list-inline-item">
-                                    <a className="facebook" href={this.props.likeCount} target="_blank"><i className="fab fa-facebook-f"></i></a>
+                                    <a className="facebook" href={this.props.likeCount} ><i className="fab fa-facebook-f"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -75,7 +76,7 @@ class Advertisement extends Component {
                         {/* <div className="post-content">
                             <p>Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door. The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.</p>
                         </div> */}
-                        <div className="post-more pt-4 align-items-center d-flex"><a href="https://www.facebook.com" className="btn btn-brand-02" target="_blank">{this.props.dictionary.results.buttons.goToFacebook} <span className="ti-arrow-right"></span></a></div>
+                        <div className="post-more pt-4 align-items-center d-flex"><a href="https://www.facebook.com" className="btn btn-brand-02">{this.props.dictionary.results.buttons.goToFacebook} <span className="ti-arrow-right"></span></a></div>
                     </div>
                 </article>
             </React.Fragment>
