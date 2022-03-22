@@ -728,7 +728,7 @@ module.exports = {
         results: {
             company: {
                 hero: {
-                    subtitle: "Visualicacion de actividades y resultados en Adme"
+                    subtitle: "Visualización de actividades y resultados en Adme"
                 }
             },
             campaign: {
