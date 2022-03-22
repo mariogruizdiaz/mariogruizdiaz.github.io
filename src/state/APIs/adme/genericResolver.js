@@ -1,9 +1,9 @@
-import { select } from "redux-saga/effects";
+// import { select } from "redux-saga/effects";
 import { graphQL } from "../connectors";
 import { commandCollection } from "./commands";
 
 // const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
-const apiReferences = (state) => state.basics.api;
+// const apiReferences = (state) => state.basics.api;
 
 
 const genericResolver = function* genericResolver(action) {
