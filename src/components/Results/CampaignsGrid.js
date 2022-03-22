@@ -76,7 +76,7 @@ class CampaignsGrid extends Component {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h3 className="h5 mb-2 card-title"><a href="/#/iosInstallGuide">{campaignItem[globalModels.campaignFields.name]}</a></h3>
+                                                <h3 className="h5 mb-2 card-title"><a href="https://www.facebook.com" onClick={(e) => this.handleClick(e, campaignItem._id)} >{campaignItem[globalModels.campaignFields.name]}</a></h3>
                                                 <p className="card-text">{`${moment(campaignItem[globalModels.campaignFields.startDt]).format('l')} - ${moment(campaignItem[globalModels.campaignFields.endDt]).format('l')}`}</p>
                                                 <a href="https://www.facebook.com" onClick={(e) => this.handleClick(e, campaignItem._id)} className="detail-link">{this.props.dictionary.results.buttons.goToCampaign} <span className="ti-arrow-right"></span></a>
                                             </div>
