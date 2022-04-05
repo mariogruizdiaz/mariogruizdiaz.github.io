@@ -71,7 +71,7 @@ class CampaignsGrid extends Component {
                                                         <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{campaignItem[globalModels.campaignFields.likeCount]} </span>
                                                             Likes
                                                         </li>
-                                                        <li className="list-inline-item"><i className="fas fa-comment-alt mr-2"></i><span>{campaignItem[globalModels.campaignFields.likeCount]} </span>
+                                                        <li className="list-inline-item"><i className="fas fa-comment-alt mr-2"></i><span>{campaignItem[globalModels.campaignFields.commentCount]} </span>
                                                             Comments
                                                         </li>
                                                     </ul>
