@@ -2,14 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import LanguageToggle from "../Language/LanguageToggle";
 
-class Header extends React.Component {
+class headerInvestors extends React.Component {
   render() {
     return (
       <React.Fragment>
         <header className="header">
             <nav className="navbar navbar-expand-lg fixed-top bg-transparent">
                 <div className="container">
-                    <a className="navbar-brand" href="/#">
+                    <a className="navbar-brand" href="index.html">
                         <img src={this.props.isColorLogo && this.props.isColorLogo === true ? "assets/img/adme-logo-name.png" : "assets/img/adme-logo-name.png"}
                         alt="logo" className="img-fluid" />
                     </a>
@@ -20,12 +20,12 @@ class Header extends React.Component {
 
                     <div className="collapse navbar-collapse h-auto" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto menu">
-                            <li><a href="#about" className="page-scroll">{this.props.dictionary.header.menu.about}</a></li>
-                            <li><a href="#process" className="page-scroll">{this.props.dictionary.header.menu.process}</a></li>
+                            <li><a href={`${process.env.PUBLIC_URL}/`} className="page-scroll">{this.props.dictionary.header.menu.about}</a></li>
+                            {/* <li><a href="#process" className="page-scroll">{this.props.dictionary.header.menu.process}</a></li>
                             <li><a href="#features" className="page-scroll">{this.props.dictionary.header.menu.features}</a></li>
                             <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.brands}</a></li>
                             <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.agencies}</a></li>
-                            <li><a href={`${process.env.PUBLIC_URL}/#Investors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li>
+                            <li><a href={`${process.env.PUBLIC_URL}/#comingSoonInvestors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li> */}
                         </ul>
                         <LanguageToggle/>
                     </div>
@@ -41,4 +41,4 @@ class Header extends React.Component {
 
 export default connect(state => ({
     dictionary: state.i18n.dictionary
-}))(Header);
+}))(headerInvestors);

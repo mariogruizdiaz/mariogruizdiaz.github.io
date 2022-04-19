@@ -3,82 +3,61 @@ import { connect } from "react-redux";
 import _data from "../../state/data";
 
 class HeroSection extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hero: {}
-    };
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            hero: {}
+        };
+    }
 
-  componentDidMount() {
-    /**
-     * Your ajax will goes here to get data then call setState
-     */
+    componentDidMount() {
+        /**
+         * Your ajax will goes here to get data then call setState
+         */
 
-    this.setState({
-      hero: _data.hero
-    });
-  }
+        this.setState({
+            hero: _data.hero
+        });
+    }
 
-  render() {
-    return (
-      <React.Fragment>
-        <section className="position-relative overflow-hidden hero-section-3 ptb-100">
-            <div className="animated-shape-wrap">
-                <div className="animated-shape-item"></div>
-                <div className="animated-shape-item"></div>
-                <div className="animated-shape-item"></div>
-                <div className="animated-shape-item"></div>
-                <div className="animated-shape-item"></div>
-            </div>
-            <img src="assets/img/combined-shape.svg" alt="s" className="shape-img-2" />
-            <img src="assets/img/shape-1.svg" alt="group shape" width="100" className="img-fluid group-shape-1" />
-            <img src="assets/img/shape-2.svg" alt="group shape" width="60" className="img-fluid group-shape-2" />
-            <div className="container">
-                <div className="row align-items-center justify-content-between">
-                    <div className="col-md-6 col-lg-6">
-                        <div className="hero-content-left pt-5">
-                            <h1 className="font-weight-bold">Make Cool Landing Pages With Apdash</h1>
-                            <p className="lead">Conveniently generate multifunctional markets and B2C vortals. Uniquely enable
-                                inexpensive materials rather than sticky products.</p>
-                            <div className="action-btns mt-4">
-                                <ul className="list-inline">
-                                    <li className="list-inline-item">
-                                        <a href="/#" className="d-flex align-items-center app-download-btn btn btn-outline-brand-02 btn-rounded">
-                                            <span className="fab fa-apple icon-size-sm mr-3"></span>
-                                            <div className="download-text text-left">
-                                                <small>Download form</small>
-                                                <h5 className="mb-0">App Store</h5>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="list-inline-item">
-                                        <a href="/#" className="d-flex align-items-center app-download-btn btn btn-outline-brand-02 btn-rounded">
-                                            <span className="fab fa-google-play icon-size-sm mr-3"></span>
-                                            <div className="download-text text-left">
-                                                <small>Download form</small>
-                                                <h5 className="mb-0">Google Play</h5>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
+    render() {
+        return (
+            <React.Fragment>
+                <section className="ptb-100 bg-image overflow-hidden" image-overlay="8">
+                    <div className="hero-bottom-shape-two" style={{
+                        backgroundImage: "url(assets/img/wave-shap.svg)",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "bottom center",
+                    }}></div>
+                    <div className="effect-1 opacity-1">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 361.1 384.8" style={{ enableBackground: "new 0 0 361.1 384.8" }} className="injected-svg svg_img dark-color">
+                            <path d="M53.1,266.7C19.3,178-41,79.1,41.6,50.1S287.7-59.6,293.8,77.5c6.1,137.1,137.8,238,15.6,288.9 S86.8,355.4,53.1,266.7z"></path>
+                        </svg>
+                    </div>
+                    <div className="container">
+                        <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                            <div className="col-md-12 col-lg-6">
+                                <div className="hero-slider-content text-white py-5">
+                                    <h1 className="text-white">{this.props.dictionary.investors.hero.title}</h1>
+                                    <p className="lead">{this.props.dictionary.investors.hero.subtitle}</p>
+                                    <div className="video-promo-content my-5 pb-4">
+                                        <a href={this.props.dictionary.investors.hero.demoURL} className="popup-youtube video-play-icon text-center m-auto"><span className="ti-control-play"></span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-sm-6 col-lg-6">
+                                <div className="img-wrap">
+                                    <img src="assets/img/hero-image.svg" alt="app" className="img-fluid" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 col-lg-6">
-                        <div className="img-wrap">
-                            <img src="assets/img/hero-image.svg" alt="hero" className="img-fluid" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img src="assets/img/hero-bg-shape-4.svg" className="shape-image" alt="shape" />
-        </section>
-      </React.Fragment>
-    );
-  }
+                </section>
+            </React.Fragment>
+        );
+    }
 }
 
 export default connect(state => ({
-  state
+    dictionary: state.i18n.dictionary
 }))(HeroSection);
