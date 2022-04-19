@@ -8,7 +8,7 @@ import Hero from "../../components/Results/HeroSectionCompanyPage";
 import Breadcrumb from "../../components/Results/CompanyGridBreadcrumb";
 
 import CampaignsGrid from "../../components/Results/CampaignsGrid";
-import Footer from "../../components/Footer/FooterAdmeMobile";
+import FooterAdmeBrands from "../../components/Footer/FooterAdmeBrands";
 import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
 import { withRouter } from "react-router";
@@ -41,7 +41,7 @@ class company extends Component {
                     <Breadcrumb />
                     <CampaignsGrid />
                 </div>
-                <Footer withoutNewsletter={true} />
+                <FooterAdmeBrands withoutNewsletter={true} />
             </React.Fragment>
         );
     }
