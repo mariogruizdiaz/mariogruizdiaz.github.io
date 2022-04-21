@@ -12,36 +12,86 @@ import FooterAdmeBrands from "../../components/Footer/FooterAdmeBrands";
 import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
 import { withRouter } from "react-router";
+import Hero404 from "../../components/HeroSection/HeroSection404";
+import PreLoader from "../../components/Loaders/PreLoaders";
+import { commonStatuses } from "../../state/models/common";
 
 class company extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            companyIdValid: true
+        };
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
         if (this.props.match.params.companyId !== nextProps.match.params.companyId) {
-            this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: nextProps.match.params.companyId });
-            return false;
+            const companyId = this.props.match.params.companyId;
+            if (companyId !== undefined && companyId !== "undefined") {
+                this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: nextProps.match.params.companyId });
+                return false;
+            } else {
+                return true;
+            }
+
         }
 
         if (this.props.selectedCompany && this.props.selectedCompany[globalModels.companyFields._id] !== nextProps.selectedCompany[globalModels.companyFields._id]) {
             return true;
         }
 
-        return false;
+        return true;
 
     }
 
     componentDidMount() {
-        this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: this.props.match.params.companyId });
+        const companyId = this.props.match.params.companyId;
+        console.log('componentDidMount', companyId);
+        if (companyId !== undefined && companyId !== "undefined") {
+            this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: companyId });
+
+            if (!this.state.companyIdValid) this.setState({ companyIdValid: true });
+        } else {
+            if (this.state.companyIdValid) this.setState({ companyIdValid: false });
+        }
     }
     render() {
         return (
+
             <React.Fragment>
                 <HeaderTeam />
-                <div className="main">
-                    <Hero />
-                    <Breadcrumb />
-                    <CampaignsGrid />
-                </div>
-                <FooterAdmeBrands withoutNewsletter={true} />
+                {
+                    this.state.companyIdValid &&
+                    (
+                        this.props.selectedCompany && this.props.selectedCompany.fetchStatus === commonStatuses.loaded &&
+                        <div>
+                            <div className="main">
+                                <Hero />
+                                <Breadcrumb />
+                                <CampaignsGrid />
+                            </div>
+                            <FooterAdmeBrands withoutNewsletter={true} />
+                        </div>
+
+                    )
+                }
+                {
+                    this.state.companyIdValid &&
+                    (
+                        (!this.props.selectedCompany || this.props.selectedCompany.fetchStatus !== commonStatuses.loaded) &&
+                        <PreLoader
+                            id={1}
+                            withLogo={true}
+                        />
+
+                    )
+                }
+                {
+                    !this.state.companyIdValid &&
+                    <Hero404 />
+                }
+
             </React.Fragment>
         );
     }
