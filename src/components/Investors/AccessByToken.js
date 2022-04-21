@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { submitContact } from "../../actions/index";
 import _data from "../../state/data";
 
-class RequestToken extends Component {
+class AccessByToken extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -104,7 +104,8 @@ class RequestToken extends Component {
 
   message(error) {
     // const messageBox = document.querySelector('#contact .message-box');
-    const messageBox = document.querySelector('#message-box-request-token');
+    const messageBox = document.querySelector('#message-box-apply-token');
+    
     if (messageBox.classList.contains("d-none")) {
       messageBox.classList.remove("d-none");
     }
@@ -139,8 +140,27 @@ class RequestToken extends Component {
       <React.Fragment>
         {/* <section id="contact" className="contact-us-section"> */}
             {/* <div className="container"> */}
-                {/* <div className="row justify-content-around"> */}
-                    <div id="message-box-request-token" className="col-4 pb-3 mb-4 message-box d-none alert alert-success"></div>
+                <div className="row justify-content-around">
+                    <div id="message-box-apply-token" className="col-12 pb-3 mb-4 message-box d-none alert alert-success"></div>
+                    <div className="col-md-12 col-lg-5 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
+                        <div className="contact-us-form gray-light-bg rounded p-5">
+                            <h4>{this.props.dictionary.investors.privateDocuments.tokenApplyTitle}</h4>
+                            <form action="" method="POST" id="contactForm" className="contact-us-form" onSubmit={this.handleSubmit}>
+                                <div className="form-row">
+                                    <div className="col-12">
+                                        <div className="form-group">
+                                            <input type="text" className="form-control" name="name" value={this.state.name} onChange={e => this.handleFormValueChange("token", e)} placeholder={this.props.dictionary.investors.privateDocuments.tokenInputPlaceHolder} />
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-12 mt-3">
+                                        <button type="submit" className="btn btn-brand-02" id="btnContactUs" disabled={this.state.disableContactBtn} onClick={() => { this.changeBtnText(this.props.dictionary.investors.privateDocuments.tokenMessageInProgress); }}>
+                                        {this.props.dictionary.investors.privateDocuments.tokenButton}
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <div className="col-md-12 col-lg-5 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
                         <div className="contact-us-form gray-light-bg rounded p-5">
                             <h4>Ready to get started?</h4>
@@ -170,43 +190,7 @@ class RequestToken extends Component {
                             </form>
                         </div>
                     </div>
-                    {/* <div className="col-md-12 col-lg-6">
-                        <div className="contact-us-content">
-                            <h2>{this.state.contact.title}</h2>
-                            <p className="lead">{this.state.contact.description}</p>
-
-                            <a href="/#" className="btn btn-outline-brand-01 align-items-center">Get Directions <span className="ti-arrow-right pl-2"></span></a>
-
-                            <hr className="my-5" />
-
-                            <ul className="contact-info-list">
-                                <li className="d-flex pb-3">
-                                    <div className="contact-icon mr-3">
-                                        <span className={(this.state.contact.addressIcon) + " color-primary rounded-circle p-3"}></span>
-                                    </div>
-                                    <div className="contact-text">
-                                        <h5 className="mb-1">{this.state.contact.addressTitle}</h5>
-                                        <p>
-                                        {this.state.contact.address}
-                                        </p>
-                                    </div>
-                                </li>
-                                <li className="d-flex pb-3">
-                                    <div className="contact-icon mr-3">
-                                        <span className={(this.state.contact.emailIcon) + " color-primary rounded-circle p-3"}></span>
-                                    </div>
-                                    <div className="contact-text">
-                                        <h5 className="mb-1">{this.state.contact.emailTitle}</h5>
-                                        <p>
-                                        {this.state.contact.email}
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div> */}
-                {/* </div> */}
+                </div>
             {/* </div> */}
         {/* </section> */}
       </React.Fragment>
@@ -216,4 +200,4 @@ class RequestToken extends Component {
 
 export default connect(state => ({
     dictionary: state.i18n.dictionary
-}))(RequestToken);
+}))(AccessByToken);

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import RequestToken from "./RequestToken";
+import AccessByToken from "./AccessByToken";
 
 class PrivateDocuments extends React.Component {
     constructor(props) {
@@ -75,16 +75,11 @@ class PrivateDocuments extends React.Component {
                             </div>
 
                         }
-                        <RequestToken />
                         {
-                            !this.props.security.authenticated && <div className="col-12">
-                            <div className="support-cta text-center mt-5">
-                                <h5 className="mb-1"><span className="ti-headphone-alt color-primary mr-3"></span>We're Here to Help You
-                                </h5>
-                                <p>Have some questions? <a href="/#">Chat with us now</a>, or <a href="/#">send us an email</a> to
-                                    get in touch.</p>
+                            !this.props.security.authenticated &&
+                            <div className="row justify-content-around">
+                                <AccessByToken />
                             </div>
-                        </div>
                         }
 
                     </div>

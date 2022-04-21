@@ -2,7 +2,10 @@ module.exports = {
     en: {
         general: {
             downloadFrom: "Download From",
-            brandsLabel: "Brands"
+            brandsLabel: "Brands",
+            NotFoundTitle: "Sorry, something went wrong",
+            NotFoundSubtitle: "The page you are looking for might have been removed had its name changed or is temporarily unavailable.",
+            NotFoundbuttonText: "Go To Homepage"
         },
         header: {
             menu: {
@@ -449,6 +452,10 @@ module.exports = {
                     subtitle: "8 minutes demo to show how a Brand launches an Ad Campaing and a social media user makes money by sponsoring a related facebook post by using adme mobile app",
                     externalURL: ""
                 },
+                tokenApplyTitle: "Ready to get access?",
+                tokenInputPlaceHolder: "Enter token",
+                tokenButton: "Unlok Section",
+                tokenMessageInProgress: "Unlocking..."
             }
             
         }
@@ -456,7 +463,10 @@ module.exports = {
     es: {
         general: {
             downloadFrom: "Descargar desde",
-            brandsLabel: "Marcas"
+            brandsLabel: "Marcas",
+            NotFoundTitle: "Lo sentimos, algo salió mal",
+            NotFoundSubtitle: "La pagina que esta buscando fue removida ó está temporalmente inaccesible.",
+            NotFoundbuttonText: "Homepage"
         },
         header: {
             menu: {
@@ -902,6 +912,10 @@ module.exports = {
                     subtitle: "8 minutes demo to show how a Brand launches an Ad Campaing and a social media user makes money by sponsoring a related facebook post by using adme mobile app",
                     externalURL: ""
                 },
+                tokenApplyTitle: "¿Listo para acceder?",
+                tokenInputPlaceHolder: "Ingrese el token",
+                tokenButton: "Desbloquear",
+                tokenMessageInProgress: "Desbloqueando..."
             }
         }
     }
