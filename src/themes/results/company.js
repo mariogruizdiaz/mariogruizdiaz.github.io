@@ -13,7 +13,7 @@ import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
 import { withRouter } from "react-router";
 import Hero404 from "../../components/HeroSection/HeroSection404";
-import PreLoader from "../../components/Loaders/PreLoaders";
+import { Facebook } from 'react-content-loader';
 import { commonStatuses } from "../../state/models/common";
 
 class company extends Component {
@@ -47,7 +47,6 @@ class company extends Component {
 
     componentDidMount() {
         const companyId = this.props.match.params.companyId;
-        console.log('componentDidMount', companyId);
         if (companyId !== undefined && companyId !== "undefined") {
             this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: companyId });
 
@@ -59,40 +58,47 @@ class company extends Component {
     render() {
         return (
 
-            <React.Fragment>
-                <HeaderTeam />
+            <div>
                 {
                     this.state.companyIdValid &&
                     (
                         this.props.selectedCompany && this.props.selectedCompany.fetchStatus === commonStatuses.loaded &&
-                        <div>
-                            <div className="main">
-                                <Hero />
-                                <Breadcrumb />
-                                <CampaignsGrid />
+                        <React.Fragment>
+                            <HeaderTeam />
+                            <div>
+                                <div className="main">
+                                    <Hero />
+                                    <Breadcrumb />
+                                    <CampaignsGrid />
+                                </div>
+                                <FooterAdmeBrands withoutNewsletter={true} />
                             </div>
-                            <FooterAdmeBrands withoutNewsletter={true} />
-                        </div>
-
+                        </React.Fragment>
                     )
                 }
                 {
                     this.state.companyIdValid &&
                     (
                         (!this.props.selectedCompany || this.props.selectedCompany.fetchStatus !== commonStatuses.loaded) &&
-                        <PreLoader
-                            id={1}
-                            withLogo={true}
-                        />
-
+                        <React.Fragment>
+                            <HeaderTeam />
+                            <div>
+                                <div className="main">
+                                    <Facebook />
+                                </div>
+                            </div>
+                        </React.Fragment>
                     )
                 }
                 {
                     !this.state.companyIdValid &&
-                    <Hero404 />
+                    <React.Fragment>
+                        <HeaderTeam />
+                        <Hero404 />
+                    </React.Fragment>
                 }
 
-            </React.Fragment>
+            </div>
         );
     }
 }
@@ -100,7 +106,7 @@ class company extends Component {
 function mapStateToProps(state) {
     return {
         dictionary: state.i18n.dictionary,
-        selectedComany: state.companies.selectedCompany
+        selectedCompany: state.companies.selectedCompany
     };
 }
 
