@@ -38,7 +38,7 @@ class TeamMember extends React.Component {
                                         <p className="mt-3">{this.props.dictionary.team.gaston.techRoleDescription}</p>
                                         <ul className="list-inline social-list-default social-color icon-hover-top-bottom">
                                             <li className="list-inline-item">
-                                                <a className="linkedin" href="https://www.linkedin.com/in/gaston-ruiz-diaz-157366bb/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
+                                                <a className="linkedin" href="https://www.linkedin.com/in/gaston-ruiz-diaz-157366bb/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -53,7 +53,7 @@ class TeamMember extends React.Component {
                                         <p className="mt-3">{this.props.dictionary.team.mario.techRoleDescription}</p>
                                         <ul className="list-inline social-list-default social-color icon-hover-top-bottom">
                                             <li className="list-inline-item">
-                                                <a className="linkedin" href="https://www.linkedin.com/in/marioruizdiaz/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
+                                                <a className="linkedin" href="https://www.linkedin.com/in/marioruizdiaz/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>

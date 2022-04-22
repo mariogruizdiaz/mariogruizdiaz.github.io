@@ -1,8 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-import { commonStatuses } from "../../state/models/common";
+import ImageLoader from "../Loaders/ImageLoader";
 
 class HeroSectionCompanyPage extends React.Component {
     constructor(props) {
@@ -20,7 +18,6 @@ class HeroSectionCompanyPage extends React.Component {
     }
 
     render() {
-        console.log('pase', this.props.selectedCompany.fetchStatus);
         return (
             <React.Fragment>
                 <section className="page-header-section ptb-100 bg-image" image-overlay="8">
@@ -31,7 +28,7 @@ class HeroSectionCompanyPage extends React.Component {
                                     <div className="process-icon-item left-shape">
                                         <div className="d-flex align-items-center">
                                             <div className="process-icon mr-4">
-                                                <img src={this.props.selectedCompany.logo} alt="member" className="img-fluid rounded shadow-sm" />
+                                                <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="img-fluid rounded shadow-sm" secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
                                             </div>
                                             <div className="col-md-9 col-lg-7">
                                                 <div className="page-header-content text-white pt-4">

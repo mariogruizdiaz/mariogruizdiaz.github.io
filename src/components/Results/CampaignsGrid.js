@@ -6,6 +6,9 @@ import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
 import moment from "moment";
 import { Redirect } from "react-router-dom";
+import { commonStatuses } from "../../state/models/common";
+import { BulletList } from 'react-content-loader';
+import ImageLoader from "../Loaders/ImageLoader";
 
 class CampaignsGrid extends Component {
     constructor(props) {
@@ -32,6 +35,7 @@ class CampaignsGrid extends Component {
     }
 
     componentDidMount() {
+        this.props.genericAction(actionTypes.FETCH_CAMPAIGNS, { [globalModels.advertisementFields.companyId]: this.props.selectedCompany[globalModels.companyFields._id] });
 
     }
 
@@ -51,15 +55,18 @@ class CampaignsGrid extends Component {
         return (
             <React.Fragment>
                 <section className="our-blog-section ptb-100">
-                    <div className="container" id="main">
+                    {
+                        <div className="container" id="main">
                         <div className="row">
                             {
-                                this.props.selectedCompany && this.props.selectedCompany.campaigns &&
+                                this.props.selectedCompany && this.props.selectedCompany.campaigns.fetchStatus === commonStatuses.loaded &&
+                                // this.props.selectedCompany && this.props.selectedCompany.campaigns &&
                                 this.props.selectedCompany.campaigns.items.map((campaignItem, index) => (
                                     <div className="col-md-6 col-lg-4" key={campaignItem._id}>
                                         <div className="single-blog-card card gray-light-bg border-0 shadow-sm my-3">
                                             <div className="blog-img position-relative">
-                                                <img src={this.props.selectedCompany.logo} className="card-img-top" alt="blog" />
+                                                {/* <img src={this.props.selectedCompany.logo} className="card-img-top" alt="blog" /> */}
+                                                <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="card-img-top" secondaryColor="rgba(150, 41, 230, 1)" color="rgba(255, 255, 255, 1)"/>
                                                 <div className="meta-date">
                                                     <strong>{moment(campaignItem[globalModels.campaignFields.startDt]).format('MMM')}</strong>
                                                     <small>{moment(campaignItem[globalModels.campaignFields.startDt]).format('YYYY')}</small>
@@ -84,6 +91,10 @@ class CampaignsGrid extends Component {
                                     </div>
                                 ))
                             }
+                            {
+                                (!this.props.selectedCompany || this.props.selectedCompany.campaigns.fetchStatus !== commonStatuses.loaded)
+                                && <BulletList />
+                            }
                         </div>
 
                         <div className="row">
@@ -102,6 +113,9 @@ class CampaignsGrid extends Component {
                         </div>
 
                     </div>
+
+                    }
+                    
                 </section>
             </React.Fragment>
         );
