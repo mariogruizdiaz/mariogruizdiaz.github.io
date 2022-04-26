@@ -18,6 +18,7 @@ class HeroSectionCampaignPage extends React.Component {
     }
 
     render() {
+        console.log('pase');
         const likeCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + item[globalModels.advertisementFields.likeCount], 0);
         const commentCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + item[globalModels.advertisementFields.commentCount], 0);
         return (
