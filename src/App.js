@@ -3,8 +3,15 @@ import React from "react";
 import { Provider } from "react-redux";
 // import { composeWithDevTools } from "redux-devtools-extension";
 // import Apdash from "./reducers";
+import { store, persistor, sagaMiddleware } from './state/stores/store';
 import Routes from "./routers";
-import store from "./state/stores/store";
+// import store from "./state/stores/store";
+import { PersistGate } from 'redux-persist/integration/react';
+import mySaga from "./state/sagas";
+
+
+// then run the saga
+sagaMiddleware.run(mySaga);
 
 // create store
 // const store = createStore(
@@ -15,11 +22,14 @@ import store from "./state/stores/store";
 // );
 
 function App() {
-  return (
-    <Provider store={store}>
-      <Routes />
-    </Provider>
-  );
+    return (
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <Routes />
+            </PersistGate>
+            {/* <Routes /> */}
+        </Provider>
+    );
 }
 
 export default App;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ImageLoader.css";
 import { SpinnerDiamond } from 'spinners-react';
+import { contains } from "jquery";
 
 // Props: source, alt
 const ImageLoader = ({ source, alt, className, color, secondaryColor }) => {
@@ -10,13 +11,16 @@ const ImageLoader = ({ source, alt, className, color, secondaryColor }) => {
 
     // render code
     return (
-        <div>
+        <div style={{ width: "inherit", height: "inherit"}}>
             <img
                 className={className}
                 src={source}
                 alt={alt}
                 style={{
                     opacity: imageLoaded ? "1" : "0",
+                    objectFit: "scale-down",
+                    width: "inherit",
+                    height: "inherit"
                 }}
                 onLoad={() => setImageLoaded(true)}
             />
@@ -25,11 +29,16 @@ const ImageLoader = ({ source, alt, className, color, secondaryColor }) => {
                 !imageLoaded &&
                 <SpinnerDiamond
                     className={className}
-                    size={"100%"}
+                    size={"80%"}
                     thickness={80}
                     speed={80}
                     secondaryColor={secondaryColor}
                     color={color}
+                    style={{
+                        objectFit: "scale-down",
+                        width: "inherit",
+                        height: "inherit"
+                    }}
                 />
             }
         </div>

@@ -49,6 +49,7 @@ class CampaignsGrid extends Component {
     };
 
     render() {
+        console.log('CampaignsGrid', this.props.selectedCompany.campaigns.fetchStatus);
         if(this.state.redirect){
             return <Redirect to="/campaign"/>;
         }
@@ -64,7 +65,7 @@ class CampaignsGrid extends Component {
                                 this.props.selectedCompany.campaigns.items.map((campaignItem, index) => (
                                     <div className="col-md-6 col-lg-4" key={campaignItem._id}>
                                         <div className="single-blog-card card gray-light-bg border-0 shadow-sm my-3">
-                                            <div className="blog-img position-relative">
+                                            <div className="blog-img position-relative" style={{ width: "100%"}}>
                                                 {/* <img src={this.props.selectedCompany.logo} className="card-img-top" alt="blog" /> */}
                                                 <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="card-img-top" secondaryColor="rgba(150, 41, 230, 1)" color="rgba(255, 255, 255, 1)"/>
                                                 <div className="meta-date">
@@ -92,7 +93,7 @@ class CampaignsGrid extends Component {
                                 ))
                             }
                             {
-                                (!this.props.selectedCompany || this.props.selectedCompany.campaigns.fetchStatus !== commonStatuses.loaded)
+                                (!this.props.selectedCompany || this.props.selectedCompany.campaigns.fetchStatus === commonStatuses.loading)
                                 && <BulletList />
                             }
                         </div>

@@ -29,10 +29,12 @@ class company extends Component {
         if (this.props.match.params.companyId !== nextProps.match.params.companyId) {
             const companyId = this.props.match.params.companyId;
             if (companyId !== undefined && companyId !== "undefined") {
-                this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: nextProps.match.params.companyId });
-                return false;
+                if (this.props.selectedCompany && companyId !== this.props.selectedCompany[globalModels.companyFields._id]) {
+                    this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: nextProps.match.params.companyId });
+                    return true;
+                }
             } else {
-                return true;
+                return false;
             }
 
         }
@@ -79,19 +81,26 @@ class company extends Component {
                 {
                     this.state.companyIdValid &&
                     (
-                        (!this.props.selectedCompany || this.props.selectedCompany.fetchStatus !== commonStatuses.loaded) &&
+                        (!this.props.selectedCompany || this.props.selectedCompany.fetchStatus === commonStatuses.loading) &&
                         <React.Fragment>
-                            <HeaderTeam />
-                            <div>
-                                <div className="main">
-                                    <Facebook />
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <Facebook
+                                    // viewBox="-100 -100 1000 1000"
+                                    foregroundColor="#9629e6"
+                                    backgroundColor="#bf00dc"
+                                    style={{
+                                        margin: "5%"
+                                    }}
+                                    />
                                 </div>
                             </div>
+
                         </React.Fragment>
                     )
                 }
                 {
-                    !this.state.companyIdValid &&
+                    (!this.state.companyIdValid || this.props.selectedCompany.fetchStatus === commonStatuses.failed) &&
                     <React.Fragment>
                         <HeaderTeam />
                         <Hero404 />
