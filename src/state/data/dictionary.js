@@ -381,6 +381,16 @@ module.exports = {
                 hero: {
                     title: "Campaign Results"
                 },
+                posts: {
+                    title: "Social Media Engagement",
+                    post: {
+                        likesLabel: "Likes",
+                        commentsLabel: "Comments",
+                        seeOnSocialSection: {
+                            title: "See the post on Socials"
+                        }
+                    }
+                }
 
             },
             buttons: {
@@ -841,6 +851,16 @@ module.exports = {
                 hero: {
                     title: "Resultados de la campaña"
                 },
+                posts: {
+                    title: "Presencia en Redes Sociales",
+                    post: {
+                        likesLabel: "Me gusta",
+                        commentsLabel: "Comentarios",
+                        seeOnSocialSection: {
+                            title: "Ver el post en las redes"
+                        }
+                    }
+                }
 
             },
             buttons: {

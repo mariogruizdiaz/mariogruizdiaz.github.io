@@ -33,7 +33,6 @@ class campaign extends Component {
 
     // }
     render() {
-        console.log('campaign', this.props.selectedCampaign.advertisements);
         return (
             <div>
                 {
