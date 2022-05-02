@@ -26,6 +26,7 @@ const initialState = {
             fetchStatus: commonStatuses.none,
             fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
         },
+        advertisementsExtended: {}
     }
 };
 
@@ -204,102 +205,74 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.FETCH_POSTS: {
-            const campaignId = action.payload.data[globalModels.postFields.campaignId];
+            const advertisementId = action.payload[globalModels.postFields.advertisementId];
 
             return {
                 ...state,
                 selectedCampaign: {
                     ...state.selectedCampaign,
-                    advertisements: {
-                        ...state.selectedCampaign.advertisements,
-                        items: state.selectedCampaign.advertisements.map(ad => {
-                            if (ad[globalModels.advertisementFields._id !== campaignId]) {
-                                return {
-                                    ...ad
-                                };
-                            } else {
-                                return {
-                                    ...ad,
-                                    posts: {
-                                        items: [],
-                                        pageIndex: -1,
-                                        fetchStatus: commonStatuses.loading,
-                                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
+                    advertisementsExtended: {
+                        ...state.selectedCampaign.advertisementsExtended,
+                        [advertisementId]: {
+                            posts: {
+                                items: [],
+                                pageIndex: -1,
+                                fetchStatus: commonStatuses.loading,
+                                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
 
-                                    }
-                                };
                             }
-                        })
+                        }
+
                     }
                 }
             };
         }
         case actionTypes.FETCH_POSTS_SUCCESS: {
-            if (action.payload.data && action.payload.data.lenght > 0) {
-                const campaignId = action.payload.data[0][globalModels.postFields.campaignId];
+            if (action.payload.data && action.payload.data.length > 0) {
+                const advertisementId = action.payload.data[0][globalModels.postFields.advertisementId];
 
                 return {
                     ...state,
-                    selectedCampaign: {
-                        ...state.selectedCampaign,
-                        advertisements: {
-                            ...state.selectedCampaign.advertisements,
-                            items: state.selectedCampaign.advertisements.map(ad => {
-                                if (ad[globalModels.advertisementFields._id !== campaignId]) {
-                                    return {
-                                        ...ad
-                                    };
+                    advertisementsExtended: {
+                        ...state.selectedCampaign.advertisementsExtended,
+                        [advertisementId]: {
+                            posts: {
+                                items: action.payload.data,
+                                pageIndex: -1,
+                                fetchStatus: commonStatuses.loaded,
+                                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
 
-                                } else {
-                                    return {
-                                        ...ad,
-                                        posts: {
-                                            items: action.payload.data,
-                                            pageIndex: -1,
-                                            fetchStatus: commonStatuses.loaded,
-                                            fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
-
-                                        }
-                                    };
-                                }
-                            })
+                            }
                         }
+
                     }
                 };
 
             } else {
+                console.log('pase')
                 return state;
             }
         }
         case actionTypes.FETCH_POSTS_FAIL:
         case actionTypes.FETCH_POSTS_UNSUCCESS: {
-            const campaignId = action.payload.data[globalModels.postFields.campaignId];
+            const advertisementId = action.payload.data[globalModels.postFields.advertisementId];
 
             return {
                 ...state,
                 selectedCampaign: {
                     ...state.selectedCampaign,
-                    advertisements: {
-                        ...state.selectedCampaign.advertisements,
-                        items: state.selectedCampaign.advertisements.map(ad => {
-                            if (ad[globalModels.advertisementFields._id !== campaignId]) {
-                                return {
-                                    ...ad
-                                };
+                    advertisementsExtended: {
+                        ...state.selectedCampaign.advertisementsExtended,
+                        [advertisementId]: {
+                            posts: {
+                                items: [],
+                                pageIndex: -1,
+                                fetchStatus: commonStatuses.failed,
+                                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
 
-                            } else {
-                                return {
-                                    ...ad,
-                                    posts: {
-                                        items: [],
-                                        pageIndex: -1,
-                                        fetchStatus: commonStatuses.failed,
-                                        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
-
-                                    }
-                                };
                             }
-                        })
+                        }
+
                     }
                 }
             };

@@ -15,26 +15,32 @@ class AdvertisementsGrid extends Component {
 
 
     render() {
-        console.log('AdvertisementsGrid', this.props.selectedCampaign.advertisements);
+        console.log('AdvertisementsGrid', this.props.dictionary.results.campaign);
         return (
             <React.Fragment>
                 <div className="module ptb-100">
                     <div className="container">
                         <div className="row justify-content-center">
+                            <div className="col-md-9 col-lg-8">
+                                <div className="section-heading text-center mb-4">
+                                    <h2>{this.props.dictionary.results.campaign.posts.title}</h2>
+                                    {/* <p>
+                                        Professional hosting at an affordable price. Distinctively recaptiualize principle-centered
+                                        core competencies through client-centered
+                                        core competencies.
+                                    </p> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row justify-content-center">
                             <div className="row">
                                 {
                                     this.props.selectedCampaign.advertisements.items.map((adItem, index) => (
                                         // <div className="col-lg-4 col-md-4" key={adItem[globalModels.advertisementFields._id]}>
-                                            <Advertisement
-                                                
-                                                multimediaUri={adItem[globalModels.advertisementFields.multimediaUri]}
-                                                caption={adItem[globalModels.advertisementFields.caption]}
-                                                likeCount={adItem[globalModels.advertisementFields.likeCount]}
-                                                commentCount={adItem[globalModels.advertisementFields.commentCount]}
-                                                creationDt={adItem[globalModels.advertisementFields.creationDt]}
-                                                bannerIncluded={adItem[globalModels.advertisementFields.bannerIncluded]}
-                                                hashtagValue={adItem.resources.hashtag.value}
-                                            />
+                                        <Advertisement
+                                            ad={adItem}
+                                            key={adItem[globalModels.advertisementFields._id]}
+                                        />
                                         // </div>
                                     ))
                                 }

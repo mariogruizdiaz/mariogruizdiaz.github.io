@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./ImageLoader.css";
 import { SpinnerDiamond } from 'spinners-react';
-import { contains } from "jquery";
 
 // Props: source, alt
 const ImageLoader = ({ source, alt, className, color, secondaryColor }) => {

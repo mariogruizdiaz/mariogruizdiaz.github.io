@@ -1,4 +1,4 @@
-import { select, put, takeLatest, delay } from "redux-saga/effects";
+import { select, put, takeLatest, delay, takeEvery } from "redux-saga/effects";
 
 import { actionTypes } from "../actionTypes";
 import admeApi from "../APIs/adme";
@@ -43,6 +43,22 @@ function* genericQuery(action) {
     }
 }
 
+function* genericComponentBoundQuery(action) {
+
+    const command = yield admeApi.generic(action);
+    try {
+        if (!action.payload.delegate) throw Error("Missing delegate component function");
+        yield controlPreRequisites();
+        const result = yield command.resolver(action);
+
+        if (result && result[command.endpointName]) {
+            yield action.payload.delegate({ data: result[command.endpointName] });
+        } else yield action.payload.delegate({ errors: command.onUnsuccessMessage });
+    } catch (e) {
+        yield action.payload.delegate({ errors: command.failureMessage });
+    }
+}
+
 function* controlPreRequisites() {
     let apiReferencesStatus = yield select(apifetchingStatus);
     if (apiReferencesStatus === commonStatuses.failed) {
@@ -72,7 +88,7 @@ export default function* userIdentity() {
     yield takeLatest(actionTypes.FETCH_COMPANY, genericQuery);
     yield takeLatest(actionTypes.FETCH_CAMPAIGNS, genericQuery);
     yield takeLatest(actionTypes.FETCH_ADVERTISEMENTS, genericQuery);
-    yield takeLatest(actionTypes.FETCH_POSTS, genericQuery);
+    yield takeEvery(actionTypes.FETCH_POSTS, genericComponentBoundQuery);
     yield takeLatest(actionTypes.SELECT_CAMPAIGN, fireFetchAdvertisements);
 
 }
