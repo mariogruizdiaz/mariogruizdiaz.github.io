@@ -26,7 +26,8 @@ const initialState = {
             fetchStatus: commonStatuses.none,
             fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
         },
-        advertisementsExtended: {}
+        postsByAdvertisementIds: {},
+        personCredentialsByAdvertisementIds: {}
     }
 };
 
@@ -181,7 +182,7 @@ export default (state = initialState, action) => {
                 selectedCampaign: {
                     ...state.selectedCampaign,
                     advertisements: {
-                        items: action.payload.data,
+                        items: action.payload.data.filter(ad => ad._posts.length > 0),
                         pageIndex: -1,
                         fetchStatus: commonStatuses.loaded,
                         fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
@@ -211,8 +212,8 @@ export default (state = initialState, action) => {
                 ...state,
                 selectedCampaign: {
                     ...state.selectedCampaign,
-                    advertisementsExtended: {
-                        ...state.selectedCampaign.advertisementsExtended,
+                    postsByAdvertisementIds: {
+                        ...state.selectedCampaign.postsByAdvertisementIds,
                         [advertisementId]: {
                             posts: {
                                 items: [],
@@ -227,48 +228,39 @@ export default (state = initialState, action) => {
                 }
             };
         }
-        case actionTypes.FETCH_POSTS_SUCCESS: {
-            if (action.payload.data && action.payload.data.length > 0) {
-                const advertisementId = action.payload.data[0][globalModels.postFields.advertisementId];
-
+        case actionTypes.FETCH_POSTS_SUCCESS_BUFFER_FLUSH_SUCCESS: {
+            if (action.payload.data && Object.keys(action.payload.data).length > 0) {
                 return {
                     ...state,
-                    advertisementsExtended: {
-                        ...state.selectedCampaign.advertisementsExtended,
-                        [advertisementId]: {
-                            posts: {
-                                items: action.payload.data,
-                                pageIndex: -1,
-                                fetchStatus: commonStatuses.loaded,
-                                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
-
-                            }
+                    selectedCampaign: {
+                        ...state.selectedCampaign,
+                        postsByAdvertisementIds: {
+                            ...state.selectedCampaign.postsByAdvertisementIds,
+                            ...action.payload.data
                         }
-
                     }
                 };
 
             } else {
-                console.log('pase')
+                console.error('No data payload into the dispathed redux action');
                 return state;
             }
         }
-        case actionTypes.FETCH_POSTS_FAIL:
-        case actionTypes.FETCH_POSTS_UNSUCCESS: {
-            const advertisementId = action.payload.data[globalModels.postFields.advertisementId];
+        case actionTypes.FETCH_PERSON_CREDENTIALS: {
+            const advertisementId = action.payload[globalModels.advertisementFields._id];
 
             return {
                 ...state,
                 selectedCampaign: {
                     ...state.selectedCampaign,
-                    advertisementsExtended: {
-                        ...state.selectedCampaign.advertisementsExtended,
+                    personCredentialsByAdvertisementIds: {
+                        ...state.selectedCampaign.personCredentialsByAdvertisementIds,
                         [advertisementId]: {
-                            posts: {
+                            person_credentials: {
                                 items: [],
                                 pageIndex: -1,
-                                fetchStatus: commonStatuses.failed,
-                                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
+                                fetchStatus: commonStatuses.loading,
+                                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
 
                             }
                         }
@@ -276,6 +268,21 @@ export default (state = initialState, action) => {
                     }
                 }
             };
+        }
+        case actionTypes.FETCH_PERSON_CREDENTIALS_SUCCESS_BUFFER_FLUSH_SUCCESS: {
+            if (action.payload.data && Object.keys(action.payload.data).length > 0) {
+                return {
+                    ...state,
+                    personCredentialsByAdvertisementIds: {
+                        ...state.selectedCampaign.personCredentialsByAdvertisementIds,
+                        ...action.payload.data
+                    }
+                };
+
+            } else {
+                console.error('No data payload into the dispathed redux action');
+                return state;
+            }
         }
 
         default:

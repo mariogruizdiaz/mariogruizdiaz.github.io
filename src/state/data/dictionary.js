@@ -388,6 +388,9 @@ module.exports = {
                         commentsLabel: "Comments",
                         seeOnSocialSection: {
                             title: "See the post on Socials"
+                        },
+                        connectOnSocialSection: {
+                            title: "Connect [REPLACE_ME] on Socials"
                         }
                     }
                 }
@@ -858,6 +861,9 @@ module.exports = {
                         commentsLabel: "Comentarios",
                         seeOnSocialSection: {
                             title: "Ver el post en las redes"
+                        },
+                        connectOnSocialSection: {
+                            title: "Conectar a [REPLACE_ME] en las redes"
                         }
                     }
                 }

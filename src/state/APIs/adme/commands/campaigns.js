@@ -10,6 +10,7 @@ query fetchAdvertisingByCampaignId(
   ){
     _id,
     name,
+    brief,
     creationDt,
     startDt,
     endDt,

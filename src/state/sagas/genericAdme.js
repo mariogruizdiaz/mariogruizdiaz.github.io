@@ -10,24 +10,6 @@ import * as globalModels from "influencers-models";
 
 const apifetchingStatus = (state) => state.basics.api.fetchingStatus;
 
-// function* genericMutation(action) {
-
-//     const command = yield admeApi.generic(action);
-//     let result;
-//     try {
-//         yield controlPreRequisites();
-//         result = yield command.resolver(action);
-
-//         if (result && result[command.endpointName].success) {
-//             let datax = JSON.parse(result[command.endpointName].data);
-//             yield put(command.onSuccess({ data: datax }));
-//         } else yield put(command.onUnsuccess({ errors: result[command.endpointName].data }));
-//     } catch (e) {
-//         console.log(e)
-//         yield put(command.onFailure({ errors: command.failureMessage }));
-//     }
-// }
-
 function* genericQuery(action) {
 
     const command = yield admeApi.generic(action);
@@ -36,26 +18,10 @@ function* genericQuery(action) {
         const result = yield command.resolver(action);
 
         if (result && result[command.endpointName]) {
-            yield put(command.onSuccess({ data: result[command.endpointName] }));
-        } else yield put(command.onUnsuccess({ errors: command.onUnsuccessMessage }));
+            yield put(command.onSuccess({ data: result[command.endpointName], inputParamaters: action.payload }));
+        } else yield put(command.onUnsuccess({ errors: command.onUnsuccessMessage, inputParamaters: action.payload }));
     } catch (e) {
-        yield put(command.onFailure({ errors: command.failureMessage }));
-    }
-}
-
-function* genericComponentBoundQuery(action) {
-
-    const command = yield admeApi.generic(action);
-    try {
-        if (!action.payload.delegate) throw Error("Missing delegate component function");
-        yield controlPreRequisites();
-        const result = yield command.resolver(action);
-
-        if (result && result[command.endpointName]) {
-            yield action.payload.delegate({ data: result[command.endpointName] });
-        } else yield action.payload.delegate({ errors: command.onUnsuccessMessage });
-    } catch (e) {
-        yield action.payload.delegate({ errors: command.failureMessage });
+        yield put(command.onFailure({ errors: command.failureMessage, inputParamaters: action.payload }));
     }
 }
 
@@ -88,7 +54,8 @@ export default function* userIdentity() {
     yield takeLatest(actionTypes.FETCH_COMPANY, genericQuery);
     yield takeLatest(actionTypes.FETCH_CAMPAIGNS, genericQuery);
     yield takeLatest(actionTypes.FETCH_ADVERTISEMENTS, genericQuery);
-    yield takeEvery(actionTypes.FETCH_POSTS, genericComponentBoundQuery);
+    yield takeEvery(actionTypes.FETCH_POSTS, genericQuery);
+    yield takeEvery(actionTypes.FETCH_PERSON_CREDENTIALS, genericQuery);
     yield takeLatest(actionTypes.SELECT_CAMPAIGN, fireFetchAdvertisements);
 
 }

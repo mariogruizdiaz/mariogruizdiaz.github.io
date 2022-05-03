@@ -53,7 +53,7 @@ class Advertisement extends Component {
                             <ImageLoader source={this.props.ad.multimediaUri} alt="Ad" className="img-fluid" color="rgba(255, 255, 255, 1)" secondaryColor="rgba(150, 41, 230, 1)" />
                         </div>
                         <div className="border-0 pricing-header">
-                            <h6 className="post-title" style={{ height: "50px" }}><a href={hastRef} >{`${this.props.ad.resources.hashtag.value} `}</a>{this.props.ad.caption}</h6>
+                            <h6 className="post-title" style={{ height: "40px" }}><a href={hastRef} >{`${this.props.ad.resources.hashtag.value} `}</a>{this.props.ad.caption}</h6>
                         </div>
                         <AdvertisementDetails
                             ad={this.props.ad}
