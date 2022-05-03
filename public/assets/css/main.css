@@ -10232,7 +10232,7 @@ readers do not read off random characters that represent icons */
 
 /* line 1303, node_modules/@fortawesome/fontawesome-free/scss/_icons.scss */
 .fa-twitter:before {
-  content: "\f099";
+  content: "\f039";
 }
 
 /* line 1304, node_modules/@fortawesome/fontawesome-free/scss/_icons.scss */
@@ -21519,9 +21519,18 @@ footer a {
   color: #4064ac !important;
 }
 
+.social-list-default.social-color li a.facebook-disabled {
+  color: #696969 !important;
+}
+
 /* line 45, public/assets/src/scss/components/_components.social-icon.scss */
 .social-list-default.social-color li a.twitter {
   color: #00a7e6 !important;
+}
+
+/* line 48, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.twitter-disabled {
+  color: #696969 !important;
 }
 
 /* line 48, public/assets/src/scss/components/_components.social-icon.scss */
@@ -21529,19 +21538,39 @@ footer a {
   color: #dd4b39 !important;
 }
 
+/* line 48, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.google-disabled {
+  color: #696969 !important;
+}
+
 /* line 51, public/assets/src/scss/components/_components.social-icon.scss */
 .social-list-default.social-color li a.dribbble {
   color: #ea4c89 !important;
 }
+
+/* line 51, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.dribbble-disabled {
+    color: #696969 !important;
+  }
 
 /* line 54, public/assets/src/scss/components/_components.social-icon.scss */
 .social-list-default.social-color li a.vk {
   color: #45668e !important;
 }
 
+/* line 54, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.vk-disabled {
+    color: #696969 !important;
+  }
+
 /* line 57, public/assets/src/scss/components/_components.social-icon.scss */
 .social-list-default.social-color li a.linkedin {
   color: #0077b5 !important;
+}
+
+/* line 57, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.linkedin-disabled {
+  color: #696969 !important;
 }
 
 /* line 60, public/assets/src/scss/components/_components.social-icon.scss */
@@ -21549,9 +21578,19 @@ footer a {
   color: #C13584 !important;
 }
 
+/* line 60, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.instagram-disabled {
+  color: #696969 !important;
+}
+
 /* line 63, public/assets/src/scss/components/_components.social-icon.scss */
 .social-list-default.social-color li a.tumblr {
   color: #35465c !important;
+}
+
+/* line 63, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.tumblr-disabled {
+  color: #696969 !important;
 }
 
 /* line 66, public/assets/src/scss/components/_components.social-icon.scss */
@@ -21559,9 +21598,19 @@ footer a {
   color: #0063dc !important;
 }
 
+/* line 66, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.flickr-disabled {
+  color: #696969 !important;
+}
+
 /* line 69, public/assets/src/scss/components/_components.social-icon.scss */
 .social-list-default.social-color li a.youtube {
   color: #ff0000 !important;
+}
+
+/* line 69, public/assets/src/scss/components/_components.social-icon.scss */
+.social-list-default.social-color li a.youtube-disabled {
+  color: #696969 !important;
 }
 
 /* line 72, public/assets/src/scss/components/_components.social-icon.scss */

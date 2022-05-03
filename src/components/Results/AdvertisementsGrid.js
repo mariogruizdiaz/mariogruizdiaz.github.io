@@ -15,7 +15,6 @@ class AdvertisementsGrid extends Component {
 
 
     render() {
-        console.log('AdvertisementsGrid', this.props.dictionary.results.campaign);
         return (
             <React.Fragment>
                 <div className="module ptb-100">
@@ -24,11 +23,10 @@ class AdvertisementsGrid extends Component {
                             <div className="col-md-9 col-lg-8">
                                 <div className="section-heading text-center mb-4">
                                     <h2>{this.props.dictionary.results.campaign.posts.title}</h2>
-                                    {/* <p>
-                                        Professional hosting at an affordable price. Distinctively recaptiualize principle-centered
-                                        core competencies through client-centered
-                                        core competencies.
-                                    </p> */}
+                                    {
+                                        this.props.selectedCampaign[globalModels.campaignFields.brief]
+                                        && <p>{this.props.selectedCampaign[globalModels.campaignFields.brief]}</p>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -36,12 +34,10 @@ class AdvertisementsGrid extends Component {
                             <div className="row">
                                 {
                                     this.props.selectedCampaign.advertisements.items.map((adItem, index) => (
-                                        // <div className="col-lg-4 col-md-4" key={adItem[globalModels.advertisementFields._id]}>
                                         <Advertisement
                                             ad={adItem}
                                             key={adItem[globalModels.advertisementFields._id]}
                                         />
-                                        // </div>
                                     ))
                                 }
 

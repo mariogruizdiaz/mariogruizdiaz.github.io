@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
-import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
 import { commonStatuses } from "../../state/models/common";
 
@@ -15,79 +14,99 @@ class AdvertisementDetails extends Component {
         };
     }
 
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     if (this.props.selectedCompany[globalModels.companyFields._id] !== nextProps.selectedCompany[globalModels.companyFields._id]) {
-    //         this.props.genericAction(actionTypes.FETCH_CAMPAIGNS, { [globalModels.advertisementFields.companyId]: nextProps.selectedCompany[globalModels.companyFields._id] });
-    //         return false;
-
-    //     }
-    //     if (this.props.selectedCompany.campaigns !== nextProps.selectedCompany.campaigns) {
-    //         return true;
-    //     }
-
-    //     if(this.state !== nextState){
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
     componentDidMount() {
-        this.props.genericAction(actionTypes.FETCH_POSTS, { [globalModels.postFields.advertisementId]: this.props.ad[globalModels.advertisementFields._id], delegate: this.getSagasResult });
-
+        // Lazy loading posts and person_Credentials
+        // this.props.genericAction(actionTypes.FETCH_POSTS, { [globalModels.postFields.advertisementId]: this.props.ad[globalModels.advertisementFields._id] });
+        // this.props.genericAction(actionTypes.FETCH_PERSON_CREDENTIALS, { [globalModels.person_credentialFields.personId]: this.props.ad[globalModels.advertisementFields.personId] });
     }
-
-    getSagasResult(result) {
-        if (result) {
-            if (result.data) {
-                this.setState({
-                    posts: result.data,
-                    fetchStatus: commonStatuses.loaded
-                })
-            } else {
-                this.setState({
-                    posts: [],
-                    fetchStatus: commonStatuses.failed
-                })
-
-            }
-
-        } else {
-
-        }
-    }
-
-    handleClick = (e, campaignId) => {
-        // e.preventDefault();
-        // const clickedCampaign = this.props.selectedCompany.campaigns.items.find(i => i[globalModels.campaignFields._id] === campaignId);
-        // this.props.genericAction(actionTypes.SELECT_CAMPAIGN, { ...clickedCampaign });
-        // this.setState({
-        //     redirect: true
-        //   });
-    };
 
     render() {
+        const twitterPost = this.props.ad._posts.length > 0 ? this.props.ad._posts.find((post) => post[globalModels.postFields.platform] === globalModels.platformEnum.Twitter) : null;
+        const facebookPost = this.props.ad._posts.length > 0 ? this.props.ad._posts.find((post) => post[globalModels.postFields.platform] === globalModels.platformEnum.Facebook) : null;
+        const instagramPost = this.props.ad._posts.length > 0 ? this.props.ad._posts.find((post) => post[globalModels.postFields.platform] === globalModels.platformEnum.Instagram) : null;
+        const twitterPersonCredential = this.props.ad._person_Credentials.length > 0 ? this.props.ad._person_Credentials.find((pc) => pc[globalModels.postFields.platform] === globalModels.platformEnum.Twitter) : null;
+        const facebookPersonCredential = this.props.ad._person_Credentials.length > 0 ? this.props.ad._person_Credentials.find((pc) => pc[globalModels.postFields.platform] === globalModels.platformEnum.Facebook) : null;
+        const instagramPersonCredential = this.props.ad._person_Credentials.length > 0 ? this.props.ad._person_Credentials.find((pc) => pc[globalModels.postFields.platform] === globalModels.platformEnum.Instagram) : null;
         return (
             <div className="pricing-content">
                 <ul className="list-unstyled pricing-feature-list">
                     <li><span>{this.props.ad.likeCount}</span> {this.props.dictionary.results.campaign.posts.post.likesLabel}</li>
                     <li><span>{this.props.ad.commentCount}</span> {this.props.dictionary.results.campaign.posts.post.commentsLabel}</li>
                 </ul>
-                <div className="other-login-signup">
+                {/* <div className="other-login-signup">
                     <div className="or-login-signup text-center">
                         <strong>{this.props.dictionary.results.campaign.posts.post.seeOnSocialSection.title}</strong>
                     </div>
+                </div> */}
+                <div className="col-12">
+                    <div className="d-flex justify-content-center text-center">
+                        <label className="pricing-switch-wrap">
+                            <span className="beforeinput year-switch text-success" id={`beforeinput-${this.props.ad[globalModels.advertisementFields._id]}`}>
+                                Posts
+                            </span>
+                            <input type="checkbox" className="d-none js-contcheckbox2" data-key={this.props.ad[globalModels.advertisementFields._id]} />
+                            <span className="switch-icon"></span>
+                            <span className="afterinput year-switch" id={`afterinput-${this.props.ad[globalModels.advertisementFields._id]}`}>
+                                Profiles
+                            </span>
+                        </label>
+                    </div>
                 </div>
-                <ul className="list-inline social-list-default social-color icon-hover-top-bottom">
+                <ul className="list-inline social-list-default social-color icon-hover-top-bottom" id={`posts-${this.props.ad[globalModels.advertisementFields._id]}`} style={{ display: "block" , margin: "0px"}}>
+                    <p>See this post on socials</p>
                     <li className="list-inline-item">
-                        <a className="facebook" href="/#" target="_blank"><i className="fab fa-facebook-f"></i></a>
+                        {
+                            facebookPost
+                            && <a className="facebook" href={facebookPost[globalModels.postFields.postPlatformId]} target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                        }
                     </li>
                     <li className="list-inline-item">
-                        <a className="twitter" href="/#" target="_blank"><i className="fab fa-twitter"></i></a>
+                        {
+                            twitterPost
+                            && <a className="twitter" href={twitterPost[globalModels.postFields.postPlatformId]} target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+                        }
                     </li>
                     <li className="list-inline-item">
-                        <a className="instagram" href="/#" target="_blank"><i className="fab fa-instagram"></i></a>
+                        {
+                            instagramPost
+                            && <a className="instagram" href={instagramPost[globalModels.postFields.postPlatformId]} target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                        }
                     </li>
                 </ul>
+                <ul className="list-inline social-list-default social-color icon-hover-top-bottom" id={`accounts-${this.props.ad[globalModels.advertisementFields._id]}`} style={{ display: "none", margin: "0px" }}>
+                    <p>Contact {this.props.ad._person[globalModels.personFields.firstName]} on socials</p>
+                    <li className="list-inline-item">
+                        {
+                            facebookPersonCredential
+                            && <a className="facebook" href={`https://wwww.facebook.com/${facebookPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                        }
+                    </li>
+                    <li className="list-inline-item">
+                        {
+                            twitterPersonCredential
+                            && <a className="twitter" href={`https://wwww.twitter.com/${twitterPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+                        }
+                    </li>
+                    <li className="list-inline-item">
+                        {
+                            instagramPersonCredential
+                            && <a className="instagram" href={`https://wwww.instagram.com/${instagramPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                        }
+                    </li>
+                </ul>
+                {/* <ul className="list-inline social-list-default social-color icon-hover-top-bottom yearly-price" id={`accounts-${this.props.ad[globalModels.advertisementFields._id]}`} style={{ display: "none" }}>
+                    <div className="support-cta text-center">
+                        <p>Contact Mario on socials <a href="/#">Facebook</a>, <a href="/#">Instagram</a>, or <a href="/#">Twitter</a></p>
+                    </div>
+                </ul> */}
+                {/* <div className="col-12 yearly-price">
+                    <div className="support-cta text-center mt-5">
+                        <h5 className="mb-1"><span className="ti-headphone-alt color-primary mr-3"></span>We're Here to Help You
+                        </h5>
+                        <p>Have some questions? <a href="/#">Chat with us now</a>, or <a href="/#">send us an email</a> to
+                            get in touch.</p>
+                    </div>
+                </div> */}
             </div>
         );
     }
@@ -96,7 +115,8 @@ class AdvertisementDetails extends Component {
 function mapStateToProps(state) {
     return {
         dictionary: state.i18n.dictionary,
-        selectedCampaign: state.companies.selectedCampaign
+        selectedCampaign: state.companies.selectedCampaign,
+        postsByAdvertisementIds: state.companies.selectedCampaign.postsByAdvertisementIds,
     };
 }
 

@@ -165,17 +165,34 @@ jQuery(function ($) {
     items: 1
   }); // 11. monthly and yearly pricing switch
 
+  // 11. monthly and yearly pricing switch
   $("#js-contcheckbox").change(function () {
     if (this.checked) {
-      $('.monthly-price').css('display', 'none');
-      $('.yearly-price').css('display', 'block');
-      $('.afterinput').addClass('text-success');
-      $('.beforeinput').removeClass('text-success');
+        $('.monthly-price').css('display', 'none');
+        $('.yearly-price').css('display', 'block');
+        $('.afterinput').addClass('text-success');
+        $('.beforeinput').removeClass('text-success');
     } else {
-      $('.monthly-price').css('display', 'block');
-      $('.yearly-price').css('display', 'none');
-      $('.afterinput').removeClass('text-success');
-      $('.beforeinput').addClass('text-success');
+        $('.monthly-price').css('display', 'block');
+        $('.yearly-price').css('display', 'none');
+        $('.afterinput').removeClass('text-success');
+        $('.beforeinput').addClass('text-success');
+    }
+  });
+
+  $(".js-contcheckbox2").change(function () {
+    console.log(this.dataset.key, 'Hola');
+    const key = this.dataset.key;
+    if (this.checked) {
+      $(`#posts-${key}`).css('display', 'none');
+      $(`#accounts-${key}`).css('display', 'block');
+      $(`#afterinput-${key}`).addClass('text-success');
+      $(`#beforeinput-${key}`).removeClass('text-success');
+    } else {
+      $(`#posts-${key}`).css('display', 'block');
+      $(`#accounts-${key}`).css('display', 'none');
+      $(`#afterinput-${key}`).removeClass('text-success');
+      $(`#beforeinput-${key}`).addClass('text-success');
     }
   }); // 12. coming soon count
 
