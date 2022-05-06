@@ -10,7 +10,7 @@ import Breadcrumb from "../../components/Results/CompanyGridBreadcrumb";
 import CampaignsGrid from "../../components/Results/CampaignsGrid";
 import FooterAdmeBrands from "../../components/Footer/FooterAdmeBrands";
 import { actionTypes } from "../../state/actionTypes";
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 import { withRouter } from "react-router";
 import Hero404 from "../../components/HeroSection/HeroSection404";
 import { Facebook } from 'react-content-loader';

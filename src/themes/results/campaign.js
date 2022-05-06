@@ -6,7 +6,7 @@ import HeaderTeam from "../../components/Header/headerTeam";
 import Hero from "../../components/Results/HeroSectionCampaignPage";
 import Breadcrumb from "../../components/Results/CampaignDetailsBreadcrumb";
 import AdvertisementsGrid from "../../components/Results/AdvertisementsGrid";
-import Footer from "../../components/Footer";
+import FooterAdmeBrands from "../../components/Footer/FooterAdmeBrands";
 import { Facebook } from 'react-content-loader';
 import { commonStatuses } from "../../state/models/common";
 import Hero404 from "../../components/HeroSection/HeroSection404";
@@ -44,7 +44,7 @@ class campaign extends Component {
                             <Breadcrumb name={"Blog No Sidebar"} />
                             <AdvertisementsGrid />
                         </div>
-                        <Footer withoutNewsletter={true} />
+                        <FooterAdmeBrands withoutNewsletter={true} />
                     </React.Fragment>
                 }
                 {

@@ -1,4 +1,4 @@
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 import { actionTypes } from "../actionTypes";
 import { commonStatusesDescriptions, commonStatuses } from "../models/common";
 

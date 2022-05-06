@@ -9,7 +9,7 @@ import Breadcrumb from "../../components/GuidesGridBreadcrumb";
 import DefaultGiudeGrid from "../../components/Guides/defaultGiudeGrid";
 import Footer from "../../components/Footer";
 import { actionTypes } from "../../state/actionTypes";
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 
 
 class Companies extends Component {

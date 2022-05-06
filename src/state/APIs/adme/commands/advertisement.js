@@ -1,5 +1,5 @@
 
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 
 const fetchAdvertisingByCampaignId = `
 query fetchAdvertisingByCampaignId(

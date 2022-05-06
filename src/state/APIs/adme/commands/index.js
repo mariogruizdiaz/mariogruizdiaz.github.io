@@ -3,7 +3,9 @@ import campaigns from "./campaigns";
 import advertisement from "./advertisement";
 import post from "./post";
 import person_credential from "./person_credential";
+import security from "./security";
 import { actionTypes } from "../../../actionTypes";
+
 
 
 const commandCollection = {
@@ -12,7 +14,8 @@ const commandCollection = {
     [actionTypes.FETCH_CAMPAIGNS]: campaigns.fetchCampaignsByCompanyId,
     [actionTypes.FETCH_ADVERTISEMENTS]: advertisement.fetchAdvertisingByCampaignId,
     [actionTypes.FETCH_POSTS]: post.fetchPostsByAdvertisementId,
-    [actionTypes.FETCH_PERSON_CREDENTIALS]: person_credential.fetchPersonCredentialByPersonId
+    [actionTypes.FETCH_PERSON_CREDENTIALS]: person_credential.fetchPersonCredentialByPersonId,
+    [actionTypes.LOGIN]: security.login
 };
 
 export {
