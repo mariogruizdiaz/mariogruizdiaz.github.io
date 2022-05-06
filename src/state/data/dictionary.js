@@ -387,11 +387,13 @@ module.exports = {
                         likesLabel: "Likes",
                         commentsLabel: "Comments",
                         seeOnSocialSection: {
-                            title: "See the post on Socials"
+                            title: "See this post on Socials"
                         },
                         connectOnSocialSection: {
                             title: "Connect [REPLACE_ME] on Socials"
-                        }
+                        },
+                        checkPostOptionLabel: "Posts",
+                        checkAccountOptionLabel: "Profiles"
                     }
                 }
 
@@ -864,7 +866,9 @@ module.exports = {
                         },
                         connectOnSocialSection: {
                             title: "Conectar a [REPLACE_ME] en las redes"
-                        }
+                        },
+                        checkPostOptionLabel: "Posteos",
+                        checkAccountOptionLabel: "Perfiles"
                     }
                 }
 

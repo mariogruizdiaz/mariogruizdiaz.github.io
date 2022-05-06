@@ -3,7 +3,7 @@ import { put, takeEvery, delay } from "redux-saga/effects";
 import { actionTypes } from "../actionTypes";
 import { commonStatuses, commonStatusesDescriptions } from "../models/common";
 import { genericAction } from "../actions";
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 
 
 let bufferedPostResults = {};

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 import { commonStatuses } from "../../state/models/common";
 
 class AdvertisementDetails extends Component {
@@ -42,18 +42,18 @@ class AdvertisementDetails extends Component {
                     <div className="d-flex justify-content-center text-center">
                         <label className="pricing-switch-wrap">
                             <span className="beforeinput year-switch text-success" id={`beforeinput-${this.props.ad[globalModels.advertisementFields._id]}`}>
-                                Posts
+                                {this.props.dictionary.results.campaign.posts.post.checkPostOptionLabel}
                             </span>
                             <input type="checkbox" className="d-none js-contcheckbox2" data-key={this.props.ad[globalModels.advertisementFields._id]} />
                             <span className="switch-icon"></span>
                             <span className="afterinput year-switch" id={`afterinput-${this.props.ad[globalModels.advertisementFields._id]}`}>
-                                Profiles
+                            {this.props.dictionary.results.campaign.posts.post.checkAccountOptionLabel}
                             </span>
                         </label>
                     </div>
                 </div>
-                <ul className="list-inline social-list-default social-color icon-hover-top-bottom" id={`posts-${this.props.ad[globalModels.advertisementFields._id]}`} style={{ display: "block" , margin: "0px"}}>
-                    <p>See this post on socials</p>
+                <ul className="list-inline social-list-default social-color icon-hover-top-bottom" id={`posts-${this.props.ad[globalModels.advertisementFields._id]}`} style={{ display: "block", margin: "0px" }}>
+                    <p>{this.props.dictionary.results.campaign.posts.post.seeOnSocialSection.title}</p>
                     <li className="list-inline-item">
                         {
                             facebookPost
@@ -74,7 +74,7 @@ class AdvertisementDetails extends Component {
                     </li>
                 </ul>
                 <ul className="list-inline social-list-default social-color icon-hover-top-bottom" id={`accounts-${this.props.ad[globalModels.advertisementFields._id]}`} style={{ display: "none", margin: "0px" }}>
-                    <p>Contact {this.props.ad._person[globalModels.personFields.firstName]} on socials</p>
+                    <p>{this.props.dictionary.results.campaign.posts.post.connectOnSocialSection.title.replace('[REPLACE_ME]', this.props.ad._person[globalModels.personFields.firstName])}</p>
                     <li className="list-inline-item">
                         {
                             facebookPersonCredential

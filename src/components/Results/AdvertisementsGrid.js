@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 import Advertisement from "./Advertisement";
 
 class AdvertisementsGrid extends Component {

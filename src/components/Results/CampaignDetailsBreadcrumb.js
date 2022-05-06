@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 
 class CampaignDetailsBreadcrumb extends Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
 import { actionTypes } from "../../state/actionTypes";
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 import moment from "moment";
 import { Redirect } from "react-router-dom";
 import { commonStatuses } from "../../state/models/common";

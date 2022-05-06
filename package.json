@@ -7,11 +7,11 @@
   "main": "src/index.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "adme-models": "^1.1.77",
     "bootstrap": "^4.5.0",
     "cross-env": "^7.0.3",
     "graphql": "^16.3.0",
     "graphql-request": "^4.1.0",
-    "influencers-models": "^1.1.75",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
     "popper.js": "^1.16.1",
