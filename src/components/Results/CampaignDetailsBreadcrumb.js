@@ -15,6 +15,7 @@ class CampaignDetailsBreadcrumb extends Component {
   }
 
   render() {
+      const brandRedirect = this.props.security.authenticated? `/#/companies` : `/#/companies/${this.props.selectedCompany[globalModels.companyFields._id]}`
     return (
       <React.Fragment>
         <div className="breadcrumb-bar gray-light-bg border-bottom">
@@ -24,7 +25,7 @@ class CampaignDetailsBreadcrumb extends Component {
                         <div className="custom-breadcrumb">
                             <ol className="breadcrumb pl-0 mb-0 bg-transparent">
                                 <li className="breadcrumb-item"><a href="/#">Home</a></li>
-                                <li className="breadcrumb-item"><a href={`/#/companies/${this.props.selectedCompany[globalModels.companyFields._id]}`}>{this.props.dictionary.general.brandsLabel}</a></li>
+                                <li className="breadcrumb-item"><a href={brandRedirect}>{this.props.dictionary.general.brandsLabel}</a></li>
                                 <li className="breadcrumb-item"><a href={`/#/companies/${this.props.selectedCompany[globalModels.companyFields._id]}`}>{this.props.selectedCompany.name}</a></li>
                                 <li className="breadcrumb-item active">{this.props.selectedCampaign.name}</li>
                             </ol>
@@ -41,5 +42,6 @@ class CampaignDetailsBreadcrumb extends Component {
 export default connect(state => ({
     dictionary: state.i18n.dictionary,
     selectedCompany: state.companies.selectedCompany,
-    selectedCampaign: state.companies.selectedCampaign
+    selectedCampaign: state.companies.selectedCampaign,
+    security: state.security
 }))(CampaignDetailsBreadcrumb);

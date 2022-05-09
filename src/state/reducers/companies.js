@@ -3,12 +3,10 @@ import { actionTypes } from "../actionTypes";
 import { commonStatusesDescriptions, commonStatuses } from "../models/common";
 
 const initialState = {
-    companies: {
-        items: [],
-        pageIndex: -1,
-        fetchStatus: commonStatuses.none,
-        fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
-    },
+    items: [],
+    pageIndex: -1,
+    fetchStatus: commonStatuses.none,
+    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
     selectedCompany: {
         fetchStatus: commonStatuses.none,
         fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
@@ -36,35 +34,26 @@ export default (state = initialState, action) => {
         case actionTypes.FETCH_COMPANIES: {
             return {
                 ...initialState,
-                companies: {
-                    ...initialState.companies,
-                    fetchStatus: commonStatuses.loading,
-                    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
-                }
+                fetchStatus: commonStatuses.loading,
+                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
             };
         }
         case actionTypes.FETCH_COMPANIES_SUCCESS: {
             return {
                 ...initialState,
-                companies: {
-                    ...state.companies,
-                    items: action.payload.data,
-                    fetchStatus: commonStatuses.loaded,
-                    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
-                },
+                items: action.payload.data,
+                fetchStatus: commonStatuses.loaded,
+                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
             };
         }
         case actionTypes.FETCH_COMPANIES_FAIL:
         case actionTypes.FETCH_COMPANIES_UNSUCCESS: {
             return {
                 ...initialState,
-                companies: {
-                    items: [],
-                    pageIndex: -1,
-                    fetchStatus: commonStatuses.failed,
-                    fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
-
-                }
+                items: [],
+                pageIndex: -1,
+                fetchStatus: commonStatuses.failed,
+                fetchStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
             };
         }
         case actionTypes.FETCH_COMPANY: {

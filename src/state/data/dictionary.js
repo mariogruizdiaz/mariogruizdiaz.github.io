@@ -16,6 +16,7 @@ module.exports = {
                 brands: 'Brands',
                 agencies: 'Agencies',
                 investors: 'Investors',
+                campaigns: 'Campaigns'
             },
         },
         hero: {
@@ -492,6 +493,7 @@ module.exports = {
                 brands: 'Marcas',
                 agencies: 'Agencias',
                 investors: 'Inversores',
+                campaigns: 'Campañas'
             },
         },
         hero: {
