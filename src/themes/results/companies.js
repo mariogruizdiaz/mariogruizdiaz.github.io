@@ -5,16 +5,16 @@ import { bindActionCreators } from "redux";
 
 import HeaderTeam from "../../components/Header/headerTeam";
 import HeroSection from "../../components/Results/HeroSectionCompaniesPage";
-import Breadcrumb from "../../components/GuidesGridBreadcrumb";
-import DefaultGiudeGrid from "../../components/Guides/defaultGiudeGrid";
+import Breadcrumb from "../../components/Results/CompaniesGridBreadcrumb";
+import DefaultGiudeGrid from "../../components/Results/CompaniesGrid";
 import Footer from "../../components/Footer";
 import { actionTypes } from "../../state/actionTypes";
-import * as globalModels from "adme-models";
+// import * as globalModels from "adme-models";
 
 
 class Companies extends Component {
     componentDidMount() {
-        this.props.genericAction(actionTypes.FETCH_COMPANY, {[globalModels.companyFields._id]: "622cd9a8f6bde20038b43316"});
+        this.props.genericAction(actionTypes.FETCH_COMPANIES, {});
     }
     render() {
         return (
@@ -22,7 +22,7 @@ class Companies extends Component {
                 <HeaderTeam />
                 <div className="main">
                     <HeroSection pageTitle={this.props.selectedComany.name} />
-                    <Breadcrumb name={this.props.selectedComany.name} />
+                    <Breadcrumb CompanyName={this.props.selectedComany.name} />
                     <DefaultGiudeGrid />
                 </div>
                 <Footer withoutNewsletter={true} />

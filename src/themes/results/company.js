@@ -70,8 +70,8 @@ class company extends Component {
                             <div>
                                 <div className="main">
                                     <Hero />
-                                    <Breadcrumb />
-                                    <CampaignsGrid />
+                                    <Breadcrumb companyName={this.props.selectedCompany[globalModels.companyFields.name]}/>
+                                    <CampaignsGrid/>
                                 </div>
                                 <FooterAdmeBrands withoutNewsletter={true} />
                             </div>

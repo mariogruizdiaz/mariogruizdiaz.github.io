@@ -46,4 +46,5 @@ export const actionTypes = {
     LOGIN_FAIL: "LOGIN_FAIL",
     LOGIN_SUCCESS: "LOGIN_SUCCESS",
     LOGIN_UNSUCCESS: "LOGIN_UNSUCCESS",
+    LOGOUT: "LOGOUT",
 };

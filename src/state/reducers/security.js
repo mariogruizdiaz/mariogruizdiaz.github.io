@@ -1,15 +1,17 @@
 import { actionTypes } from "../actionTypes";
 import { commonStatuses, commonStatusesDescriptions } from "../models/common";
+import * as globalModels from "adme-models";
 
 const FIELD_USER = "user";
 const FIELD_USER_PERMISSIONS = "permissions";
-
 const initialState = {
-    api: null,
     authenticated: false,
     authenticationStatus: commonStatuses.none,
     authenticationStatusDescription: commonStatusesDescriptions[commonStatuses.none],
-    permissions: []
+    permissions: [],
+    firstName: null,
+    lastName: null,
+    thumbnail: null
 };
 
 export default (state = initialState, action) => {
@@ -80,12 +82,17 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.LOGIN_SUCCESS: {
+            console.log(action.payload.data);
             return {
                 ...state,
-                authenticationStatus: commonStatuses.loading,
-                authenticationStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
+                authenticationStatus: commonStatuses.loaded,
+                authenticationStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
                 authenticated: true,
                 permissions: action.payload.data[FIELD_USER][FIELD_USER_PERMISSIONS],
+                firstName: action.payload.data[FIELD_USER][globalModels.personFields.firstName],
+                lastName: action.payload.data[FIELD_USER][globalModels.personFields.lastName],
+                thumbnail: action.payload.data[FIELD_USER][globalModels.personFields.thumbnail]
+
             };
         }
         case actionTypes.LOGIN_UNSUCCESS:
@@ -96,6 +103,11 @@ export default (state = initialState, action) => {
                 authenticationStatusDescription: commonStatusesDescriptions[commonStatuses.failed],
                 authenticated: false,
                 permissions: []
+            };
+        }
+        case actionTypes.LOGOUT: {
+            return {
+                ...initialState
             };
         }
         default:
