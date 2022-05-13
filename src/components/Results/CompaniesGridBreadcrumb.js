@@ -24,7 +24,7 @@ class CompaniesGridBreadcrumb extends Component {
                             <ol className="breadcrumb pl-0 mb-0 bg-transparent">
                                 <li className="breadcrumb-item"><a href="/#">Home</a></li>
                                 {/* <li className="breadcrumb-item"><a href="/#">Team</a></li> */}
-                                <li className="breadcrumb-item active">Results</li>
+                                <li className="breadcrumb-item active">Companies</li>
                             </ol>
                         </div>
                     </div>

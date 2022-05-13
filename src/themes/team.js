@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-import Header from "../components/Header/header";
-import Hero from "../components/HeroSection/HeroSectionInnerPage";
+// import Header from "../components/Header/header";
+import Header from "../components/Header/headerInvestors";
+import Hero from "../components/HeroSection/HeroSectionTeam";
 import Breadcrumb from "../components/Breadcrumb";
 import TeamMember from "../components/TeamMember";
-import TrustedCompany from "../components/TrustedCompany/TrustedCompany";
-import Footer from "../components/Footer";
+import FooterSection from "../components/Footer/FooterAdmeInvestors";
 
 class Theme extends Component {
   render() {
@@ -16,9 +16,8 @@ class Theme extends Component {
           <Hero pageTitle={"Our Team"} />
           <Breadcrumb name={"Our Team"} />
           <TeamMember item={6} hideTitle={true} />
-          <TrustedCompany />
         </div>
-        <Footer withoutNewsletter={true} />
+        <FooterSection withNewsletter={false} isWhite={true} />
       </React.Fragment>
     );
   }

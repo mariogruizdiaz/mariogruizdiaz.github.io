@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
-import moment from "moment";
+import ImageLoader from "../Loaders/ImageLoader";
+import AdvertisementDetails from "./AdvertisementDetails";
+
 
 class Advertisement extends Component {
     constructor(props) {
@@ -42,43 +44,22 @@ class Advertisement extends Component {
     };
 
     render() {
-        const hastRef = `https://www.facebook.com/hashtag/${this.props.hashtagValue.replace('#', '')}`;
+        const hastRef = `https://www.facebook.com/hashtag/${this.props.ad.resources.hashtag.value.replace('#', '')}`;
         return (
             <React.Fragment>
-                <article className="post">
-                    <h2 className="post-title"><a href={hastRef} >{`${this.props.hashtagValue} `}</a>{this.props.caption}</h2>
-                    <div className="post-preview"><img src={this.props.multimediaUri} alt="post" /></div>
-                    <div className="post-wrapper">
-                        <div className="post-header">
-                            <ul className="post-meta">
-                                <li>{moment(this.props.creationDt).fromNow()}</li>
-                                {/* <li><a >{this.props.likeCount} Likes</a></li>
-                                <li><a >{this.props.commentCount} Comments</a></li> */}
-                                <li className="list-inline-item">
-                                    <a className="facebook" href={this.props.likeCount} ><i className="fab fa-facebook-f"></i></a>
-                                </li>
-                            </ul>
+                <div className="col-lg-4 col-md-6 col-sm-8" >
+                    <div className="text-center bg-white single-pricing-pack mt-4 ">
+                        <div className="price-img my-4 justify-content-center" style={{ height: "240px" }}>
+                            <ImageLoader source={this.props.ad.multimediaUri} alt="Ad" className="img-fluid" color="rgba(255, 255, 255, 1)" secondaryColor="rgba(150, 41, 230, 1)" />
                         </div>
-                        <div className="row pt-3">
-                            <div className="col-4 col-lg-3 border-right">
-                                <div className="count-data text-center">
-                                    <h4 className="count-number mb-0 color-primary font-weight-bold">{this.props.likeCount}</h4>
-                                    <span>Likes</span>
-                                </div>
-                            </div>
-                            <div className="col-4 col-lg-3 border-right">
-                                <div className="count-data text-center">
-                                    <h4 className="count-number mb-0 color-primary font-weight-bold">{this.props.commentCount}</h4>
-                                    <span>Comments</span>
-                                </div>
-                            </div>
+                        <div className="border-0 pricing-header">
+                            <h6 className="post-title" style={{ height: "40px" }}><a href={hastRef} >{`${this.props.ad.resources.hashtag.value} `}</a>{this.props.ad.caption}</h6>
                         </div>
-                        {/* <div className="post-content">
-                            <p>Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door. The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.</p>
-                        </div> */}
-                        <div className="post-more pt-4 align-items-center d-flex"><a href="https://www.facebook.com" className="btn btn-brand-02">{this.props.dictionary.results.buttons.goToFacebook} <span className="ti-arrow-right"></span></a></div>
+                        <AdvertisementDetails
+                            ad={this.props.ad}
+                        />
                     </div>
-                </article>
+                </div>
             </React.Fragment>
         );
     }

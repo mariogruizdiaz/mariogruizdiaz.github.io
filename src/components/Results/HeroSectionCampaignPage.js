@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 
 class HeroSectionCampaignPage extends React.Component {
     constructor(props) {

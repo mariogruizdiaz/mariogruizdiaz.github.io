@@ -35,16 +35,16 @@ class SingleTeamMember extends React.Component {
                                 <li><strong>Phone:</strong><span> {this.props.phone}</span></li>
                                 <li><strong>Email:</strong><span> {this.props.email}</span></li>
                             </ul>
-                            {/* <div className="text-content mt-20">
+                            <div className="text-content mt-20">
                                 <p>Authoritatively deploy fully researched leadership skills whereas one-to-one best
                                     practices. Monotonectally aggregate virtual imperatives and accurate technology.
                                     Dynamically streamline progressive sources before user friendly.</p>
                                 <p>Enthusiastically synthesize cross-unit technology for sticky results.
                                 </p>
                                 <p>Progressively productize vertical alignments after sticky process improvements. Competently scale transparent methods of empowerment and visionary products.</p>
-                            </div> */}
+                            </div>
                             <ul className="list-inline social-list-default social-color background-color social-hover-2">
-                                {/* <li className="list-inline-item">
+                                <li className="list-inline-item">
                                     <a className="facebook" href="/#" target="_blank"><i className="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li className="list-inline-item">
@@ -52,15 +52,15 @@ class SingleTeamMember extends React.Component {
                                 </li>
                                 <li className="list-inline-item">
                                     <a className="dribbble" href="/#" target="_blank"><i className="fab fa-dribbble"></i></a>
-                                </li> */}
-                                {/* <li className="list-inline-item">
+                                </li>
+                                <li className="list-inline-item">
                                     <a className="linkedin" href="/#" target="_blank"><i className="fab fa-linkedin-in"></i></a>
-                                </li> */}
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                {/* <div className="row mt-5">
+                <div className="row mt-5">
                     <div className="col-md-6 col-sm-6 col-12">
                         <div className="section-heading">
                             <h5>Activities And Skills</h5>
@@ -108,7 +108,7 @@ class SingleTeamMember extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                // </div>
             </div>
         </section>
       </React.Fragment>

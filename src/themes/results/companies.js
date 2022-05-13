@@ -5,24 +5,27 @@ import { bindActionCreators } from "redux";
 
 import HeaderTeam from "../../components/Header/headerTeam";
 import HeroSection from "../../components/Results/HeroSectionCompaniesPage";
-import Breadcrumb from "../../components/GuidesGridBreadcrumb";
-import DefaultGiudeGrid from "../../components/Guides/defaultGiudeGrid";
-import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Results/CompaniesGridBreadcrumb";
+import DefaultGiudeGrid from "../../components/Results/CompaniesGrid";
+import Footer from "../../components/Footer/FooterAdmeBrands";
 import { actionTypes } from "../../state/actionTypes";
-import * as globalModels from "influencers-models";
+// import * as globalModels from "adme-models";
 
 
 class Companies extends Component {
     componentDidMount() {
-        this.props.genericAction(actionTypes.FETCH_COMPANY, {[globalModels.companyFields._id]: "622cd9a8f6bde20038b43316"});
+        this.props.genericAction(actionTypes.FETCH_COMPANIES, {});
     }
     render() {
         return (
             <React.Fragment>
                 <HeaderTeam />
                 <div className="main">
-                    <HeroSection pageTitle={this.props.selectedComany.name} />
-                    <Breadcrumb name={this.props.selectedComany.name} />
+                    <HeroSection
+                        pageTitle={this.props.dictionary.results.companies.hero.title}
+                        pageSubtitle={this.props.dictionary.results.companies.hero.subtitle}
+                        />
+                    <Breadcrumb CompanyName={this.props.dictionary.results.companies.hero.subtitle} />
                     <DefaultGiudeGrid />
                 </div>
                 <Footer withoutNewsletter={true} />

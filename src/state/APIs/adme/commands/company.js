@@ -1,5 +1,5 @@
 
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 
 const fetchCompanyById = `
 query fetchCompanyById(
@@ -27,7 +27,9 @@ query fetchCompanyById(
 
 const fetchCompanies = `
 query fetchCompanies{
-  companies {
+  companies (
+    ${globalModels.companyFields.active}: true
+  ) {
     _id,
     name,
     logo,

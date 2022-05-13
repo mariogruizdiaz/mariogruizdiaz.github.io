@@ -2,7 +2,10 @@ module.exports = {
     en: {
         general: {
             downloadFrom: "Download From",
-            brandsLabel: "Brands"
+            brandsLabel: "Brands",
+            NotFoundTitle: "Sorry, something went wrong",
+            NotFoundSubtitle: "The page you are looking for might have been removed had its name changed or is temporarily unavailable.",
+            NotFoundbuttonText: "Go To Homepage"
         },
         header: {
             menu: {
@@ -13,6 +16,7 @@ module.exports = {
                 brands: 'Brands',
                 agencies: 'Agencies',
                 investors: 'Investors',
+                campaigns: 'Campaigns'
             },
         },
         hero: {
@@ -145,37 +149,100 @@ module.exports = {
             placeholder: "Enter your email",
         },
         team: {
+            sections : {
+                cofounders: {
+                    title: "Our Founders",
+                    subtitle: "Deversion, creativity from the impediments, failing early to reach success, are some of the values that the Ruiz Diaz brothers, our founders, promote and that justify Adme being so disruptive for the advertising market on social networks."
+                },
+                footer: {
+                    theTeamTitle: "We're a lateral thinking team",
+                    theTeamSubtitle: "Meet the creative brains behind Adme",
+                    hereButtonLabel: "here"
+                }
+            },
             gaston: {
+                fullName: "Gastón Ruiz Diaz",
                 role: "Co-Founder",
                 roleDescription: "Gaston and his brother, Mario Ruiz Diaz are the Co-Founder of the new generation of social medias, Adme",
+                techRole: "Full Stack Developer",
+                techRoleDescription: "Bachelor Degree in Computer Engineering with more than 15 years in the industry of building software",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "gaston@adme.com.ar",
-                picturePath: "gaston500x500.jpg"
+                picturePath: "gaston500x500.jpg",
+                linkedinURL: "https://www.linkedin.com/in/gaston-ruiz-diaz-157366bb/"
             },
             mario: {
+                fullName: "Mario Ruiz Diaz",
                 role: "Co-Founder",
                 roleDescription: "Mario and his brother, Gastón Ruiz Diaz are the Co-Founder of the new generation of social medias, Adme",
+                techRole: "Full Stack Developer",
+                techRoleDescription: "Bachelor Degree in Computer Engineering with more than 18 years in the industry of building software",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "gaston@adme.com.ar",
-                picturePath: "gaston.jpg"
+                picturePath: "Mario.jpg",
+                linkedinURL: "https://www.linkedin.com/in/marioruizdiaz/"
             },
             yulian: {
+                fullName: "Julio Aranda",
                 role: "Software Engineer",
                 roleDescription: "Julio is one of of the people that is creating the new generation of social medias, Adme",
                 personalityDescription: "",
                 phone: "+54 911 5139-4412",
                 email: "julio.aranda@adme.com.ar",
-                picturePath: "yulian500x500.jpeg"
+                picturePath: "yulian500x500.jpeg",
+                linkedinURL: "https://www.linkedin.com/in/julioarandadev/"
             },
             alex: {
+                fullName: "Alexander Paez Yepez",
                 role: "Quality Assurance",
                 roleDescription: "Julio is one of of the people that is creating the new generation of social medias, Adme",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
-                email: "gaston@adme.com.ar",
-                picturePath: "gaston.jpg"
+                email: "alex.paez@adme.com.ar",
+                picturePath: "alex.jpg",
+                linkedinURL: "https://www.linkedin.com/in/alexander-paez/"
+            },
+            guille: {
+                fullName: "Guillermina Diaz",
+                role: "Quality Assurance",
+                roleDescription: "Guille is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "guillermina.diaz@adme.com.ar",
+                picturePath: "guille.jpg",
+                linkedinURL: "https://www.linkedin.com/in/guillermina-d%C3%ADaz-57a11337/"
+            },
+            javy: {
+                fullName: "Javier Andriani",
+                role: "Quality Assurance",
+                roleDescription: "Javy is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "javier.andriani@adme.com.ar",
+                picturePath: "javy.jpg",
+                linkedinURL: "https://www.linkedin.com/in/javierandrianiqcanalyst/"
+            },
+            fer: {
+                fullName: "Fernando Messala",
+                role: "Marketing Specialist",
+                roleDescription: "Fer is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "fernando.messala@adme.com.ar",
+                picturePath: "fer.jpg",
+                linkedinURL: "https://www.linkedin.com/in/fernando-messala/"
+            },
+            nico: {
+                fullName: "Nicolas Carosio",
+                role: "IT Specialist",
+                roleDescription: "Nico is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "nicoas.carosio@adme.com.ar",
+                picturePath: "nico.jpg",
+                linkedinURL: "https://www.linkedin.com/in/nicolas-carosio-13096615/"
             },
         },
         guides: {
@@ -354,6 +421,21 @@ module.exports = {
 
         },
         results: {
+            companies: {
+                hero: {
+                    title: "Launched campaigns by Brands",
+                    subtitle: "Companies usging Adme"
+                },
+                items: {
+                    kpis: {
+                        onGoingTitle: "Active campaigns"
+                    },
+                    buttons: {
+                        goToCompaigns: "Go to Campaigns"
+                    }
+                }
+
+            },
             company: {
                 hero: {
                     subtitle: "Activities and results in Adme"
@@ -364,18 +446,155 @@ module.exports = {
                 hero: {
                     title: "Campaign Results"
                 },
+                posts: {
+                    title: "Social Media Engagement",
+                    post: {
+                        likesLabel: "Likes",
+                        commentsLabel: "Comments",
+                        seeOnSocialSection: {
+                            title: "See this post on Socials"
+                        },
+                        connectOnSocialSection: {
+                            title: "Connect [REPLACE_ME] on Socials"
+                        },
+                        checkPostOptionLabel: "Posts",
+                        checkAccountOptionLabel: "Profiles"
+                    }
+                }
 
             },
             buttons: {
                 goToCampaign: "More details",
                 goToFacebook: "See on Facebook"
             }
+        },
+        investors: {
+            hero: {
+                title: "Adme, The new concept in social netrwork",
+                subtitle: "The first social network that understands that the money from advertising companies should go to social network users, who through their daily posts influence their friends and followers",
+                demoURL: "https://www.youtube.com/watch?v=GfTEj6NVdnY"
+            },
+            promo: {
+                title: "Why invest in Adme?",
+                subtitle: "If Web1 is about information, Web2 is about content creation and social media. With Web2, running from around 2005 to the present day, the users became active creators and the web went from being a reading platform to a publishing platform. But Web2 has a dark side: the main platforms vaccinated up to the entire economy. In Web2, the user-created the value that the platform enjoyed.",
+                subtitle2: "Adme complies with the web3 concept where content creators demand payment of the benefits generated by the influence they achieve on social networks with their posts.",
+                reason1Title: "On top of Socials",
+                reason1Subtitle: " Adme does not compete with existing social networks, but empowers its users, so that they can finally monetize all the content they have been creating and uploading forever.",
+                reason2Title: "Everyone is influencer",
+                reason2Subtitle: "Adme believes that one 👍 is one influence generated, so why don't to encourage everyone to sponsor the posts with related Ad Campaigns and therefore to pay the content creator for that?",
+                reason3Title: "Blockchain based",
+                reason3Subtitle: "Thinking of wallets for Brands and users, it is easy to imagine Adme as a fintech platform as well. Okay, yes! we are building it based on blockchain technology"
+            },
+            access: {
+                title: "Do you want to know more?",
+                subtitle: "Potential investiors can request and token to access to the following information:",
+            },
+            faq: {
+                title: "Frequently Asked Questions",
+                subtitle: "All you need yo know about the problems that we try to solve, how are we achieving this, and other information that any investor would like to know before contacting us.",
+                item3Question: "How Adme will make money",
+                item3Answer: `Adme is an option for Brands to encourage people, with Ad campaigns, to create posts with related content, and even sponsor the spontaneous photos, that they are posting every day. With Adme, brands will continue having a presence on the same famous social networks but this time by sponsoring content created by the users.
+                Adme is changing the current paradigm as follows:
+                 - All social network users will be, for the first time, paid for just posting.
+                 - Social networks users will be able to post on many social networks at once from one single mobile app.
+                 - For the first time, the spontaneous photos posts will be sponsorable.
+                 - Brands will be able to launch Ad Campaigns on many social networks at once from one single platform.
+                 - Adme monetization: The Ad Campaigns money will be distributed as follows: 
+                         - Social media users: 75%
+                         - Adme: 25%
+                         - Social network platforms: 0%
+                `,
+                item1Question: "What problem or use case does your company address, and how do your potential target customers get by today in the absence of your product/service?",
+                item1Answer: `The problem:
+                On one hand, Brands need to advertise genuine content created by people but:
+                 a - Social networks only distribute the content created by brands
+                 b - Hiring professional influencers to request them to create content is not automated
+                 c - People are posting a lot of spontaneous photos with brands, products, and places that can be sponsorable but there is not a mechanism to do that.
+                And, on the other hand, 
+                 d - social networks users, are posting a lot of content with brands, products, and places, generating influence to their friends and followers, but no one is paying them for that
+                Solution
+                 - Adme lets brands sponsor content created by people (based on a brief or just spontaneous) in addition to letting people post on their social networks walls content created by brands as well.
+                 - All social network users are considered influencers. And for the first time, their spontaneous photo will be paid.
+                
+                Without Adme:
+                 a - Brands' content is delivered by the platforms only. It is not possible to ask people to post them on their walls.
+                 b - Not automated. Brands contact influencers or their agent directly. Prices are not standardized.
+                c - Not possible
+                d - Social networks users continue posting branded photos making brands enjoy the benefits of their influence without rewarding content owners for that`,
+                item2Question: "What makes your company stand out amongst that competition?",
+                item2Answer: `If Web1 is about information, Web2 is about content creation and social media. With Web2, running from around 2005 to the present day, users became active creators and the web went from being a reading platform to a publishing platform. Bu Web2 had a dark side: the main platforms vaccinated up to the entire economy. In Web2, the user-created the value that the platform enjoyed.
+                Adme complies with the web3 concept where content creators demand payment of the benefits generated by the influence they achieve on social networks with said content.`,
+                item4Question: "How far along is Adme?",
+                item4Answer: `We have version 1 of both applications.
+                We launched in March 2022 the first Ad campaign that involved one brand and twenty social media users.
+                The plan is to continue bringing social networks users at the same time we launch more and more Ad Campaigns from existing and new Brands.`,
+                item5Question: "How long have each of you been working on this? How much of that has been full-time?",
+                item5Answer: `We started talking about the concept in June 2018, and in September of the same year, we decided to quit our jobs, live off our savings and family loans, to work full-time building an MVP, with the goal of traveling to San Francisco and probe the concept there. After 6 months of working many hours a day, and after finishing the MVP, we traveled to San Francisco where we stayed for 1 month (May / June 2019). A period in which we pitched 3 times in pitching events. We met a lot of people and after sharing our idea through the use of the app that we had on our cell phones, we came back happy from all the positive feedback we received.
+                We came back with no savings and debts, so we had to get a job while we continued working on the development of the platform with the aim of transforming the MVP into version 1.
+                In February 2020, we were able to hire our first and only paid Full Stack developer. I say 'paid' because we have Fernando Messala, our Marketing specialist who, after hiring him for a particular need at the end of 2018, stayed with the team forever, making his contributions without receiving financial compensation in return, hoping that in some time Adme raises funds and can hire him full time.
+                Something similar happened with Guillermina, girlfriend of Gaston, Javier, and Alexander (friends for many years) whom we trained as QA during the pandemic with the aim of helping them get into the software market and get a job. The 3 achieved the objective, and since then they have been working for large companies such as IBM, Globant while continuing to test Adme without receiving any salary.
+                In December 2021 we finished version 1, and in February 2022 we began the path of launching Adme on our own with the strategy of going from less to more at the same time that we resume the path of seeking investments.`,
+                item6Question: "Are people using Adme apps?",
+                item6Answer: "Yes",
+                item7Question: "How many active users or customers do you have?",
+                item7Answer: `We launched the first Ad Campaign in Feb/March of this yes after getting the first Brand aboard and installing the Adme mobile app on 21 social media users.
+                As the first objective is to solve the problem of the chicken and the egg, the first campaigns are not designed for Adme to monetize, but to increase the volume of brands and influencers.
+                The results of the Ad campaign can be seen in the private section that we delivered to the brans after finishing the campaign:
+                https://adme.com.ar/#/companies/622cd9a8f6bde20038b43316`,
+                item8Question: "Who writes code, or does other technical work on your product? Was any of it done by a non-founder?",
+                item8Answer: "Gaston and Mario wrote the code, in addition to Julio, our only one employee Full Stack Dev.",
+                item9Question: "How long have the founders known one another and how did you meet?",
+                item9Answer: "We are brothers",
+            },
+            privateDocuments: {
+                title: "Private Documents for Investors",
+                subtitle: "All the information necessary to confirm that Adme is an exceptional investment opportunity",
+                pitchDeck: {
+                    title: "Pitch Deck",
+                    subtitle: "Access to the Deck that we use to Pitch in San Francisco.",
+                    externalURL: "https://docs.google.com/presentation/d/1rwSYPhXNgEkuhoT9EgMFtzRbhtvRUFvg/edit?usp=sharing&ouid=112934507687098617406&rtpof=true&sd=true",
+                    externalURLLabel: "Download now"
+                },
+                demo: {
+                    title: "Full Demo",
+                    subtitle: "8 minutes demo to show how a Brand launches an Ad Campaing and a social media user makes money by sponsoring a related facebook post by using adme mobile app",
+                    externalURL: "https://www.youtube.com/watch?v=GfTEj6NVdnY",
+                    externalURLLabel: "here"
+                },
+                crunchbase: {
+                    title: "crunchbase.com Profile",
+                    subtitle: "Visit our profile in crunchbase.com",
+                    externalURL: "https://www.crunchbase.com/organization/adme-633a",
+                    externalURLLabel: "here"
+                },
+                gust: {
+                    title: "gust.com Profile",
+                    subtitle: "Visit our profile in crunchbase.com",
+                    externalURL: "https://gust.com/companies/admestartup",
+                    externalURLLabel: "here"
+                },
+                tokenApplyTitle: "Ready to get access?",
+                tokenInputPlaceHolder: "Enter token",
+                tokenButton: "Unlok Section",
+                tokenMessageInProgress: "Unlocking...",
+                downloadNowButton: "Download now",
+                watchHereButton: "Watch here",
+                tokenRequestTitle: "Request a token",
+                tokenRequestFullNamePlaceHolder: "Full Name",
+                tokenRequestProfilePlaceHolder: "Investor profile url (linkedin or other)",
+                tokenRequestButtonLabel: "Request",
+                tokenRequestButtonInProgressLabel: "Requesting...",
+            }
+            
         }
     },
     es: {
         general: {
             downloadFrom: "Descargar desde",
-            brandsLabel: "Marcas"
+            brandsLabel: "Marcas",
+            NotFoundTitle: "Lo sentimos, algo salió mal",
+            NotFoundSubtitle: "La pagina que esta buscando fue removida ó está temporalmente inaccesible.",
+            NotFoundbuttonText: "Homepage"
         },
         header: {
             menu: {
@@ -386,6 +605,7 @@ module.exports = {
                 brands: 'Marcas',
                 agencies: 'Agencias',
                 investors: 'Inversores',
+                campaigns: 'Campañas'
             },
         },
         hero: {
@@ -518,37 +738,101 @@ module.exports = {
             placeholder: "Ingresá tu email",
         },
         team: {
+            sections : {
+                cofounders: {
+                    title: "Nuestros fundadores",
+                    subtitle: "Deversión, creatividad desde los impedimentos, fallar temparno para llegar al éxito, son algunos de los valores que los hermanos Ruiz Diaz, nuestros fundadores, fomentan y que justifican que Adme sea tan disrruptivo para el mercado de la publicidd en redes sociales"
+                },
+                footer: {
+                    theTeamTitle: "Somos un equipo de personas que pensamos diferente",
+                    theTeamSubtitle: "Conocé a las mentes creativas detrás de Adme",
+                    hereButtonLabel: "aquí"
+                }
+            },
             gaston: {
-                role: "Cofundador",
+                fullName: "Gastón Ruiz Diaz",
+                role: "Co-Fundador",
                 roleDescription: "Gastón y su hermano, Mario Ruiz Diaz son los fundadores de la nueva generación en redes sociales, Adme",
+                techRole: "Full Stack Developer",
+                techRoleDescription: "Licenciado en Sistemas con más de 15 años en la industria del desarrollo de software",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "gaston@adme.com.ar",
-                picturePath: "gaston500x500.jpg"
+                picturePath: "gaston500x500.jpg",
+                linkedinURL: "https://www.linkedin.com/in/gaston-ruiz-diaz-157366bb/"
             },
             mario: {
-                role: "Cofundador",
+                fullName: "Mario Ruiz Diaz",
+                role: "Co-Fundador",
                 roleDescription: "Mario y su hermano, Gastón Ruiz Diaz son los fundadores de la nueva generación en redes sociales, Adme",
+                techRole: "Hands-on Software Architect",
+                techRoleDescription: "Licenciado en Sistemas con más de 18 años en la industria del desarrollo de software",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "mario@adme.com.ar",
-                picturePath: "gaston.jpg"
+                picturePath: "Mario.jpg",
+                linkedinURL: "https://www.linkedin.com/in/marioruizdiaz/"
             },
             yulian: {
+                fullName: "Julio Aranda",
                 role: "Ingeniero de Software",
                 roleDescription: "Yulian es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
                 personalityDescription: "",
                 phone: "+54 911 5139-4412",
                 email: "julio.aranda@adme.com.ar",
-                picturePath: "yulian500x500.jpeg"
+                picturePath: "yulian500x500.jpeg",
+                linkedinURL: "https://www.linkedin.com/in/julioarandadev/"
             },
             alex: {
+                fullName: "Alexander Paez Yepez",
                 role: "Quality Assurance",
                 roleDescription: "Alexander es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
                 personalityDescription: "",
-                phone: "+54 911 4085-1807",                email: "alex@adme.com.ar",
-                picturePath: "gaston.jpg"
-            }
+                phone: "+54 911 4085-1807",
+                email: "alexander.paez@adme.com.ar",
+                picturePath: "alex.jpg",
+                linkedinURL: "https://www.linkedin.com/in/alexander-paez/"
+            },
+            guille: {
+                fullName: "Guillermina Diaz",
+                role: "Quality Assurance",
+                roleDescription: "Guille es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "guillermina.diaz@adme.com.ar",
+                picturePath: "guille.jpg",
+                linkedinURL: "https://www.linkedin.com/in/guillermina-d%C3%ADaz-57a11337/"
+            },
+            javy: {
+                fullName: "Javier Andriani",
+                role: "Quality Assurance",
+                roleDescription: "Javy es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "javier.andriani@adme.com.ar",
+                picturePath: "javy.jpg",
+                linkedinURL: "https://www.linkedin.com/in/javierandrianiqcanalyst/"
+            },
+            fer: {
+                fullName: "Fernando Messala",
+                role: "Marketing Specialist",
+                roleDescription: "Fer es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "fernando.messala@adme.com.ar",
+                picturePath: "fer.jpg",
+                linkedinURL: "https://www.linkedin.com/in/fernando-messala/"
+            },
+            nico: {
+                fullName: "Nicolas Carosio",
+                role: "IT Specialist",
+                roleDescription: "Nico es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "nicolas.carosio@adme.com.ar",
+                picturePath: "nico.jpg",
+                linkedinURL: "https://www.linkedin.com/in/nicolas-carosio-13096615/"
+            },
         },
         guides: {
             title: "Todo lo que necesitas para comenzar a monetizar con Adme",
@@ -726,6 +1010,21 @@ module.exports = {
 
         },
         results: {
+            companies: {
+                hero: {
+                    title: "Campañas agrupadas por Marcas",
+                    subtitle: "Empresas usando Adme"
+                },
+                items: {
+                    kpis: {
+                        onGoingTitle: "campañas activas"
+                    },
+                    buttons: {
+                        goToCompaigns: "Ver Campañas"
+                    }
+                }
+
+            },
             company: {
                 hero: {
                     subtitle: "Visualización de actividades y resultados en Adme"
@@ -735,11 +1034,144 @@ module.exports = {
                 hero: {
                     title: "Resultados de la campaña"
                 },
+                posts: {
+                    title: "Presencia en Redes Sociales",
+                    post: {
+                        likesLabel: "Me gusta",
+                        commentsLabel: "Comentarios",
+                        seeOnSocialSection: {
+                            title: "Ver el post en las redes"
+                        },
+                        connectOnSocialSection: {
+                            title: "Conectar a [REPLACE_ME] en las redes"
+                        },
+                        checkPostOptionLabel: "Posteos",
+                        checkAccountOptionLabel: "Perfiles"
+                    }
+                }
 
             },
             buttons: {
                 goToCampaign: "Ver detalles",
                 goToFacebook: "Ver en Facebook"
+            }
+        },
+        investors: {
+            hero: {
+                title: "Adme, Un nuevo concepto en redes sociales",
+                subtitle: "La primer red social que entiende que el dinero de las compañas publicitarias debe ser para los usuarios de redes sociales, quienes mediantes sus posts diarios influencian a sus amigos y seguidores",
+                demoURL: "https://www.youtube.com/watch?v=GfTEj6NVdnY"
+            },
+            promo: {
+                title: "¿Porqué invertir en Adme?",
+                subtitle: "Si Web1 se trata de información, Web2 se trata de creación de contenido y redes sociales. Con Web2, funcionando desde alrededor de 2005 hasta la actualidad, los usuarios se convertieron en creadores activos y la web pasó de ser una plataforma de lectura a una plataforma de publicación. Pero Web2 tiene un lado oscuro: las principales plataformas distorcionan a toda la economía. En Web2, el usuario creaba el valor que acaparan las plataformas.",
+                subtitle2: "Adme cumple con el concepto web3 donde los creadores de contenido exigen el pago de los beneficios generados por la influencia que logran en las redes sociales con sus publicaciones.",
+                reason1Title: "On top of Socials",
+                reason1Subtitle: "Adme no compite con las redes sociales existentes, sino que empodera a sus usuarios, para que por fÍn, puedan monetizar todo el contenido que vienen creando y subiendo desde siempre.",
+                reason2Title: "Todos somos influencer",
+                reason2Subtitle: "Adme cree que un 👍 es una influencia generada, entonces, ¿por qué no animar a todos los usuarios a auspiciar las publicaciones con campañas publicitarias relacionadas, pagando a sus creadores?",
+                reason3Title: "Blockchain",
+                reason3Subtitle: "Pensando en billeteras para Marcas y usuarios, es fácil imaginar una plataforma fintech. ¡Bueno, sí! lo estamos construyendo sobre la tecnología blockchain"
+            },
+            access: {
+                title: "¿Te gustaría saber mas?",
+                subtitle: "Los potenciales inversores pueden solicitar un token para acceder a la siguiente informacion:",
+            },
+            faq: {
+                title: "Preguntas Frecuentes",
+                subtitle: "Todo lo que necesita saber sobre los problemas que tratamos de resolver, cómo lo estamos logrando y otra información que a cualquier inversor le gustaría saber antes de contactar con nosotros.",
+                item3Question: "How Adme will make money",
+                item3Answer: `Adme is an option for Brands to encourage people, with Ad campaigns, to create posts with related content, and even sponsor the spontaneous photos, that they are posting every day. With Adme, brands will continue having a presence on the same famous social networks but this time by sponsoring content created by the users.
+                Adme is changing the current paradigm as follows:
+                 - All social network users will be, for the first time, paid for just posting.
+                 - Social networks users will be able to post on many social networks at once from one single mobile app.
+                 - For the first time, the spontaneous photos posts will be sponsorable.
+                 - Brands will be able to launch Ad Campaigns on many social networks at once from one single platform.
+                 - Adme monetization: The Ad Campaigns money will be distributed as follows: 
+                         - Social media users: 75%
+                         - Adme: 25%
+                         - Social network platforms: 0%
+                `,
+                item1Question: "What problem or use case does your company address, and how do your potential target customers get by today in the absence of your product/service?",
+                item1Answer: `The problem:
+                On one hand, Brands need to advertise genuine content created by people but:
+                 a - Social networks only distribute the content created by brands
+                 b - Hiring professional influencers to request them to create content is not automated
+                 c - People are posting a lot of spontaneous photos with brands, products, and places that can be sponsorable but there is not a mechanism to do that.
+                And, on the other hand, 
+                 d - social networks users, are posting a lot of content with brands, products, and places, generating influence to their friends and followers, but no one is paying them for that
+                Solution
+                 - Adme lets brands sponsor content created by people (based on a brief or just spontaneous) in addition to letting people post on their social networks walls content created by brands as well.
+                 - All social network users are considered influencers. And for the first time, their spontaneous photo will be paid.
+                
+                Without Adme:
+                 a - Brands' content is delivered by the platforms only. It is not possible to ask people to post them on their walls.
+                 b - Not automated. Brands contact influencers or their agent directly. Prices are not standardized.
+                c - Not possible
+                d - Social networks users continue posting branded photos making brands enjoy the benefits of their influence without rewarding content owners for that`,
+                item2Question: "What makes your company stand out amongst that competition?",
+                item2Answer: `If Web1 is about information, Web2 is about content creation and social media. With Web2, running from around 2005 to the present day, users became active creators and the web went from being a reading platform to a publishing platform. Bu Web2 had a dark side: the main platforms vaccinated up to the entire economy. In Web2, the user-created the value that the platform enjoyed.
+                Adme complies with the web3 concept where content creators demand payment of the benefits generated by the influence they achieve on social networks with said content.`,
+                item4Question: "How far along is Adme?",
+                item4Answer: `We have version 1 of both applications.
+                We launched in March 2022 the first Ad campaign that involved one brand and twenty social media users.
+                The plan is to continue bringing social networks users at the same time we launch more and more Ad Campaigns from existing and new Brands.`,
+                item5Question: "How long have each of you been working on this? How much of that has been full-time?",
+                item5Answer: `We started talking about the concept in June 2018, and in September of the same year, we decided to quit our jobs, live off our savings and family loans, to work full-time building an MVP, with the goal of traveling to San Francisco and probe the concept there. After 6 months of working many hours a day, and after finishing the MVP, we traveled to San Francisco where we stayed for 1 month (May / June 2019). A period in which we pitched 3 times in pitching events. We met a lot of people and after sharing our idea through the use of the app that we had on our cell phones, we came back happy from all the positive feedback we received.
+                We came back with no savings and debts, so we had to get a job while we continued working on the development of the platform with the aim of transforming the MVP into version 1.
+                In February 2020, we were able to hire our first and only paid Full Stack developer. I say 'paid' because we have Fernando Messala, our Marketing specialist who, after hiring him for a particular need at the end of 2018, stayed with the team forever, making his contributions without receiving financial compensation in return, hoping that in some time Adme raises funds and can hire him full time.
+                Something similar happened with Guillermina, girlfriend of Gaston, Javier, and Alexander (friends for many years) whom we trained as QA during the pandemic with the aim of helping them get into the software market and get a job. The 3 achieved the objective, and since then they have been working for large companies such as IBM, Globant while continuing to test Adme without receiving any salary.
+                In December 2021 we finished version 1, and in February 2022 we began the path of launching Adme on our own with the strategy of going from less to more at the same time that we resume the path of seeking investments.`,
+                item6Question: "Are people using Adme apps?",
+                item6Answer: "Yes",
+                item7Question: "How many active users or customers do you have?",
+                item7Answer: `We launched the first Ad Campaign in Feb/March of this yes after getting the first Brand aboard and installing the Adme mobile app on 21 social media users.
+                As the first objective is to solve the problem of the chicken and the egg, the first campaigns are not designed for Adme to monetize, but to increase the volume of brands and influencers.
+                The results of the Ad campaign can be seen in the private section that we delivered to the brans after finishing the campaign:
+                https://adme.com.ar/#/companies/622cd9a8f6bde20038b43316`,
+                item8Question: "Who writes code, or does other technical work on your product? Was any of it done by a non-founder?",
+                item8Answer: "Gaston and Mario wrote the code, in addition to Julio, our only one employee Full Stack Dev.",
+                item9Question: "How long have the founders known one another and how did you meet?",
+                item9Answer: "We are brothers",
+            },
+            privateDocuments: {
+                title: "Documentos exclusivamente para inversionistas",
+                subtitle: "Toda la información necesaria para confirmar que Adme es una oportunidad exepcional de inversión",
+                pitchDeck: {
+                    title: "Pitch Deck",
+                    subtitle: "Acceda al Deck que usamos para pitchear en San Francisco.",
+                    externalURL: "https://docs.google.com/presentation/d/1rwSYPhXNgEkuhoT9EgMFtzRbhtvRUFvg/edit?usp=sharing&ouid=112934507687098617406&rtpof=true&sd=true",
+                    externalURLLabel: "Descargar"
+                },
+                demo: {
+                    title: "Full Demo",
+                    subtitle: "8 minutes demo to show how a Brand launches an Ad Campaing and a social media user makes money by sponsoring a related facebook post by using adme mobile app",
+                    externalURL: "https://www.youtube.com/watch?v=GfTEj6NVdnY",
+                    externalURLLabel: "aquí"
+                },
+                crunchbase: {
+                    title: "Perfile en crunchbase.com",
+                    subtitle: "Visite nuestro perful en crunchbase.com",
+                    externalURL: "https://www.crunchbase.com/organization/adme-633a",
+                    externalURLLabel: "aquí"
+                },
+                gust: {
+                    title: "Perfil en gust.com",
+                    subtitle: "Visite nuestro perfil en gust.com",
+                    externalURL: "https://gust.com/companies/admestartup",
+                    externalURLLabel: "aquí"
+                },
+                tokenApplyTitle: "¿Listo para acceder?",
+                tokenInputPlaceHolder: "Ingrese el token",
+                tokenButton: "Desbloquear",
+                tokenMessageInProgress: "Desbloqueando...",
+                downloadNowButton: "Descargar",
+                watchHereButton: "Ver aqui",
+                tokenRequestTitle: "Solicitar un token",
+                tokenRequestFullNamePlaceHolder: "Nombre completo",
+                tokenRequestProfilePlaceHolder: "Url del perfil como inversor (linkedin u otro)",
+                tokenRequestButtonLabel: "Solicitar",
+                tokenRequestButtonInProgressLabel: "Solicitando...",
             }
         }
     }

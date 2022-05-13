@@ -1,4 +1,4 @@
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 
 const fetchCampaignsByCompanyId = `
 query fetchAdvertisingByCampaignId(
@@ -10,6 +10,7 @@ query fetchAdvertisingByCampaignId(
   ){
     _id,
     name,
+    brief,
     creationDt,
     startDt,
     endDt,

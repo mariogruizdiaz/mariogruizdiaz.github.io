@@ -23,8 +23,8 @@ class CompanyGridBreadcrumb extends Component {
                         <div className="custom-breadcrumb">
                             <ol className="breadcrumb pl-0 mb-0 bg-transparent">
                                 <li className="breadcrumb-item"><a href="/#">Home</a></li>
-                                <li className="breadcrumb-item active">{this.props.dictionary.general.brandsLabel}</li>
-                                <li className="breadcrumb-item active">{this.props.selectedCompany.name}</li>
+                                <li className="breadcrumb-item"><a href="/#companies">{this.props.dictionary.general.brandsLabel}</a></li>
+                                <li className="breadcrumb-item active">{this.props.companyName}</li>
                             </ol>
                         </div>
                     </div>

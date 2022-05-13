@@ -1,5 +1,5 @@
 
-import * as globalModels from "influencers-models";
+import * as globalModels from "adme-models";
 
 const fetchAdvertisingByCampaignId = `
 query fetchAdvertisingByCampaignId(
@@ -10,6 +10,7 @@ query fetchAdvertisingByCampaignId(
   ){
     _id,
     campaignId,
+    personId,
     campaignName,
     companyName,
     companyLogo,
@@ -104,6 +105,22 @@ query fetchAdvertisingByCampaignId(
         enabled,
         value
       }
+    },
+    _person {
+        ${globalModels.personFields.firstName},
+        ${globalModels.personFields.lastName},
+    },
+    _person_Credentials {
+        ${globalModels.person_credentialFields.firstName},
+        ${globalModels.person_credentialFields.lastName},
+        ${globalModels.person_credentialFields.platform},
+        ${globalModels.person_credentialFields.picture},
+        ${globalModels.person_credentialFields.platformObjectIdentity},
+    },
+    ,
+    _posts {
+        ${globalModels.postFields.platform},
+        ${globalModels.postFields.postPlatformId},
     }
   }
 }
