@@ -25,6 +25,7 @@ import ComingSoon from "../themes/comingSoon";
 import ComingSoonBrands from "../themes/comingSoonBrands";
 import GastonRuizDiaz from "../themes/gastonruizdiaz";
 import JulioAranda from "../themes/julioaranda";
+import TeamMember from "../themes/teamMember";
 import Guides from "../themes/guides/guides";
 import iOSInstallGuide from "../themes/guides/iOSInstallGuide";
 import androidInstallGuide from "../themes/guides/androidInstallGuide";
@@ -58,6 +59,7 @@ class Routes extends React.PureComponent {
             <Route exact path="/" component={Theme1} />
             <Route exact path="/gastonruizdiaz" component={GastonRuizDiaz} />
             <Route exact path="/julioaranda" component={JulioAranda} />
+            <Route exact path="/teamMember/:memberKey" component={TeamMember} />
             <Route exact path="/team" component={Team} />
             <Route exact path="/guides" component={Guides} />
             <Route exact path="/iOSInstallGuide" component={iOSInstallGuide} />

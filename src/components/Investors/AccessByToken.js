@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { submitContact } from "../../actions/index";
 import { actionTypes } from "../../state/actionTypes";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
@@ -53,7 +52,7 @@ class AccessByToken extends Component {
         event.preventDefault();
 
         let error = false;
-        if (!this.state.token || this.state.token !== 'test') {
+        if (!this.state.token || this.state.token !== '0b1ab26c-d2d2-11ec-9d64-0242ac120002') {
             error = true;
         }
 
@@ -143,47 +142,51 @@ class AccessByToken extends Component {
         event.preventDefault();
 
         let error = false;
-        if (!(this.state.name && this.state.profileURL && this.state.message)) {
+        if (!this.state.name || !this.state.profileURL) {
             error = true;
         }
 
+
+
         if (!error) {
             // disable the button
-            this.setState({ disableContactBtn: true });
+            // this.setState({ disableContactBtn: true });
 
-            // get action
-            const contactAction = submitContact(this.state);
+            // // get action
+            // const contactAction = submitContact(this.state);
 
-            // Dispatch the contact from data
-            this.props.dispatch(contactAction);
+            // // Dispatch the contact from data
+            // this.props.dispatch(contactAction);
+
+            window.open(`https://api.whatsapp.com/send?phone=5491124065989&text=Hi!%20I%20am%20${this.state.name}!%20I%20I%20would%20like%20to%20access%20to%20the%20private%20section%20of%20Adme%20project.%20My%20profile%20url%20is%20${this.state.profileURL}`, "_blank");
 
             // added delay to change button text to previous
-            setTimeout(
-                function () {
-                    // enable the button
-                    this.setState({ disableContactBtn: false });
+            // setTimeout(
+            //     function () {
+            //         // enable the button
+            //         this.setState({ disableContactBtn: false });
 
-                    // change to button name
-                    this.changeBtnText("Send Message");
+            //         // change to button name
+            //         this.changeBtnText("Send Message");
 
-                    // get action again to update state
-                    const contactAction = submitContact(this.state);
+            //         // get action again to update state
+            //         const contactAction = submitContact(this.state);
 
-                    // Dispatch the contact from data
-                    this.props.dispatch(contactAction);
+            //         // Dispatch the contact from data
+            //         this.props.dispatch(contactAction);
 
-                    // clear form data
-                    this.setState({
-                        name: "",
-                        profileURL: "",
-                        message: ""
-                    });
+            //         // clear form data
+            //         this.setState({
+            //             name: "",
+            //             profileURL: "",
+            //             message: ""
+            //         });
 
-                    // Set success message
-                    this.message(error);
-                }.bind(this),
-                3000
-            );
+            //         // Set success message
+            //         this.message(error);
+            //     }.bind(this),
+            //     3000
+            // );
         } else {
             // Set error message
             this.message(error);
@@ -242,7 +245,7 @@ class AccessByToken extends Component {
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group">
-                                            <input type="email" className="form-control" name="email" value={this.state.profileURL} onChange={e => this.handleFormValueChange("profileURL", e)} placeholder={this.props.dictionary.investors.privateDocuments.tokenRequestProfilePlaceHolder} />
+                                            <input type="text" className="form-control" name="email" value={this.state.profileURL} onChange={e => this.handleFormValueChange("profileURL", e)} placeholder={this.props.dictionary.investors.privateDocuments.tokenRequestProfilePlaceHolder} />
                                         </div>
                                     </div>
                                     <div className="col-sm-12 mt-3">

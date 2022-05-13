@@ -17,19 +17,6 @@ class investors extends Component {
                 <div className="main">
                     <Hero />
                     <Promo />
-                    {/* <AboutUs /> */}
-                    {/* <Feature /> */}
-                    {/* <Download /> */}
-                    {/* <Screenshots isWhite={false} removeTop={true} /> */}
-                    {/* <WorkProcess isGray={true}  /> */}
-                    {/* <Pricing isWhite={true}  /> */}
-                    {/* <Counter /> */}
-                    {/* {
-                        !this.props.security.authenticated &&
-                        <div className="row justify-content-around">
-                            <AccessByToken />
-                        </div>
-                    } */}
                     <PrivateDocuments isWhite={false} />
                     {
                         (this.props.security.authenticated || this.props.security.guestToken) && <Faq isWhite={true} />
@@ -37,10 +24,6 @@ class investors extends Component {
                     {
                         <TeamMember isWhite={(!this.props.security.authenticated && !this.props.security.guestToken)} />
                     }
-                    {/* <Testimonial /> */}
-                    {/* <ContactSection /> */}
-                    {/* <Blog /> */}
-                    {/* <TrustedCompany /> */}
                 </div>
                 <FooterSection withNewsletter={false} isWhite={true} />
             </React.Fragment>

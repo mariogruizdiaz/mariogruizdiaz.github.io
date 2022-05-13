@@ -28,7 +28,7 @@ class SingleTeamMember extends React.Component {
                     <div className="col-md-12 col-sm-12 col-lg-6">
                         <div className="team-single-text">
                             <div className="team-name mb-4">
-                                <h4 className="mb-1">{this.props.firstName} {this.props.lastName}</h4>
+                                <h4 className="mb-1">{this.props.fullName}</h4>
                                 <span>{this.props.role}</span>
                             </div>
                             <ul className="team-single-info">

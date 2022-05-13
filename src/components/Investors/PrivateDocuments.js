@@ -34,7 +34,7 @@ class PrivateDocuments extends React.Component {
                                     <div className="single-faq mt-4">
                                         <h5>{this.props.dictionary.investors.privateDocuments.pitchDeck.title}</h5>
                                         <p>{this.props.dictionary.investors.privateDocuments.pitchDeck.subtitle}</p>
-                                        <a href={this.props.dictionary.investors.privateDocuments.pitchDeck.externalURL}>{this.props.dictionary.investors.privateDocuments.pitchDeck.externalURLLabel}</a>
+                                        <a href={this.props.dictionary.investors.privateDocuments.pitchDeck.externalURL} target="_blank" rel="noopener noreferrer">{this.props.dictionary.investors.privateDocuments.pitchDeck.externalURLLabel}</a>
                                     </div>
                                 </div>
                                 <div className="col-md-6">

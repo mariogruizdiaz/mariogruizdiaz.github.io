@@ -169,7 +169,8 @@ module.exports = {
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "gaston@adme.com.ar",
-                picturePath: "gaston500x500.jpg"
+                picturePath: "gaston500x500.jpg",
+                linkedinURL: "https://www.linkedin.com/in/gaston-ruiz-diaz-157366bb/"
             },
             mario: {
                 fullName: "Mario Ruiz Diaz",
@@ -180,7 +181,8 @@ module.exports = {
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "gaston@adme.com.ar",
-                picturePath: "Mario.jpg"
+                picturePath: "Mario.jpg",
+                linkedinURL: "https://www.linkedin.com/in/marioruizdiaz/"
             },
             yulian: {
                 fullName: "Julio Aranda",
@@ -189,7 +191,8 @@ module.exports = {
                 personalityDescription: "",
                 phone: "+54 911 5139-4412",
                 email: "julio.aranda@adme.com.ar",
-                picturePath: "yulian500x500.jpeg"
+                picturePath: "yulian500x500.jpeg",
+                linkedinURL: "https://www.linkedin.com/in/julioarandadev/"
             },
             alex: {
                 fullName: "Alexander Paez Yepez",
@@ -197,8 +200,49 @@ module.exports = {
                 roleDescription: "Julio is one of of the people that is creating the new generation of social medias, Adme",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
-                email: "gaston@adme.com.ar",
-                picturePath: "gaston.jpg"
+                email: "alex.paez@adme.com.ar",
+                picturePath: "alex.jpg",
+                linkedinURL: "https://www.linkedin.com/in/alexander-paez/"
+            },
+            guille: {
+                fullName: "Guillermina Diaz",
+                role: "Quality Assurance",
+                roleDescription: "Guille is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "guillermina.diaz@adme.com.ar",
+                picturePath: "guille.jpg",
+                linkedinURL: "https://www.linkedin.com/in/guillermina-d%C3%ADaz-57a11337/"
+            },
+            javy: {
+                fullName: "Javier Andriani",
+                role: "Quality Assurance",
+                roleDescription: "Javy is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "javier.andriani@adme.com.ar",
+                picturePath: "javy.jpg",
+                linkedinURL: "https://www.linkedin.com/in/javierandrianiqcanalyst/"
+            },
+            fer: {
+                fullName: "Fernando Messala",
+                role: "Marketing Specialist",
+                roleDescription: "Fer is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "fernando.messala@adme.com.ar",
+                picturePath: "fer.jpg",
+                linkedinURL: "https://www.linkedin.com/in/fernando-messala/"
+            },
+            nico: {
+                fullName: "Nicolas Carosio",
+                role: "IT Specialist",
+                roleDescription: "Nico is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "nicoas.carosio@adme.com.ar",
+                picturePath: "nico.jpg",
+                linkedinURL: "https://www.linkedin.com/in/nicolas-carosio-13096615/"
             },
         },
         guides: {
@@ -508,7 +552,7 @@ module.exports = {
                 pitchDeck: {
                     title: "Pitch Deck",
                     subtitle: "Access to the Deck that we use to Pitch in San Francisco.",
-                    externalURL: "",
+                    externalURL: "https://docs.google.com/presentation/d/1rwSYPhXNgEkuhoT9EgMFtzRbhtvRUFvg/edit?usp=sharing&ouid=112934507687098617406&rtpof=true&sd=true",
                     externalURLLabel: "Download now"
                 },
                 demo: {
@@ -714,7 +758,8 @@ module.exports = {
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "gaston@adme.com.ar",
-                picturePath: "gaston500x500.jpg"
+                picturePath: "gaston500x500.jpg",
+                linkedinURL: "https://www.linkedin.com/in/gaston-ruiz-diaz-157366bb/"
             },
             mario: {
                 fullName: "Mario Ruiz Diaz",
@@ -725,7 +770,8 @@ module.exports = {
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "mario@adme.com.ar",
-                picturePath: "Mario.jpg"
+                picturePath: "Mario.jpg",
+                linkedinURL: "https://www.linkedin.com/in/marioruizdiaz/"
             },
             yulian: {
                 fullName: "Julio Aranda",
@@ -734,7 +780,8 @@ module.exports = {
                 personalityDescription: "",
                 phone: "+54 911 5139-4412",
                 email: "julio.aranda@adme.com.ar",
-                picturePath: "yulian500x500.jpeg"
+                picturePath: "yulian500x500.jpeg",
+                linkedinURL: "https://www.linkedin.com/in/julioarandadev/"
             },
             alex: {
                 fullName: "Alexander Paez Yepez",
@@ -742,9 +789,50 @@ module.exports = {
                 roleDescription: "Alexander es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
-                email: "alex@adme.com.ar",
-                picturePath: "gaston.jpg"
-            }
+                email: "alexander.paez@adme.com.ar",
+                picturePath: "alex.jpg",
+                linkedinURL: "https://www.linkedin.com/in/alexander-paez/"
+            },
+            guille: {
+                fullName: "Guillermina Diaz",
+                role: "Quality Assurance",
+                roleDescription: "Guille es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "guillermina.diaz@adme.com.ar",
+                picturePath: "guille.jpg",
+                linkedinURL: "https://www.linkedin.com/in/guillermina-d%C3%ADaz-57a11337/"
+            },
+            javy: {
+                fullName: "Javier Andriani",
+                role: "Quality Assurance",
+                roleDescription: "Javy es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "javier.andriani@adme.com.ar",
+                picturePath: "javy.jpg",
+                linkedinURL: "https://www.linkedin.com/in/javierandrianiqcanalyst/"
+            },
+            fer: {
+                fullName: "Fernando Messala",
+                role: "Marketing Specialist",
+                roleDescription: "Fer es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "fernando.messala@adme.com.ar",
+                picturePath: "fer.jpg",
+                linkedinURL: "https://www.linkedin.com/in/fernando-messala/"
+            },
+            nico: {
+                fullName: "Nicolas Carosio",
+                role: "IT Specialist",
+                roleDescription: "Nico es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme",
+                personalityDescription: "",
+                phone: "+54 911 4085-1807",
+                email: "nicolas.carosio@adme.com.ar",
+                picturePath: "nico.jpg",
+                linkedinURL: "https://www.linkedin.com/in/nicolas-carosio-13096615/"
+            },
         },
         guides: {
             title: "Todo lo que necesitas para comenzar a monetizar con Adme",
@@ -1052,7 +1140,7 @@ module.exports = {
                 pitchDeck: {
                     title: "Pitch Deck",
                     subtitle: "Acceda al Deck que usamos para pitchear en San Francisco.",
-                    externalURL: "",
+                    externalURL: "https://docs.google.com/presentation/d/1rwSYPhXNgEkuhoT9EgMFtzRbhtvRUFvg/edit?usp=sharing&ouid=112934507687098617406&rtpof=true&sd=true",
                     externalURLLabel: "Descargar"
                 },
                 demo: {
