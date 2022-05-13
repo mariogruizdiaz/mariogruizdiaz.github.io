@@ -17,10 +17,10 @@ class AdvertisementsGrid extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="module ptb-100">
-                    <div className="container">
+                <div className={`module ptb-100 ${this.props.isWhite && this.props.isWhite === true ? '' : 'gray-light-bg'}`}>
+                    <div className={`container`}>
                         <div className="row justify-content-center">
-                            <div className="col-md-9 col-lg-8">
+                            <div className="col-md-9 col-lg-12">
                                 <div className="section-heading text-center mb-4">
                                     <h2>{this.props.dictionary.results.campaign.posts.title}</h2>
                                     {
@@ -32,6 +32,7 @@ class AdvertisementsGrid extends Component {
                         </div>
                         <div className="row justify-content-center">
                             <div className="row">
+                            {/* <div className="col-md-6"> */}
                                 {
                                     this.props.selectedCampaign.advertisements.items.map((adItem, index) => (
                                         <Advertisement
@@ -42,7 +43,8 @@ class AdvertisementsGrid extends Component {
                                 }
 
                             </div>
-                            <div className="row ptb-100">
+                        </div>
+                        <div className="row ptb-100">
                                 <div className="col-md-12">
                                     <nav className="custom-pagination-nav">
                                         <ul className="pagination justify-content-center">
@@ -56,7 +58,6 @@ class AdvertisementsGrid extends Component {
                                     </nav>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </React.Fragment>

@@ -42,7 +42,7 @@ class campaign extends Component {
                         <div className="main">
                             <Hero pageTitle={"Blog No Sidebar"} />
                             <Breadcrumb name={"Blog No Sidebar"} />
-                            <AdvertisementsGrid />
+                            <AdvertisementsGrid isWhite={false}/>
                         </div>
                         <FooterAdmeBrands withoutNewsletter={true} />
                     </React.Fragment>

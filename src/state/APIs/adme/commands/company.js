@@ -27,7 +27,9 @@ query fetchCompanyById(
 
 const fetchCompanies = `
 query fetchCompanies{
-  companies {
+  companies (
+    ${globalModels.companyFields.active}: true
+  ) {
     _id,
     name,
     logo,

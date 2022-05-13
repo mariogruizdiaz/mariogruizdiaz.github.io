@@ -20,6 +20,7 @@ class AdvertisementDetails extends Component {
         // this.props.genericAction(actionTypes.FETCH_PERSON_CREDENTIALS, { [globalModels.person_credentialFields.personId]: this.props.ad[globalModels.advertisementFields.personId] });
     }
 
+    
     render() {
         const twitterPost = this.props.ad._posts.length > 0 ? this.props.ad._posts.find((post) => post[globalModels.postFields.platform] === globalModels.platformEnum.Twitter) : null;
         const facebookPost = this.props.ad._posts.length > 0 ? this.props.ad._posts.find((post) => post[globalModels.postFields.platform] === globalModels.platformEnum.Facebook) : null;

@@ -24,30 +24,37 @@ class CompaniesGrid extends Component {
                             <div className="row">
                                 {
                                     this.props.companies.fetchStatus === commonStatuses.loaded &&
-                                    this.props.companies.items.filter(c => c[globalModels.companyFields.logo] !== "").map((companyItem, index) => (
+                                    this.props.companies.items.map((companyItem, index) => (
                                         <div className="col-md-6 col-lg-4" key={companyItem[globalModels.companyFields._id]}>
                                             <div className="single-blog-card card gray-light-bg border-0 shadow-sm my-3">
                                                 <div className="blog-img position-relative">
                                                     <img src={companyItem[globalModels.companyFields.logo]} className="card-img-top" alt="blog" />
                                                     <div className="meta-date">
-                                                        <strong>Feb</strong>
-                                                        <small>2022</small>
+                                                        <strong>Total</strong>
+                                                        <small>{
+                                                            companyItem[globalModels.companyFields.campaignsOnGoingCount] +
+                                                            companyItem[globalModels.companyFields.campaignsStoppedCount] +
+                                                            companyItem[globalModels.companyFields.campaignsFinishedCount] +
+                                                            companyItem[globalModels.companyFields.campaignsWaitingForPaymentCount] +
+                                                            companyItem[globalModels.companyFields.campaignsWaitingForApprovalCount]
+                                                        }</small>
                                                     </div>
                                                 </div>
                                                 <div className="card-body">
                                                     <div className="post-meta mb-2">
                                                         <ul className="list-inline meta-list">
-                                                            <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>12 </span>
-                                                                Comments
+                                                            <li className="list-inline-item"><i className="fas fa-heart mr-2"></i>
+                                                                <span>{companyItem[globalModels.companyFields.campaignsOnGoingCount]} </span>
+                                                                {this.props.dictionary.results.companies.items.kpis.onGoingTitle}
                                                             </li>
-                                                            <li className="list-inline-item"><i className="fas fa-share-alt mr-2"></i><span>32 </span>
+                                                            {/* <li className="list-inline-item"><i className="fas fa-share-alt mr-2"></i><span>32 </span>
                                                                 Share
-                                                            </li>
+                                                            </li> */}
                                                         </ul>
                                                     </div>
                                                     <h3 className="h5 mb-2 card-title"><a href={`#/companies/${companyItem[globalModels.companyFields._id]}`}>{companyItem[globalModels.companyFields.name]}</a></h3>
                                                     {/* <p className="card-text">{this.props.dictionary.guides.ios.install.smallCard.subtitle}</p> */}
-                                                    <a href={`#/companies/${companyItem[globalModels.companyFields._id]}`} className="detail-link">{this.props.dictionary.guides.buttons.readMore} <span className="ti-arrow-right"></span></a>
+                                                    <a href={`#/companies/${companyItem[globalModels.companyFields._id]}`} className="detail-link">{this.props.dictionary.results.companies.items.buttons.goToCompaigns} <span className="ti-arrow-right"></span></a>
                                                 </div>
                                             </div>
                                         </div>

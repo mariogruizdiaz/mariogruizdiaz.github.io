@@ -26,7 +26,7 @@ class HeroSectionCompaniesPage extends React.Component {
                     <div className="col-md-9 col-lg-7">
                         <div className="page-header-content text-white pt-4">
                             <h1 className="text-white mb-0">{this.props.pageTitle}</h1>
-                            <p className="lead">{this.props.roleDescription} </p>
+                            <p className="lead">{this.props.pageSubtitle} </p>
                         </div>
                     </div>
                 </div>

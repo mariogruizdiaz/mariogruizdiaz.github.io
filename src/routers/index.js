@@ -58,6 +58,7 @@ class Routes extends React.PureComponent {
             <Route exact path="/" component={Theme1} />
             <Route exact path="/gastonruizdiaz" component={GastonRuizDiaz} />
             <Route exact path="/julioaranda" component={JulioAranda} />
+            <Route exact path="/team" component={Team} />
             <Route exact path="/guides" component={Guides} />
             <Route exact path="/iOSInstallGuide" component={iOSInstallGuide} />
             <Route exact path="/androidInstallGuide" component={androidInstallGuide} />

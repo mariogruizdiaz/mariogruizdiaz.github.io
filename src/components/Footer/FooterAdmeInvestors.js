@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { subscribe } from "../../actions/index";
 
-class Footer extends React.Component {
+class FooterAdmeInvestors extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -58,8 +58,8 @@ class Footer extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <footer className={"footer-1 gradient-bg ptb-60 " + (this.props.withoutNewsletter && this.props.withoutNewsletter === true ? "" : "footer-with-newsletter")}>
-                    {!(this.props.withoutNewsletter && this.props.withoutNewsletter === true) && (
+                <footer className={"footer-1 gradient-bg ptb-60 " + (!this.props.withNewsletter || this.props.withNewsletter === false ? "" : "footer-with-newsletter")}>
+                    {(this.props.withNewsletter && this.props.withNewsletter === true) && (
                         <div className="container">
                             <div className="row newsletter-wrap primary-bg rounded shadow-lg p-5">
                                 <div className="col-md-6 col-lg-7 mb-4 mb-md-0 mb-sm-4 mb-lg-0">
@@ -114,39 +114,39 @@ class Footer extends React.Component {
                                 </li>
                             </ul>
                         </div> */}
-                                    <div className="col-sm-6 col-md-3 col-lg-3 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
-                                        <h6 className="text-uppercase">{this.props.dictionary.footer.products.title}</h6>
-                                        <ul>
-                                            <li>
-                                                <a href="#hero" className="page-scroll">{this.props.dictionary.footer.products.p1}</a>
-                                            </li>
-                                            <li>
-                                                <a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`}>{this.props.dictionary.footer.products.p2}</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className="col-sm-6 col-md-3 col-lg-3 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
-                                        <h6 className="text-uppercase">{this.props.dictionary.footer.company.title}</h6>
-                                        <ul>
-                                            <li>
-                                                <a href="#about" className="page-scroll">{this.props.dictionary.footer.company.section1}</a>
-                                            </li>
-                                            <li>
-                                                <a href="#testimonials" className="page-scroll">{this.props.dictionary.footer.company.section2}</a>
-                                            </li>
-                                            <li>
-                                                <a href={`${process.env.PUBLIC_URL}/#comingSoonInvestors`}>{this.props.dictionary.footer.company.section3}</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className="col-sm-6 col-md-3 col-lg-3">
-                                        <h6 className="text-uppercase">{this.props.dictionary.footer.support.title}</h6>
-                                        <ul>
-                                            <li>
-                                                <a href="#faq" className="page-scroll">{this.props.dictionary.footer.support.s1}</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    {/* <div className="col-sm-6 col-md-3 col-lg-3 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
+                            <h6 className="text-uppercase">{this.props.dictionary.footer.products.title}</h6>
+                            <ul>
+                                <li>
+                                    <a href="#hero" className="page-scroll">{this.props.dictionary.footer.products.p1}</a>
+                                </li>
+                                <li>
+                                    <a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`}>{this.props.dictionary.footer.products.p2}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="col-sm-6 col-md-3 col-lg-3 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
+                            <h6 className="text-uppercase">{this.props.dictionary.footer.company.title}</h6>
+                            <ul>
+                                <li>
+                                    <a href="#about" className="page-scroll">{this.props.dictionary.footer.company.section1}</a>
+                                </li>
+                                <li>
+                                    <a href="#testimonials" className="page-scroll">{this.props.dictionary.footer.company.section2}</a>
+                                </li>
+                                <li>
+                                    <a href={`${process.env.PUBLIC_URL}/#comingSoonInvestors`}>{this.props.dictionary.footer.company.section3}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="col-sm-6 col-md-3 col-lg-3">
+                            <h6 className="text-uppercase">{this.props.dictionary.footer.support.title}</h6>
+                            <ul>
+                                <li>
+                                    <a href="#faq" className="page-scroll">{this.props.dictionary.footer.support.s1}</a>
+                                </li>
+                            </ul>
+                        </div> */}
                                 </div>
                             </div>
                         </div>
@@ -179,4 +179,4 @@ class Footer extends React.Component {
 
 export default connect(state => ({
     dictionary: state.i18n.dictionary
-}))(Footer);
+}))(FooterAdmeInvestors);

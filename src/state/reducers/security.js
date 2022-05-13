@@ -11,7 +11,8 @@ const initialState = {
     permissions: [],
     firstName: null,
     lastName: null,
-    thumbnail: null
+    thumbnail: null,
+    guestToken: null
 };
 
 export default (state = initialState, action) => {
@@ -108,6 +109,12 @@ export default (state = initialState, action) => {
         case actionTypes.LOGOUT: {
             return {
                 ...initialState
+            };
+        }
+        case actionTypes.APPLY_GUEST_TOKEN: {
+            return {
+                ...initialState,
+                guestToken: action.payload
             };
         }
         default:

@@ -28,55 +28,47 @@ class PrivateDocuments extends React.Component {
                             </div>
                         </div>
                         {
-                            this.props.security.authenticated &&
+                            (this.props.security.authenticated || this.props.security.guestToken) &&
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="single-faq mt-4">
-                                        <h5>How can I pay for this?</h5>
-                                        <p>Intrinsicly implement high standards in strategic theme areas via inexpensive solutions.
-                                            Assertively conceptualize prospective bandwidth whereas xpedite intuitive services rather than process-centric.</p>
+                                        <h5>{this.props.dictionary.investors.privateDocuments.pitchDeck.title}</h5>
+                                        <p>{this.props.dictionary.investors.privateDocuments.pitchDeck.subtitle}</p>
+                                        <a href={this.props.dictionary.investors.privateDocuments.pitchDeck.externalURL}>{this.props.dictionary.investors.privateDocuments.pitchDeck.externalURLLabel}</a>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
                                     <div className="single-faq mt-4">
-                                        <h5>Is it possible to pay yearly?</h5>
-                                        <p>Assertively iterate user friendly innovation without open-source markets. Monotonectally extend
-                                            resource sucking without high-payoff paradigms. Objectively customize sound relationships. </p>
+                                        <h5>{this.props.dictionary.investors.privateDocuments.demo.title}</h5>
+                                        <p>{this.props.dictionary.investors.privateDocuments.demo.subtitle}</p>
+                                        {/* <a className="btn btn-brand-02 btn-sm btn-rounded" href={this.props.dictionary.investors.privateDocuments.demo.externalURL}>
+                                            {this.props.dictionary.investors.privateDocuments.downloadNowButton}
+                                        </a> */}
+                                        <div className="video-promo-content my-5 pb-4">
+                                            <a href={this.props.dictionary.investors.privateDocuments.demo.externalURL} className="popup-youtube video-play-icon text-center m-auto"><span className="ti-control-play"></span> </a>
+                                        </div>
+                                        {/* <a href={this.props.dictionary.investors.privateDocuments.demo.externalURL} className="popup-youtube video-play-icon text-center m-auto">{this.props.dictionary.investors.privateDocuments.demo.externalURLLabel}</a> */}
                                     </div>
                                 </div>
                                 <div className="col-md-6">
                                     <div className="single-faq mt-4">
-                                        <h5>Do you offer discounts on multiple items?</h5>
-                                        <p>Dramatically target focused testing procedures after holistic ideas. Collaboratively maximize
-                                            high-payoff ROI and value-added products. Distinctively deliver cooperative whereas customized</p>
+                                        <h5>{this.props.dictionary.investors.privateDocuments.crunchbase.title}</h5>
+                                        <p>{this.props.dictionary.investors.privateDocuments.crunchbase.subtitle}</p>
+                                        <a href={this.props.dictionary.investors.privateDocuments.crunchbase.externalURL} target="_blank" rel="noopener noreferrer">{this.props.dictionary.investors.privateDocuments.crunchbase.externalURLLabel}</a>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
                                     <div className="single-faq mt-4">
-                                        <h5>Is VAT included in plan prices?</h5>
-                                        <p>Distinctively simplify high-quality initiatives for highly efficient applications. Monotonectally
-                                            repurpose integrated customer service after magnetic e-services matrix exceptional results. </p>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="single-faq mt-4">
-                                        <h5>Will I pay more for some features?</h5>
-                                        <p>Enthusiastically pontificate resource-leveling supply chains whereas scalable markets.
-                                            Authoritatively streamline resource Continually re-engineer ethical niches re-engineer ethical niches with real-time e-tailers.</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="single-faq mt-4">
-                                        <h5>Why are there no limits on the number of messages?</h5>
-                                        <p>Assertively target turnkey ideas for market-driven portals.Continually re-engineer ethical niches with real-time e-tailers
-                                            intellectual capital whereas 2.0 mindshare cultivate prospective process improvements .</p>
+                                        <h5>{this.props.dictionary.investors.privateDocuments.gust.title}</h5>
+                                        <p>{this.props.dictionary.investors.privateDocuments.gust.subtitle}</p>
+                                        <a href={this.props.dictionary.investors.privateDocuments.gust.externalURL} target="_blank" rel="noopener noreferrer">{this.props.dictionary.investors.privateDocuments.gust.externalURLLabel}</a>
                                     </div>
                                 </div>
                             </div>
 
                         }
                         {
-                            !this.props.security.authenticated &&
+                            (!this.props.security.authenticated && !this.props.security.guestToken) &&
                             <div className="row justify-content-around">
                                 <AccessByToken />
                             </div>
