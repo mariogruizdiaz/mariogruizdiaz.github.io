@@ -4,21 +4,10 @@ import { connect } from "react-redux";
 import Header from "../components/Header/headerInvestors";
 import Hero from "../components/HeroSection/HeroSection4";
 import Promo from "../components/PromoSection/PromoInvestors";
-// import AboutUs from "../components/AboutUs/AboutUs4";
-// import Feature from "../components/Features/Features4";
-// import Download from "../components/CallToAction/DownloadExt";
-// import Screenshots from "../components/Screenshots";
-// import WorkProcess from "../components/WorkProcess";
-// import Pricing from "../components/Pricing";
-// import Counter from "../components/CallToAction/Counter";
 import TeamMember from "../components/TeamMember/coFounders";
 import Faq from "../components/Faq/FaqAdmeInvestors";
-// import Testimonial from "../components/Testimonial";
-// import ContactSection from "../components/Contact";
 import PrivateDocuments from "../components/Investors/PrivateDocuments";
-// import Blog from "../components/Blog";
-// import TrustedCompany from "../components/TrustedCompany/TrustedCompany";
-import FooterSection from "../components/Footer";
+import FooterSection from "../components/Footer/FooterAdmeInvestors";
 
 class investors extends Component {
     render() {
@@ -35,17 +24,25 @@ class investors extends Component {
                     {/* <WorkProcess isGray={true}  /> */}
                     {/* <Pricing isWhite={true}  /> */}
                     {/* <Counter /> */}
-                    <PrivateDocuments  isWhite={false} />
+                    {/* {
+                        !this.props.security.authenticated &&
+                        <div className="row justify-content-around">
+                            <AccessByToken />
+                        </div>
+                    } */}
+                    <PrivateDocuments isWhite={false} />
                     {
-                        this.props.security.authenticated && <Faq isGray={true} />
+                        (this.props.security.authenticated || this.props.security.guestToken) && <Faq isWhite={true} />
                     }
-                    <TeamMember isWhite={true} />
+                    {
+                        <TeamMember isWhite={(!this.props.security.authenticated && !this.props.security.guestToken)} />
+                    }
                     {/* <Testimonial /> */}
                     {/* <ContactSection /> */}
                     {/* <Blog /> */}
                     {/* <TrustedCompany /> */}
                 </div>
-                <FooterSection />
+                <FooterSection withNewsletter={false} isWhite={true} />
             </React.Fragment>
         );
     }

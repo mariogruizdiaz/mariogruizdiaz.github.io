@@ -31,7 +31,7 @@ class TeamMember extends React.Component {
                         <div className="row justify-content-center">
                             <div className="col-md-6 col-lg-3">
                                 <div className="single-team-wrap bg-white text-center border rounded p-4 mt-4">
-                                    <img src="assets/img/team/team-member-1.png" alt="team" width="120" className="img-fluid m-auto pb-4" />
+                                    <img src={`assets/img/team/${this.props.dictionary.team.gaston.picturePath}`} alt="team" width="120" className="img-fluid m-auto pb-4" />
                                     <div className="team-content">
                                         <h5 className="mb-0">{this.props.dictionary.team.gaston.fullName}</h5>
                                         <span>{this.props.dictionary.team.gaston.role}</span>
@@ -46,7 +46,7 @@ class TeamMember extends React.Component {
                             </div>
                             <div className="col-md-6 col-lg-3">
                                 <div className="single-team-wrap bg-white text-center border rounded p-4 mt-4">
-                                    <img src="assets/img/team/team-member-1.png" alt="team" width="120" className="img-fluid m-auto pb-4" />
+                                    <img src={`assets/img/team/${this.props.dictionary.team.mario.picturePath}`} alt="team" width="120" className="img-fluid m-auto pb-4" />
                                     <div className="team-content">
                                         <h5 className="mb-0">{this.props.dictionary.team.mario.fullName}</h5>
                                         <span>{this.props.dictionary.team.mario.role}</span>
@@ -59,7 +59,12 @@ class TeamMember extends React.Component {
                                     </div>
                                 </div>
                             </div>
-
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="support-cta text-center mt-5">
+                            <h5 className="mb-1"><span className="ti-palette color-primary mr-3"></span>{this.props.dictionary.team.sections.footer.theTeamTitle}</h5>
+                            <p>{this.props.dictionary.team.sections.footer.theTeamSubtitle} <a href="/#team">{this.props.dictionary.team.sections.footer.hereButtonLabel}</a></p>
                         </div>
                     </div>
                 </section>

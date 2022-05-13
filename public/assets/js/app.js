@@ -181,7 +181,6 @@ jQuery(function ($) {
   });
 
   $(".js-contcheckbox2").change(function () {
-    console.log(this.dataset.key, 'Hola');
     const key = this.dataset.key;
     if (this.checked) {
       $(`#posts-${key}`).css('display', 'none');
