@@ -87,7 +87,7 @@ class Footer extends React.Component {
                     <div className="list-inline social-list-default background-color social-hover-2 mt-2">
                         <li className="list-inline-item"><a className="twitter" href="/#"><i className="fab fa-twitter"></i></a></li>
                         <li className="list-inline-item"><a className="youtube" href="/#"><i className="fab fa-youtube"></i></a></li>
-                        <li className="list-inline-item"><a className="linkedin" href="/#"><i className="fab fa-linkedin-in"></i></a></li>
+                        <li className="list-inline-item"><a className="linkedin" href="https://www.linkedin.com/company/81803306/admin/"><i className="fab fa-linkedin-in"></i></a></li>
                         <li className="list-inline-item"><a className="dribbble" href="/#"><i className="fab fa-dribbble"></i></a></li>
                     </div>
                 </div>

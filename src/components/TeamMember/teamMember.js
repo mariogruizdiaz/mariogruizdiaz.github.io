@@ -54,7 +54,7 @@ class SingleTeamMember extends React.Component {
                                     <a className="dribbble" href="/#" target="_blank"><i className="fab fa-dribbble"></i></a>
                                 </li>
                                 <li className="list-inline-item">
-                                    <a className="linkedin" href="/#" target="_blank"><i className="fab fa-linkedin-in"></i></a>
+                                    <a className="linkedin" href="https://www.linkedin.com/company/81803306/admin/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
                                 </li>
                             </ul>
                         </div>
