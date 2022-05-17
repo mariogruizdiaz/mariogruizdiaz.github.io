@@ -89,7 +89,7 @@ class FooterAdmeInvestors extends React.Component {
                                 <div className="list-inline social-list-default background-color social-hover-2 mt-2">
                                     <li className="list-inline-item"><a className="instagram" href="https://www.instagram.com/adme.and.payme/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
                                     <li className="list-inline-item"><a className="facebook" href="https://www.facebook.com/Adme.And.Payme" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
-                                    <li className="list-inline-item"><a className="linkedin" href="https://www.linkedin.com/company/81803306/admin/"><i className="fab fa-linkedin-in" target="_blank" rel="noopener noreferrer"></i></a></li>
+                                    <li className="list-inline-item"><a className="linkedin" href="https://www.linkedin.com/company/advertiseme" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in" target="_blank" rel="noopener noreferrer"></i></a></li>
                                 </div>
                             </div>
                             <div className="col-md-12 col-lg-8">
