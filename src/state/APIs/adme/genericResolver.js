@@ -11,7 +11,7 @@ const genericResolver = function* genericResolver(action) {
         // let apiRefs = yield select(apiReferences);
         const command = commandCollection[action.type];
         // const response = yield graphQL.executeCommand(`http://${apiRefs.host}:${apiRefs.port}/graphql`, command, action.payload);
-        const response = yield graphQL.executeCommand(`https://e2d3-190-16-234-137.ngrok.io/graphql`, command, action.payload);
+        const response = yield graphQL.executeCommand(`https://67bb-190-16-234-137.ngrok.io/graphql`, command, action.payload);
         return response;
     } catch (e) {
         console.log(`Error executing command: ${action.type}`);
