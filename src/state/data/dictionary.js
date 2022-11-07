@@ -666,7 +666,7 @@ module.exports = {
             title: "Ingresos pasivos",
             subtitle: "Con Adme no solo ganás dinero por subir tus fotos, sino que también ganás dinero de manera pasiva.",
             method1Title: "El Mejor Programa De Referidos",
-            method1Subtitle: "Toda persona que se sume a Adme gracias a tu invitación, o a la invitación de tus invitados, conformarán tu clan. Y lo bueno es que todos ellos (sin importar que tan profundo estén en tu red de referidos) te harán ganar dinero, ya que Adme te recompenza con un porcetaje de sus ganancias, cada vez que suceda.",
+            method1Subtitle: "Toda persona que se sume a Adme gracias a tu invitación, o a la invitación de tus invitados, conformarán tu clan. Y lo bueno es que todos ellos (sin importar que tan profundo estén en tu red de referidos) te harán ganar dinero, ya que Adme te recompensa con un porcetaje de sus ganancias, cada vez que suceda.",
             method2Title: "El éxito de tus posts",
             method2Subtitle: "Después de recibir el pago por compartir una foto, seguiras recibiendo dinero de acuerdo al éxito de la misma entre tus amigos y seguidores. Adme también te paga por cada like, comentario y otras reacciones.",
             method3Title: "",
@@ -676,7 +676,7 @@ module.exports = {
         },
         features: {
             title: "Funcionalidades de Adme",
-            subtitle: "Adme es la primer plataforma que cree que todo usuario de redes sociales es un influencer. Es por ésta razón que Adme transforma los benefícios que las marcas obtinen por las influencis de tus fotos en recompenzas monetarias al protagonista de toda ésta historia, vos 🤟",
+            subtitle: "Adme es la primer plataforma que cree que todo usuario de redes sociales es un influencer. Es por ésta razón que Adme transforma los benefícios que las marcas obtinen por las influencis de tus fotos en recompensas monetarias al protagonista de toda ésta historia, vos 🤟",
             feature1Title: "Una sola app para todas tus redes sociales",
             feature1Subtitle: "Con la app de Adme puedes postear al mismo tiempo en todas tus redes sociales habituales. 📱",
             feature2Title: "Fotos espponsorizadas",
@@ -1211,7 +1211,7 @@ module.exports = {
                 reason3Title: "Infrastructura Descentralizada",
                 reason3Subtitle: "Arquitectura resistente basada en infraestructura Web3",
                 reason4Title: "Crypto para los runners",
-                reason4Subtitle: "Reciben nuestros tokens nativos, $ADME, como recompenzas"
+                reason4Subtitle: "Reciben nuestros tokens nativos, $ADME, como recompensas"
             },
         }
     }
