@@ -729,7 +729,7 @@ module.exports = {
                 placeholder: "Ingresa tu email",
             },
             corp: {
-                subtitle: "La plataforma de publicidad disrruptiva que llegó para cambiar el paradigma de las publicidad en redes sociales."
+                subtitle: "La plataforma de publicidad disruptiva que llegó para cambiar el paradigma de las publicidad en redes sociales."
             },
             products: {
                 title: "Productos",
@@ -762,7 +762,7 @@ module.exports = {
             sections : {
                 cofounders: {
                     title: "Nuestros fundadores",
-                    subtitle: "Deversión, creatividad desde los impedimentos, fallar temparno para llegar al éxito, son algunos de los valores que los hermanos Ruiz Diaz, nuestros fundadores, fomentan y que justifican que Adme sea tan disrruptivo para el mercado de la publicidd en redes sociales"
+                    subtitle: "Deversión, creatividad desde los impedimentos, fallar temparno para llegar al éxito, son algunos de los valores que los hermanos Ruiz Diaz, nuestros fundadores, fomentan y que justifican que Adme sea tan disruptivo para el mercado de la publicidd en redes sociales"
                 },
                 footer: {
                     theTeamTitle: "Somos un equipo de personas que pensamos diferente",
@@ -1208,10 +1208,10 @@ module.exports = {
                 reason1Subtitle: "Integra todas las redes sociales existentes y que aun no existen",
                 reason2Title: "Dinero para los usuarios",
                 reason2Subtitle: "Dinero de campaña publicitaria distribuido creadores de contenido",
-                reason3Title: "Ingrastructura Descentralizada",
+                reason3Title: "Infrastructura Descentralizada",
                 reason3Subtitle: "Arquitectura resistente basada en infraestructura Web3",
                 reason4Title: "Crypto para los runners",
-                reason4Subtitle: "Reciben nuesrtos tokens nativos, $ADME, como recompenzas"
+                reason4Subtitle: "Reciben nuestros tokens nativos, $ADME, como recompenzas"
             },
         }
     }
