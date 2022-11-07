@@ -27,6 +27,7 @@ class Header extends React.Component {
                                     <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.brands}</a></li>
                                     <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.agencies}</a></li>
                                     <li><a href={`${process.env.PUBLIC_URL}/#Investors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li>
+                                    <li><a href={`${process.env.PUBLIC_URL}/#Web3`} className="page-scroll">{this.props.dictionary.header.menu.web3}</a></li>
                                     {
                                         this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCompanies') &&
                                         <li><a href={`${process.env.PUBLIC_URL}/#Companies`} className="page-scroll">{this.props.dictionary.header.menu.campaigns}</a></li>

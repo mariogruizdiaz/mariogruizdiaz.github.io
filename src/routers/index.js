@@ -34,6 +34,7 @@ import Company from "../themes/results/company";
 import Campaign from "../themes/results/campaign";
 import ComingSoonInvestors from "../themes/comingSoonInvestors";
 import Investors from "../themes/investors";
+import Web3 from "../themes/web3";
 import ThankYou from "../themes/thankYou";
 import Team from "../themes/team";
 import SingleTeam from "../themes/singleTeam";
@@ -85,6 +86,7 @@ class Routes extends React.PureComponent {
             <Route exact path="/comingSoonBrands" component={ComingSoonBrands} />
             <Route exact path="/comingSoonInvestors" component={ComingSoonInvestors} />
             <Route exact path="/investors" component={Investors} />
+            <Route exact path="/web3" component={Web3} />
             <Route exact path="/thankYou" component={ThankYou} />
             <Route exact path="/team" component={Team} />
             <Route exact path="/singleTeam" component={SingleTeam} />
