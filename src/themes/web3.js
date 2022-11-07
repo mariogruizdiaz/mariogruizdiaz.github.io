@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Header from "../components/Header/headerInvestors";
+import Header from "../components/Header/headerWeb3";
 import Hero from "../components/HeroSection/HeroWeb3";
 import Promo from "../components/PromoSection/PromoWeb3";
 import FooterSection from "../components/Footer/FooterAdmeInvestors";
