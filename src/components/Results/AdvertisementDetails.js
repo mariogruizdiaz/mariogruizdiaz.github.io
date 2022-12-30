@@ -79,19 +79,19 @@ class AdvertisementDetails extends Component {
                     <li className="list-inline-item">
                         {
                             facebookPersonCredential
-                            && <a className="facebook" href={`https://wwww.facebook.com/${facebookPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                            && <a className="facebook" href={`https://www.facebook.com/${facebookPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
                         }
                     </li>
                     <li className="list-inline-item">
                         {
                             twitterPersonCredential
-                            && <a className="twitter" href={`https://wwww.twitter.com/${twitterPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+                            && <a className="twitter" href={`https://www.twitter.com/${twitterPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
                         }
                     </li>
                     <li className="list-inline-item">
                         {
                             instagramPersonCredential
-                            && <a className="instagram" href={`https://wwww.instagram.com/${instagramPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                            && <a className="instagram" href={`https://www.instagram.com/${instagramPersonCredential[globalModels.person_credentialFields.platformObjectIdentity]}`} target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
                         }
                     </li>
                 </ul>

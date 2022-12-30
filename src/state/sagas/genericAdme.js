@@ -15,7 +15,7 @@ function* genericMutation(action) {
     let result;
     try {
         result = yield command.resolver(action);
-        if (result && result[command.endpointName].success) {
+        if (result && result[command.endpointName]?.success) {
             let datax = JSON.parse(result[command.endpointName].data);
             yield put(command.onSuccess({data: datax}));
         } else yield put(command.onUnsuccess({errors: result[command.endpointName].data}));
