@@ -12,6 +12,13 @@ class AdvertisementDetails extends Component {
             posts: [],
             fetchStatus: commonStatuses.loading
         };
+        
+        let searchText = window.location.href.split('?');
+
+        if ( searchText.length > 0 && searchText[1] !== 'reloaded' ) {  
+            window.location.replace(`${window.location.toString()}?reloaded` );
+            window.location.reload();
+        }
     }
 
     componentDidMount() {
