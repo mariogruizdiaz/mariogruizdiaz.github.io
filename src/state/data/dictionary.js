@@ -637,8 +637,8 @@ module.exports = {
         about: {
             title: '¿Por qué Adme es diferente?',
             subtitle: 'Adme te reconoce como el principal protagonista en el mundo de las redes sociales. Sin importar cuantos amigos y/o seguidores tengas en tus redes sociales, Adme te considera un Influencer, y te paga por ello',
-            reason1Title: 'Tú foto, tú plata',
-            reason1Subtitle: "Si sós el que crea las fotos, y el que pagó por los productos y servicios que aparecen en ellas ¿por qué no te pagan por compartirla? Adme lo hace posible!",
+            reason1Title: 'Tu foto, tu plata',
+            reason1Subtitle: "Si sos el que crea las fotos, y el que pagó por los productos y servicios que aparecen en ellas ¿por qué no te pagan por compartirla? Adme lo hace posible!",
             reason2Title: 'Posteá desde una sola app',
             reason2Subtitle: "La app de Adme te permite postear en todas tus redes sociales al mismo tiempo y desde un solo lugar. Además te permite ganar dinero si quisieras esponsorizarlas.",
             reason3Title: 'Ingresos pasivos',
