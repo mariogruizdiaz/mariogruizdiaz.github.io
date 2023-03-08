@@ -729,7 +729,7 @@ module.exports = {
                 placeholder: "Ingresa tu email",
             },
             corp: {
-                subtitle: "La plataforma de publicidad disruptiva que llegó para cambiar el paradigma de las publicidad en redes sociales."
+                subtitle: "La plataforma de publicidad disruptiva que llegó para cambiar el paradigma de la publicidad en redes sociales."
             },
             products: {
                 title: "Productos",
@@ -762,7 +762,7 @@ module.exports = {
             sections : {
                 cofounders: {
                     title: "Nuestros fundadores",
-                    subtitle: "Deversión, creatividad desde los impedimentos, fallar temparno para llegar al éxito, son algunos de los valores que los hermanos Ruiz Diaz, nuestros fundadores, fomentan y que justifican que Adme sea tan disruptivo para el mercado de la publicidd en redes sociales"
+                    subtitle: "Diversión, creatividad desde los impedimentos, fallar temparno para llegar al éxito, son algunos de los valores que los hermanos Ruiz Diaz, nuestros fundadores, fomentan y que justifican que Adme sea tan disruptivo para el mercado de la publicidd en redes sociales"
                 },
                 footer: {
                     theTeamTitle: "Somos un equipo de personas que pensamos diferente",
@@ -1079,12 +1079,12 @@ module.exports = {
         },
         investors: {
             hero: {
-                title: "Adme, Un nuevo concepto en redes sociales",
-                subtitle: "La primer red social que entiende que el dinero de las compañas publicitarias debe ser para los usuarios de redes sociales, quienes mediantes sus posts diarios influencian a sus amigos y seguidores",
+                title: "Adme, un nuevo concepto en redes sociales",
+                subtitle: "La primer red social que entiende que el dinero de las campañas publicitarias debe ser para los usuarios de redes sociales, quienes mediantes sus posts diarios influencian a sus amigos y seguidores",
                 demoURL: "https://www.youtube.com/watch?v=GfTEj6NVdnY"
             },
             promo: {
-                title: "¿Porqué invertir en Adme?",
+                title: "¿Por qué invertir en Adme?",
                 subtitle: "Si Web1 se trata de información, Web2 se trata de creación de contenido y redes sociales. Con Web2, funcionando desde alrededor de 2005 hasta la actualidad, los usuarios se convertieron en creadores activos y la web pasó de ser una plataforma de lectura a una plataforma de publicación. Pero Web2 tiene un lado oscuro: las principales plataformas distorcionan a toda la economía. En Web2, el usuario creaba el valor que acaparan las plataformas.",
                 subtitle2: "Adme cumple con el concepto web3 donde los creadores de contenido exigen el pago de los beneficios generados por la influencia que logran en las redes sociales con sus publicaciones.",
                 reason1Title: "On top of Socials",
