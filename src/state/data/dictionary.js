@@ -553,7 +553,7 @@ module.exports = {
                 pitchDeck: {
                     title: "Pitch Deck",
                     subtitle: "Access to the Deck that we use to Pitch in San Francisco.",
-                    externalURL: "https://docs.google.com/presentation/d/1rwSYPhXNgEkuhoT9EgMFtzRbhtvRUFvg/edit?usp=sharing&ouid=112934507687098617406&rtpof=true&sd=true",
+                    externalURL: "https://docs.google.com/presentation/d/1WtO1UJYFNT1lmwCyi8nXFIB27XCoA8fJ/edit?usp=sharing&ouid=112934507687098617406&rtpof=true&sd=true",
                     externalURLLabel: "Download now"
                 },
                 demo: {
@@ -1161,7 +1161,7 @@ module.exports = {
                 pitchDeck: {
                     title: "Pitch Deck",
                     subtitle: "Acceda al Deck que usamos para pitchear en San Francisco.",
-                    externalURL: "https://docs.google.com/presentation/d/1rwSYPhXNgEkuhoT9EgMFtzRbhtvRUFvg/edit?usp=sharing&ouid=112934507687098617406&rtpof=true&sd=true",
+                    externalURL: "https://docs.google.com/presentation/d/1WtO1UJYFNT1lmwCyi8nXFIB27XCoA8fJ/edit?usp=sharing&ouid=112934507687098617406&rtpof=true&sd=true",
                     externalURLLabel: "Descargar"
                 },
                 demo: {
