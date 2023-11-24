@@ -32,7 +32,7 @@ class iOSInstallGuide extends React.Component {
                                         <h2>{this.props.dictionary.guides.ios.install.step1.title}</h2>
                                         <p>{this.props.dictionary.guides.ios.install.step1.subtitle}</p>
                                         <ul className="dot-circle pt-3">
-                                            <li>{this.props.dictionary.guides.ios.install.step1.subSteps.a}<a href="https://expo.dev/signup" className="btn btn-brand-03 btn-rounded mr-3">Sign Up Expo</a></li>
+                                            <li>{this.props.dictionary.guides.ios.install.step1.subSteps.a}<a href="https://apps.apple.com/us/app/testflight/id899247664?mt=8" className="btn btn-brand-03 btn-rounded mr-3">Download</a></li>
                                             <li>{this.props.dictionary.guides.ios.install.step1.subSteps.b}</li>
                                             <li>{this.props.dictionary.guides.ios.install.step1.subSteps.c}</li>
                                             <li>{this.props.dictionary.guides.ios.install.step1.subSteps.d}</li>
@@ -45,7 +45,7 @@ class iOSInstallGuide extends React.Component {
                                 </div>
                                 <div className="col-sm-5 col-md-5 col-lg-4">
                                     <div className="about-content-right">
-                                        <img src="assets/img/guides/ios/expoCreateAccount.jpeg" alt="about us" className="img-fluid" />
+                                        <img src="assets/img/guides/ios/testFlight.png" alt="about us" className="img-fluid" />
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ class iOSInstallGuide extends React.Component {
                                         <h2>{this.props.dictionary.guides.ios.install.step2.title}</h2>
                                         <p>{this.props.dictionary.guides.ios.install.step2.subtitle}</p>
                                         <ul className="dot-circle pt-3">
-                                            <li>{this.props.dictionary.guides.ios.install.step2.subSteps.a}<a href="https://apps.apple.com/us/app/expo-go/id982107779" className="btn btn-brand-03 btn-rounded mr-3">Expo Go</a></li>
+                                            <li>{this.props.dictionary.guides.ios.install.step2.subSteps.a}<a href="https://testflight.apple.com/join/zFAtn9PC" className="btn btn-brand-03 btn-rounded mr-3">Beta</a></li>
                                             <li>{this.props.dictionary.guides.ios.install.step2.subSteps.b}</li>
                                             <li>{this.props.dictionary.guides.ios.install.step2.subSteps.c}</li>
                                             <li>{this.props.dictionary.guides.ios.install.step2.subSteps.d}</li>
@@ -78,7 +78,7 @@ class iOSInstallGuide extends React.Component {
                                 </div>
                                 <div className="col-sm-5 col-md-5 col-lg-4">
                                     <div className="about-content-right">
-                                        <img src="assets/img/guides/ios/expo.jpeg" alt="about us" className="img-fluid" />
+                                        <img src="assets/img/guides/ios/joinBeta.png" alt="about us" className="img-fluid" />
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@ class iOSInstallGuide extends React.Component {
                                 </div>
                                 <div className="col-sm-5 col-md-5 col-lg-4">
                                     <div className="about-content-right">
-                                        <img src="assets/img/guides/ios/joinMarioRuizDiaz.jpeg" alt="about us" className="img-fluid" />
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@ class iOSInstallGuide extends React.Component {
                                         <h2>{this.props.dictionary.guides.ios.install.step4.title}</h2>
                                         <p>{this.props.dictionary.guides.ios.install.step4.subtitle}</p>
                                         <ul className="dot-circle pt-3">
-                                            <li>{this.props.dictionary.guides.ios.install.step4.subSteps.a}  <a href="https://expo.io/@marioruizdiaz/adme-mobile?release-channel=qa" className="btn btn-brand-03 btn-rounded mr-3">{this.props.dictionary.guides.buttons.downloadNow} <i className="fas fa-cloud-download-alt pl-2"></i></a></li>
+                                            <li>{this.props.dictionary.guides.ios.install.step4.subSteps.a} </li>
                                             <li>{this.props.dictionary.guides.ios.install.step4.subSteps.b}</li>
                                         </ul>
                                         <div className="action-btns mt-4">
