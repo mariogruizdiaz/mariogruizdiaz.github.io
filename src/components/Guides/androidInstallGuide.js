@@ -32,7 +32,7 @@ class androidInstallGuide extends React.Component {
                                         <h2>{this.props.dictionary.guides.android.install.step1.title}</h2>
                                         <p>{this.props.dictionary.guides.android.install.step1.subtitle}</p>
                                         <ul className="dot-circle pt-3">
-                                            <li>{this.props.dictionary.guides.android.install.step1.subSteps.a} <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US" className="btn btn-brand-03 btn-rounded mr-3">Expo</a></li>
+                                            <li>{this.props.dictionary.guides.android.install.step1.subSteps.a} <a href="https://play.google.com/apps/testing/ar.com.adme.social.qa" className="btn btn-brand-03 btn-rounded mr-3">Play Store</a></li>
                                             <li>{this.props.dictionary.guides.android.install.step1.subSteps.b}</li>
                                             <li>{this.props.dictionary.guides.android.install.step1.subSteps.c}</li>
                                             <li>{this.props.dictionary.guides.android.install.step1.subSteps.d}</li>
@@ -44,7 +44,7 @@ class androidInstallGuide extends React.Component {
                                 </div>
                                 <div className="col-sm-5 col-md-5 col-lg-4">
                                     <div className="about-content-right">
-                                        <img src="assets/img/guides/android/expo.jpeg" alt="about us" className="img-fluid" />
+                                        <img src="assets/img/guides/android/becometester.png" alt="about us" className="img-fluid" />
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@ class androidInstallGuide extends React.Component {
                                         <h2>{this.props.dictionary.guides.android.install.step2.title}</h2>
                                         <p>{this.props.dictionary.guides.android.install.step2.subtitle}</p>
                                         <ul className="dot-circle pt-3">
-                                            <li>{this.props.dictionary.guides.android.install.step2.subSteps.a}  <a href="https://expo.io/@marioruizdiaz/adme-mobile?release-channel=qa" className="btn btn-brand-03 btn-rounded mr-3">{this.props.dictionary.guides.buttons.downloadNow} <i className="fas fa-cloud-download-alt pl-2"></i></a></li>
+                                            <li>{this.props.dictionary.guides.android.install.step2.subSteps.a}  </li>
                                             <li>{this.props.dictionary.guides.android.install.step2.subSteps.b}</li>
                                         </ul>
                                         <div className="action-btns mt-4">
@@ -75,7 +75,7 @@ class androidInstallGuide extends React.Component {
                                 </div>
                                 <div className="col-sm-5 col-md-5 col-lg-4">
                                     <div className="about-content-right">
-                                        <img src="assets/img/guides/ios/login.jpeg" alt="about us" className="img-fluid" />
+                                        <img src="assets/img/guides/android/downloadit.png" alt="about us" className="img-fluid" />
                                     </div>
                                 </div>
                             </div>
