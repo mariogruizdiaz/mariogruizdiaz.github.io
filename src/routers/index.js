@@ -30,6 +30,7 @@ import Guides from "../themes/guides/guides";
 import iOSInstallGuide from "../themes/guides/iOSInstallGuide";
 import androidInstallGuide from "../themes/guides/androidInstallGuide";
 import Companies from "../themes/results/companies";
+import DeleteMyData from "../themes/deleteMyData";
 import Company from "../themes/results/company";
 import Campaign from "../themes/results/campaign";
 import ComingSoonInvestors from "../themes/comingSoonInvestors";
@@ -66,6 +67,7 @@ class Routes extends React.PureComponent {
             <Route exact path="/iOSInstallGuide" component={iOSInstallGuide} />
             <Route exact path="/androidInstallGuide" component={androidInstallGuide} />
             <Route exact path="/companies" component={Companies} />
+            <Route exact path="/deletemydata" component={DeleteMyData} />
             <Route exact path="/companies/:companyId" component={Company} />
             <Route exact path="/campaign" component={Campaign} />
             <Route exact path="/theme1" component={Theme1} />
