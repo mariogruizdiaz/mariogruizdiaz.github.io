@@ -606,6 +606,13 @@ module.exports = {
                 reason4Title: "Crypto for runners",
                 reason4Subtitle: "They receive our native tokens, $ADME, as rewards"
             }
+        },
+        deleteMyData: {
+            title: "Delete Account Request",
+            subtitle: "The account and the associated data will be deleted",
+            confirmButton: "Delete",
+            placeholder: "Write DELETE here",
+            confirmMessage: "The request was successfully sent. Your account and all related data will be delete in 72hs."
         }
     },
     es: {
@@ -1213,6 +1220,13 @@ module.exports = {
                 reason4Title: "Crypto para los runners",
                 reason4Subtitle: "Reciben nuestros tokens nativos, $ADME, como recompensas"
             },
+        },
+        deleteMyData: {
+            title: "Solicitud de eliminacion de la cuenta de Adme",
+            subtitle: "Todos los datos relacionados serán eliminados",
+            confirmButton: "Eliminar",
+            placeholder: "Escriba ELIMINAR aqui",
+            confirmMessage: "La solicitud fué enviada satisfactoriamente. Los datos serán tendrán efecto en 72hs."
         }
     }
 };

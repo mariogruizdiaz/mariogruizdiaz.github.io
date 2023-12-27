@@ -5,7 +5,7 @@ import { bindActionCreators } from "redux";
 import * as globalModels from "adme-models";
 import { actionTypes } from "../../state/actionTypes";
 import { commonStatuses } from "../../state/models/common";
-import { Redirect } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 
 class HeroSection extends React.Component {
     constructor(props) {
@@ -22,6 +22,8 @@ class HeroSection extends React.Component {
         this.message = this.message.bind(this);
     }
 
+    // history = useHistory();
+    
     changeBtnText = btnText => {
         this.setState({ btnText });
     };
@@ -131,7 +133,7 @@ class HeroSection extends React.Component {
 
     render() {
         if(this.props.security.authenticated){
-            return <Redirect to="/#"/>;
+            return <Redirect to={{pathname: this.props.location?.state?.from? this.props.location.state.from : "/"}}/>;
         }
         return (
             <React.Fragment>
@@ -225,6 +227,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeroSection);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(HeroSection));
 
 
