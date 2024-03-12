@@ -94,7 +94,7 @@ class HeroSection extends React.Component {
                             </div>
                             <div className="action-btns mt-4 text-center">
                                 <ul className="list-inline">
-                                    <li className="list-inline-item">
+                                    {/* <li className="list-inline-item">
                                         <a href="/#/iosInstallGuide" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
                                             <span className="fab fa-apple icon-size-sm mr-3 color-primary"></span>
                                             <div className="download-text text-left">
@@ -111,14 +111,14 @@ class HeroSection extends React.Component {
                                                 <h5 className="mb-0">Google Play</h5>
                                             </div>
                                         </a>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-6 col-lg-5">
                         <div className="img-wrap">
-                            <img src="assets/img/adme-mobil3-dash3.png" alt="app" className="img-fluid" />
+                            <img width={450} src="assets/img/adme-mobil3-dash3.png" alt="app" className="img-fluid" />
                         </div>
                     </div>
                 </div>

@@ -115,9 +115,9 @@ module.exports = {
         },
         footer: {
             subscribe: {
-                title: "Subscribe to our Beta Tester program",
-                subtitle: "And earn money in the meantime.",
-                placeholder: "Enter your email"
+                title: "Subscribe before launch",
+                subtitle: "And you will have exclusive campaigns for you",
+                placeholder: "enter your IG",
             },
             corp: {
                 subtitle: "The disruptive social media platform that changes the social network advertising paradigm."
@@ -718,9 +718,9 @@ module.exports = {
             subtitle: "Sabemos que cuesta entender que una red social le pague a sus usuarios, pero es así. Adme lo hace!  Si aún tenés preguntas, contactanos!",
             q1Question: "¿Me pagan si uso mis redes sociales habituales? 💵",
             q1Answer: "Sí, tenés que seguir usando tus redes sociales habituales. Adme te permite linkear tus cuentas de Facebook, Twitter e Instagram (y otras en el futuro) para que puedas postear desde una unica app. Ademas de la oportunidad de recibir dinero por esponsorizarlas con campañas publicitarias.",
-            q2Question: "¿Es importante la calidad de mis posteos? ✅ 💰",
+            q2Question: "¿Es importante la calidad de mis posteos? 💰",
             q2Answer: "Sí, es muy importante, porque para recibir el pago por una foto, la misma debe ser validada y aprobada, primero, por el Departamento de Calidad de Adme y finalmente por el Departamento de Calidad de la marca dueña de la campaña publicitaria.",
-            q3Question: "¿Importa si mis fotos reciben reacciones? 👍 😱 🤩 🤪 ❤️",
+            q3Question: "¿Importa si mis fotos reciben reacciones? 👍 ❤️",
             q3Answer: "Claro que sí importa, ya que Adme no solo te paga por postar fotos en tus redes sociales, sino que también te paga por el éxito que las mísmas consigan entre tus amigos y seguidores. Lo cual es medido por la reacciones que éstas consigan.",
             q4Question: "¿Hay alguna otra forma de ganar dinero con Adme? 💸",
             q4Answer: "Sí claro, nosotros lo llamamos 'Ingresos pasivos'. Una de las maneras es aumentando tu red de referidos, ya que continuamente recibirás un porcentaje del dinero que ellos vayan ganando. Cualquier persona, sea referido directo o referido de tus referidos te harán ganar dinero. Sin importar que tan abajo en tu red se encuentren.",
@@ -731,9 +731,9 @@ module.exports = {
         },
         footer: {
             subscribe: {
-                title: "Suscribite para probar Adme",
-                subtitle: "Y gana dinero mientras tanto",
-                placeholder: "Ingresa tu email",
+                title: "Suscríbete antes del lanzamiento",
+                subtitle: "Y obtendras campañas exclusivas para vos",
+                placeholder: "Ingresá tu IG",
             },
             corp: {
                 subtitle: "La plataforma de publicidad disruptiva que llegó para cambiar el paradigma de la publicidad en redes sociales."
