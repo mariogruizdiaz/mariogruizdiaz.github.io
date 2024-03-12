@@ -115,9 +115,9 @@ module.exports = {
         },
         footer: {
             subscribe: {
-                title: "Subscribe to our Beta Tester program",
-                subtitle: "And earn money in the meantime.",
-                placeholder: "Enter your email"
+                title: "Subscribe before launch",
+                subtitle: "And you will have exclusive campaigns for you",
+                placeholder: "enter your IG",
             },
             corp: {
                 subtitle: "The disruptive social media platform that changes the social network advertising paradigm."
@@ -731,9 +731,9 @@ module.exports = {
         },
         footer: {
             subscribe: {
-                title: "Suscribite para probar Adme",
-                subtitle: "Y gana dinero mientras tanto",
-                placeholder: "Ingresa tu email",
+                title: "Suscríbete antes del lanzamiento",
+                subtitle: "Y obtendras campañas exclusivas para vos",
+                placeholder: "Ingresá tu IG",
             },
             corp: {
                 subtitle: "La plataforma de publicidad disruptiva que llegó para cambiar el paradigma de la publicidad en redes sociales."
