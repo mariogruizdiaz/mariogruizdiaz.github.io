@@ -637,8 +637,8 @@ module.exports = {
             },
         },
         hero: {
-            title: "Adme, la red social que te paga simplemente por postear",
-            subtitle: "En Adme sos un Influencer. Usá la app para postear en Facebook, Twitter e Instagram y recibí tu pago cada vez que lo hagas",
+            title: "Adme, transforma tus posteos en ingresos",
+            subtitle: "En Adme sos un Influencer. Usá la app para postear en Facebook e Instagram y recibí tu pago cada vez que lo hagas.",
             videoUrl: "https://www.youtube.com/watch?v=ZpkI--1X8UI",
         },
         about: {
@@ -659,13 +659,13 @@ module.exports = {
 
         },
         process: {
-            title: "Ganar dinero con Adme es muy sencillo",
+            title: "Monetizar con Adme es muy sencillo",
             subtitle: "Adme pone a tu disposición las campañas publicitarias de las marcas que buscan personas como vos para promocionar sus productos y servicios.",
             stepsImage: "assets/img/adme-mobile-processes-es.png",
             step1Title: "Selfie",
             step1Subtitle: "Sacate una foto como usualmente lo haces.",
             step2Title: "Esponsorizala y compartila",
-            step2Subtitle: "Antes de subirla en tus redes sociales habituales (Facebook, Instagram, Twitter y otras) esponsorizala con alguna campaña publicitaria relacionada a algún producto o servicio que aparece en ella.",
+            step2Subtitle: "Antes de subirla en tus redes sociales habituales (Facebook, Instagram y otras) esponsorizala con alguna campaña publicitaria relacionada a algún producto o servicio que aparece en ella.",
             step3Title: "Recibe el pago",
             step3Subtitle: "Una vez que tu foto es evaluada y aprobada, simplemente recibís el pago.",
         },
@@ -717,7 +717,7 @@ module.exports = {
             title: "Preguntas Frecuentes",
             subtitle: "Sabemos que cuesta entender que una red social le pague a sus usuarios, pero es así. Adme lo hace!  Si aún tenés preguntas, contactanos!",
             q1Question: "¿Me pagan si uso mis redes sociales habituales? 💵",
-            q1Answer: "Sí, tenés que seguir usando tus redes sociales habituales. Adme te permite linkear tus cuentas de Facebook, Twitter e Instagram (y otras en el futuro) para que puedas postear desde una unica app. Ademas de la oportunidad de recibir dinero por esponsorizarlas con campañas publicitarias.",
+            q1Answer: "Sí, tenés que seguir usando tus redes sociales habituales. Adme te permite linkear tus cuentas de Facebook e Instagram (y otras en el futuro) para que puedas postear desde una unica app. Ademas de la oportunidad de recibir dinero por esponsorizarlas con campañas publicitarias.",
             q2Question: "¿Es importante la calidad de mis posteos? 💰",
             q2Answer: "Sí, es muy importante, porque para recibir el pago por una foto, la misma debe ser validada y aprobada, primero, por el Departamento de Calidad de Adme y finalmente por el Departamento de Calidad de la marca dueña de la campaña publicitaria.",
             q3Question: "¿Importa si mis fotos reciben reacciones? 👍 ❤️",
