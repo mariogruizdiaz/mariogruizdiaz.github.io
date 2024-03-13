@@ -87,7 +87,7 @@ class FooterAdmeBrands extends React.Component {
                                 <br />
                                 <p>{this.props.dictionary.footer.corp.subtitle}</p>
                                 <div className="list-inline social-list-default background-color social-hover-2 mt-2">
-                                    <li className="list-inline-item"><a className="instagram" href="https://www.instagram.com/adme.and.payme/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
+                                    <li className="list-inline-item"><a className="instagram" href="https://www.instagram.com/admecorp/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
                                     <li className="list-inline-item"><a className="facebook" href="https://www.facebook.com/Adme.And.Payme" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
                                     <li className="list-inline-item"><a className="linkedin" href="https://www.linkedin.com/company/advertiseme" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in" target="_blank" rel="noopener noreferrer"></i></a></li>
                                 </div>
