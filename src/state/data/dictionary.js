@@ -21,7 +21,7 @@ module.exports = {
             },
         },
         hero: {
-            title: "Adme, the social network that pays you for posting",
+            title: "Adme, transform your posts into income",
             subtitle: "In Adme you are an Influencer! Simply use the app to post on Facebook, Twitter, Instagram and receive money",
             videoUrl: "https://www.youtube.com/watch?v=ZpkI--1X8UI",
         },
@@ -37,7 +37,7 @@ module.exports = {
         },
         counters: {
             socialNetworksConnected: "Social Networks connected",
-            betaTesterUsers: "Beta Testers Users",
+            betaTesterUsers: "Users using the app",
             betaTesterBrands: "Brans advertising in Adme",
             currencyIntegrated: "Currencies integrated"
 
@@ -653,7 +653,7 @@ module.exports = {
         },
         counters: {
             socialNetworksConnected: "Redes Sociales Integradas",
-            betaTesterUsers: "Usuarios probando la app",
+            betaTesterUsers: "Usuarios usando la app",
             betaTesterBrands: "Marcas publicitando en Adme",
             currencyIntegrated: "Tipos de monedas integradas"
 
