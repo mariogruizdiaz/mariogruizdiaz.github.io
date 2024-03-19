@@ -24,7 +24,7 @@ class FooterAdmeInvestors extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
 
-        window.open(`https://api.whatsapp.com/send?phone=5491140851807&text=I%20want%20to%20test%20Adme.%20My%20email%20is%20${this.state.email}`, "_blank");
+        window.open(`https://api.whatsapp.com/send?phone=5491135795588&text=I%20want%20to%20test%20Adme.%20My%20email%20is%20${this.state.email}`, "_blank");
         // get action
         const subscribeAction = subscribe(this.state);
 
