@@ -110,8 +110,8 @@ module.exports = {
             q4Answer: "Yes! Adme offers the referral mechanism by which you earn extra money receiving a percentage of the earnings that your referrals and referrals of your referrals earn continuously. Can you imagine seeing how your Adme account increases the money in your wallet, just because your referrals continually earn money?",
             q5Question: "Why is it important that I rush to refer people? 🏂",
             q5Answer: "Because every Adme user can only be under a single referrer. So if you don't hurry, you will lose out on adding to your close friends under your network.",
-            q6Question: "How do I receive payments? 🤝",
-            q6Answer: "Adme allows you to receive payments in 6 Latin American currencies, US dollars, and even in crypto currencies",
+            q6Question: "How do I receive my profit? 🤝",
+            q6Answer: "You upload your MP alias in the preferences section and you will receive your weekly payments to that alias.",
         },
         footer: {
             subscribe: {
@@ -726,8 +726,8 @@ module.exports = {
             q4Answer: "Sí claro, nosotros lo llamamos 'Ingresos pasivos'. Una de las maneras es aumentando tu red de referidos, ya que continuamente recibirás un porcentaje del dinero que ellos vayan ganando. Cualquier persona, sea referido directo o referido de tus referidos te harán ganar dinero. Sin importar que tan abajo en tu red se encuentren.",
             q5Question: "¿Por qué es tan importante referir a mis amigos? 🏂",
             q5Answer: "Porque cada persona que se suma a Adme estará debajo de un referente directo. Por lo tanto si tus amigos son referidos por alguien más, perdés la oportunidad de sumarlos a tu red y, por lo tanto, la oportunidad de ganar dinero por el éxito que tengan ellos mismos y su red debajo.",
-            q6Question: "¿En qué monedas me pagan? 🤝",
-            q6Answer: "Adme permite recibir pagos en 6 monedas de Latinoamérica, dólar americano y Crypto monedas.",
+            q6Question: "¿Cómo recibo mi ganancia?",
+            q6Answer: "Cargas tu alias de MP en la sección de preferencias y recibirás tus pagos semanales a ese alias.",
         },
         footer: {
             subscribe: {
