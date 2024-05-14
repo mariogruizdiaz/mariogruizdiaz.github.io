@@ -115,8 +115,8 @@ module.exports = {
         },
         footer: {
             subscribe: {
-                title: "Subscribe before launch",
-                subtitle: "And you will have exclusive campaigns for you",
+                title: "If you have a brand, join Adme",
+                subtitle: "And you will obtain exclusive benefits for your brand",
                 placeholder: "enter your IG",
             },
             corp: {
@@ -731,8 +731,8 @@ module.exports = {
         },
         footer: {
             subscribe: {
-                title: "Suscríbete antes del lanzamiento",
-                subtitle: "Y obtendras campañas exclusivas para vos",
+                title: "Si tenés una marca, sumate a Adme",
+                subtitle: "Y obtendras beneficios exclusivas para tu marca",
                 placeholder: "Ingresá tu IG",
             },
             corp: {
