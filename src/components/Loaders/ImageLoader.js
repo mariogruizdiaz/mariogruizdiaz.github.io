@@ -28,7 +28,7 @@ const ImageLoader = ({ source, alt, className, color, secondaryColor }) => {
                 !imageLoaded &&
                 <SpinnerDiamond
                     className={className}
-                    size={"80%"}
+                    size={50}
                     thickness={80}
                     speed={80}
                     secondaryColor={secondaryColor}
@@ -36,7 +36,8 @@ const ImageLoader = ({ source, alt, className, color, secondaryColor }) => {
                     style={{
                         objectFit: "scale-down",
                         width: "inherit",
-                        height: "inherit"
+                        height: "inherit",
+                        transform: 'scale(0.5)'
                     }}
                 />
             }

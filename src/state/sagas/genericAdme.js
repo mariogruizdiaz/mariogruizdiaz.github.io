@@ -5,20 +5,22 @@ import admeApi from "../APIs/adme";
 import { commonStatuses } from "../models/common";
 import moment from 'moment';
 import { genericAction } from "../actions";
-import * as globalModels from "adme-models";
+import * as globalModels from "influencers-models";
 
 
 const apifetchingStatus = (state) => state.basics.api.fetchingStatus;
 
 function* genericMutation(action) {
+  console.log('llega hasta aca', action)
     const command = yield admeApi.generic(action);
     let result;
     try {
+      
         result = yield command.resolver(action);
-        if (result && result[command.endpointName]?.success) {
-            let datax = JSON.parse(result[command.endpointName].data);
+        if (result && result.data && result.data[command.endpointName]?.success) {
+            let datax = JSON.parse(result.data[command.endpointName].data);
             yield put(command.onSuccess({data: datax}));
-        } else yield put(command.onUnsuccess({errors: result[command.endpointName].data}));
+        } else yield put(command.onUnsuccess({errors: result.errors}));
     } catch (e) {
         console.log(e)
         yield put(command.onFailure({errors: command.failureMessage}));
@@ -31,9 +33,8 @@ function* genericQuery(action) {
     try {
         yield controlPreRequisites();
         const result = yield command.resolver(action);
-
-        if (result && result[command.endpointName]) {
-            yield put(command.onSuccess({ data: result[command.endpointName], inputParamaters: action.payload }));
+        if (result && result.data && result.data[command.endpointName]) {
+            yield put(command.onSuccess({ data: result.data[command.endpointName], inputParamaters: action.payload }));
         } else yield put(command.onUnsuccess({ errors: command.onUnsuccessMessage, inputParamaters: action.payload }));
     } catch (e) {
         yield put(command.onFailure({ errors: command.failureMessage, inputParamaters: action.payload }));
@@ -72,5 +73,10 @@ export default function* userIdentity() {
     yield takeEvery(actionTypes.FETCH_POSTS, genericQuery);
     yield takeEvery(actionTypes.FETCH_PERSON_CREDENTIALS, genericQuery);
     yield takeLatest(actionTypes.SELECT_CAMPAIGN, fireFetchAdvertisements);
+    yield takeLatest(actionTypes.FETCH_TERMS_AND_CONDITIONS, genericQuery);
+    yield takeLatest(actionTypes.SIGNUP, genericMutation);
+    yield takeLatest(actionTypes.CREATE_COMPANY, genericMutation);
+    yield takeLatest(actionTypes.UPDATE_COMPANY, genericMutation);
+    yield takeLatest(actionTypes.UPDATE_USER, genericMutation);
 
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import LanguageToggle from "../Language/LanguageToggle";
+import AvatarToggle from "../Avatar/AvatarToggle";
 
 class HeaderTeam extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class HeaderTeam extends React.Component {
         <header className="header">
             <nav className="navbar navbar-expand-lg fixed-top bg-transparent">
                 <div className="container">
-                    <a className="navbar-brand" href="index.html">
+                    <a className="navbar-brand" href="/">
                         <img src={this.props.isColorLogo && this.props.isColorLogo === true ? "assets/img/adme-logo-name.png" : "assets/img/adme-logo-name.png"}
                         alt="logo" className="img-fluid" />
                     </a>
@@ -20,14 +21,22 @@ class HeaderTeam extends React.Component {
 
                     <div className="collapse navbar-collapse h-auto" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto menu">
-                            <li><a href={`${process.env.PUBLIC_URL}/`} className="page-scroll">{this.props.dictionary.header.menu.about}</a></li>
+                            {/* <li><a href={`${process.env.PUBLIC_URL}/`} className="page-scroll">{this.props.dictionary.header.menu.about}</a></li> */}
                             {/* <li><a href="#process" className="page-scroll">{this.props.dictionary.header.menu.process}</a></li>
                             <li><a href="#features" className="page-scroll">{this.props.dictionary.header.menu.features}</a></li>
                             <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.brands}</a></li>
                             <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.agencies}</a></li>
                             <li><a href={`${process.env.PUBLIC_URL}/#comingSoonInvestors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li> */}
+                            {
+                              this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCampaings') &&
+                              (this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCompanies') ?
+                              <li><a href={`${process.env.PUBLIC_URL}/#/Companies`} className="page-scroll">{this.props.dictionary.header.menu.companies}</a></li>
+                                :
+                               <li><a href={`${process.env.PUBLIC_URL}/#/Companies/${this.props.security.company.id}`} className="page-scroll">{this.props.dictionary.header.menu.campaigns}</a></li>)
+                            }
                         </ul>
                         <LanguageToggle/>
+                        <AvatarToggle />
                     </div>
                     
                 </div>
@@ -40,5 +49,6 @@ class HeaderTeam extends React.Component {
 }
 
 export default connect(state => ({
-    dictionary: state.i18n.dictionary
+    dictionary: state.i18n.dictionary,
+    security: state.security
 }))(HeaderTeam);

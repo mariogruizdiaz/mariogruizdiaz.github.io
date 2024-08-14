@@ -10,11 +10,12 @@ import Breadcrumb from "../../components/Results/CompanyGridBreadcrumb";
 import CampaignsGrid from "../../components/Results/CampaignsGrid";
 import FooterAdmeBrands from "../../components/Footer/FooterAdmeBrands";
 import { actionTypes } from "../../state/actionTypes";
-import * as globalModels from "adme-models";
-import { withRouter } from "react-router";
+import * as globalModels from "influencers-models";
+import { Redirect, withRouter } from "react-router";
 import Hero404 from "../../components/HeroSection/HeroSection404";
 import { Facebook } from 'react-content-loader';
 import { commonStatuses } from "../../state/models/common";
+import { PermissionHelper } from '../../state/helpers/security';
 
 class company extends Component {
     constructor(props) {
@@ -51,13 +52,21 @@ class company extends Component {
         const companyId = this.props.match.params.companyId;
         if (companyId !== undefined && companyId !== "undefined") {
             this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: companyId });
-
             if (!this.state.companyIdValid) this.setState({ companyIdValid: true });
         } else {
             if (this.state.companyIdValid) this.setState({ companyIdValid: false });
         }
     }
+
+    canViewComponent() {
+      const { companyId } = this.props.match.params;
+      let result = this.props.security.authenticated && PermissionHelper.canViewComponent(this.props.security.permissions, 'CompanyComponent', companyId, this.props.security.company.id);
+      return result;
+    }
     render() {
+        if(!this.canViewComponent()) {
+            return <Redirect to={{pathname: this.props.location?.state?.from? this.props.location.state.from : "/"}}/>;
+        }
         return (
 
             <div>
@@ -115,7 +124,8 @@ class company extends Component {
 function mapStateToProps(state) {
     return {
         dictionary: state.i18n.dictionary,
-        selectedCompany: state.companies.selectedCompany
+        selectedCompany: state.companies.selectedCompany,
+        security: state.security
     };
 }
 

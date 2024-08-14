@@ -13580,6 +13580,11 @@ img.mfp-img {
   height: auto;
 }
 
+.img-fluid100px {
+  max-width: 100px;
+  height: auto;
+}
+
 /* line 14, node_modules/bootstrap/scss/_images.scss */
 .img-thumbnail {
   padding: 0.25rem;
@@ -19233,6 +19238,7 @@ a.close.disabled {
   height: 100%;
   z-index: 9999;
   background: #fff;
+  background-color: black;
 }
 
 /* line 10, public/assets/src/scss/components/_components.preloader.scss */
@@ -20141,16 +20147,21 @@ footer a {
 
 /* line 182, public/assets/src/scss/components/_components.buttons.scss */
 .btn-brand-03 {
-  background-color: #bf00dc;
-  border-color: #bf00dc;
-  color: #fff;
+  background-color: silver;
+  border-color: red;
+  color: red;
+}
+
+.message-box {
+  margin-top: 15px;
+  text-align: center;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 .btn-brand-03:hover, .btn-brand-03:focus {
-  background-color: #9300a9;
-  border-color: #9300a9;
-  color: #fff;
+  background-color: silver;
+  border-color: red;
+  color: red;
 }
 
 /* line 192, public/assets/src/scss/components/_components.buttons.scss */
@@ -24081,9 +24092,26 @@ button,
   left: 0;
 }
 
+.login-signup-form .form-group .input-group .input-icon-right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
 /* line 21, public/assets/src/scss/components/contact-section/_common.scss */
 .login-signup-form .form-group .input-group .input-icon span {
   padding: 16px;
+  position: absolute;
+  color: #8392a5;
+}
+
+/* line 21, public/assets/src/scss/components/contact-section/_common.scss */
+.login-signup-form .form-group .input-group .input-icon div {
+  margin: 10px;
   position: absolute;
   color: #8392a5;
 }

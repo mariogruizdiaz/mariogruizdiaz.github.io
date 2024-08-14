@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
 import Hero from "../components/HeroSection/HeroSectionComingSoonBrands";
-// import Header from "../components/Header/header";
+import HeaderTeam from "../components/Header/headerTeam";
 
 class Theme extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <Header /> */}
+        <HeaderTeam />
         <div className="main">
           <Hero />
         </div>

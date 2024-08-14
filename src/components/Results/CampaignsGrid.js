@@ -3,27 +3,24 @@ import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
 import { actionTypes } from "../../state/actionTypes";
-import * as globalModels from "adme-models";
+import * as globalModels from "influencers-models";
 import moment from "moment";
 import { Redirect } from "react-router-dom";
 import { commonStatuses } from "../../state/models/common";
 import { BulletList } from 'react-content-loader';
-import ImageLoader from "../Loaders/ImageLoader";
 
 class CampaignsGrid extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            redirect: false
+            redirect: false,
+            pathCampain: ""
         };
+
+        this.props.genericAction(actionTypes.FETCH_CAMPAIGNS, { [globalModels.advertisementFields.companyId]: this.props.selectedCompany[globalModels.companyFields._id] });
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (this.props.selectedCompany[globalModels.companyFields._id] !== nextProps.selectedCompany[globalModels.companyFields._id]) {
-            this.props.genericAction(actionTypes.FETCH_CAMPAIGNS, { [globalModels.advertisementFields.companyId]: nextProps.selectedCompany[globalModels.companyFields._id] });
-            return false;
-
-        }
         if (this.props.selectedCompany.campaigns !== nextProps.selectedCompany.campaigns) {
             return true;
         }
@@ -34,23 +31,20 @@ class CampaignsGrid extends Component {
         return false;
     }
 
-    componentDidMount() {
-        this.props.genericAction(actionTypes.FETCH_CAMPAIGNS, { [globalModels.advertisementFields.companyId]: this.props.selectedCompany[globalModels.companyFields._id] });
-
-    }
-
     handleClick = (e, campaignId) => {
         e.preventDefault();
         const clickedCampaign = this.props.selectedCompany.campaigns.items.find(i => i[globalModels.campaignFields._id] === campaignId);
         this.props.genericAction(actionTypes.SELECT_CAMPAIGN, { ...clickedCampaign });
+
         this.setState({
+            pathCampain: `/companies/${this.props.selectedCompany._id}/${campaignId}`,
             redirect: true
         });
     };
 
     render() {
         if (this.state.redirect) {
-            return <Redirect to="/campaign" />;
+            return <Redirect to={this.state.pathCampain} />;
         }
         return (
             <React.Fragment>
@@ -66,13 +60,14 @@ class CampaignsGrid extends Component {
                                             <div className="single-blog-card card gray-light-bg border-0 shadow-sm my-3">
                                                 <div className="blog-img position-relative" style={{ width: "100%" }}>
                                                     {/* <img src={this.props.selectedCompany.logo} className="card-img-top" alt="blog" /> */}
-                                                    <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="card-img-top" secondaryColor="rgba(150, 41, 230, 1)" color="rgba(255, 255, 255, 1)" />
+                                                    {/* <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="card-img-top" secondaryColor="rgba(150, 41, 230, 1)" color="rgba(255, 255, 255, 1)" /> */}
                                                     <div className="meta-date">
                                                         <strong>{moment(campaignItem[globalModels.campaignFields.startDt]).format('MMM')}</strong>
                                                         <small>{moment(campaignItem[globalModels.campaignFields.startDt]).format('YYYY')}</small>
                                                     </div>
                                                 </div>
                                                 <div className="card-body">
+                                                    <h3 className="h6 mb-2 card-title"><a href="/" onClick={(e) => this.handleClick(e, campaignItem._id)} >{campaignItem[globalModels.campaignFields.name]}</a></h3>
                                                     <div className="post-meta mb-2">
                                                         <ul className="list-inline meta-list">
                                                             <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{campaignItem[globalModels.campaignFields.likeCount]} </span>
@@ -83,9 +78,8 @@ class CampaignsGrid extends Component {
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <h3 className="h6 mb-2 card-title"><a href="/#" onClick={(e) => this.handleClick(e, campaignItem._id)} >{campaignItem[globalModels.campaignFields.name]}</a></h3>
                                                     <p className="card-text">{`${moment(campaignItem[globalModels.campaignFields.startDt]).format('l')} - ${moment(campaignItem[globalModels.campaignFields.endDt]).format('l')}`}</p>
-                                                    <a href="/#" onClick={(e) => this.handleClick(e, campaignItem._id)} className="detail-link">{this.props.dictionary.results.buttons.goToCampaign} <span className="ti-arrow-right"></span></a>
+                                                    <a href='/' onClick={(e) => this.handleClick(e, campaignItem._id)} className="detail-link">{this.props.dictionary.results.buttons.goToCampaign} <span className="ti-arrow-right"></span></a>
                                                 </div>
                                             </div>
                                         </div>

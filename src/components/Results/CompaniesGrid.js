@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { commonStatuses } from "../../state/models/common";
-import * as globalModels from "adme-models";
+import * as globalModels from "influencers-models";
 
 class CompaniesGrid extends Component {
     constructor(props) {

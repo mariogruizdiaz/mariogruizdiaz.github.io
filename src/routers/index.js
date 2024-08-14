@@ -18,11 +18,13 @@ import Theme8 from "../themes/theme8";
 import Theme9 from "../themes/theme9";
 import Login from "../themes/login";
 import SignUp from "../themes/signup";
+import EditProfile from "../themes/editProfile";
+import EditCompany from "../themes/editCompany";
 import ResetPassword from "../themes/resetPassword";
 // import Faq from "../themes/faq";
 import NotFound from "../themes/404";
 import ComingSoon from "../themes/comingSoon";
-import ComingSoonBrands from "../themes/comingSoonBrands";
+import Brands from "../themes/brands";
 import GastonRuizDiaz from "../themes/gastonruizdiaz";
 import JulioAranda from "../themes/julioaranda";
 import TeamMember from "../themes/teamMember";
@@ -69,7 +71,7 @@ class Routes extends React.PureComponent {
             <Route exact path="/companies" component={Companies} />
             <Route exact path="/deletemydata" component={DeleteMyData} />
             <Route exact path="/companies/:companyId" component={Company} />
-            <Route exact path="/campaign" component={Campaign} />
+            <Route exact path="/companies/:companyId/:campaignId" component={Campaign} />
             <Route exact path="/theme1" component={Theme1} />
             <Route exact path="/theme2" component={Theme2} />
             <Route exact path="/theme3" component={Theme3} />
@@ -81,11 +83,13 @@ class Routes extends React.PureComponent {
             <Route exact path="/theme9" component={Theme9} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/editProfile" component={EditProfile} />
+            <Route exact path="/editCompany" component={EditCompany} />
             <Route exact path="/resetPassword" component={ResetPassword} />
             {/* <Route exact path="/faq" component={Faq} /> */}
             <Route exact path="/404" component={NotFound} />
             <Route exact path="/comingSoon" component={ComingSoon} />
-            <Route exact path="/comingSoonBrands" component={ComingSoonBrands} />
+            <Route exact path="/brands" component={Brands} />
             <Route exact path="/comingSoonInvestors" component={ComingSoonInvestors} />
             <Route exact path="/investors" component={Investors} />
             <Route exact path="/web3" component={Web3} />

@@ -1,7 +1,7 @@
 import { request } from "graphql-request";
 
 export const executeCommand = async (endpoint, mutation, variables) => request(endpoint, mutation, variables)
-    .then(data => Promise.resolve(data))
+    .then(data => Promise.resolve({data, errors: []}))
     .catch(err => {
-        return Promise.resolve(err.response.data || err.response.errors);
+        return Promise.resolve({data: err.response.data, errors: err.response.errors});
     });
