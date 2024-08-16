@@ -87,7 +87,7 @@ class HeroSection extends React.Component {
     const file = e.target.files[0];
 
     if (file && (file.type === "image/png" || file.type === "image/jpeg")) {
-      this.setState({ isUploading: true });
+      this.setState({ isUploading: true, photoError: null });
 
       uploadImageToFirebase(
         file,
@@ -131,30 +131,33 @@ class HeroSection extends React.Component {
     this.setState(await validateSignUpFields(!this.props.security.authenticated, this.state));
     this.setState({ handleSubmit: true });
     if (!this.state.errors.hasErrors) {
-      if (!this.props.security.authenticated) {
-        // Crear usuario
-        await this.props.genericAction(actionTypes.SIGNUP, {
-          [globalModels.personFields.email]: this.state.email,
-          [globalModels.personFields.password]: this.state.password,
-        });
-      } else {
-        // Crear compañía
-        await this.props.genericAction(actionTypes.CREATE_COMPANY, {
-          "_id": this.props.security._id,
-          "logo": this.state.photo,
-          "thumbnail": this.state.thumbnail,
-          "termsAndConditions": {
-            "appTypes": this.props.termsAndConditions.appTypes,
-            "version": this.props.termsAndConditions.version,
-            "ip": this.state.ip,
-            "location": this.state.location,
-            "language": this.props.termsAndConditions.language
+      if (!this.props.security.authenticated) await this.createUser()
+      else await this.createCompany();
+    }
+  }
+
+  createUser = async () => {
+    await this.props.genericAction(actionTypes.SIGNUP, {
+      [globalModels.personFields.email]: this.state.email,
+      [globalModels.personFields.password]: this.state.password,
+    });
+  }
+
+  createCompany = async () => {
+    await this.props.genericAction(actionTypes.CREATE_COMPANY, {
+          [globalModels.companyFields._id]: this.props.security._id,
+          [globalModels.companyFields.logo]: this.state.photo,
+          [globalModels.companyFields.thumbnail]: this.state.thumbnail,
+          [globalModels.person_companyFields.termsAndConditions]: {
+            [globalModels.person_companyFields.appTypes]: this.props.termsAndConditions.appTypes,
+            [globalModels.person_companyFields.version]: this.props.termsAndConditions.version,
+            [globalModels.person_companyFields.ip]: this.state.ip,
+            [globalModels.person_companyFields.location]: this.state.location,
+            [globalModels.person_companyFields.language]: this.props.termsAndConditions.language
           },
           [globalModels.companyFields.name]: this.state.companyName,
-          "cellPhone": this.state.cellPhone
+          [globalModels.companyFields.cellPhone]: this.state.cellPhone
         });
-      }
-    }
   }
 
   fetchIp = async () => {

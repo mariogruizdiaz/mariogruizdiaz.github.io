@@ -1,5 +1,3 @@
-import * as globalModels from "influencers-models";
-
 const fetchTermsAndConditionsHistoric = `
 query fetchTermsAndConditionsHistoric(
   $language: LanguagesEnum

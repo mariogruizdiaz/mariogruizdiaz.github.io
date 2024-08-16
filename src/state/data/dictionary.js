@@ -39,7 +39,7 @@ module.exports = {
           notAvailable: "Service not available",
           none: "None",
           createYourAccount: "Create your account",
-          addYourCompany: "Agrega tu compañia",
+          addYourCompany: "Agrega tu compañía",
           alreadyHaveAccount: "Already have an account? ",
           existEmail: "The email entered already exists.",
           existCompanyName: 'The company name already exists.',
@@ -86,7 +86,8 @@ module.exports = {
           cancel: "Cancel",
           editInformation: 'Edit information',
           addCompany: 'Add company',
-          goToCompanyInformation: 'Go to Company information'
+          goToCompanyInformation: 'Go to Company information',
+          saved: 'The changes were saved.',
         },
         header: {
             menu: {
@@ -99,7 +100,12 @@ module.exports = {
                 investors: 'Investors',
                 companies: 'Companies',
                 campaigns: 'Campaigns',
-                web3: 'Web3'
+                web3: 'Web3',
+                logout: 'logout',
+                signUp: 'SignUp',
+                addCompany: 'Add company',
+                profile: 'Profile',
+                login: 'Login'
             },
         },
         hero: {
@@ -738,10 +744,10 @@ module.exports = {
           none: "None",
           alreadyHaveAccount: "¿Ya tienes una cuenta? ",
           createYourAccount: "Crea tu cuenta",
-          addYourCompany: "Agrega tu compañia",
+          addYourCompany: "Agrega tu compañía",
           existEmail: "El correo ingresado ya existe.",
-          existCompanyName: 'El nombre de compañia ya existe.',
-          companyName: 'Nombre compañia *',
+          existCompanyName: 'El nombre de compañía ya existe.',
+          companyName: 'Nombre compañía *',
           cellPhone: 'Celular *',
           uploadLogo: 'Cargar Logo (PNG o JPEG)',
           photoError: 'Cargue un archivo de imagen valido (PNG o JPEG).',
@@ -750,19 +756,19 @@ module.exports = {
           iAgree: 'Acepto los ',
           termsAndConditions: 'Términos y Condiciones',
           shouldAcceptTAndC: 'Debes aceptar Términos y Condiciones',
-          createCompany: 'Crear la compañia',
+          createCompany: 'Crear la compañía',
           signUpSuccessful: "Registro Satisfactorio. Bienvenido!",
           signUpError: "Error al crear la cuenta",
-          createCompanySuccessful: 'Creaste tu compañia, felicitaciones!',
-          createCompanyError: 'Error al agregar tu compañia'
+          createCompanySuccessful: 'Creaste tu compañía, felicitaciones!',
+          createCompanyError: 'Error al agregar tu compañía'
         },
         editCompany: {
           saving: 'Guardando...',
           saved: 'Los cambios fueron guardados.',
-          editError: 'Se produjo un error al editar tu compañia.',
-          editTitle: 'Editar información de compañia',
-          title: 'Infomación de compañia',
-          companyName: 'Nombre de compañia',
+          editError: 'Se produjo un error al editar tu compañía.',
+          editTitle: 'Editar información de compañía',
+          title: 'Infomación de compañía',
+          companyName: 'Nombre de compañía',
           cellPhone: 'Celular',
           uploadLogo: 'Cargar Logo (PNG o JPEG)',
           photoError: 'Cargue un archivo de imagen valido (PNG o JPEG).',
@@ -786,8 +792,8 @@ module.exports = {
           save: "Guardar",
           cancel: "Cancelar",
           editInformation: "Editar información",
-          addCompany: 'Agregar compañia',
-          goToCompanyInformation: 'Ir a informacion de compañia'
+          addCompany: 'Agregar compañía',
+          goToCompanyInformation: 'Ir a informacion de compañía'
         },
         header: {
             menu: {
@@ -800,7 +806,12 @@ module.exports = {
                 investors: 'Inversores',
                 campaigns: 'Campañas',
                 companies: 'Companias',
-                web3: 'Web3'
+                web3: 'Web3',
+                logout: 'Cerrar sesión',
+                signUp: 'Registrarse',
+                addCompany: 'Agregar empresa',
+                profile: 'Perfil',
+                login: 'Iniciar sesión'
             },
         },
         hero: {

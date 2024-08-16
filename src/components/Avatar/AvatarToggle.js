@@ -144,7 +144,7 @@ const AvatarToggle = props => {
             <ListItemIcon>
               <LoginIcon fontSize="small" />
             </ListItemIcon>
-            Login
+            {props.dictionary.header.menu.login}
           </MenuItem>
         }
         {
@@ -156,19 +156,16 @@ const AvatarToggle = props => {
               :
                 <Avatar fontSize="small" />}
             </ListItemIcon>
-            Profile
+            {props.dictionary.header.menu.profile}
           </MenuItem>
         }
-        {/* <MenuItem onClick={handleClose}>
-          <Avatar /> My account
-        </MenuItem> */}
         {
           props.security.authenticated && !props.security.company.id &&
           <MenuItem onClick={handleAddCompany}>
             <ListItemIcon>
               <AddBusinessIcon fontSize="small" />
             </ListItemIcon>
-            Add Company
+            {props.dictionary.header.menu.addCompany}
           </MenuItem>
         }
         {
@@ -179,7 +176,7 @@ const AvatarToggle = props => {
             <ListItemIcon>
               <PersonAddIcon fontSize="small" />
             </ListItemIcon>
-            SignUp
+            {props.dictionary.header.menu.signUp}
             </MenuItem>
           </>
           
@@ -190,7 +187,7 @@ const AvatarToggle = props => {
             <ListItemIcon>
               <Logout fontSize="small" />
             </ListItemIcon>
-            Logout
+            {props.dictionary.header.menu.logout}
           </MenuItem>
         }
       </Menu>
