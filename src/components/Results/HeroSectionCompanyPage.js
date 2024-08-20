@@ -61,7 +61,7 @@ class HeroSectionCompanyPage extends React.Component {
                             </div>
                             <div className="col-md-6 col-lg-6">
                                 <div className="download-img">
-                                    <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="img-fluid rounded shadow-sm" secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
+                                    <ImageLoader source={this.props.selectedCompany.logo} alt="An image" secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
                                 </div>
                             </div>
                         </div>
