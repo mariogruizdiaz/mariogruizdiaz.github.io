@@ -20,29 +20,52 @@ class HeroSectionCompanyPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <section className="page-header-section ptb-100 bg-image" image-overlay="8">
-                    {
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="process-single-item">
-                                    <div className="process-icon-item left-shape">
-                                        <div className="d-flex align-items-center">
-                                            <div className="process-icon mr-4">
-                                                <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="img-fluid rounded shadow-sm" secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
-                                            </div>
-                                            <div className="col-md-9 col-lg-7">
-                                                <div className="page-header-content text-white pt-4">
-                                                    <h1 className="text-white mb-0">{this.props.selectedCompany.name}</h1>
-                                                    <p className="lead">{this.props.dictionary.results.company.hero.subtitle} </p>
-                                                </div>
-
-                                            </div>
+                <section className="position-relative feature-section ptb-100 bg-image" image-overlay="9">
+                  <div className="background-image-wraper" style={{ backgroundImage: "url(assets/img/cta-bg.jpg)", opacity: 1 }}></div>
+                    <div className="container">
+                        <div className="row align-items-center justify-content-between">
+                            
+                            <div className="col-md-12 col-lg-6">
+                                <div className="feature-contents text-center section-heading text-white">
+                                    <h2 className="text-white mb-0">{this.props.selectedCompany.name}</h2>
+                                    <p className="lead">{this.props.dictionary.results.company.hero.subtitle} </p>
+                                    <ul className="list-inline mt-4 list-with-icon">
+                                      <div className="row">
+                                    <div className="col-sm-6 col-md-6 col-lg-3">
+                                        <div className="text-white p-2 count-data text-center my-3">
+                                            <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsOnGoingCount}</h3>
+                                            <span>Active</span>
                                         </div>
                                     </div>
+                                    <div className="col-sm-6 col-md-6 col-lg-3">
+                                        <div className="text-white p-2 count-data text-center my-3">
+                                            <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsStoppedCount}</h3>
+                                            <span>Finished</span>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-md-6 col-lg-3">
+                                        <div className="text-white p-2 count-data text-center my-3">
+                                            <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsFinishedCount}</h3>
+                                            <span>Stopped</span>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-md-6 col-lg-3">
+                                        <div className="text-white p-2 count-data text-center my-3">
+                                            <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsDraftCount}</h3>
+                                            <span>Draft</span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-6">
+                                <div className="download-img">
+                                    <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="img-fluid rounded shadow-sm" secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
                                 </div>
                             </div>
                         </div>
-                    }
+                    </div>
                 </section>
             </React.Fragment>
         );

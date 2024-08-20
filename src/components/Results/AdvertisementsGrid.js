@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
-import * as globalModels from "adme-models";
+import * as globalModels from "influencers-models";
 import Advertisement from "./Advertisement";
 
 class AdvertisementsGrid extends Component {
@@ -30,9 +30,7 @@ class AdvertisementsGrid extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="row justify-content-center">
-                            <div className="row">
-                            {/* <div className="col-md-6"> */}
+                        <div className="row align-items-center justify-content-md-center justify-content-center">
                                 {
                                     this.props.selectedCampaign.advertisements.items.map((adItem, index) => (
                                         <Advertisement
@@ -40,9 +38,8 @@ class AdvertisementsGrid extends Component {
                                             key={adItem[globalModels.advertisementFields._id]}
                                         />
                                     ))
+                                    
                                 }
-
-                            </div>
                         </div>
                         <div className="row ptb-100">
                                 <div className="col-md-12">

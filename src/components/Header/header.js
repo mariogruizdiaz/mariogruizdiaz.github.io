@@ -24,19 +24,21 @@ class Header extends React.Component {
                                     <li><a href="#about" className="page-scroll">{this.props.dictionary.header.menu.about}</a></li>
                                     <li><a href="#process" className="page-scroll">{this.props.dictionary.header.menu.process}</a></li>
                                     <li><a href="#features" className="page-scroll">{this.props.dictionary.header.menu.features}</a></li>
-                                    <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.brands}</a></li>
-                                    <li><a href={`${process.env.PUBLIC_URL}/#comingSoonBrands`} className="page-scroll">{this.props.dictionary.header.menu.agencies}</a></li>
+                                    <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll">{this.props.dictionary.header.menu.brands}</a></li>
+                                    {/* <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll">{this.props.dictionary.header.menu.agencies}</a></li> */}
                                     <li><a href={`${process.env.PUBLIC_URL}/#Investors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li>
                                     <li><a href={`${process.env.PUBLIC_URL}/#Web3`} className="page-scroll">{this.props.dictionary.header.menu.web3}</a></li>
                                     {
-                                        this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCompanies') &&
-                                        <li><a href={`${process.env.PUBLIC_URL}/#Companies`} className="page-scroll">{this.props.dictionary.header.menu.campaigns}</a></li>
+                                        this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCampaings') &&
+                                        (this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCompanies') ?
+                                        <li><a href={`${process.env.PUBLIC_URL}/#/Companies`} className="page-scroll">{this.props.dictionary.header.menu.companies}</a></li>
+                                        :
+                                        <li><a href={`${process.env.PUBLIC_URL}/#/Companies/${this.props.security.company.id}`} className="page-scroll">{this.props.dictionary.header.menu.campaigns}</a></li>)
                                     }
                                 </ul>
                                 <LanguageToggle />
-                                {
-                                    this.props.security.authenticated && <AvatarToggle />
-                                }
+                                <AvatarToggle />
+                                
 
                             </div>
 

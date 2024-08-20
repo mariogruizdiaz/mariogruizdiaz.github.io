@@ -1,4 +1,4 @@
-import * as globalModels from "adme-models";
+import * as globalModels from "influencers-models";
 import { actionTypes } from "../actionTypes";
 import { commonStatusesDescriptions, commonStatuses } from "../models/common";
 
@@ -39,6 +39,7 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.FETCH_COMPANIES_SUCCESS: {
+          console.log('action.payload', action.payload)
             return {
                 ...initialState,
                 items: action.payload.data,
@@ -109,6 +110,7 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.FETCH_CAMPAIGNS_SUCCESS: {
+          console.log('FETCH_CAMPAIGNS action.payload', action.payload)
             return {
                 ...state,
                 selectedCompany: {
@@ -171,7 +173,7 @@ export default (state = initialState, action) => {
                 selectedCampaign: {
                     ...state.selectedCampaign,
                     advertisements: {
-                        items: action.payload.data.filter(ad => ad._posts.length > 0),
+                        items: action.payload.data, //.filter(ad => ad._posts.length > 0),
                         pageIndex: -1,
                         fetchStatus: commonStatuses.loaded,
                         fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],

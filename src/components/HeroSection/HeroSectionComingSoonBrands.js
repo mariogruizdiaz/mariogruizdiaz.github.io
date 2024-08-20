@@ -69,6 +69,7 @@ class HeroSection extends React.Component {
   }
 
   render() {
+    console.log('this.props.security', this.props.security)
     return (
       <React.Fragment>
         <section className="page-header-section ptb-100 bg-image full-height" image-overlay="8">
@@ -77,6 +78,48 @@ class HeroSection extends React.Component {
             opacity:1
           }}></div>
         <div className="container">
+          {
+            !this.props.security.authenticated ?
+            <div className="row align-items-center justify-content-md-center justify-content-center">
+              <div className="col-lg-4 col-md-6 col-sm-8">
+                          <a href="/#/signUp"><div className="text-center bg-white single-pricing-pack mt-4 ">
+                              <div className="py-4 border-0 pricing-header">
+                              </div>
+                              <div className="price-name">
+                                  <h5 className="mb-0">Sign Up and Create your Company</h5>
+                              </div>
+                              <div className="pricing-content">
+                                  <ul className="list-unstyled mb-4 pricing-feature-list">
+                                      <span>I don´t have an account yet</span>
+                                  </ul>
+                                  <span className="btn btn-outline-brand-02 btn-rounded mb-3">Sing Up</span>
+                              </div>
+                          </div></a>
+              </div>
+            </div>
+          :
+            !this.props.security.company.id ? 
+            <div className="row align-items-center justify-content-md-center justify-content-center">
+              <div className="col-lg-4 col-md-6 col-sm-8">
+                          <a href="/#/signUp"><div className="text-center bg-white single-pricing-pack mt-4 ">
+                              <div className="py-4 border-0 pricing-header">
+                              </div>
+                              <div className="price-name">
+                                  <h5 className="mb-0">Create your Company</h5>
+                              </div>
+                              <div className="pricing-content">
+                                  <ul className="list-unstyled mb-4 pricing-feature-list">
+                                      <li><span>I don´t have a company yet</span></li>
+                                  </ul>
+                                  <span className="btn btn-outline-brand-02 btn-rounded mb-3">Create Company</span>
+                              </div>
+                          </div></a>
+              </div>
+            </div>
+            :
+            null
+          }
+
           <div className="row align-items-center justify-content-center">
               <div className="col-12 col-md-9 col-lg-7">
                   <div className="hero-content-left text-white text-center">
@@ -102,5 +145,6 @@ class HeroSection extends React.Component {
 }
 
 export default connect(state => ({
-    dictionary: state.i18n.dictionary
+    dictionary: state.i18n.dictionary,
+    security: state.security
 }))(HeroSection);

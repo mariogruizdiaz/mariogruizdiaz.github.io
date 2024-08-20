@@ -8,6 +8,7 @@ import Routes from "./routers";
 // import store from "./state/stores/store";
 import { PersistGate } from 'redux-persist/integration/react';
 import mySaga from "./state/sagas";
+import { SnackbarProvider } from './components/Toast/SnackbarContext';
 
 
 // then run the saga
@@ -24,9 +25,11 @@ sagaMiddleware.run(mySaga);
 function App() {
     return (
         <Provider store={store}>
+          <SnackbarProvider>
             <PersistGate loading={null} persistor={persistor}>
                 <Routes />
             </PersistGate>
+          </SnackbarProvider>
             {/* <Routes /> */}
         </Provider>
     );

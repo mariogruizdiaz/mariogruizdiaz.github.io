@@ -23,7 +23,10 @@ class CompanyGridBreadcrumb extends Component {
                         <div className="custom-breadcrumb">
                             <ol className="breadcrumb pl-0 mb-0 bg-transparent">
                                 <li className="breadcrumb-item"><a href="/#">Home</a></li>
-                                <li className="breadcrumb-item"><a href="/#companies">{this.props.dictionary.general.brandsLabel}</a></li>
+                                {
+                                  this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCompanies') &&
+                                  <li className="breadcrumb-item"><a href="/#companies">{this.props.dictionary.general.brandsLabel}</a></li>
+                                }
                                 <li className="breadcrumb-item active">{this.props.companyName}</li>
                             </ol>
                         </div>
@@ -38,5 +41,6 @@ class CompanyGridBreadcrumb extends Component {
 
 export default connect(state => ({
     dictionary: state.i18n.dictionary,
-    selectedCompany: state.companies.selectedCompany
+    selectedCompany: state.companies.selectedCompany,
+    security: state.security
 }))(CompanyGridBreadcrumb);

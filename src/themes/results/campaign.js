@@ -10,30 +10,27 @@ import FooterAdmeBrands from "../../components/Footer/FooterAdmeBrands";
 import { Facebook } from 'react-content-loader';
 import { commonStatuses } from "../../state/models/common";
 import Hero404 from "../../components/HeroSection/HeroSection404";
+import { Redirect } from "react-router-dom";
+import { PermissionHelper } from '../../state/helpers/security';
 
 class campaign extends Component {
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     if (this.props.selectedCompany[globalModels.companyFields._id] !== nextProps.selectedCompany[globalModels.companyFields._id]) {
-    //         this.props.genericAction(actionTypes.FETCH_CAMPAIGNS, { [globalModels.advertisementFields.companyId]: nextProps.selectedCompany[globalModels.companyFields._id] });
-    //         return false;
-
-    //     }
-    //     // if (this.props.selectedCompany.campaigns !== nextProps.selectedCompany.campaigns) {
-    //     //     return true;
-    //     // }
-
-    //     if (this.state !== nextState) {
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
     // componentDidMount() {
-    //     this.props.genericAction(actionTypes.FETCH_CAMPAIGNS, { [globalModels.advertisementFields.companyId]: this.props.selectedCompany[globalModels.companyFields._id] });
-
+    //     const campaignId = this.props.match.params.campaignId;
+    //     if (campaignId !== undefined && campaignId !== "undefined") {
+    //         this.props.genericAction(actionTypes.SELECT_CAMPAIGN, { ...campaignId });
+    //     } 
     // }
+    canViewComponent() {
+      const { companyId } = this.props.match.params;
+      console.log('companyId', companyId);  
+      return this.props.security.authenticated && PermissionHelper.canViewComponent(this.props.security.permissions, 'CampaignComponent', companyId, this.props.security.company.id)
+    }
     render() {
+      if(!this.canViewComponent()) {
+            return <Redirect to={{pathname: this.props.location?.state?.from? this.props.location.state.from : "/"}}/>;
+        }
         return (
+          
             <div>
                 {
                     this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loaded &&
@@ -76,7 +73,8 @@ function mapStateToProps(state) {
     return {
         dictionary: state.i18n.dictionary,
         selectedCompany: state.companies.selectedCompany,
-        selectedCampaign: state.companies.selectedCampaign
+        selectedCampaign: state.companies.selectedCampaign,
+        security: state.security
     };
 }
 

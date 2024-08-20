@@ -9,15 +9,24 @@ import Breadcrumb from "../../components/Results/CompaniesGridBreadcrumb";
 import DefaultGiudeGrid from "../../components/Results/CompaniesGrid";
 import Footer from "../../components/Footer/FooterAdmeBrands";
 import { actionTypes } from "../../state/actionTypes";
-// import * as globalModels from "adme-models";
+import { Redirect } from "react-router";
+import { PermissionHelper } from '../../state/helpers/security';
 
 
 class Companies extends Component {
     componentDidMount() {
         this.props.genericAction(actionTypes.FETCH_COMPANIES, {});
     }
+
+    canViewComponent() {
+      return this.props.security.authenticated && PermissionHelper.canViewComponent(this.props.security.permissions, 'CompaniesComponent', null, this.props.security.company.id)
+    }
     render() {
+      if(!this.canViewComponent()) {
+            return <Redirect to={{pathname: this.props.location?.state?.from? this.props.location.state.from : "/"}}/>;
+        }
         return (
+          
             <React.Fragment>
                 <HeaderTeam />
                 <div className="main">
@@ -36,7 +45,8 @@ class Companies extends Component {
 function mapStateToProps(state) {
     return {
         dictionary: state.i18n.dictionary,
-        selectedComany: state.companies.selectedCompany
+        selectedComany: state.companies.selectedCompany,
+        security: state.security
     };
 }
 

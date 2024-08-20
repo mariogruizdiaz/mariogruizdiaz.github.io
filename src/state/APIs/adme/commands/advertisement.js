@@ -1,12 +1,14 @@
 
-import * as globalModels from "adme-models";
+import * as globalModels from "influencers-models";
 
 const fetchAdvertisingByCampaignId = `
 query fetchAdvertisingByCampaignId(
     $${globalModels.advertisementFields.campaignId}: ID!
 ){
   advertisements(
-    ${globalModels.advertisementFields.campaignId}: $${globalModels.advertisementFields.campaignId}
+    ${globalModels.advertisementFields.campaignId}: $${globalModels.advertisementFields.campaignId},
+      orderBy: "creationDt",
+      asc: false,
   ){
     _id,
     campaignId,
