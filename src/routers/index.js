@@ -35,6 +35,7 @@ import Companies from "../themes/results/companies";
 import DeleteMyData from "../themes/deleteMyData";
 import Company from "../themes/results/company";
 import Campaign from "../themes/results/campaign";
+import Audit from "../themes/results/audit";
 import ComingSoonInvestors from "../themes/comingSoonInvestors";
 import Investors from "../themes/investors";
 import Web3 from "../themes/web3";
@@ -72,6 +73,7 @@ class Routes extends React.PureComponent {
             <Route exact path="/deletemydata" component={DeleteMyData} />
             <Route exact path="/companies/:companyId" component={Company} />
             <Route exact path="/companies/:companyId/:campaignId" component={Campaign} />
+            <Route exact path="/audit/:advertisementId" component={Audit} />
             <Route exact path="/theme1" component={Theme1} />
             <Route exact path="/theme2" component={Theme2} />
             <Route exact path="/theme3" component={Theme3} />
