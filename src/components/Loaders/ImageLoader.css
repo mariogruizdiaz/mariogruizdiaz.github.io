@@ -1,20 +1,25 @@
 .imageLoader {
-    height: 50vh;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .imageLoader img {
+  position: relative;
+    width: 100%;
+    /* El contenedor tomará todo el ancho disponible */
+    max-width: 620px;
+    /* Puedes ajustar este valor según tus necesidades */
+    padding-top: 100%;
+    /* Hace que la altura sea igual al ancho, creando una proporción 1:1 */
+    overflow: hidden;
+    display: inline-block;
+}
+
+.imageLoader img {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.imageLoader .spinner {
+  width: auto;
     height: 100%;
-  }
-  
-  .imageLoader .realImg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition-property: background-color, border-color, color, fill, stroke,
-      opacity, box-shadow, transform;
-    transition-property: all;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
+}
