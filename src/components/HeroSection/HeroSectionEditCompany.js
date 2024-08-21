@@ -224,7 +224,7 @@ class EditCompany extends React.Component {
                             </Avatar>
                           </div>
                           :
-                          <ImageLoader source={this.state.photo} alt="An image" className="img-fluid100px mb-3" secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
+                          <ImageLoader source={this.state.photo} alt="An image" maxWidth={100} secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
                         }
                         
                       </div>
