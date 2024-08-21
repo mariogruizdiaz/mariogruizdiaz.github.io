@@ -13,8 +13,7 @@ const genericResolver = function* genericResolver(action) {
         const command = commandCollection[action.type];
         console.log('command', action.type, 'action.payload', action.payload);
         // const response = yield graphQL.executeCommand(`http://${apiRefs.host}:${apiRefs.port}/graphql`, command, action.payload);
-        //const response = yield graphQL.executeCommand(`https://api-qa.adme.com.ar/graphql`, command, action.payload);
-        const response = yield graphQL.executeCommand(`http://localhost:4003/graphql`, command, action.payload);
+        const response = yield graphQL.executeCommand(`https://api-qa.adme.com.ar/graphql`, command, action.payload);
         return response;
     } catch (e) {
         console.log(`Error executing command: ${action.type}`);
