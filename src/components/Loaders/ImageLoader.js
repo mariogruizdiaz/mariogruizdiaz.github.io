@@ -27,7 +27,7 @@ class ImageLoader extends Component {
         const { source, alt, maxWidth, color, secondaryColor } = this.props;
         const { imageLoaded } = this.state;
 
-        const styles = maxWidth == 100 ? {maxWidth: "100px", maxHeight: "100px",  width: "100%", height: "auto", "padding-top": "30%"} : { maxWidth: "500px", maxHeight: "500px", width: "100%", height: "auto", position: "relative" }
+        const styles = maxWidth === 100 ? {maxWidth: "100px", maxHeight: "100px",  width: "100%", height: "auto", "padding-top": "30%"} : { maxWidth: "500px", maxHeight: "500px", width: "100%", height: "auto", position: "relative" }
         return (
             <div style={styles} className={`imageLoader`}>
                 {!imageLoaded && (
