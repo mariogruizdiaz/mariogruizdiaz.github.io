@@ -54,5 +54,10 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
 
-    - name: Overwrite CNAME in temporary directory
-      run: echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > "$(find /home/runner -type d -name actions_github_pages_*)/CNAME"
+    - name: Find and overwrite CNAME
+      run: |
+          TEMP_DIR=$(find /home/runner -type d -name actions_github_pages_*)
+          echo "Temporary directory: $TEMP_DIR"
+          echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > "$TEMP_DIR/CNAME"
+          echo "CNAME content:"
+          cat "$TEMP_DIR/CNAME"
