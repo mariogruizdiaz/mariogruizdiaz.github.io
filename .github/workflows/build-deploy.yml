@@ -5,15 +5,13 @@ on:
     branches:
       - master
       - qa
-  pull_request:
-    branches:
-      - master
-      - qa
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branch: [master, qa]
 
     steps:
     - name: Checkout code
@@ -30,34 +28,17 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Upload production-ready build files
-      uses: actions/upload-artifact@v2
-      with:
-        name: production-files
-        path: ./build
+    - name: Configure CNAME
+      run: |
+        if [ "${{ matrix.branch }}" == "master" ]; then
+          echo "adme.com.ar" > ./build/CNAME
+        elif [ "${{ matrix.branch }}" == "qa" ]; then
+          echo "qa.adme.com.ar" > ./build/CNAME
+        fi
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v2
-      with:
-        name: production-files
-        path: ./build
-
-    - name: Deploy to gh-pages
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
-
-    - name: Find and overwrite CNAME
-      run: |
-          TEMP_DIR=$(find /home/runner -type d -name actions_github_pages_*)
-          echo "Temporary directory: $TEMP_DIR"
-          echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > "$TEMP_DIR/CNAME"
-          echo "CNAME content:"
-          cat "$TEMP_DIR/CNAME"
+        publish_branch: ${{ matrix.branch == 'master' && 'gh-pages' || 'gh-pages-qa' }}
