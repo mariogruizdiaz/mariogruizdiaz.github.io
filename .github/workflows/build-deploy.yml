@@ -110,4 +110,4 @@ jobs:
         # Hacer commit y push de los cambios
         git add .
         git commit -m "Deploy QA to gh-pages/qa"
-        git push origin gh-pages
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
