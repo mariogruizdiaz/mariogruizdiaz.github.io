@@ -1,0 +1,19 @@
+.error-content-wrap{
+  .notfound-404 {
+    position: relative;
+    height: 280px;
+    z-index: 2;
+    margin-bottom: 30px;
+    h1 {
+      font-size: 230px;
+      font-weight: 700;
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.form-control {
+  height: calc(2.4em + 0.75rem + 2px);
+  font-size: 14px;
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+
+*::-webkit-input-placeholder {
+  color: $text-color-03 !important;
+  font-size: 13px;
+}
+*:-moz-placeholder {
+  /* FF 4-18 */
+  color: $text-color-03 !important;
+  font-size: 13px;
+  opacity: 1;
+}
+*::-moz-placeholder {
+  /* FF 19+ */
+  color: $text-color-03 !important;
+  font-size: 13px;
+  opacity: 1;
+}
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: $text-color-03 !important;
+  font-size: 13px;
+}
+*::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $text-color-03 !important;
+  font-size: 13px;
+}
+*::placeholder {
+  /* modern browser */
+  color: $text-color-03 !important;
+  font-size: 13px;
+}

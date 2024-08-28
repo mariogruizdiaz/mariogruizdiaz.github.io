@@ -1,0 +1,223 @@
+/*background image*/
+.bg-image{
+  position: relative;
+  .background-image-wraper {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+    z-index: 0;
+    transition: opacity .3s linear;
+    -webkit-transition: opacity .3s linear;
+    opacity: 0;
+    img{
+      display: none;
+    }
+  }
+  .background-image-wraper:not([class*='col-']) {
+    width: 100%;
+  }
+}
+.light-bg-image{
+  position: relative;
+  .background-image-wraper {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+    z-index: 0;
+    transition: opacity .3s linear;
+    -webkit-transition: opacity .3s linear;
+    opacity: 0;
+    img{
+      display: none;
+    }
+  }
+  .background-image-wraper:not([class*='col-']) {
+    width: 100%;
+  }
+}
+//image overly
+[image-overlay] {
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    background: linear-gradient(75deg, darken($color-primary, 10%), darken($color-secondary, 10%)) !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+//image overly top
+[data-overlay-top] {
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 80%;
+    background: -moz-linear-gradient(bottom, $gray-900 0%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, left bottom, color-stop(0%, $gray-900), color-stop(100%, rgba(0, 0, 0, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(bottom, $gray-900 0%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(bottom, $gray-900 0%, rgba(0, 0, 0, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(bottom, $gray-900 0%, rgba(0, 0, 0, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, $gray-900 0%, rgba(0, 0, 0, 0) 100%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+// image overly bottom
+[data-overly-bottom] {
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 80%;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, $gray-900 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, $gray-900));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, $gray-900 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, $gray-900 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, $gray-900 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, $gray-900 100%);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+  }
+}
+
+//image overly gradient
+[data-overlay-gradient]{
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    background: $color-primary;
+    background: -moz-linear-gradient(to right, $color-primary 5%, $color-secondary 95%) !important;
+    background: -webkit-linear-gradient(to right, $color-primary 5%, $color-secondary 95%) !important;
+    background: linear-gradient(to right, $color-primary 5%, $color-secondary 95%) !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+
+//image overly top, bottom opacity
+[image-overlay="1"], [data-overly-top="1"], [data-overly-bottom="1"], [data-overlay-gradient="1"]{
+  &:before{
+    opacity: 0.1;
+  }
+}
+
+[image-overlay="2"], [data-overly-top="2"], [data-overly-bottom="2"], [data-overlay-gradient="2"]{
+  &:before{
+    opacity: 0.2;
+  }
+}
+[image-overlay="3"], [data-overly-top="3"], [data-overly-bottom="3"], [data-overlay-gradient="3"]{
+  &:before{
+    opacity: 0.3;
+  }
+}
+
+[image-overlay="4"], [data-overly-top="4"], [data-overly-bottom="4"], [data-overlay-gradient="4"]{
+  &:before{
+    opacity: 0.4;
+  }
+}
+
+[image-overlay="5"], [data-overly-top="5"], [data-overly-bottom="5"], [data-overlay-gradient="5"]{
+  &:before{
+    opacity: 0.5;
+  }
+}
+
+[image-overlay="6"], [data-overly-top="6"], [data-overly-bottom="6"], [data-overlay-gradient="6"]{
+  &:before{
+    opacity: 0.6;
+  }
+}
+
+[image-overlay="7"], [data-overly-top="7"], [data-overly-bottom="7"], [data-overlay-gradient="7"]{
+  &:before{
+    opacity: 0.7;
+  }
+}
+[image-overlay="8"], [data-overly-top="8"], [data-overly-bottom="8"], [data-overlay-gradient="8"]{
+  &:before{
+    opacity: 0.8;
+  }
+}
+
+[image-overlay="9"], [data-overly-top="9"], [data-overly-bottom="9"], [data-overlay-gradient="9"]{
+  &:before{
+    opacity: 0.9;
+  }
+}
+
+
+.bg-image.animated-color-bg > .background-image-wraper {
+  opacity: .2 !important;
+}
+
+[image-overlay] *:not(.container):not(.background-image-wraper) {
+  z-index: 2;
+}
+.bg-image{
+  .card-body{
+    z-index: 2;
+  }
+}
+
+
+
+
+
+
+//background shape
+.hero-bottom-shape, .hero-bottom-shape-two {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.background-shape-img:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-image: url('../img/about-bg-shape.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

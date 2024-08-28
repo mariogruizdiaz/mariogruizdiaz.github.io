@@ -1,0 +1,70 @@
+//testimonial section css
+.testimonial-content-wrap{
+  position: relative;
+
+  .testimonial-tb-shape{
+    position: absolute;
+    &.shape-top{
+      top: -60px;
+      right: 20%;
+    }
+    &.shape-bottom{
+      bottom: -88px;
+      right: 50%;
+    }
+  }
+
+  // testimonial quote
+  .testimonial-shape{
+    &:before{
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      width: 99%;
+      height: 69%;
+      background: $color-accent;
+      -webkit-transform: rotate(-6deg);
+      transform: rotate(-6deg);
+      z-index: -1;
+      border-radius: 4px;
+    }
+    .testimonial-quote-wrap{
+      background: $color-secondary;
+      padding: 30px 40px;
+      z-index: 4;
+      margin-top: 30px;
+      border-radius: 4px;
+      .author-info{
+        .author-img {
+          border-radius: 4px;
+          border: 4px solid $white;
+          width: 100px;
+          position: absolute;
+          top: 0;
+        }
+        .media-body{
+          position: relative;
+          left: 120px;
+        }
+
+        i{
+          font-size: 40px;
+        }
+      }
+
+    }
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 1199px){
+  .testimonial-content-wrap .testimonial-tb-shape.shape-top, .testimonial-content-wrap .testimonial-tb-shape.shape-bottom{
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 991px){
+  .author-info i, .testimonial-shape:before{
+    display: none;
+  }
+}

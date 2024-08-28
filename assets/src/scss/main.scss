@@ -1,0 +1,31 @@
+/*
+* Apdash v1.0.0 (https://themeforest.net/user/themetags)
+* Copyright 2020 Themetags
+* Licensed under ThemeForest License
+*/
+
+
+
+//setting
+@import "settings/main";
+
+//function
+@import "functions/main";
+
+//Generic
+@import "generic/main";
+
+//elements
+@import "elements/main";
+
+//objects
+@import "objects/main";
+
+//Third party plugins css.
+@import "vendors/main";
+
+//Components and widgets.
+@import "components/main";
+
+//Helper classes and overrides.
+@import "trumps/main";
