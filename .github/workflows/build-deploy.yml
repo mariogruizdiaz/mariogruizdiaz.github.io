@@ -22,7 +22,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: 13.x
+        node-version: 14.x
 
     - name: Install NPM packages
       run: npm ci
@@ -54,5 +54,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
 
-    - name: Overwrite CNAME in gh-pages directory
-      run: echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > /home/runner/actions_github_pages_1724855824509/CNAME
+    - name: Overwrite CNAME in temporary directory
+      run: echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > "$(find /home/runner -type d -name actions_github_pages_*)/CNAME"
