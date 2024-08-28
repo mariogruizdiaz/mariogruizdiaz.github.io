@@ -95,6 +95,6 @@ jobs:
       run: |
           cd ./build
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/username/adme-corp-qa.git
-          git add .
+          git add -f .
           git commit -m "Deploy QA from QA branch"
           git push origin master --force
