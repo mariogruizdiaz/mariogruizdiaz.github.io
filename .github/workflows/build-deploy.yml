@@ -93,9 +93,8 @@ jobs:
     - name: Deploy to Separate QA Repository
       if: matrix.branch == 'qa'
       run: |
-        git init
-        git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/username/adme-corp-qa.git
-        git checkout -b master
-        git add .
-        git commit -m "Deploy QA"
-        git push -u origin master --force
+          cd ./build
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/username/adme-corp-qa.git
+          git add .
+          git commit -m "Deploy QA from QA branch"
+          git push origin master --force
