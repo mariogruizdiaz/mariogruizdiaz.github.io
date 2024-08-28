@@ -35,6 +35,8 @@
         console.log('Hostname:', window.location.hostname); // Esto debería mostrar 'qa.adme.com.ar' en la consola si es correcto
         if (window.location.hostname === 'qa.adme.com.ar') {
             window.location.replace('https://qa.adme.com.ar/qa/');
+        } else {
+            console.log('No se redirige a QA');
         }
     </script>
 
