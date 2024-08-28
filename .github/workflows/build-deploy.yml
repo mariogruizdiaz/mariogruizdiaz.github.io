@@ -64,10 +64,10 @@ jobs:
         fi
         echo "CNAME content after rewrite:"
         cat ./build/CNAME
-        
+
 
     - name: Verify CNAME content
-      run: cat ./build/public/CNAME
+      run: cat ./build/CNAME
 
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
