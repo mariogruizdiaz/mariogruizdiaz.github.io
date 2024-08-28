@@ -82,6 +82,12 @@ jobs:
           echo "qa.adme.com.ar" > ./build/CNAME
         fi
 
+    - name: Set up Git user
+      if: matrix.branch == 'qa'
+      run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
     - name: Deploy to GitHub Pages (Production)
       if: matrix.branch == 'master'
       uses: peaceiris/actions-gh-pages@v3
