@@ -52,11 +52,18 @@ jobs:
         name: production-files
         path: ./build
 
-    - name: List files in build directory
-      run: ls -R ./build
+    - name: Debug github.ref
+      run: 'echo "Current branch: $GITHUB_REF"''
   
     - name: Configure CNAME
-      run: echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > ./build/public/CNAME
+      run: |
+        if [ "$GITHUB_REF" = "refs/heads/qa" ]; then
+          echo "qa.adme.com.ar" > ./build/CNAME
+        else
+          echo "adme.com.ar" > ./build/CNAME
+        fi
+        echo "CNAME content after rewrite:"
+        cat ./build/CNAME
 
     - name: Verify CNAME content
       run: cat ./build/public/CNAME
