@@ -1,0 +1,21 @@
+.single-promo-card{
+  border-radius: 1rem;
+  transition: $global-transition;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+  &.single-promo-hover{
+    transition: $global-transition;
+    &:hover{
+      transform: translateY(-10px);
+      box-shadow: 0 1rem 3rem rgba(31,45,61,.125);
+      background: $color-primary;
+      color: $white;
+      span, h5{
+        color: $white !important;
+      }
+    }
+  }
+  &:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(31,45,61,.125);
+  }
+}

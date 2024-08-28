@@ -1,0 +1,11 @@
+//required settings and functions
+@import "../settings/main";
+@import "../functions/main";
+
+//import bootstrap objects
+@import "objects.bootstrap";
+
+//custom object
+@import "objects.custom-padding";
+@import "objects.background-image";
+@import "objects.background";

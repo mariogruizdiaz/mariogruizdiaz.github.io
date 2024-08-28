@@ -1,0 +1,117 @@
+//footer css
+footer{
+  p{
+    font-size: 14px;
+  }
+  ul{
+    li{
+      &:not(:hover){
+        opacity: $opacity-8;
+      }
+    }
+  }
+
+  ul:not(.list-inline):not(.slides) > li {
+    line-height: 30px !important;
+  }
+  ul:not([class*='menu']) li > a:hover {
+    text-decoration: none;
+  }
+
+  ul:not([class*='menu']) li > a {
+    font-weight: $font-weight-regular;
+    font-size: 13px;
+    display: block;
+    &:hover{
+      opacity: $opacity-10;
+      color: inherit;
+    }
+  }
+
+  a{
+    font-weight: normal;
+    color: $text-color-01;
+  }
+
+}
+
+//foreground color change for background color
+.footer-1.gradient-bg{
+  p, h6{
+    color: $white;
+    opacity: $opacity-8;
+  }
+  ul{
+    li{
+      a{
+        color: $white;
+        opacity: $opacity-8;
+        &:hover{
+          color: $white;
+          opacity: $opacity-10;
+        }
+      }
+    }
+  }
+}
+
+//small text
+.small-text{
+  font-size: 13px;
+  &:not(p){
+    opacity: $opacity-10;
+  }
+}
+
+//footer newsletter
+.footer-with-newsletter{
+  margin-top: 80px;
+  .newsletter-wrap{
+    margin-top: -136px;
+    margin-bottom: 60px;
+  }
+}
+.newsletter-form{
+  .input-newsletter{
+    height: 50px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 25px;
+  }
+  button{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    height: auto;
+    border: none;
+    border-radius: 30px;
+    background-color: $color-secondary;
+    display: inline-block;
+    color: $white;
+    padding-left: 30px;
+    padding-right: 30px;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.terms-policy-wrap{
+  ul{
+    li{
+      a{
+        color: $text-color-01;
+        &:hover{
+          color: initial;
+        }
+      }
+    }
+  }
+}

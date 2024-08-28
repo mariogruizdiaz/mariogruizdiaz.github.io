@@ -1,0 +1,26 @@
+.color-primary{
+  color: $color-primary !important;
+}
+.color-secondary{
+  color: $color-secondary !important;
+}
+.color-accent{
+  color: $color-accent !important;
+}
+.gray-light-bg{
+  background: $color-ui-01 !important;
+}
+
+.primary-bg{
+  background: $color-primary !important;
+}
+.secondary-bg{
+  background: $color-secondary !important;
+}
+.accent-bg{
+  background: $color-accent !important;
+}
+
+.gradient-bg {
+  background: linear-gradient(75deg, darken($color-primary, 10%), darken($color-secondary, 10%)) !important;
+}

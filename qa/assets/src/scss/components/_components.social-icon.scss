@@ -1,0 +1,466 @@
+//social list default style
+.social-list-default{
+  li{
+    a{
+      display: block;
+      text-align: center;
+      -webkit-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      position: relative;
+      overflow: hidden;
+      height: 32px;
+      width: 32px;
+      line-height: 32px;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    &:not(.bg-brand-01):not(.bg-brand-02):not(.bg-brand-03) a {
+      color: $color-inverse-01;
+    }
+    &:not(:hover){
+      opacity: $opacity-8;
+    }
+
+  }
+
+  .list-inline-item:not(:last-child){
+    margin-right: .3rem;
+  }
+}
+
+//social list color style
+
+.social-list-default.social-color{
+  li{
+    &:not(.primary-bg):not(.dark-bg):not(.secondary-bg):not(.accent-bg) a {
+      color: inherit;
+    }
+    &:not(:hover){
+      opacity: $opacity-8;
+    }
+    a.facebook{
+      color: $facebook-color !important;
+    }
+    a.twitter{
+      color: $twitter-color !important;
+    }
+    a.google{
+      color: $googleplus-color !important;
+    }
+    a.dribbble{
+      color: $dribbble-color !important;
+    }
+    a.vk{
+      color: $vk-color !important;
+    }
+    a.linkedin{
+      color: $linkedin-color !important;
+    }
+    a.instagram{
+      color: $instagram-color !important;
+    }
+    a.tumblr{
+      color: $tumblr-color !important;
+    }
+    a.flickr{
+      color: $flickr-color !important;
+    }
+    a.youtube{
+      color: $youtube-color !important;
+    }
+    a.rss{
+      color: $rss-color !important;
+    }
+    a.reddit{
+      color: $reddit-color !important;
+    }
+    a.behance{
+      color: $behance-color !important;
+    }
+    a.vimeo{
+      color: $vimeo-color !important;
+    }
+    a.stumbleupon{
+      color: $stumbleupon-color !important;
+    }
+    a.digg{
+      color: $digg-color !important;
+    }
+    a.skype{
+      color: $skype-color !important;
+    }
+    a.dropbox{
+      color: $dropbox-color !important;
+    }
+    a.github{
+      color: $github-color !important;
+    }
+    a.gitlab{
+      color: $gitlab-color !important;
+    }
+    a.pinterest{
+      color: $pinterest-color !important;
+    }
+  }
+
+  .list-inline-item:not(:last-child){
+    margin-right: .3rem;
+  }
+}
+
+
+//social list hover style 1
+
+
+//top to bottom animation on hover
+@-webkit-keyframes topToBottom {
+  49% {-webkit-transform: translateY(-100%);}
+  50% {opacity: 0; -webkit-transform: translateY(100%);}
+  51% {opacity: 1;}
+}
+@-moz-keyframes topToBottom {
+  49% {-moz-transform: translateY(-100%);}
+  50% {opacity: 0; -moz-transform: translateY(100%);}
+  51% {opacity: 1;}
+}
+@keyframes topToBottom {
+  49% {transform: translateY(-100%);}
+  50% {opacity: 0; transform: translateY(100%);}
+  51% {opacity: 1;}
+}
+
+//bottom to top animation on hover
+@-webkit-keyframes bottomToTop {
+  49% {-webkit-transform: translateY(100%);}
+  50% {opacity: 0; -webkit-transform: translateY(-100%);}
+  51% {opacity: 1;}
+}
+@-moz-keyframes bottomToTop {
+  49% {-moz-transform: translateY(100%);}
+  50% {opacity: 0; -moz-transform: translateY(-100%);}
+  51% {opacity: 1;}
+}
+@keyframes bottomToTop {
+  49% {transform: translateY(100%);}
+  50% {opacity: 0; transform: translateY(-100%);}
+  51% {opacity: 1;}
+}
+
+.icon-hover-top-bottom{
+  li{
+    &:hover{
+      i{
+        -webkit-animation: topToBottom 0.4s both;
+        -moz-animation: topToBottom 0.4s both;
+        animation: topToBottom 0.4s both;
+      }
+    }
+  }
+}
+.icon-hover-bottom-top{
+  li{
+    &:hover{
+      i{
+        -webkit-animation: bottomToTop 0.4s both;
+        -moz-animation: bottomToTop 0.4s both;
+        animation: bottomToTop 0.4s both;
+      }
+    }
+  }
+}
+
+//social list hover style 2
+
+.social-hover-2{
+  li{
+    &:hover{
+      a{
+        transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        color: $white !important;
+        border-radius: 100%;
+      }
+      a.facebook{
+        background: $facebook-color;
+        color: $white !important;
+      }
+      a.twitter{
+        background: $twitter-color;
+        color: $white !important;
+      }
+      a.google{
+        background: $googleplus-color;
+        color: $white !important;
+      }
+      a.dribbble{
+        background: $dribbble-color;
+        color: $white !important;
+      }
+      a.vk{
+        background: $vk-color;
+        color: $white !important;
+      }
+      a.linkedin{
+        background: $linkedin-color;
+        color: $white !important;
+      }
+      a.instagram{
+        background: $instagram-color;
+        color: $white !important;
+      }
+      a.tumblr{
+        background: $tumblr-color;
+        color: $white !important;
+      }
+      a.flickr{
+        background: $flickr-color;
+        color: $white !important;
+      }
+      a.youtube{
+        background: $youtube-color;
+        color: $white !important;
+      }
+      a.rss{
+        background: $rss-color;
+        color: $white !important;
+      }
+      a.reddit{
+        background: $reddit-color;
+        color: $white !important;
+      }
+      a.behance{
+        background: $behance-color;
+        color: $white !important;
+      }
+      a.vimeo{
+        background: $vimeo-color;
+        color: $white !important;
+      }
+      a.stumbleupon{
+        background: $stumbleupon-color;
+        color: $white !important;
+      }
+      a.digg{
+        background: $digg-color;
+        color: $white !important;
+      }
+      a.skype{
+        background: $skype-color;
+        color: $white !important;
+      }
+      a.dropbox{
+        background: $dropbox-color;
+        color: $white !important;
+      }
+      a.github{
+        background: $github-color;
+        color: $white !important;
+      }
+      a.gitlab{
+        background: $gitlab-color;
+        color: $white !important;
+      }
+      a.pinterest{
+        background: $pinterest-color;
+        color: $white !important;
+      }
+
+    }
+  }
+}
+
+
+.background-color.social-hover-2{
+  li{
+    a.facebook{
+      background: $facebook-color;
+      color: $white !important;
+    }
+    a.twitter{
+      background: $twitter-color;
+      color: $white !important;
+    }
+    a.google{
+      background: $googleplus-color;
+      color: $white !important;
+    }
+    a.dribbble{
+      background: $dribbble-color;
+      color: $white !important;
+    }
+    a.vk{
+      background: $vk-color;
+      color: $white !important;
+    }
+    a.linkedin{
+      background: $linkedin-color;
+      color: $white !important;
+    }
+    a.instagram{
+      background: $instagram-color;
+      color: $white !important;
+    }
+    a.tumblr{
+      background: $tumblr-color;
+      color: $white !important;
+    }
+    a.flickr{
+      background: $flickr-color;
+      color: $white !important;
+    }
+    a.youtube{
+      background: $youtube-color;
+      color: $white !important;
+    }
+    a.rss{
+      background: $rss-color;
+      color: $white !important;
+    }
+    a.reddit{
+      background: $reddit-color;
+      color: $white !important;
+    }
+    a.behance{
+      background: $behance-color;
+      color: $white !important;
+    }
+    a.vimeo{
+      background: $vimeo-color;
+      color: $white !important;
+    }
+    a.stumbleupon{
+      background: $stumbleupon-color;
+      color: $white !important;
+    }
+    a.digg{
+      background: $digg-color;
+      color: $white !important;
+    }
+    a.skype{
+      background: $skype-color;
+      color: $white !important;
+    }
+    a.dropbox{
+      background: $dropbox-color;
+      color: $white !important;
+    }
+    a.github{
+      background: $github-color;
+      color: $white !important;
+    }
+    a.gitlab{
+      background: $gitlab-color;
+      color: $white !important;
+    }
+    a.pinterest{
+      background: $pinterest-color;
+      color: $white !important;
+    }
+  }
+}
+
+.social-color.background-color{
+  li{
+    a.facebook{
+      background: rgba(59, 89, 152, 0.4);
+      color: $facebook-color !important;
+    }
+    a.twitter{
+      background: rgba(29, 161, 242, .40);
+      color: $twitter-color !important;
+    }
+    a.google{
+      background: rgba(221, 75, 57, .4);
+      color: $googleplus-color !important;
+    }
+    a.dribbble{
+      background: rgba(234, 76, 137, .4);
+      color: $dribbble-color !important;
+    }
+    a.vk{
+      background: rgba(69, 102, 142, .4);
+      color: $vk-color !important;
+    }
+    a.linkedin{
+      background: rgba(0, 119, 181, .4);
+      color: $linkedin-color !important;
+    }
+    a.instagram{
+      background: rgba(64, 93, 230, .4);
+      color: $instagram-color !important;
+    }
+    a.tumblr{
+      background: rgba(53, 70, 92, .4);
+      color: $tumblr-color !important;
+    }
+    a.flickr{
+      background: rgba(0, 99, 220, .4);
+      color: $flickr-color !important;
+    }
+    a.youtube{
+      background: rgba(255, 0, 0, .4);
+      color: $youtube-color !important;
+    }
+    a.rss{
+      background: rgba(242, 101, 34, .4);
+      color: $rss-color !important;
+    }
+    a.reddit{
+      background: rgba(255, 69, 0, .4);
+      color: $reddit-color !important;
+    }
+    a.behance{
+      background: rgba(23, 105, 255, .4);
+      color: $behance-color !important;
+    }
+    a.vimeo{
+      background: rgba(26, 183, 234, .4);
+      color: $vimeo-color !important;
+    }
+    a.stumbleupon{
+      background: rgba(235, 73, 36, .4);
+      color: $stumbleupon-color !important;
+    }
+    a.digg{
+      background: rgba(0, 91, 226, .4);
+      color: $digg-color !important;
+    }
+    a.skype{
+      background: rgba(0, 175, 240, .4);
+      color: $skype-color !important;
+    }
+    a.dropbox{
+      background: rgba(0, 126, 229, .4);
+      color: $dropbox-color !important;
+    }
+    a.github{
+      background: rgba(64, 120, 192, 0.39);
+      color: $github-color !important;
+    }
+    a.gitlab{
+      background: rgba(252, 163, 38, .4);
+      color: $gitlab-color !important;
+    }
+    a.pinterest{
+      background: rgba(189, 8, 28, .4);
+      color: $pinterest-color !important;
+    }
+  }
+}
+.social-hover-2.rounded-icon{
+  li{
+    a{
+      border-radius: 100%;
+    }
+
+    &:hover{
+      a{
+        border-radius: 4px;
+      }
+    }
+  }
+}
