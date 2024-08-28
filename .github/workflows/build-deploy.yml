@@ -87,7 +87,7 @@ jobs:
       run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          
+
     - name: Deploy to GitHub Pages (Production)
       if: matrix.branch == 'master'
       uses: peaceiris/actions-gh-pages@v3
@@ -99,8 +99,9 @@ jobs:
     - name: Deploy to Separate QA Repository
       if: matrix.branch == 'qa'
       run: |
-          cd ./build
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/username/adme-corp-qa.git
-          git add -f .
-          git commit -m "Deploy QA from QA branch"
-          git push origin master --force
+        cd ./build
+        git init
+        git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/username/adme-corp-qa.git
+        git add -f .
+        git commit -m "Deploy QA from QA branch"
+        git push origin HEAD:master --force
