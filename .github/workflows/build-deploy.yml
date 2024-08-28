@@ -53,7 +53,10 @@ jobs:
         path: ./build
 
     - name: Configure CNAME
-      run: echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > ./public/CNAME
+      run: echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > ./build/CNAME
+
+    - name: Verify CNAME content
+      run: cat ./build/CNAME
 
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
