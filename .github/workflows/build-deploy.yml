@@ -53,7 +53,7 @@ jobs:
         path: ./build
 
     - name: Debug github.ref
-      run: 'echo "Current branch: $GITHUB_REF"''
+      run: 'echo "Current branch: $GITHUB_REF"'
   
     - name: Configure CNAME
       run: |
@@ -64,6 +64,7 @@ jobs:
         fi
         echo "CNAME content after rewrite:"
         cat ./build/CNAME
+        
 
     - name: Verify CNAME content
       run: cat ./build/public/CNAME
