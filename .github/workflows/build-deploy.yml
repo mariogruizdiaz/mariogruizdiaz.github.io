@@ -52,6 +52,9 @@ jobs:
         name: production-files
         path: ./build
 
+    - name: List files in build directory
+      run: ls -R ./build
+  
     - name: Configure CNAME
       run: echo "${{ github.ref == 'refs/heads/qa' && 'qa.adme.com.ar' || 'adme.com.ar' }}" > ./build/public/CNAME
 
