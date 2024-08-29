@@ -68,6 +68,14 @@ jobs:
       with:
         node-version: 14.x
 
+    - name: Set environment variable
+      run: |
+          if [ "${{ matrix.branch }}" == "master" ]; then
+            echo "REACT_APP_ENV=production" >> $GITHUB_ENV
+          elif [ "${{ matrix.branch }}" == "qa" ]; then
+            echo "REACT_APP_ENV=qa" >> $GITHUB_ENV
+          fi
+  
     - name: Install NPM packages
       run: npm ci
 
@@ -100,7 +108,7 @@ jobs:
       run: |
           cd ./build
           git init
-          git remote add origin https://x-access-token:${{ secrets.ADME_CORP_QA_SECRET }}@github.com/mariogruizdiaz/adme-corp-qa.git
+          git remote add origin https://x-access-token:${{ secrets.ADME_CORP_QA_SECRET }}@github.com/mariogruizdiaz/insights-corp-qa.git
           git add -f .
           git commit -m "Deploy QA from QA branch"
           git push origin HEAD:master --force
