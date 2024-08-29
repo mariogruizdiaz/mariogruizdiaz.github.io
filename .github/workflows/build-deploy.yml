@@ -68,6 +68,14 @@ jobs:
       with:
         node-version: 14.x
 
+    - name: Set environment variable
+      run: |
+          if [ "${{ matrix.branch }}" == "master" ]; then
+            echo "REACT_APP_ENV=production" >> $GITHUB_ENV
+          elif [ "${{ matrix.branch }}" == "qa" ]; then
+            echo "REACT_APP_ENV=qa" >> $GITHUB_ENV
+          fi
+  
     - name: Install NPM packages
       run: npm ci
 

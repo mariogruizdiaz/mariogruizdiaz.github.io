@@ -56,6 +56,7 @@ class Routes extends React.PureComponent {
         this.props.genericAction(actionTypes.FETCH_API_REFERENCES, {});
     }
   render() {
+    console.log('REACT_APP_ENV', process.env.REACT_APP_ENV);
     return (
       <React.Fragment>
         <Router basename={process.env.PUBLIC_URL}>
