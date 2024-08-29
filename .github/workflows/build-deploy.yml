@@ -100,7 +100,7 @@ jobs:
       run: |
           cd ./build
           git init
-          git remote add origin https://x-access-token:${{ secrets.ADME_CORP_QA_SECRET }}@github.com/mariogruizdiaz/adme-corp-qa.git
+          git remote add origin https://x-access-token:${{ secrets.ADME_CORP_QA_SECRET }}@github.com/mariogruizdiaz/insights-corp-qa.git
           git add -f .
           git commit -m "Deploy QA from QA branch"
           git push origin HEAD:master --force
