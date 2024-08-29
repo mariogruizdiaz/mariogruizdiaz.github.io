@@ -4,7 +4,7 @@ import { commandCollection } from "./commands";
 
 // const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
 // const apiReferences = (state) => state.basics.api;
-const apiUrl = process.env.REACT_APP_ENV === 'production' ? 'https://api.adme.com.ar/graphql' : 'https://api-qa.adme.com.ar/graphql';
+const apiUrl = process.env.REACT_APP_ENV === 'production' ? 'https://api-prod.adme.com.ar/graphql' : 'https://api-qa.adme.com.ar/graphql';
 console.log('apiUrl', apiUrl);
 
 const genericResolver = function* genericResolver(action) {
