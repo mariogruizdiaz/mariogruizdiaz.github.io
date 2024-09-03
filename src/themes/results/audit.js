@@ -5,11 +5,11 @@ import { bindActionCreators } from "redux";
 
 import HeaderTeam from "../../components/Header/headerTeam";
 import Hero from "../../components/Results/HeroSectionAuditPage";
-import FooterAdmeBrands from "../../components/Footer/FooterAdmeBrands";
 import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
-import { Redirect, withRouter } from "react-router";
-import Hero404 from "../../components/HeroSection/HeroSection404";
+import {  withRouter } from "react-router";
+import Hero403 from "../../components/HeroSection/HeroSection403";
+import Hero401 from "../../components/HeroSection/HeroSection401";
 import { Facebook } from 'react-content-loader';
 import { commonStatuses } from "../../state/models/common";
 import { PermissionHelper } from '../../state/helpers/security';
@@ -17,59 +17,47 @@ import { PermissionHelper } from '../../state/helpers/security';
 class company extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            companyIdValid: true
-        };
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        // if (this.props.match.params.companyId !== nextProps.match.params.companyId) {
-        //     const companyId = this.props.match.params.companyId;
-        //     if (companyId !== undefined && companyId !== "undefined") {
-        //         if (this.props.selectedCompany && companyId !== this.props.selectedCompany[globalModels.companyFields._id]) {
-        //             this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: nextProps.match.params.companyId });
-        //             return true;
-        //         }
-        //     } else {
-        //         return false;
-        //     }
-
-        // }
-
-        // if (this.props.selectedCompany && this.props.selectedCompany[globalModels.companyFields._id] !== nextProps.selectedCompany[globalModels.companyFields._id]) {
-        //     return true;
-        // }
-
-        // return true;
-
     }
 
     componentDidMount() {
-        // const companyId = this.props.match.params.companyId;
-        // if (companyId !== undefined && companyId !== "undefined") {
-        //     this.props.genericAction(actionTypes.FETCH_COMPANY, { [globalModels.companyFields._id]: companyId });
-        //     if (!this.state.companyIdValid) this.setState({ companyIdValid: true });
-        // } else {
-        //     if (this.state.companyIdValid) this.setState({ companyIdValid: false });
-        // }
+      this.props.security.company.id ? this.fetchAdvertisement() : this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
+    }
+
+    componentDidUpdate(prevProps) {
+      if (prevProps.security !== this.props.security) {
+        if (!this.props.security.authenticated) {
+          this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`)
+        }
+      }
+    }
+
+    fetchAdvertisement = () => {
+      const advertisementId = this.props.match.params.advertisementId;
+      if (advertisementId) {
+          this.props.genericAction(actionTypes.FETCH_ADVERTISEMENT, {
+              [globalModels.advertisementFields._id]: advertisementId,
+              [globalModels.advertisementFields.companyId]: this.props.security.company.id
+          });
+      }
     }
 
     canViewComponent() {
-      // const { companyId } = this.props.match.params;
-      // let result = this.props.security.authenticated && PermissionHelper.canViewComponent(this.props.security.permissions, 'CompanyComponent', companyId, this.props.security.company.id);
-      // return result;
-      return true;
+      return this.props.security.authenticated && PermissionHelper.canViewComponent(this.props.security.permissions, 'AuditComponent', null, this.props.security.company.id);
     }
+
     render() {
         if(!this.canViewComponent()) {
-            return <Redirect to={{pathname: this.props.location?.state?.from? this.props.location.state.from : "/"}}/>;
+            return (
+              <React.Fragment>
+               <HeaderTeam />
+               <Hero401 />
+              </React.Fragment>
+            )
         }
         return (
-
             <div>
                 {
-                    this.state.companyIdValid &&
+                    !!this.props.advertisement._id ?
                     (
                         <React.Fragment>
                             <HeaderTeam />
@@ -80,16 +68,20 @@ class company extends Component {
                             </div>
                         </React.Fragment>
                     )
+                    :
+                    (
+                      <React.Fragment>
+                        <HeaderTeam />
+                        <Hero403 />
+                      </React.Fragment>
+                    )
                 }
                 {
-                    this.state.companyIdValid &&
-                    (
-                        (!this.props.selectedCompany || this.props.selectedCompany.fetchStatus === commonStatuses.loading) &&
+                    this.props.advertisement.fetchStatus === commonStatuses.loading &&
                         <React.Fragment>
                             <div className="row">
                                 <div className="col-md-12">
                                     <Facebook
-                                    // viewBox="-100 -100 1000 1000"
                                     foregroundColor="#9629e6"
                                     backgroundColor="#bf00dc"
                                     style={{
@@ -100,14 +92,6 @@ class company extends Component {
                             </div>
 
                         </React.Fragment>
-                    )
-                }
-                {
-                    (!this.state.companyIdValid || this.props.selectedCompany.fetchStatus === commonStatuses.failed) &&
-                    <React.Fragment>
-                        <HeaderTeam />
-                        <Hero404 />
-                    </React.Fragment>
                 }
 
             </div>
@@ -119,7 +103,8 @@ function mapStateToProps(state) {
     return {
         dictionary: state.i18n.dictionary,
         selectedCompany: state.companies.selectedCompany,
-        security: state.security
+        security: state.security,
+        advertisement: state.advertisement
     };
 }
 

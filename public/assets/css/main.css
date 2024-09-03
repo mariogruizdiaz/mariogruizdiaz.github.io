@@ -3143,6 +3143,25 @@ table {
   position: relative;
 }
 
+/* Definición de estilos personalizados */
+.bg-success {
+  background-color: green;
+  /* Color verde para la aprobación */
+  color: white;
+  /* Color de texto blanco para contraste */
+  transition: background-color 0.3s ease;
+  /* Suaviza la transición */
+}
+
+.bg-warning {
+  background-color: orange;
+  /* Color naranja para el rechazo */
+  color: white;
+  /* Color de texto blanco para contraste */
+  transition: background-color 0.3s ease;
+  /* Suaviza la transición */
+}
+
 /* line 4, public/assets/src/scss/objects/_objects.background-image.scss */
 .bg-image .background-image-wraper {
   position: absolute;

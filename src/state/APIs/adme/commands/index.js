@@ -22,7 +22,9 @@ const commandCollection = {
     [actionTypes.SIGNUP]: security.signUp,
     [actionTypes.CREATE_COMPANY]: security.createCompany,
     [actionTypes.UPDATE_COMPANY]: security.updateCompany,
-    [actionTypes.UPDATE_USER]: security.updatePersonPrimary
+    [actionTypes.UPDATE_USER]: security.updatePersonPrimary,
+    [actionTypes.FETCH_ADVERTISEMENT]: advertisement.fetchAdvertisementByIdAndCompanyId,
+    [actionTypes.UPDATE_ADVERTISEMENT]: advertisement.updateAdvertisement,
 };
 
 export {

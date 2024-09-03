@@ -5,7 +5,11 @@ module.exports = {
             brandsLabel: "Brands",
             NotFoundTitle: "Sorry, something went wrong",
             NotFoundSubtitle: "The page you are looking for might have been removed had its name changed or is temporarily unavailable.",
-            NotFoundbuttonText: "Go To Homepage"
+            NotFoundbuttonText: "Go To Homepage",
+            NoAccessTitle: "Inaccessible advertisement",
+            NoAccessSubtitle: "It looks like this advertisement does not belong to your company or the ad does not exist.",
+            UnauthorizedTitle: "Not authorized",
+            UnauthorizedSubtitle: "You do not have permission to access the auditing module. Please contact your account manager if you need access."
         },
         login: {
           title: "Login your account",
@@ -88,6 +92,20 @@ module.exports = {
           addCompany: 'Add company',
           goToCompanyInformation: 'Go to Company information',
           saved: 'The changes were saved.',
+        },
+        audtiAdvertisemnt: {
+          approve: 'Approve',
+          reject: 'Reject',
+          approvedAd: 'Approved advertisement',
+          rejectedAd: 'rejected advertisement',
+          brief: 'Brief',
+          validate: 'Validate',
+          willBePaidWith: 'Ad will be paid with ',
+          creation: 'Creation ', 
+          campaignType: 'Campaign Type ',
+          creatorUser: 'Creator User ',
+          showSnackbarApproved: 'The advertisement was successfully approved.',
+          showSnackbarRejected: 'The advertisement was successfully rejected.'
         },
         header: {
             menu: {
@@ -709,7 +727,11 @@ module.exports = {
             brandsLabel: "Marcas",
             NotFoundTitle: "Lo sentimos, algo salió mal",
             NotFoundSubtitle: "La pagina que esta buscando fue removida ó está temporalmente inaccesible.",
-            NotFoundbuttonText: "Homepage"
+            NotFoundbuttonText: "Homepage",
+            NoAccessTitle: "Anuncio inaccesible",
+            NoAccessSubtitle: "Parece que este anuncio no pertenece a tu compañía o el anuncio no existe.",
+            UnauthorizedTitle: "No autorizado",
+            UnauthorizedSubtitle: "No tienes permiso para acceder al módulo de auditoría. Por favor, contacta al administrador de tu cuenta si necesitas acceso."
         },
        login: {
           title: "Ingresa a tu cuenta",
@@ -794,6 +816,20 @@ module.exports = {
           editInformation: "Editar información",
           addCompany: 'Agregar compañía',
           goToCompanyInformation: 'Ir a informacion de compañía'
+        },
+        audtiAdvertisemnt: {
+          approve: 'Aprobar',
+          reject: 'Rechazar',
+          approvedAd: 'Anuncio aprobado',
+          rejectedAd: 'Anuncio rechazado',
+          brief: 'Instructivo',
+          validate: 'Validar',
+          willBePaidWith: 'El anuncio se pagará con ',
+          creation: 'Creación ',
+          campaignType: 'Tipo de campaña ',
+          creatorUser: 'Usuario creador ',
+          showSnackbarApproved: 'Se aprobo satisfactoriamente el anuncio.',
+          showSnackbarRejected: 'Se rechazo satisfactoriamente el anuncio.'
         },
         header: {
             menu: {

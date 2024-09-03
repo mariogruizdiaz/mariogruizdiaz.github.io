@@ -30,6 +30,7 @@ class LoginComponent extends React.Component {
         passwordOk: true,
         hasErrors: false,
       },
+      fromAudit: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -49,7 +50,6 @@ class LoginComponent extends React.Component {
     stateValue[inputName] = event.target.value;
     this.setState(stateValue);
     this.setState(await validateField('login', inputName, this.state.errors, stateValue[inputName]));
-    
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -94,14 +94,27 @@ class LoginComponent extends React.Component {
     this.setState(prevState => ({ showPassword: !prevState.showPassword }));
   }
 
+  componentDidMount() {
+    const searchParams = new URLSearchParams(this.props.location.search);
+    const from = searchParams.get('from');
+    from === 'audit' && this.setState({fromAudit : true});
+  }
+
   getQueryValue() {
     const searchParams = new URLSearchParams(this.props.location.search);
-    const value = searchParams.get('from');
+    const from = searchParams.get('from');
+    const id = searchParams.get('id');
 
-    if (value) {
-      this.props.history.push(`/${value}`);
-    } else {
-      this.props.history.push(`/`);
+    switch (from) {
+      case 'signUp':
+        this.props.history.push(`/${from}`);
+        break;
+      case 'audit':
+        this.props.history.push(`/${from}/${id}`);
+        break;
+      default:
+        this.props.history.push(`/`);
+        break;
     }
   }
 
@@ -121,6 +134,10 @@ class LoginComponent extends React.Component {
                     <img width={50} src="assets/img/admeLogoLogin.png" className="img-fluid mb-3" alt="Adme" />
                     <h4 className="mb-5">{this.props.dictionary.login.title}</h4>
                   </div>
+                 { this.state.fromAudit && 
+                 <div className={`message-box d-block alert-info alert`}>
+                    {"Debe hacer login antes de poder auditar este anuncio"}
+                  </div>}
                   <MessageBox
                         authenticationStatus={this.props.security.authenticationStatus}
                         authenticationStatusDescription={
