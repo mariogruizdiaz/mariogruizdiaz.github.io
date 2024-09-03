@@ -9,12 +9,12 @@ const validatePassword = (password) => {
 }
 
 const validatePasswordSignUp = (password) => {
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumber = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*()\-_=+{}[\]:;'\"<>,.?/|\\`~]/.test(password);
-  const hasValidLength = password.length >= 6 && password.length <= 15;
-  return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasValidLength;
+  const hasUpperCase = /[A-Z]/.test(password); // Verifica que haya al menos una letra mayúscula
+  const hasLowerCase = /[a-z]/.test(password); // Verifica que haya al menos una letra minúscula
+  const hasNumber = /\d/.test(password); // Verifica que haya al menos un número
+  const hasSpecialChar = /[!@#$%^&*()\-_=+{}\[\]:;'"<>,.?/|\\`~]/.test(password); // Verifica que haya al menos un carácter especial
+  const hasValidLength = password.length >= 6 && password.length <= 15; // Verifica que la longitud de la contraseña esté entre 6 y 15 caracteres
+  return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasValidLength; // Retorna verdadero si cumple con todos los criterios
 }
 
 const validateEmail = (email) => {
