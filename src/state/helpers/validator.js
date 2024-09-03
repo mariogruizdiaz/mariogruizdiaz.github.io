@@ -12,7 +12,7 @@ const validatePasswordSignUp = (password) => {
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumber = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*()\-_=+{}\[\]:;'"<>,.?/|\\`~]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*()\-_=+{}[\]:;'"<>,.?/|\\`~]/.test(password);
   const hasValidLength = password.length >= 6 && password.length <= 15;
   return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasValidLength;
 }
