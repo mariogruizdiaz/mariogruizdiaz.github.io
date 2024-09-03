@@ -2,19 +2,25 @@ import * as globalModels from "influencers-models";
 
 const validatePassword = (password) => {
   const hasUpperCase = /[A-Z]/.test(password);
-  const hasMinLength = password.length >= 8;
-  return hasUpperCase && hasMinLength;
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasValidLength = password.length >= 6 && password.length <= 15;
+  return hasUpperCase && hasLowerCase && hasNumber && hasValidLength;
 }
 
 const validatePasswordSignUp = (password) => {
   const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
   const hasNumber = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-  const hasMinLength = password.length >= 8;
-  return hasUpperCase && hasNumber && hasSpecialChar && hasMinLength;
+  const hasSpecialChar = /[!@#$%^&*()\-_=+{}[\]:;'\"<>,.?/|\\`~]/.test(password);
+  const hasValidLength = password.length >= 6 && password.length <= 15;
+  return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasValidLength;
 }
 
 const validateEmail = (email) => {
+  if (email.length > 254) {
+    return false;
+  }
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return emailPattern.test(email);
 }
