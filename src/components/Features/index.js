@@ -15,7 +15,13 @@ class Feature extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div id="features" className={"feature-section ptb-100 " + (this.props.isGray && this.props.isGray === true ? 'gray-light-bg' : '')}>
+        <div id="features" className="about-us ptb-100 background-shape-img position-relative">
+            <div className="animated-shape-wrap">
+                    <div className="animated-shape-item"></div>
+                    <div className="animated-shape-item"></div>
+                    <div className="animated-shape-item"></div>
+                    <div className="animated-shape-item"></div>
+                </div>
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-9 col-lg-9">
@@ -60,7 +66,7 @@ class Feature extends React.Component {
                     </div>
                     <div className="col-lg-4 col-md-5 d-none d-sm-none d-md-block d-lg-block">
                         <div className="position-relative pb-md-5 py-lg-0">
-                            <img alt="placeholder" src="assets/img/app-mobile-image.png" className="img-center img-fluid" />
+                            <img alt="placeholder" src="assets/img/app-adme-mobile-image.png" className="img-center img-fluid" />
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-12">

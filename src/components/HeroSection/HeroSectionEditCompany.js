@@ -103,8 +103,8 @@ class EditCompany extends React.Component {
   }
 
   handleCancel = () => {
-    this.setState({ isEditing: false });
     this.setState({
+      isEditing: false,
       cellPhone: this.props.security.company.cellPhone || "",
       companyName: this.props.security.company.name || "",
       photo: this.props.security.company.logo || "",
@@ -114,6 +114,7 @@ class EditCompany extends React.Component {
         instagram : this.props.security.company.socialMedia?.instagram || "",
         facebook : this.props.security.company.socialMedia?.facebook || "",
       },
+      photoError: null,
     });
   }
 
@@ -224,7 +225,7 @@ class EditCompany extends React.Component {
                             </Avatar>
                           </div>
                           :
-                          <ImageLoader source={this.state.photo} alt="An image" className="img-fluid100px mb-3" secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
+                          <ImageLoader source={this.state.photo} alt="An image" maxWidth={100} secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
                         }
                         
                       </div>

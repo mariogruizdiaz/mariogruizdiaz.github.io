@@ -50,6 +50,7 @@ import BlogSingleLeftSidebar from "../themes/blogSingleLeftSidebar";
 import BlogSingleRightSidebar from "../themes/blogSingleRightSidebar";
 import AboutUs from "../themes/aboutUs";
 import ContactUs from "../themes/contactUs";
+import Download from "../themes/download";
 
 
 class Routes extends React.PureComponent {
