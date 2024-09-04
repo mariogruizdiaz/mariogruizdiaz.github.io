@@ -49,6 +49,7 @@ import BlogSingleLeftSidebar from "../themes/blogSingleLeftSidebar";
 import BlogSingleRightSidebar from "../themes/blogSingleRightSidebar";
 import AboutUs from "../themes/aboutUs";
 import ContactUs from "../themes/contactUs";
+import Download from "../themes/download";
 
 
 class Routes extends React.PureComponent {
@@ -72,6 +73,7 @@ class Routes extends React.PureComponent {
             <Route exact path="/deletemydata" component={DeleteMyData} />
             <Route exact path="/companies/:companyId" component={Company} />
             <Route exact path="/companies/:companyId/:campaignId" component={Campaign} />
+            <Route exact path="/download" component={Download} />
             <Route exact path="/theme1" component={Theme1} />
             <Route exact path="/theme2" component={Theme2} />
             <Route exact path="/theme3" component={Theme3} />
