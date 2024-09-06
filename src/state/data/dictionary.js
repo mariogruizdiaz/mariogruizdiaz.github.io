@@ -59,6 +59,7 @@ module.exports = {
           createCompany: 'Create company',
           signUpSuccessful: "Sign Up successful. Welcome!",
           signUpError: " Sign Up error!",
+          specificationCellPhone: "No spaces or hyphens allowed.",
           createCompanySuccessful: 'You have created your company, congratulations!',
           createCompanyError: 'Error adding your company!'
         },
@@ -781,8 +782,9 @@ module.exports = {
           termsAndConditions: 'Términos y Condiciones',
           shouldAcceptTAndC: 'Debes aceptar Términos y Condiciones',
           createCompany: 'Crear la compañía',
-          signUpSuccessful: "Registro Satisfactorio. Bienvenido!",
+          signUpSuccessful: "Registro satisfactorio. Bienvenido!",
           signUpError: "Error al crear la cuenta",
+          specificationCellPhone:  "No se permiten espacios ni guiones.",
           createCompanySuccessful: 'Creaste tu compañía, felicitaciones!',
           createCompanyError: 'Error al agregar tu compañía'
         },
@@ -791,7 +793,7 @@ module.exports = {
           saved: 'Los cambios fueron guardados.',
           editError: 'Se produjo un error al editar tu compañía.',
           editTitle: 'Editar datos de la Compañía',
-          title: 'Datos de la Compañíaa',
+          title: 'Datos de la Compañía',
           companyName: 'Nombre de compañía',
           cellPhone: 'Celular',
           uploadLogo: 'Cargar Logo (PNG o JPEG)',
@@ -802,7 +804,7 @@ module.exports = {
           save: "Guardar",
           cancel: "Cancelar",
           editInformation: "Editar información",
-          goToProfilInformation: "Ir a informacion de perfil",
+          goToProfilInformation: "Ir a información de perfil",
         },
         editProfile: {
           saving: 'Guardando...',
@@ -838,7 +840,7 @@ module.exports = {
         header: {
             menu: {
                 about: 'Nosotros',
-                process: '¿Como?',
+                process: '¿Cómo?',
                 features: 'Funcionalidades',
                 passiveIncomes: "Ingresos pasivos",
                 brands: 'Marcas',
