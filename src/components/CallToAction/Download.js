@@ -17,8 +17,8 @@ class Download extends React.Component {
                 <div className="row justify-content-center">
                     <div className="col-md-9 col-lg-8">
                         <div className="section-heading text-center mb-1 text-white">
-                            <h2 className="text-white">Download Our Apps</h2>
-                            <p>Start working with that can provide everything you need to generate awareness, drive traffic, connect. Efficiently transform granular value with client-focused content. Energistically redefine market.</p>
+                            <h2 className="text-white">Descargá la App</h2>
+                            <p>Estamos en Apple Store y Google Store, hace click en el boton de arriba y comenza a disfrutar de Adme.</p>
                             <div className="action-btns mt-4">
                                 <ul className="list-inline">
                                     <li className="list-inline-item">

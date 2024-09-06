@@ -1,9 +1,13 @@
 import React from "react";
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 class Feature extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      text: 'Este es el texto a copiar',
+      copied: false
+    };
   }
 
   componentDidMount() {
@@ -11,6 +15,19 @@ class Feature extends React.Component {
      * Your ajax will goes here to get data then call setState
      */
   }
+
+  copyToClipboard = () => {
+    navigator.clipboard.writeText(this.state.text)
+      .then(() => {
+        this.setState({ copied: true });
+        setTimeout(() => {
+          this.setState({ copied: false });
+        }, 4000); // Resetea el estado después de 2 segundos
+      })
+      .catch(err => {
+        console.error('Error al copiar: ', err);
+      });
+  };
 
   render() {
     return (
@@ -39,8 +56,8 @@ class Feature extends React.Component {
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <span className="ti-face-smile icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Responsive web design</h5>
-                                        <p>Modular and monetize an componente between layouts monetize array. Core competencies for testing.</p>
+                                        <h5 className="mb-2">Descargá la App</h5>
+                                        <p>Hace click en el boton de arriba y comenza a disfrutar Ya de Adme.</p>
                                     </div>
                                 </div>
                             </div>
@@ -48,8 +65,9 @@ class Feature extends React.Component {
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <span className="ti-vector icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Loaded with features</h5>
-                                        <p>Holisticly aggregate client centered the manufactured products transparent. Organic sources content.</p>
+                                        <h5 className="mb-2">Ingresá un código de referido</h5>
+                                        <p>{`ASDFDSFDSF `}<ContentCopyIcon onClick={this.copyToClipboard} style={{ color: this.state.copied ? 'green' : 'black' }} /></p>
+                                        <p>Podes copiar este codigo o bien usar el de un amig@ si ya se la descargo antes a la App.</p>
                                     </div>
                                 </div>
                             </div>
