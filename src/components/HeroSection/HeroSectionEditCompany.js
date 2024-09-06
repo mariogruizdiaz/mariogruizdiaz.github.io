@@ -246,6 +246,7 @@ class EditCompany extends React.Component {
                                     </InputAdornment>
                                   ),
                                 }}
+                                inputProps={{ maxLength: 100 }}
                             />
                           </div>
                           <div className="form-group">
@@ -262,7 +263,11 @@ class EditCompany extends React.Component {
                                     </InputAdornment>
                                   ),
                                 }}
+                                inputProps={{ maxLength: 100 }}
                               />
+                              <small className="small-text">
+                                {this.props.dictionary.signUp.specificationCellPhone}
+                              </small>
                           </div>
                           <div className="form-group">
                               <input type="file" id="fileUpload" style={{ display: 'none' }} onChange={e => this.handleFormPhotoChange(e)} />
