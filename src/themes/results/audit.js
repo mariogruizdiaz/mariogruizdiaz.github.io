@@ -15,10 +15,6 @@ import { commonStatuses } from "../../state/models/common";
 import { PermissionHelper } from '../../state/helpers/security';
 
 class company extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
       this.props.security.company.id ? this.fetchAdvertisement() : this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
     }
