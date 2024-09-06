@@ -10,7 +10,7 @@ class HeaderAudit extends React.Component {
             <nav className="navbar navbar-expand-lg fixed-top bg-transparent">
                 <div className="container">
                     <img src={this.props.isColorLogo && this.props.isColorLogo === true ? "assets/img/adme-logo-name.png" : "assets/img/adme-logo-name.png"}
-                        className="img-fluid" />
+                        className="img-fluid" alt="" />
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="ti-menu"></span>
                     </button>
