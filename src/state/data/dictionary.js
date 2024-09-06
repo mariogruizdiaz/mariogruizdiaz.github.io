@@ -105,7 +105,9 @@ module.exports = {
           campaignType: 'Campaign Type ',
           creatorUser: 'Creator User ',
           showSnackbarApproved: 'The advertisement was successfully approved.',
-          showSnackbarRejected: 'The advertisement was successfully rejected.'
+          showSnackbarRejected: 'The advertisement was successfully rejected.',
+          youAreInAudit: 'You are in the Adme audit module',
+          areYouSureToReject: 'Are you sure you want to reject this Advertisement?'
         },
         header: {
             menu: {
@@ -829,7 +831,9 @@ module.exports = {
           campaignType: 'Tipo de campaña ',
           creatorUser: 'Usuario creador ',
           showSnackbarApproved: 'Se aprobo satisfactoriamente el anuncio.',
-          showSnackbarRejected: 'Se rechazo satisfactoriamente el anuncio.'
+          showSnackbarRejected: 'Se rechazo satisfactoriamente el anuncio.',
+          youAreInAudit: 'You are in the Adme audit module',
+          areYouSureToReject: '¿Estás seguro de que deseas rechazar este anuncio?'
         },
         header: {
             menu: {

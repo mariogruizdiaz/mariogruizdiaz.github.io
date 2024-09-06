@@ -50,7 +50,7 @@ export default (state = initialState, action) => {
     }
     case actionTypes.FETCH_ADVERTISEMENT_SUCCESS: {
       return {
-        id: action.payload.data[0]._id,
+        _id: action.payload.data[0]._id,
         fetchStatus: commonStatuses.loaded,
         fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
         campaignName: action.payload.data[0].campaignName,

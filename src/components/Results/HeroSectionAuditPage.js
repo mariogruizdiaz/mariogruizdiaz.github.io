@@ -11,10 +11,13 @@ import { withRouter } from "react-router";
 import { bindActionCreators } from "redux";
 import { genericAction } from "../../state/actions";
 import moment from 'moment';
-import 'moment/locale/es'; // Importa los idiomas que necesites
-import { TailSpin } from 'react-loader-spinner'; // Importa el componente TailSpin desde la librería
+import 'moment/locale/es';
+import { TailSpin } from 'react-loader-spinner'; 
+import ExpandableText from '../../state/helpers/expandableText';
+import { SnackbarContext } from '../Toast/SnackbarContext';
 
 class HeroSectionCompanyPage extends React.Component {
+    static contextType = SnackbarContext;
     constructor(props) {
         super(props);
 
@@ -39,27 +42,18 @@ class HeroSectionCompanyPage extends React.Component {
 
     componentDidMount() {
         this.resizeImage();
-        //this.fetchAdvertisement();
     }
-
-    // fetchAdvertisement = () => {
-    //     const advertisementId = this.props.match.params.advertisementId;
-    //     if (advertisementId) {
-    //         this.props.genericAction(actionTypes.FETCH_ADVERTISEMENT, {
-    //             [globalModels.advertisementFields._id]: advertisementId,
-    //             [globalModels.advertisementFields.companyId]: this.props.company.id
-    //         });
-    //     }
-    // }
 
     shouldComponentUpdate(nextProps, nextState) {
         if (this.props.advertisement.status !== nextProps.advertisement.status) {
             switch (nextProps.advertisement.status) {
               case "Approved":
                 this.setState({ loading: false, resultStatus: 'approved' });
+                this.context.showSnackbar(this.props.dictionary.audtiAdvertisemnt.showSnackbarApproved, "success");
                 break;
               case "RejectedByCustomer":
                 this.setState({ loading: false, resultStatus: 'rejected' });
+                this.context.showSnackbar(this.props.dictionary.audtiAdvertisemnt.showSnackbarRejected, "success");
                 break;
               default:
                 break;
@@ -92,6 +86,10 @@ class HeroSectionCompanyPage extends React.Component {
     }
 
     handleDecline = () => {
+
+      const confirmReject = window.confirm("¿Estás seguro de que deseas rechazar este anuncio?");
+    
+      if (confirmReject) {
         this.setState({ loading: true, resultStatus: null });
         const advertisementId = this.props.match.params.advertisementId;
 
@@ -102,12 +100,13 @@ class HeroSectionCompanyPage extends React.Component {
             });
         } catch (error) {
         }
+      }
     }
 
     render() {
         const { isOpen, loading } = this.state;
         moment.locale(this.props.language);
-
+        console.log('this.props.advertisement.status', this.props.advertisement.status)
         return (
             <React.Fragment>
                 <section className="page-header-section ptb-100 bg-image"image-overlay="5">
@@ -118,8 +117,8 @@ class HeroSectionCompanyPage extends React.Component {
                                 <div className="popular-price bg-white text-center single-pricing-pack mt-4" color="primary">
                                     <div className="pricing-content">
                                       {
-                                        this.props.advertisement.status === globalModels.advertisementStatusEnum.WaitingForPlatformAudit ?
-                                          this.props.advertisement.campaignType === globalModels.campaignType.advertisement ?
+                                        this.props.advertisement.status === (globalModels.advertisementStatusEnum.WaitingForCustomerAudit || globalModels.advertisementStatusEnum.WaitingForPlatformAudit) ?
+                                          this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising ?
                                             <CardActions>
                                                 <Button fullWidth className="btn btn-brand-02 btn-rounded mb-3" color="primary" disabled={this.props.advertisement.fetchStatus === 'SAVING'} variant="contained" onClick={this.handleApprove}>{this.props.dictionary.audtiAdvertisemnt.approve}</Button>
                                                 <Button fullWidth className="btn btn-outline-brand-02 btn-rounded mb-3" color="error" disabled={this.props.advertisement.fetchStatus === 'SAVING'} variant="contained" onClick={this.handleDecline}>{this.props.dictionary.audtiAdvertisemnt.reject}</Button>
@@ -143,25 +142,34 @@ class HeroSectionCompanyPage extends React.Component {
                                         <img src={this.props.advertisement.multimediaUri} alt="Photo" />
                                     </div>
                                     <div className="py-4 border-0 pricing-header">
-                                        <h2 className="text mb-0 color-secondary">{this.props.advertisement.campaignName}</h2>
+                                        <h2 className="text mb-0 color-secondary"> <ExpandableText text={this.props.advertisement.campaignName} maxChars={50} /></h2>
                                     </div>
                                     <div className="price-name">
-                                        <h5 className="mb-0"> {this.props.advertisement.brief} {this.props.advertisement.campaignType === globalModels.campaignType.advertisement && this.props.advertisement._campaign.brief}</h5>
+                                         <h5 className="mb-0 text">
+                                          {
+                                            this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising &&
+                                           <React.Fragment>
+                                              {this.props.dictionary.audtiAdvertisemnt.brief}
+                                              <ExpandableText text={this.props.advertisement._campaign.brief} maxChars={50} />
+                                           </React.Fragment>
+                                           
+                                          }
+                                          
+                                        </h5>
                                     </div>
                                     <div className="pricing-content">
                                         <ul className="list-unstyled mb-4 pricing-feature-list">
-                                            <li><span>Se pagara con </span> {this.props.advertisement._campaign.productPaymentDescription}</li>
-                                            <li><span>Creación </span>{moment(this.props.advertisement.creationDt).fromNow()}</li>
-                                            <li><span>Tipo Campaña </span> {`${this.props.advertisement.campaignType}`}</li>
-                                            <li><span>Usuario creador</span> {`${this.props.advertisement._person.firstName} ${this.props.advertisement._person.lastName}`}</li>
+                                            <li><span>{this.props.dictionary.audtiAdvertisemnt.willBePaidWith}</span> {this.props.advertisement._campaign.productPaymentDescription}</li>
+                                            <li><span>{this.props.dictionary.audtiAdvertisemnt.creation} </span>{moment(this.props.advertisement.creationDt).fromNow()}</li>
+                                            <li><span>{this.props.dictionary.audtiAdvertisemnt.campaignType} </span> {`${this.props.advertisement.campaignType}`}</li>
+                                            <li><span>{this.props.dictionary.audtiAdvertisemnt.creatorUser}</span> {`${this.props.advertisement._person.firstName} ${this.props.advertisement._person.lastName}`}</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12">
                                 <div className="support-cta text-center text-white mt-5">
-                                    <h5 className="mb-1"><span className="ti-headphone-alt color-primary mr-3"></span>Estamos aquí para ayudarte</h5>
-                                    <p>¿Tienes algunas preguntas? <a href="/#">Chatea con nosotros ahora</a>, o <a href="/#">envíanos un correo</a> para ponerte en contacto.</p>
+                                    <p>{this.props.dictionary.audtiAdvertisemnt.youAreInAudit}</p>
                                 </div>
                             </div>
                         </div>
