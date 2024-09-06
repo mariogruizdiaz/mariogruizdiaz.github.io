@@ -78,5 +78,7 @@ export default function* userIdentity() {
     yield takeLatest(actionTypes.CREATE_COMPANY, genericMutation);
     yield takeLatest(actionTypes.UPDATE_COMPANY, genericMutation);
     yield takeLatest(actionTypes.UPDATE_USER, genericMutation);
+    yield takeLatest(actionTypes.FETCH_ADVERTISEMENT, genericQuery);
+    yield takeLatest(actionTypes.UPDATE_ADVERTISEMENT, genericQuery);
 
 }

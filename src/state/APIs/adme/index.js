@@ -15,6 +15,8 @@ const endpointMapper = async (type) => {
     case actionTypes.CREATE_COMPANY: return "createCompanyByPerson";
     case actionTypes.UPDATE_COMPANY: return "updateCompany";
     case actionTypes.UPDATE_USER: return "updatePersonPrimary";
+    case actionTypes.FETCH_ADVERTISEMENT: return "advertisements";
+    case actionTypes.UPDATE_ADVERTISEMENT: return "updateAdvertisement";
     default: return type.toLowerCase();
     }
 };
