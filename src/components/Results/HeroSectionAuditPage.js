@@ -139,7 +139,7 @@ class HeroSectionCompanyPage extends React.Component {
                                       }
                                     </div>
                                     <div className="image-container" onClick={this.handleImageClick}>
-                                        <img src={this.props.advertisement.multimediaUri} alt="Photo" />
+                                        <img src={this.props.advertisement.multimediaUri} alt="" />
                                     </div>
                                     <div className="py-4 border-0 pricing-header">
                                         <h2 className="text mb-0 color-secondary"> <ExpandableText text={this.props.advertisement.campaignName} maxChars={50} /></h2>

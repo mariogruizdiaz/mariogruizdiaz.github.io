@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
 
-import HeaderDownload from "../../components/Header/headerDownload";
+import HeaderAudit from "../../components/Header/headerAudit";
 import Hero from "../../components/Results/HeroSectionAuditPage";
 import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
@@ -45,7 +45,7 @@ class company extends Component {
         if(!this.canViewComponent()) {
             return (
               <React.Fragment>
-               <HeaderDownload />
+               <HeaderAudit />
                <Hero401 />
               </React.Fragment>
             )
@@ -56,7 +56,7 @@ class company extends Component {
                     !!this.props.advertisement._id ?
                     (
                         <React.Fragment>
-                            <HeaderDownload />
+                            <HeaderAudit />
                             <div>
                                 <div className="main">
                                     <Hero />
@@ -67,7 +67,7 @@ class company extends Component {
                     :
                     (
                       <React.Fragment>
-                        <HeaderDownload />
+                        <HeaderAudit />
                         <Hero403 />
                       </React.Fragment>
                     )
