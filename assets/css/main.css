@@ -3143,6 +3143,25 @@ table {
   position: relative;
 }
 
+/* Definición de estilos personalizados */
+.bg-success {
+  background-color: green;
+  /* Color verde para la aprobación */
+  color: white;
+  /* Color de texto blanco para contraste */
+  transition: background-color 0.3s ease;
+  /* Suaviza la transición */
+}
+
+.bg-warning {
+  background-color: orange;
+  /* Color naranja para el rechazo */
+  color: white;
+  /* Color de texto blanco para contraste */
+  transition: background-color 0.3s ease;
+  /* Suaviza la transición */
+}
+
 /* line 4, public/assets/src/scss/objects/_objects.background-image.scss */
 .bg-image .background-image-wraper {
   position: absolute;
@@ -29098,3 +29117,34 @@ a.text-dark:hover, a.text-dark:focus {
 
 /*# sourceMappingURL=../../../../scss */
 /*# sourceMappingURL=main.css.map */
+
+.image-container {
+  position: relative;
+  width: 100%;
+  /* El contenedor tomará todo el ancho disponible */
+  max-width: 620px;
+  /* Puedes ajustar este valor según tus necesidades */
+  padding-top: 50%;
+  /* Hace que la altura sea igual al ancho, creando una proporción 1:1 */
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.image-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+  /* Centra la imagen */
+  object-fit: cover;
+}
+
+.image-container img.portrait {
+  width: auto;
+  height: 100%;
+}
+
