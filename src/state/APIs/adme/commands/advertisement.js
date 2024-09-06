@@ -128,6 +128,82 @@ query fetchAdvertisingByCampaignId(
 }
 `;
 
+const fetchAdvertisementByIdAndCompanyId = `
+query fetchAdvertisingByCampaignId(
+    $${globalModels.advertisementFields._id}: ID!
+    $${globalModels.advertisementFields.companyId}: ID!
+){
+  advertisements(
+    ${globalModels.advertisementFields._id}: $${globalModels.advertisementFields._id},
+    ${globalModels.advertisementFields.companyId}: $${globalModels.advertisementFields.companyId},
+      limit: 1,
+  ){
+    _id,
+    campaignId,
+    personId,
+    campaignName,
+    companyName,
+    campaignType,
+    companyId,
+    active,
+    multimediaUri,
+    caption,
+    status,
+    rejectionReason,
+    creationDt,
+    budgetFreezed,
+    moneyAvailable,
+    moneyEarned,
+    socialMediaTarget,
+    resources{
+      hashtag{
+        enabled,
+        value
+      }
+    },
+    _person {
+        ${globalModels.personFields.firstName},
+        ${globalModels.personFields.lastName},
+    },
+    _campaign {
+      ${globalModels.campaignFields._id},
+      ${globalModels.campaignFields.name},
+      ${globalModels.campaignFields.brief},
+      ${globalModels.campaignFields.type},
+      ${globalModels.campaignFields.productPaymentDescription},
+      ${globalModels.campaignFields.status},
+      ${globalModels.campaignFields.customProductUsagePrice},
+      ${globalModels.campaignFields.customInsightMultiplier},
+      ${globalModels.campaignFields.customTagMentionPeoplePrice},
+      ${globalModels.campaignFields.customSealPrice},
+      ${globalModels.campaignFields.customTagMentionMePrice},
+      ${globalModels.campaignFields.paymentType},
+    }
+  }
+}
+`;
+
+const updateAdvertisement = `
+mutation updateAdvertisement(
+    $${globalModels.advertisementFields._id}: ID!
+    $${globalModels.advertisementFields.status}: advertisementStatus!
+){
+  updateAdvertisement(
+    ${globalModels.advertisementFields._id}: $${globalModels.advertisementFields._id},
+    ${globalModels.advertisementFields.status}: $${globalModels.advertisementFields.status},
+  ){
+    data,
+    success,
+    error {
+        path
+        message
+      }
+  }
+}
+`;
+
 export default {
-    fetchAdvertisingByCampaignId
+    fetchAdvertisingByCampaignId,
+    fetchAdvertisementByIdAndCompanyId,
+    updateAdvertisement
 };

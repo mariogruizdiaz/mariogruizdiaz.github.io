@@ -39,7 +39,6 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.FETCH_COMPANIES_SUCCESS: {
-          console.log('action.payload', action.payload)
             return {
                 ...initialState,
                 items: action.payload.data,
@@ -110,7 +109,6 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.FETCH_CAMPAIGNS_SUCCESS: {
-          console.log('FETCH_CAMPAIGNS action.payload', action.payload)
             return {
                 ...state,
                 selectedCompany: {

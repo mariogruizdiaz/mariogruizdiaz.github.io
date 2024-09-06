@@ -14,15 +14,8 @@ import { Redirect } from "react-router-dom";
 import { PermissionHelper } from '../../state/helpers/security';
 
 class campaign extends Component {
-    // componentDidMount() {
-    //     const campaignId = this.props.match.params.campaignId;
-    //     if (campaignId !== undefined && campaignId !== "undefined") {
-    //         this.props.genericAction(actionTypes.SELECT_CAMPAIGN, { ...campaignId });
-    //     } 
-    // }
     canViewComponent() {
       const { companyId } = this.props.match.params;
-      console.log('companyId', companyId);  
       return this.props.security.authenticated && PermissionHelper.canViewComponent(this.props.security.permissions, 'CampaignComponent', companyId, this.props.security.company.id)
     }
     render() {
