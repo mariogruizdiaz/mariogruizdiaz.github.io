@@ -49,7 +49,7 @@ export const validateField = (component, fieldName, errors, value, password = un
         errors.cellPhoneOk = validateCellPhone(value);
         break;
       case 'companyName':
-        errors.companyNameOk = !!value.trim();
+        errors.companyNameOk = !!value.trim() && value.trim().length <= 100;
         break;
       case 'confirmPassword':
         errors.confirmPasswordOk = !!(value === password);
@@ -115,7 +115,7 @@ export const validateEditUserFields = async (state) => {
 export const validateEditCompanyFields = async (state) => {
     let errors = state.errors;
     errors = {
-      companyNameOk: !!state.companyName.trim(),
+      companyNameOk: !!state.companyName.trim() && state.companyName.trim().length <= 100,
       cellPhoneOk: validateCellPhone(state.cellPhone.trim()),
     };
 
