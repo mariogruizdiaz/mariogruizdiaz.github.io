@@ -43,7 +43,7 @@ class Download extends React.Component {
       });
   };
 
-    shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps, nextState) {
     if (nextState.copied !== this.state.copied && nextState.copied) {
       this.context.showSnackbar(this.props.dictionary.download.copiedSuccessful, "success");
     }
@@ -75,7 +75,7 @@ class Download extends React.Component {
                         <div className="bg-white p-5 rounded text-center shadow mt-lg-0 mt-4">
                             <div className="icon-text-wrap">
                                 <i className="fab fa-apple icon-size-md color-primary mb-2"></i>
-                                <h5>Descibrí Adme</h5>
+                                <h5>Descubrí Adme</h5>
                             </div>
                             <div className="p-20px">
                                 <p className="m-0px">Usa este codigo de referido para tu creacion de cuenta.</p> 
@@ -88,7 +88,7 @@ class Download extends React.Component {
                         <div className="bg-white p-5 rounded text-center shadow mt-lg-0 mt-4">
                             <div className="icon-text-wrap">
                                 <i className="fab fa-google-play icon-size-md color-primary mb-2"></i>
-                                <h5>Descibrí Adme</h5>
+                                <h5>Descubrí Adme</h5>
                             </div>
                             <div className="p-20px">
                                  <p className="m-0px">Usa este codigo de referido para tu creacion de cuenta.</p> 
@@ -105,7 +105,7 @@ class Download extends React.Component {
                         <div className="bg-white p-5 rounded text-center shadow mt-lg-0 mt-4">
                             <div className="icon-text-wrap">
                                 <i className="fab fa-apple icon-size-md color-primary mb-2"></i>
-                                <h5>Descibrí Adme</h5>
+                                <h5>Descubrí Adme</h5>
                             </div>
                             <div className="p-20px">
                                  <p className="m-0px">Usa este codigo de referido para tu creacion de cuenta.</p> 
@@ -119,7 +119,7 @@ class Download extends React.Component {
                         <div className="bg-white p-5 rounded text-center shadow mt-lg-0 mt-4">
                             <div className="icon-text-wrap">
                                 <i className="fab fa-google-play icon-size-md color-primary mb-2"></i>
-                                <h5>Descibrí Adme</h5>
+                                <h5>Descubrí Adme</h5>
                             </div>
                             <div className="p-20px">
                                  <p className="m-0px">Usa este codigo de referido para tu creacion de cuenta.</p> 
