@@ -5,7 +5,6 @@ import Lightbox from 'react-image-lightbox';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import 'react-image-lightbox/style.css';
-import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
 import { withRouter } from "react-router";
 import { bindActionCreators } from "redux";
