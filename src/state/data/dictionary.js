@@ -110,6 +110,9 @@ module.exports = {
           youAreInAudit: 'You are in the Adme audit module',
           areYouSureToReject: 'Are you sure you want to reject this Advertisement?'
         },
+        download: {
+          copiedSuccessful: "Referral code copied!",
+        },
         header: {
             menu: {
                 about: 'About',
@@ -836,6 +839,9 @@ module.exports = {
           showSnackbarRejected: 'Se rechazo satisfactoriamente el anuncio.',
           youAreInAudit: 'You are in the Adme audit module',
           areYouSureToReject: '¿Estás seguro de que deseas rechazar este anuncio?'
+        },
+        download: {
+          copiedSuccessful: "Código de referido copiado!",
         },
         header: {
             menu: {
