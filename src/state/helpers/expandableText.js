@@ -16,7 +16,7 @@ class ExpandableText extends Component {
     const { text, maxChars } = this.props;
     const { isExpanded } = this.state;
 
-    const truncatedText = text.length > maxChars ? text.substring(0, maxChars) + '...' : text;
+    const truncatedText = text && text.length > maxChars ? text.substring(0, maxChars) + '...' : text;
 
     return (
       <div>
