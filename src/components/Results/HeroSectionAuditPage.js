@@ -1,11 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Button, CardActions } from '@mui/material';
+import { Button, CardActions, IconButton } from '@mui/material';
 import Lightbox from 'react-image-lightbox';
-import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import SearchIcon from '@mui/icons-material/Search';
 import 'react-image-lightbox/style.css';
-import { actionTypes } from "../../state/actionTypes";
 import * as globalModels from "influencers-models";
 import { withRouter } from "react-router";
 import { bindActionCreators } from "redux";
@@ -44,25 +43,6 @@ class HeroSectionCompanyPage extends React.Component {
         this.resizeImage();
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        if (this.props.advertisement.status !== nextProps.advertisement.status) {
-            switch (nextProps.advertisement.status) {
-              case "Approved":
-                this.setState({ loading: false, resultStatus: 'approved' });
-                this.context.showSnackbar(this.props.dictionary.audtiAdvertisemnt.showSnackbarApproved, "success");
-                break;
-              case "RejectedByCustomer":
-                this.setState({ loading: false, resultStatus: 'rejected' });
-                this.context.showSnackbar(this.props.dictionary.audtiAdvertisemnt.showSnackbarRejected, "success");
-                break;
-              default:
-                break;
-            }
-        }
-
-        return true;
-    }
-
     resizeImage = () => {
         const image = document.querySelector('.image-container img');
         image.onload = () => {
@@ -72,44 +52,13 @@ class HeroSectionCompanyPage extends React.Component {
         };
     }
 
-    handleApprove = () => {
-        this.setState({ loading: true, resultStatus: null });
-        const advertisementId = this.props.match.params.advertisementId;
-
-        try {
-            this.props.genericAction(actionTypes.UPDATE_ADVERTISEMENT, {
-                [globalModels.advertisementFields._id]: advertisementId,
-                [globalModels.advertisementFields.status]: globalModels.advertisementStatusEnum.Approved,
-            });
-        } catch (error) {
-        }
-    }
-
-    handleDecline = () => {
-
-      const confirmReject = window.confirm("¿Estás seguro de que deseas rechazar este anuncio?");
-    
-      if (confirmReject) {
-        this.setState({ loading: true, resultStatus: null });
-        const advertisementId = this.props.match.params.advertisementId;
-
-        try {
-            this.props.genericAction(actionTypes.UPDATE_ADVERTISEMENT, {
-                [globalModels.advertisementFields._id]: advertisementId,
-                [globalModels.advertisementFields.status]: globalModels.advertisementStatusEnum.RejectedByCustomer
-            });
-        } catch (error) {
-        }
-      }
-    }
-
     render() {
         const { isOpen, loading } = this.state;
         moment.locale(this.props.language);
-        console.log('this.props.advertisement.status', this.props.advertisement.status)
+        
         return (
             <React.Fragment>
-                <section className="page-header-section ptb-100 bg-image"image-overlay="5">
+                <section className="page-header-section ptb-100 bg-image" image-overlay="5">
                     <div className="background-image-wraper" style={{ backgroundImage: "url(assets/img/cta-bg.jpg)", opacity: 1 }}></div>
                     <div className="container">
                         <div className="row align-items-center justify-content-md-center justify-content-center" >
@@ -138,9 +87,24 @@ class HeroSectionCompanyPage extends React.Component {
                                           </div>
                                       }
                                     </div>
-                                    <div className="image-container" onClick={this.handleImageClick}>
-                                        <img src={this.props.advertisement.multimediaUri} alt="" />
+                                    
+                                    <div className="image-container" style={{ position: 'relative' }}>
+                                        <img src={this.props.advertisement.multimediaUri} alt="" onClick={this.handleImageClick} style={{ cursor: 'pointer', width: '100%' }} />
+                                        {/* Icono de lupa */}
+                                        <IconButton
+                                            onClick={this.handleImageClick}
+                                            style={{ 
+                                                position: 'absolute',
+                                                bottom: '10px',
+                                                right: '10px',
+                                                backgroundColor: 'rgba(255, 255, 255, 0.8)'
+                                            }}
+                                            aria-label="zoom"
+                                        >
+                                            <SearchIcon style={{ color: '#000' }} />
+                                        </IconButton>
                                     </div>
+
                                     <div className="py-4 border-0 pricing-header">
                                         <h2 className="text mb-0 color-secondary"> <ExpandableText text={this.props.advertisement.campaignName} maxChars={50} /></h2>
                                     </div>
@@ -150,7 +114,7 @@ class HeroSectionCompanyPage extends React.Component {
                                             this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising &&
                                            <React.Fragment>
                                               {this.props.dictionary.audtiAdvertisemnt.brief}
-                                              <ExpandableText text={this.props.advertisement._campaign.brief} maxChars={50} />
+                                              <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={50} />
                                            </React.Fragment>
                                            
                                           }

@@ -25,7 +25,10 @@ class company extends Component {
           this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`)
         }
       }
-    }
+      if (prevProps.match.params.advertisementId !== this.props.match.params.advertisementId) {
+        this.props.security.company.id ? this.fetchAdvertisement() : this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
+      }
+      }
 
     fetchAdvertisement = () => {
       const advertisementId = this.props.match.params.advertisementId;
@@ -53,27 +56,7 @@ class company extends Component {
         return (
             <div>
                 {
-                    !!this.props.advertisement._id ?
-                    (
-                        <React.Fragment>
-                            <HeaderAudit />
-                            <div>
-                                <div className="main">
-                                    <Hero />
-                                </div>
-                            </div>
-                        </React.Fragment>
-                    )
-                    :
-                    (
-                      <React.Fragment>
-                        <HeaderAudit />
-                        <Hero403 />
-                      </React.Fragment>
-                    )
-                }
-                {
-                    this.props.advertisement.fetchStatus === commonStatuses.loading &&
+                    this.props.advertisement.fetchStatus === commonStatuses.loading ?
                         <React.Fragment>
                             <div className="row">
                                 <div className="col-md-12">
@@ -88,8 +71,26 @@ class company extends Component {
                             </div>
 
                         </React.Fragment>
-                }
-
+                        :
+                        !!this.props.advertisement._id ?
+                        (
+                            <React.Fragment>
+                                <HeaderAudit />
+                                <div>
+                                    <div className="main">
+                                        <Hero />
+                                    </div>
+                                </div>
+                            </React.Fragment>
+                        )
+                        :
+                        (
+                          <React.Fragment>
+                            <HeaderAudit />
+                            <Hero403 />
+                          </React.Fragment>
+                        )
+                    }
             </div>
         );
     }
