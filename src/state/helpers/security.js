@@ -3,6 +3,7 @@ export const PermissionHelper = {
     'CompaniesComponent': 'readCompanies',
     'CompanyComponent': 'readCampaings',
     'CampaignComponent': 'readCampaings',
+    'AuditComponent': 'auditAdvertisement'
   },
 
   canViewComponent(permissions, component, selectedCompanyId, securityCompanyId) {

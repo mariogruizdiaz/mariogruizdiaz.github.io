@@ -420,6 +420,7 @@ class HeroSection extends React.Component {
                                     </InputAdornment>
                                   ),
                                 }}
+                                inputProps={{ maxLength: 100 }}
                               />
                             </div>
                             <div className="form-group">
@@ -436,6 +437,7 @@ class HeroSection extends React.Component {
                                     </InputAdornment>
                                   ),
                                 }}
+                                inputProps={{ maxLength: 100 }}
                               />
                             </div>
                             <div className="form-group">

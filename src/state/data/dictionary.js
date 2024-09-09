@@ -5,7 +5,11 @@ module.exports = {
             brandsLabel: "Brands",
             NotFoundTitle: "Sorry, something went wrong",
             NotFoundSubtitle: "The page you are looking for might have been removed had its name changed or is temporarily unavailable.",
-            NotFoundbuttonText: "Go To Homepage"
+            NotFoundbuttonText: "Go To Homepage",
+            NoAccessTitle: "Inaccessible advertisement",
+            NoAccessSubtitle: "It looks like this advertisement does not belong to your company or the ad does not exist.",
+            UnauthorizedTitle: "Not authorized",
+            UnauthorizedSubtitle: "You do not have permission to access the auditing module. Please contact your account manager if you need access."
         },
         login: {
           title: "Login your account",
@@ -55,6 +59,7 @@ module.exports = {
           createCompany: 'Create company',
           signUpSuccessful: "Sign Up successful. Welcome!",
           signUpError: " Sign Up error!",
+          specificationCellPhone: "No spaces or hyphens allowed.",
           createCompanySuccessful: 'You have created your company, congratulations!',
           createCompanyError: 'Error adding your company!'
         },
@@ -88,6 +93,22 @@ module.exports = {
           addCompany: 'Add company',
           goToCompanyInformation: 'Go to Company information',
           saved: 'The changes were saved.',
+        },
+        audtiAdvertisemnt: {
+          approve: 'Approve',
+          reject: 'Reject',
+          approvedAd: 'Approved advertisement',
+          rejectedAd: 'rejected advertisement',
+          brief: 'Brief',
+          validate: 'Validate',
+          willBePaidWith: 'Ad will be paid with ',
+          creation: 'Creation ', 
+          campaignType: 'Campaign Type ',
+          creatorUser: 'Creator User ',
+          showSnackbarApproved: 'The advertisement was successfully approved.',
+          showSnackbarRejected: 'The advertisement was successfully rejected.',
+          youAreInAudit: 'You are in the Adme audit module',
+          areYouSureToReject: 'Are you sure you want to reject this Advertisement?'
         },
         header: {
             menu: {
@@ -709,7 +730,11 @@ module.exports = {
             brandsLabel: "Marcas",
             NotFoundTitle: "Lo sentimos, algo salió mal",
             NotFoundSubtitle: "La pagina que esta buscando fue removida ó está temporalmente inaccesible.",
-            NotFoundbuttonText: "Homepage"
+            NotFoundbuttonText: "Homepage",
+            NoAccessTitle: "Anuncio inaccesible",
+            NoAccessSubtitle: "Parece que este anuncio no pertenece a tu compañía o el anuncio no existe.",
+            UnauthorizedTitle: "No autorizado",
+            UnauthorizedSubtitle: "No tienes permiso para acceder al módulo de auditoría. Por favor, contacta al administrador de tu cuenta si necesitas acceso."
         },
        login: {
           title: "Ingresa a tu cuenta",
@@ -757,8 +782,9 @@ module.exports = {
           termsAndConditions: 'Términos y Condiciones',
           shouldAcceptTAndC: 'Debes aceptar Términos y Condiciones',
           createCompany: 'Crear la compañía',
-          signUpSuccessful: "Registro Satisfactorio. Bienvenido!",
+          signUpSuccessful: "Registro satisfactorio. Bienvenido!",
           signUpError: "Error al crear la cuenta",
+          specificationCellPhone:  "No se permiten espacios ni guiones.",
           createCompanySuccessful: 'Creaste tu compañía, felicitaciones!',
           createCompanyError: 'Error al agregar tu compañía'
         },
@@ -767,7 +793,7 @@ module.exports = {
           saved: 'Los cambios fueron guardados.',
           editError: 'Se produjo un error al editar tu compañía.',
           editTitle: 'Editar datos de la Compañía',
-          title: 'Datos de la Compañíaa',
+          title: 'Datos de la Compañía',
           companyName: 'Nombre de compañía',
           cellPhone: 'Celular',
           uploadLogo: 'Cargar Logo (PNG o JPEG)',
@@ -778,7 +804,7 @@ module.exports = {
           save: "Guardar",
           cancel: "Cancelar",
           editInformation: "Editar información",
-          goToProfilInformation: "Ir a informacion de perfil",
+          goToProfilInformation: "Ir a información de perfil",
         },
         editProfile: {
           saving: 'Guardando...',
@@ -795,10 +821,26 @@ module.exports = {
           addCompany: 'Agregar compañía',
           goToCompanyInformation: 'Ir a datos de la Compañía'
         },
+        audtiAdvertisemnt: {
+          approve: 'Aprobar',
+          reject: 'Rechazar',
+          approvedAd: 'Anuncio aprobado',
+          rejectedAd: 'Anuncio rechazado',
+          brief: 'Instructivo',
+          validate: 'Validar',
+          willBePaidWith: 'El anuncio se pagará con ',
+          creation: 'Creación ',
+          campaignType: 'Tipo de campaña ',
+          creatorUser: 'Usuario creador ',
+          showSnackbarApproved: 'Se aprobo satisfactoriamente el anuncio.',
+          showSnackbarRejected: 'Se rechazo satisfactoriamente el anuncio.',
+          youAreInAudit: 'You are in the Adme audit module',
+          areYouSureToReject: '¿Estás seguro de que deseas rechazar este anuncio?'
+        },
         header: {
             menu: {
                 about: 'Nosotros',
-                process: '¿Como?',
+                process: '¿Cómo?',
                 features: 'Funcionalidades',
                 passiveIncomes: "Ingresos pasivos",
                 brands: 'Marcas',
