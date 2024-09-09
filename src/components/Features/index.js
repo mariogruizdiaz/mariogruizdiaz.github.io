@@ -1,7 +1,11 @@
 import React from "react";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { SnackbarContext } from '../Toast/SnackbarContext';
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 class Feature extends React.Component {
+  static contextType = SnackbarContext; 
   constructor(props) {
     super(props);
     this.state = {
@@ -14,6 +18,14 @@ class Feature extends React.Component {
     /**
      * Your ajax will goes here to get data then call setState
      */
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.copied !== this.state.copied && nextState.copied) {
+      this.context.showSnackbar(this.props.dictionary.download.copiedSuccessful, "success");
+    }
+
+    return true;
   }
 
   copyToClipboard = () => {
@@ -66,7 +78,7 @@ class Feature extends React.Component {
                                     <span className="ti-vector icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
                                         <h5 className="mb-2">Ingresá un código de referido</h5>
-                                        <p>{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} style={{ color: this.state.copied ? 'green' : 'black' }} /></p>
+                                        <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
                                         <p>Podes copiar este codigo o bien usar el de un amig@ si ya se la descargo antes a la App.</p>
                                     </div>
                                 </div>
@@ -126,4 +138,11 @@ class Feature extends React.Component {
   }
 }
 
-export default Feature;
+function mapStateToProps(state) {
+  return {
+    dictionary: state.i18n.dictionary,
+    language: state.i18n.language,
+  };
+}
+
+export default connect(mapStateToProps)(withRouter(Feature));
