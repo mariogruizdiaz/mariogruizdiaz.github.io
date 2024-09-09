@@ -1,9 +1,13 @@
 import React from "react";
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 class Feature extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      text: '9CD4CD95',
+      copied: false
+    };
   }
 
   componentDidMount() {
@@ -11,6 +15,19 @@ class Feature extends React.Component {
      * Your ajax will goes here to get data then call setState
      */
   }
+
+  copyToClipboard = () => {
+    navigator.clipboard.writeText(this.state.text)
+      .then(() => {
+        this.setState({ copied: true });
+        setTimeout(() => {
+          this.setState({ copied: false });
+        }, 4000); // Resetea el estado después de 2 segundos
+      })
+      .catch(err => {
+        console.error('Error al copiar: ', err);
+      });
+  };
 
   render() {
     return (
@@ -26,8 +43,8 @@ class Feature extends React.Component {
                 <div className="row justify-content-center">
                     <div className="col-md-9 col-lg-9">
                         <div className="section-heading text-center mb-5">
-                            <h2>Apdash Features</h2>
-                            <p>Objectively deliver professional value with diverse web-readiness. Collaboratively transition wireless customer service without goal-oriented catalysts for change. Collaboratively.</p>
+                            <h2>¿Cómo empezar?</h2>
+                            <p>Sigue estos simples pasos para empezar a ganar atravez de Adme </p>
 
                         </div>
                     </div>
@@ -39,8 +56,8 @@ class Feature extends React.Component {
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <span className="ti-face-smile icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Responsive web design</h5>
-                                        <p>Modular and monetize an componente between layouts monetize array. Core competencies for testing.</p>
+                                        <h5 className="mb-2">Descargá la App</h5>
+                                        <p>Hace click en el boton de arriba y comenza a disfrutar Ya de Adme.</p>
                                     </div>
                                 </div>
                             </div>
@@ -48,8 +65,9 @@ class Feature extends React.Component {
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <span className="ti-vector icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Loaded with features</h5>
-                                        <p>Holisticly aggregate client centered the manufactured products transparent. Organic sources content.</p>
+                                        <h5 className="mb-2">Ingresá un código de referido</h5>
+                                        <p>{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} style={{ color: this.state.copied ? 'green' : 'black' }} /></p>
+                                        <p>Podes copiar este codigo o bien usar el de un amig@ si ya se la descargo antes a la App.</p>
                                     </div>
                                 </div>
                             </div>
@@ -57,8 +75,8 @@ class Feature extends React.Component {
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <span className="ti-headphone-alt icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Friendly online support</h5>
-                                        <p>Monotonectally recaptiualize client the centric customize clicks niche markets for this meta-services via. </p>
+                                        <h5 className="mb-2">registraté</h5>
+                                        <p>completa info necesaria poder brindarte campañas que se ajusten a tu perfil. </p>
                                     </div>
                                 </div>
                             </div>
@@ -75,8 +93,8 @@ class Feature extends React.Component {
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <span className="ti-layout-media-right icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Free updates forever</h5>
-                                        <p>Compellingly formulate installed base imperatives high standards in benefits for highly efficient client.</p>
+                                        <h5 className="mb-2">Linkea tus redes</h5>
+                                        <p>Para poder hacer todo de forma automatica desde Adme</p>
                                     </div>
                                 </div>
                             </div>
@@ -84,8 +102,8 @@ class Feature extends React.Component {
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <span className="ti-layout-cta-right icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Built with Sass</h5>
-                                        <p>Energistically initiate client-centric the maximize market positioning synergy rather client-based data. </p>
+                                        <h5 className="mb-2">Seleccioná una campaña</h5>
+                                        <p>Las campañas pueden darte dinero o producto/descuento. </p>
                                     </div>
                                 </div>
                             </div>
@@ -93,8 +111,8 @@ class Feature extends React.Component {
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <span className="ti-palette icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Infinite colors</h5>
-                                        <p>Energistically initiate client-centric e-tailers rather than-based data. Morph business technology before.</p>
+                                        <h5 className="mb-2">Publicá y recibí tu recompensa</h5>
+                                        <p>Luego de publicar, recibiras tu recompensa. Dependiendo de la campaña en particular, serás recompensado con dinero o con producto!</p>
                                     </div>
                                 </div>
                             </div>
