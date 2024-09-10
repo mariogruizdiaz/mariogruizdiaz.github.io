@@ -14,6 +14,7 @@ import 'moment/locale/es';
 import { TailSpin } from 'react-loader-spinner'; 
 import ExpandableText from '../../state/helpers/expandableText';
 import { SnackbarContext } from '../Toast/SnackbarContext';
+import { actionTypes } from "../../state/actionTypes";
 
 class HeroSectionCompanyPage extends React.Component {
     static contextType = SnackbarContext;
@@ -50,6 +51,52 @@ class HeroSectionCompanyPage extends React.Component {
                 image.classList.add('portrait');
             }
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+      if (this.props.advertisement.status !== nextProps.advertisement.status) {
+          switch (nextProps.advertisement.status) {
+            case "Approved":
+              this.setState({ loading: false, resultStatus: 'approved' });
+              this.context.showSnackbar(this.props.dictionary.audtiAdvertisemnt.showSnackbarApproved, "success");
+              break;
+            case "RejectedByCustomer":
+              this.setState({ loading: false, resultStatus: 'rejected' });
+              this.context.showSnackbar(this.props.dictionary.audtiAdvertisemnt.showSnackbarRejected, "success");
+              break;
+            default:
+              break;
+          }
+      }
+      return true;
+    }
+
+    handleApprove = () => {
+      this.setState({ loading: true, resultStatus: null });
+      const advertisementId = this.props.match.params.advertisementId;
+      try {
+          this.props.genericAction(actionTypes.UPDATE_ADVERTISEMENT, {
+              [globalModels.advertisementFields._id]: advertisementId,
+              [globalModels.advertisementFields.status]: globalModels.advertisementStatusEnum.Approved,
+          });
+      } catch (error) {}
+    }
+
+    handleDecline = () => {
+      const confirmReject = window.confirm("¿Estás seguro de que deseas rechazar este anuncio?");
+
+      if (confirmReject) {
+        this.setState({ loading: true, resultStatus: null });
+        const advertisementId = this.props.match.params.advertisementId;
+
+        try {
+            this.props.genericAction(actionTypes.UPDATE_ADVERTISEMENT, {
+                [globalModels.advertisementFields._id]: advertisementId,
+                [globalModels.advertisementFields.status]: globalModels.advertisementStatusEnum.RejectedByCustomer
+            });
+        } catch (error) {
+        }
+      }
     }
 
     render() {
