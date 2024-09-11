@@ -14,21 +14,26 @@ import { Facebook } from 'react-content-loader';
 import { commonStatuses } from "../../state/models/common";
 import { PermissionHelper } from '../../state/helpers/security';
 
-class company extends Component {
+class audit extends Component {
     componentDidMount() {
-      this.props.security.company.id ? this.fetchAdvertisement() : this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
+      this.props.security.company.id ? 
+        this.fetchAdvertisement() :
+        !this.props.security.authenticated &&
+          this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
     }
 
     componentDidUpdate(prevProps) {
-      if (prevProps.security !== this.props.security) {
-        if (!this.props.security.authenticated) {
-          this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`)
-        }
-      }
-      if (prevProps.match.params.advertisementId !== this.props.match.params.advertisementId) {
-        this.props.security.company.id ? this.fetchAdvertisement() : this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
-      }
-      }
+      // if (prevProps.security !== this.props.security) {
+      //   if (!this.props.security.authenticated) {
+      //     this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`)
+      //   }
+      // }
+      // if (prevProps.match.params.advertisementId !== this.props.match.params.advertisementId) {
+      //   this.props.security.company.id ? this.fetchAdvertisement() : this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
+      // }
+
+      return true;
+    }
 
     fetchAdvertisement = () => {
       const advertisementId = this.props.match.params.advertisementId;
@@ -40,12 +45,12 @@ class company extends Component {
       }
     }
 
-    canViewComponent() {
+    canView() {
       return this.props.security.authenticated && PermissionHelper.canViewComponent(this.props.security.permissions, 'AuditComponent', null, this.props.security.company.id);
     }
 
     render() {
-        if(!this.canViewComponent()) {
+        if(!this.canView()) {
             return (
               <React.Fragment>
                <HeaderAudit />
@@ -112,4 +117,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(company));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(audit));
