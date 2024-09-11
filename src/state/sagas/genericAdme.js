@@ -11,7 +11,6 @@ import * as globalModels from "influencers-models";
 const apifetchingStatus = (state) => state.basics.api.fetchingStatus;
 
 function* genericMutation(action) {
-  console.log('llega hasta aca', action)
     const command = yield admeApi.generic(action);
     let result;
     try {
