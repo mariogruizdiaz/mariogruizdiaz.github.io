@@ -16,23 +16,27 @@ import { PermissionHelper } from '../../state/helpers/security';
 
 class audit extends Component {
     componentDidMount() {
+      this.shouldFetch();
+    }
+
+    componentDidUpdate(prevProps) {
+      if (prevProps.security !== this.props.security) {
+        if (!this.props.security.authenticated) {
+          this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`)
+        }
+      }
+      if (prevProps.match.params.advertisementId !== this.props.match.params.advertisementId) {
+        this.shouldFetch();
+      }
+
+      return true;
+    }
+
+    shouldFetch = () => {
       this.props.security.company.id ? 
         this.fetchAdvertisement() :
         !this.props.security.authenticated &&
           this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
-    }
-
-    componentDidUpdate(prevProps) {
-      // if (prevProps.security !== this.props.security) {
-      //   if (!this.props.security.authenticated) {
-      //     this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`)
-      //   }
-      // }
-      // if (prevProps.match.params.advertisementId !== this.props.match.params.advertisementId) {
-      //   this.props.security.company.id ? this.fetchAdvertisement() : this.props.history.push(`/Login?from=audit&id=${this.props.match.params.advertisementId}`);
-      // }
-
-      return true;
     }
 
     fetchAdvertisement = () => {
