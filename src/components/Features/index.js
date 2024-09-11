@@ -56,7 +56,7 @@ class Feature extends React.Component {
                     <div className="col-md-9 col-lg-9">
                         <div className="section-heading text-center mb-5">
                             <h2>¿Cómo empezar?</h2>
-                            <p>Sigue estos simples pasos para empezar a ganar atravez de Adme </p>
+                            <p>Sigue estos simples pasos para empezar a ganar a través de Adme.</p>
 
                         </div>
                     </div>
@@ -69,7 +69,7 @@ class Feature extends React.Component {
                                     <span className="ti-face-smile icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
                                         <h5 className="mb-2">Descargá la App</h5>
-                                        <p>Hace click en el boton de arriba y comenza a disfrutar Ya de Adme.</p>
+                                        <p>Hace clic en el botón de arriba y comenzá a disfrutar ya de Adme.</p>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ class Feature extends React.Component {
                                     <div className="icon-text">
                                         <h5 className="mb-2">Ingresá un código de referido</h5>
                                         <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
-                                        <p>Podes copiar este codigo o bien usar el de un amig@ si ya se la descargo antes a la App.</p>
+                                        <p>Podés copiar este código o bien usar el de un amig@ si ya se la descargo antes.</p>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@ class Feature extends React.Component {
                                     <span className="ti-headphone-alt icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
                                         <h5 className="mb-2">registraté</h5>
-                                        <p>completa info necesaria poder brindarte campañas que se ajusten a tu perfil. </p>
+                                        <p>Completá la info necesaria para poder brindarte campañas que se ajusten a tu perfil. </p>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@ class Feature extends React.Component {
                                     <span className="ti-layout-media-right icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
                                         <h5 className="mb-2">Linkea tus redes</h5>
-                                        <p>Para poder hacer todo de forma automatica desde Adme</p>
+                                        <p>Para publicar en ellas el contenido que desees, de forma automática mediante Adme.</p>
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ class Feature extends React.Component {
                                     <span className="ti-layout-cta-right icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
                                         <h5 className="mb-2">Seleccioná una campaña</h5>
-                                        <p>Las campañas pueden darte dinero o producto/descuento. </p>
+                                        <p>Las campañas pueden tener alguna indicación o podés crear el contenido libremente.</p>
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ class Feature extends React.Component {
                                     <span className="ti-palette icon-size-md color-secondary mr-4"></span>
                                     <div className="icon-text">
                                         <h5 className="mb-2">Publicá y recibí tu recompensa</h5>
-                                        <p>Luego de publicar, recibiras tu recompensa. Dependiendo de la campaña en particular, serás recompensado con dinero o con producto!</p>
+                                        <p>Luego de publicar recibirás tu recompensa. Dependiendo de la campaña, serás recompensado con dinero o con productos/descuentos!</p>
                                     </div>
                                 </div>
                             </div>
