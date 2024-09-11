@@ -153,7 +153,7 @@ class HeroSectionCompanyPage extends React.Component {
                                     </div>
 
                                     <div className="py-4 border-0 pricing-header">
-                                        <h2 className="text mb-0 color-secondary"> <ExpandableText text={this.props.advertisement.campaignName} maxChars={50} /></h2>
+                                        <h2 className="text mb-0 color-secondary"> <ExpandableText text={this.props.advertisement.campaignName} maxChars={35} /></h2>
                                     </div>
                                     <div className="price-name">
                                          <h5 className="mb-0 text">
@@ -161,7 +161,7 @@ class HeroSectionCompanyPage extends React.Component {
                                             this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising &&
                                            <React.Fragment>
                                               {this.props.dictionary.audtiAdvertisemnt.brief}
-                                              <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={50} />
+                                              <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={35} />
                                            </React.Fragment>
                                            
                                           }
@@ -173,7 +173,7 @@ class HeroSectionCompanyPage extends React.Component {
                                             <li><span>{this.props.dictionary.audtiAdvertisemnt.willBePaidWith}</span> {this.props.advertisement._campaign.productPaymentDescription}</li>
                                             <li><span>{this.props.dictionary.audtiAdvertisemnt.creation} </span>{moment(this.props.advertisement.creationDt).fromNow()}</li>
                                             <li><span>{this.props.dictionary.audtiAdvertisemnt.campaignType} </span> {`${this.props.advertisement.campaignType}`}</li>
-                                            <li><span>{this.props.dictionary.audtiAdvertisemnt.creatorUser}</span> {`${this.props.advertisement._person.firstName} ${this.props.advertisement._person.lastName}`}</li>
+                                            <li><span>{this.props.dictionary.audtiAdvertisemnt.creatorUser}</span> {`${this.props.advertisement._person.firstName} ${this.props.advertisement._person.lastName ? this.props.advertisement._person.lastName : ''}`}</li>
                                         </ul>
                                     </div>
                                 </div>
