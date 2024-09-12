@@ -49,11 +49,6 @@ class Feature extends React.Component {
   };
 
   render() {
-    const brands = [
-      { name: 'Brand 1', ig: 'https://www.instagram.com/brand1' },
-      { name: 'Brand 2', ig: 'https://www.instagram.com/brand2' },
-      { name: 'Brand 3', ig: 'https://www.instagram.com/brand3' }
-    ];
     return (
       <React.Fragment>
         <div id="features" className="about-us ptb-100 background-shape-img position-relative">

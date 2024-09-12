@@ -80,7 +80,7 @@ class Download extends React.Component {
                             <div className="p-20px">
                                 <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
                                 <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
-                               <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">Descargar</a>
+                               <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">{this.props.dictionary.download.download}</a>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ class Download extends React.Component {
                             <div className="p-20px">
                                  <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
                                 <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
-                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">Descargar</a>
+                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">{this.props.dictionary.download.download}</a>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@ class Download extends React.Component {
                             <div className="p-20px">
                                  <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
                                 <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
-                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">Descargar</a>
+                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">{this.props.dictionary.download.download}</a>
                             </div>
                         </div>
                     </div>)}
@@ -124,7 +124,7 @@ class Download extends React.Component {
                             <div className="p-20px">
                                  <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
                                 <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
-                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">Descargar</a>
+                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">{this.props.dictionary.download.download}</a>
                             </div>
                         </div>
                     </div>
