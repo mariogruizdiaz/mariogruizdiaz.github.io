@@ -62,8 +62,8 @@ class Download extends React.Component {
                 <div className="row justify-content-center">
                     <div className="col-md-9 col-lg-8">
                         <div className="section-heading text-center text-white">
-                            <h2 className="text-white">En Adme todos somos influencers</h2>
-                            <p>Adme es la aplicación que te conecta directamente con campañas publicitarias y te permite ganar recompensas por ser parte de ellas. Es más que una simple app, es tu portal hacia la nueva forma de generar contenido y ser recompensado por eso.</p>
+                            <h2 className="text-white">{this.props.dictionary.download.title}</h2>
+                            <p>{this.props.dictionary.download.subtitle}</p>
                         </div>
                     </div>
                 </div>
@@ -75,10 +75,10 @@ class Download extends React.Component {
                         <div className="bg-white p-5 rounded text-center shadow mt-lg-0 mt-4">
                             <div className="icon-text-wrap">
                                 <i className="fab fa-apple icon-size-md color-primary mb-2"></i>
-                                <h5>Descubrí Adme</h5>
+                                <h5>{this.props.dictionary.download.downloadTitle}</h5>
                             </div>
                             <div className="p-20px">
-                                <p className="m-0px">Usá este código de referido para tu creación de cuenta.</p> 
+                                <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
                                 <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">Descargar</a>
                             </div>
@@ -88,10 +88,10 @@ class Download extends React.Component {
                         <div className="bg-white p-5 rounded text-center shadow mt-lg-0 mt-4">
                             <div className="icon-text-wrap">
                                 <i className="fab fa-google-play icon-size-md color-primary mb-2"></i>
-                                <h5>Descubrí Adme</h5>
+                                <h5>{this.props.dictionary.download.downloadTitle}</h5>
                             </div>
                             <div className="p-20px">
-                                 <p className="m-0px">Usá este código de referido para tu creación de cuenta.</p> 
+                                 <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
                                 <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
                                 <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">Descargar</a>
                             </div>
@@ -105,10 +105,10 @@ class Download extends React.Component {
                         <div className="bg-white p-5 rounded text-center shadow mt-lg-0 mt-4">
                             <div className="icon-text-wrap">
                                 <i className="fab fa-apple icon-size-md color-primary mb-2"></i>
-                                <h5>Descubrí Adme</h5>
+                                <h5>{this.props.dictionary.download.downloadTitle}</h5>
                             </div>
                             <div className="p-20px">
-                                 <p className="m-0px">Usa este codigo de referido para tu creacion de cuenta.</p> 
+                                 <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
                                 <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
                                 <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">Descargar</a>
                             </div>
@@ -119,10 +119,10 @@ class Download extends React.Component {
                         <div className="bg-white p-5 rounded text-center shadow mt-lg-0 mt-4">
                             <div className="icon-text-wrap">
                                 <i className="fab fa-google-play icon-size-md color-primary mb-2"></i>
-                                <h5>Descubrí Adme</h5>
+                                <h5>{this.props.dictionary.download.downloadTitle}</h5>
                             </div>
                             <div className="p-20px">
-                                 <p className="m-0px">Usa este codigo de referido para tu creacion de cuenta.</p> 
+                                 <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
                                 <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
                                 <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">Descargar</a>
                             </div>

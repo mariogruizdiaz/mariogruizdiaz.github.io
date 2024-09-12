@@ -3,6 +3,14 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { SnackbarContext } from '../Toast/SnackbarContext';
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import ShareIcon from '@mui/icons-material/Share';
+import CampaignIcon from '@mui/icons-material/Campaign';
+import PublishIcon from '@mui/icons-material/Publish';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 class Feature extends React.Component {
   static contextType = SnackbarContext; 
@@ -42,6 +50,11 @@ class Feature extends React.Component {
   };
 
   render() {
+    const brands = [
+      { name: 'Brand 1', ig: 'https://www.instagram.com/brand1' },
+      { name: 'Brand 2', ig: 'https://www.instagram.com/brand2' },
+      { name: 'Brand 3', ig: 'https://www.instagram.com/brand3' }
+    ];
     return (
       <React.Fragment>
         <div id="features" className="about-us ptb-100 background-shape-img position-relative">
@@ -55,8 +68,8 @@ class Feature extends React.Component {
                 <div className="row justify-content-center">
                     <div className="col-md-9 col-lg-9">
                         <div className="section-heading text-center mb-5">
-                            <h2>¿Cómo empezar?</h2>
-                            <p>Sigue estos simples pasos para empezar a ganar a través de Adme.</p>
+                            <h2>{this.props.dictionary.download.bodyTitle}</h2>
+                            <p>{this.props.dictionary.download.bodySubtitle}</p>
 
                         </div>
                     </div>
@@ -66,29 +79,29 @@ class Feature extends React.Component {
                         <div className="row">
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <span className="ti-face-smile icon-size-md color-secondary mr-4"></span>
+                                    <CloudDownloadIcon fontSize="large" className="color-secondary mr-4"></CloudDownloadIcon>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Descargá la App</h5>
-                                        <p>Hace clic en el botón de arriba y comenzá a disfrutar ya de Adme.</p>
+                                        <h5 className="mb-2">{this.props.dictionary.download.step1Title}</h5>
+                                        <p>{this.props.dictionary.download.step1Subtitle}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <span className="ti-vector icon-size-md color-secondary mr-4"></span>
+                                    <ContentCopyIcon fontSize="large" className="color-secondary mr-4"></ContentCopyIcon>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Ingresá un código de referido</h5>
+                                        <h5 className="mb-2">{this.props.dictionary.download.step2Title}</h5>
                                         <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
-                                        <p>Podés copiar este código o bien usar el de un amig@ si ya se la descargo antes.</p>
+                                        <p>{this.props.dictionary.download.step2Subtitle}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <span className="ti-headphone-alt icon-size-md color-secondary mr-4"></span>
+                                    <PersonAddIcon fontSize="large" className="color-secondary mr-4"></PersonAddIcon>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">registraté</h5>
-                                        <p>Completá la info necesaria para poder brindarte campañas que se ajusten a tu perfil. </p>
+                                        <h5 className="mb-2">{this.props.dictionary.download.step3Title}</h5>
+                                        <p>{this.props.dictionary.download.step3Subtitle}</p>
                                     </div>
                                 </div>
                             </div>
@@ -103,28 +116,31 @@ class Feature extends React.Component {
                         <div className="row">
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <span className="ti-layout-media-right icon-size-md color-secondary mr-4"></span>
+                                    <ShareIcon fontSize="large" className="color-secondary mr-4"></ShareIcon>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Linkea tus redes</h5>
-                                        <p>Para publicar en ellas el contenido que desees, de forma automática mediante Adme.</p>
+                                        <h5 className="mb-2">{this.props.dictionary.download.step4Title}</h5>
+                                        <p>{this.props.dictionary.download.step4Subtitle}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <span className="ti-layout-cta-right icon-size-md color-secondary mr-4"></span>
+                                    <CampaignIcon fontSize="large" className="color-secondary mr-4"></CampaignIcon>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Seleccioná una campaña</h5>
-                                        <p>Las campañas pueden tener alguna indicación o podés crear el contenido libremente.</p>
+                                        <h5 className="mb-2">{this.props.dictionary.download.step5Title}</h5>
+                                        <p>{this.props.dictionary.download.step5Subtitle}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <span className="ti-palette icon-size-md color-secondary mr-4"></span>
+                                    <PublishIcon fontSize="large" className="color-secondary mr-4" />
+                                    
                                     <div className="icon-text">
-                                        <h5 className="mb-2">Publicá y recibí tu recompensa</h5>
-                                        <p>Luego de publicar recibirás tu recompensa. Dependiendo de la campaña, serás recompensado con dinero o con productos/descuentos!</p>
+                                        <h5 className="mb-2">{this.props.dictionary.download.step6Title}</h5>
+                                        <p><CardGiftcardIcon fontSize="large" className="color-primary mr-4" />
+                                          <MonetizationOnIcon fontSize="large" className="color-primary mr-4" /></p>
+                                        <p>{this.props.dictionary.download.step6Subtitle}</p>
                                     </div>
                                 </div>
                             </div>
@@ -132,6 +148,20 @@ class Feature extends React.Component {
                     </div>
                 </div>
             </div>
+            <div className="row justify-content-center mt-5">
+              <div className="col-12">
+                <h4>Marcas que nos acompañan</h4>
+                <ul className="list-unstyled">
+                  {brands.map((brand, index) => (
+                    <li key={index} className="d-flex align-items-center mb-3">
+                      <InstagramIcon className="color-secondary mr-2" />
+                      <a href={brand.ig} target="_blank" rel="noopener noreferrer">{brand.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
         </div>
       </React.Fragment>
     );
