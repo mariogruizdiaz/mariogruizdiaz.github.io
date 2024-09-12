@@ -10,7 +10,6 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import PublishIcon from '@mui/icons-material/Publish';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import InstagramIcon from '@mui/icons-material/Instagram';
 
 class Feature extends React.Component {
   static contextType = SnackbarContext; 
@@ -50,11 +49,6 @@ class Feature extends React.Component {
   };
 
   render() {
-    const brands = [
-      { name: 'Brand 1', ig: 'https://www.instagram.com/brand1' },
-      { name: 'Brand 2', ig: 'https://www.instagram.com/brand2' },
-      { name: 'Brand 3', ig: 'https://www.instagram.com/brand3' }
-    ];
     return (
       <React.Fragment>
         <div id="features" className="about-us ptb-100 background-shape-img position-relative">
@@ -148,20 +142,6 @@ class Feature extends React.Component {
                     </div>
                 </div>
             </div>
-            <div className="row justify-content-center mt-5">
-              <div className="col-12">
-                <h4>Marcas que nos acompañan</h4>
-                <ul className="list-unstyled">
-                  {brands.map((brand, index) => (
-                    <li key={index} className="d-flex align-items-center mb-3">
-                      <InstagramIcon className="color-secondary mr-2" />
-                      <a href={brand.ig} target="_blank" rel="noopener noreferrer">{brand.name}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
         </div>
       </React.Fragment>
     );
