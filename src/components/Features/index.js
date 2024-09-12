@@ -7,9 +7,9 @@ import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import ShareIcon from '@mui/icons-material/Share';
 import CampaignIcon from '@mui/icons-material/Campaign';
-import PublishIcon from '@mui/icons-material/Publish';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import AddLinkIcon from '@mui/icons-material/AddLink';
 
 class Feature extends React.Component {
   static contextType = SnackbarContext; 
@@ -110,7 +110,7 @@ class Feature extends React.Component {
                         <div className="row">
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <ShareIcon fontSize="large" className="color-secondary mr-4"></ShareIcon>
+                                    <AddLinkIcon fontSize="large" className="color-secondary mr-4"></AddLinkIcon>
                                     <div className="icon-text">
                                         <h5 className="mb-2">{this.props.dictionary.download.step4Title}</h5>
                                         <p>{this.props.dictionary.download.step4Subtitle}</p>
@@ -128,7 +128,7 @@ class Feature extends React.Component {
                             </div>
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <PublishIcon fontSize="large" className="color-secondary mr-4" />
+                                    <ShareIcon fontSize="large" className="color-secondary mr-4" />
                                     
                                     <div className="icon-text">
                                         <h5 className="mb-2">{this.props.dictionary.download.step6Title}</h5>
