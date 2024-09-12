@@ -130,6 +130,7 @@ module.exports = {
           step5Subtitle: 'Campaigns can have some direction or you can create the content freely.',
           step6Title: 'Publish and receive your reward',
           step6Subtitle: 'After posting you will receive your reward. Depending on the campaign, you will be rewarded with money or with products/discounts!',
+          download: 'Download'
         },
         header: {
             menu: {
@@ -878,6 +879,7 @@ module.exports = {
           step5Subtitle: 'Las campañas pueden tener alguna indicación o podés crear el contenido libremente.',
           step6Title: 'Publicá y recibí tu recompensa',
           step6Subtitle: 'Luego de publicar recibirás tu recompensa. Dependiendo de la campaña, serás recompensado con dinero o con productos/descuentos!',
+          download: 'Descargar'
         },
         header: {
             menu: {
