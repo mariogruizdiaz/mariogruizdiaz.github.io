@@ -51,7 +51,7 @@ class Feature extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div id="features" className="about-us ptb-100 background-shape-img position-relative">
+        <div id="features" className="about-us ptb-0-100 background-shape-img position-relative">
             <div className="animated-shape-wrap">
                     <div className="animated-shape-item"></div>
                     <div className="animated-shape-item"></div>

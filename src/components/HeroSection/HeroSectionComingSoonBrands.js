@@ -69,7 +69,6 @@ class HeroSection extends React.Component {
   }
 
   render() {
-    console.log('this.props.security', this.props.security)
     return (
       <React.Fragment>
         <section className="page-header-section ptb-100 bg-image full-height" image-overlay="8">
