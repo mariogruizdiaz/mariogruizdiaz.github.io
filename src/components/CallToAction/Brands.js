@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { withRouter } from "react-router-dom";
 
 class Brands extends React.Component {
