@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
-import Hero from "../components/HeroSection/HeroSectionComingSoonBrands";
 import HeaderTeam from "../components/Header/headerTeam";
+import HeroSection from "../components/CallToAction/Brands";
+import AdmeValueProposition from "../components/Features/AdmeValueProposition";
 
 class Theme extends Component {
   render() {
@@ -9,7 +10,8 @@ class Theme extends Component {
       <React.Fragment>
         <HeaderTeam />
         <div className="main">
-          <Hero />
+          <HeroSection />
+          <AdmeValueProposition />
         </div>
       </React.Fragment>
     );

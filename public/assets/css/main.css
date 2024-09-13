@@ -3016,6 +3016,11 @@ table {
   padding: 100px 0;
 }
 
+/* line 1, public/assets/src/scss/objects/_objects.custom-padding.scss */
+.ptb-0-100 {
+  padding: 0 0 100px 0;
+}
+
 /* line 4, public/assets/src/scss/objects/_objects.custom-padding.scss */
 .pt-100 {
   padding-top: 100px;
