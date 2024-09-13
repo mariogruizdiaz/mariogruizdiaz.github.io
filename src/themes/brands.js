@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import Hero from "../components/HeroSection/HeroSectionComingSoonBrands";
 import HeaderTeam from "../components/Header/headerTeam";
+import HeroSection from "../components/CallToAction/DownloadExt";
+import Index from "../components/Features";
 
 class Theme extends Component {
   render() {
@@ -9,7 +11,8 @@ class Theme extends Component {
       <React.Fragment>
         <HeaderTeam />
         <div className="main">
-          <Hero />
+          <HeroSection />
+          <Index />
         </div>
       </React.Fragment>
     );
