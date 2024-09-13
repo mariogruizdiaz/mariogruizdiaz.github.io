@@ -5,6 +5,7 @@ import { bindActionCreators } from "redux";
 import { actionTypes } from "../../state/actionTypes";
 import { commonStatuses } from "../../state/models/common";
 import { Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class HeroSection extends React.Component {
     constructor(props) {
@@ -31,14 +32,6 @@ class HeroSection extends React.Component {
                 ? event.target.checked
                 : event.target.value;
         this.setState(stateValue);
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        if (this.props.security !== nextProps.security) {
-            this.message(nextProps.security.authenticationStatus === commonStatuses.failed);
-        }
-
-        return true;
     }
 
     handleSubmit(event) {
@@ -108,18 +101,10 @@ class HeroSection extends React.Component {
     }
 
     componentDidMount() {
-        /**
-         * Your ajax will goes here to get data then call setState
-         */
+        !this.props.security.authenticated && this.props.history.push('/login?from=deletemydata');
     }
 
     render() {
-        if(!this.props.security.authenticated){
-            return <Redirect to={{
-                pathname: "/login",
-                state: { from: '/deletemydata' }
-            }} />;
-        }
         if(this.state.redirectToHome){
             return <Redirect to="/#"/>;
         }
@@ -135,7 +120,7 @@ class HeroSection extends React.Component {
                             <div className="col-12 col-md-8 col-lg-6">
                                 <div className="login-signup-wrap p-5 gray-light-bg rounded shadow">
                                     <div className="login-signup-header text-center">
-                                        <a href="/#"><img src="assets/img/adme-logo-name.png" className="img-fluid mb-3" alt="Logo" /></a>
+                                        <img width={50} src="assets/img/admeLogoLogin.png" className="img-fluid" alt="Adme" />
                                         <h4 className="mb-5">{this.props.dictionary.deleteMyData.title}</h4>
                                         <p className="lead">{this.props.dictionary.deleteMyData.subtitle}</p>
                                     </div>
@@ -176,6 +161,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeroSection);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(HeroSection));
 
 

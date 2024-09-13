@@ -107,6 +107,7 @@ class LoginComponent extends React.Component {
 
     switch (from) {
       case 'signUp':
+      case 'deletemydata':
         this.props.history.push(`/${from}`);
         break;
       case 'audit':
