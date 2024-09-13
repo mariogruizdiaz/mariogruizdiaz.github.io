@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
 import { actionTypes } from "../../state/actionTypes";
-import { commonStatuses } from "../../state/models/common";
 import { Redirect } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
