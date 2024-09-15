@@ -1,6 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import _data from "../../state/data";
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import CreateIcon from '@mui/icons-material/Create';
+import DevicesIcon from '@mui/icons-material/Devices';
 
 class PromoSection extends React.Component {
   constructor(props) {
@@ -23,19 +27,21 @@ class PromoSection extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section className="promo-section ptb-100">
+        <section className="promo-section ptb-0">
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 col-lg-3">
                         <div className="card border-0 single-promo-card single-promo-hover p-2 mt-4 shadow">
                             <div className="card-body">
                                 <div className="pb-2">
-                                    <span className="fas fa-concierge-bell icon-size-md color-secondary"></span>
+                                    {/* <span className="fas fa-concierge-bell icon-size-md color-secondary"></span> */}
+                                    <PersonAddIcon fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Modular</h5>
+                                    <h5>Registrate</h5>
                                     <p className="mb-0">All components are built to be used in combination.</p>
                                 </div>
+                                <a className="btn btn-brand-02 btn-sm btn-rounded" rel="noopener noreferrer" href="/#/signUp" >Registrarme</a>
                             </div>
                         </div>
                     </div>
@@ -43,10 +49,10 @@ class PromoSection extends React.Component {
                         <div className="card border-0 single-promo-card single-promo-hover p-2 mt-4 shadow">
                             <div className="card-body">
                                 <div className="pb-2">
-                                    <span className="fas fa-window-restore icon-size-md color-secondary"></span>
+                                    <AddBusinessIcon fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Responsive</h5>
+                                    <h5>Agrega tu Marca</h5>
                                     <p className="mb-0">Quick is optimized to work for most devices.</p>
                                 </div>
                             </div>
@@ -56,10 +62,10 @@ class PromoSection extends React.Component {
                         <div className="card border-0 single-promo-card single-promo-hover p-2 mt-4 shadow">
                             <div className="card-body">
                                 <div className="pb-2">
-                                    <span className="fas fa-sync-alt icon-size-md color-secondary"></span>
+                                    <CreateIcon fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Scalable</h5>
+                                    <h5>Diseña tu campaña</h5>
                                     <p className="mb-0">Remain consistent while developing new features.</p>
                                 </div>
                             </div>
@@ -69,10 +75,10 @@ class PromoSection extends React.Component {
                         <div className="card border-0 single-promo-card single-promo-hover p-2 mt-4 shadow">
                             <div className="card-body">
                                 <div className="pb-2">
-                                    <span className="fas fa-bezier-curve icon-size-md color-secondary"></span>
+                                    <DevicesIcon fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Customizable</h5>
+                                    <h5>Monitorea tus campañas</h5>
                                     <p className="mb-0">Change a few variables and the whole theme adapts.</p>
                                 </div>
                             </div>
