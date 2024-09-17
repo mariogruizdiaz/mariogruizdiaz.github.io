@@ -191,7 +191,7 @@ class HeroSection extends React.Component {
         "language": this.props.language
       });
 
-      if (!!this.props.security.company.id) this.props.history.push(`/`);
+      if (!!this.props.security.company.id) this.getQueryValue() //this.props.history.push(`/`);
     }
   }
 
@@ -220,7 +220,7 @@ class HeroSection extends React.Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     if (this.props.security !== nextProps.security) {
-      if (!!nextProps.security.company.id) this.props.history.push(`/`);
+      if (!!nextProps.security.company.id) this.getQueryValue();
     }
 
     if(this.props.language !== nextProps.language) {
@@ -271,6 +271,26 @@ class HeroSection extends React.Component {
     }
 
     return true;
+  }
+
+  getParams() {
+    const searchParams = new URLSearchParams(this.props.location.search);
+    const from = searchParams.get('from');
+    return from;
+  }
+
+  getQueryValue() {
+    const searchParams = new URLSearchParams(this.props.location.search);
+    const from = searchParams.get('from');
+
+    switch (from) {
+      case 'brands': 
+        this.props.history.push(`/${from}`);
+        break;
+      default:
+        this.props.history.push(`/`);
+        break;
+    }
   }
 
   render() {
@@ -394,7 +414,7 @@ class HeroSection extends React.Component {
                               this.props.dictionary.signUp.loading : this.props.dictionary.signUp.signUp }
                             </Button>
                           </div>
-                          <p className="text-center mb-0">{this.props.dictionary.signUp.alreadyHaveAccount}<a href="/#/login?from=signUp">{this.props.dictionary.login.login}</a></p>
+                          <p className="text-center mb-0">{this.props.dictionary.signUp.alreadyHaveAccount}<a href={!!this.getParams() ? "/#/login?from=signUp&from2=" + this.getParams() : "/#/login?from=signUp"}>{this.props.dictionary.login.login}</a></p>
                         </Collapse>
                         <Collapse in={this.props.security.authenticated} timeout={500}>
                            <MessageBox
