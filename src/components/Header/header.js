@@ -21,11 +21,15 @@ class Header extends React.Component {
 
                             <div className="collapse navbar-collapse h-auto" id="navbarSupportedContent">
                                 <ul className="navbar-nav ml-auto menu">
+                                    {
+                                        this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCampaings') ?
+                                        <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll">{this.props.dictionary.header.menu.registerMyBusiness}</a></li>
+                                        :
+                                        <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll">{this.props.dictionary.header.menu.registerMyBusiness}</a></li>
+                                    }
                                     <li><a href="#about" className="page-scroll">{this.props.dictionary.header.menu.about}</a></li>
                                     <li><a href="#process" className="page-scroll">{this.props.dictionary.header.menu.process}</a></li>
                                     <li><a href="#features" className="page-scroll">{this.props.dictionary.header.menu.features}</a></li>
-                                    <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll">{this.props.dictionary.header.menu.brands}</a></li>
-                                    {/* <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll">{this.props.dictionary.header.menu.agencies}</a></li> */}
                                     <li><a href={`${process.env.PUBLIC_URL}/#Investors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li>
                                     <li><a href={`${process.env.PUBLIC_URL}/#Web3`} className="page-scroll">{this.props.dictionary.header.menu.web3}</a></li>
                                     {

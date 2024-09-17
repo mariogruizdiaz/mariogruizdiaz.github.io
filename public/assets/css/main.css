@@ -3022,7 +3022,7 @@ table {
 }
 
 .ptb-0 {
-  padding: 0 0 0 0;
+  padding: 0;
 }
 
 /* line 4, public/assets/src/scss/objects/_objects.custom-padding.scss */
@@ -16832,11 +16832,20 @@ input[type="button"].btn-block {
 }
 
 /* line 38, node_modules/bootstrap/scss/_card.scss */
-.card-body {
+.card-body-270 {
+  color: #696969;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  min-height: 1px;
+  min-height: 270px;
+  padding: 1.25rem;
+}
+
+.card-body {
+  color: #696969;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 1.25rem;
 }
 
@@ -22708,6 +22717,31 @@ footer a {
           box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
 }
 
+.single-promo-card-silver {
+  background-color: #d9dcee;
+  border-radius: 1rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* line 5, public/assets/src/scss/components/promo-section/_promo-2.scss */
+.single-promo-card-silver.single-promo-hover {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+/* line 7, public/assets/src/scss/components/promo-section/_promo-2.scss */
+.single-promo-card-silver.single-promo-hover:hover {
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
+  box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
+  /* background: #17c463; */
+  color: #fff;
+}
+
 /* line 5, public/assets/src/scss/components/promo-section/_promo-2.scss */
 .single-promo-card.single-promo-hover {
   -webkit-transition: all 300ms ease-in-out;
@@ -22716,17 +22750,17 @@ footer a {
 
 /* line 7, public/assets/src/scss/components/promo-section/_promo-2.scss */
 .single-promo-card.single-promo-hover:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
   -webkit-box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
           box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
-  background: #6730e3;
+  /* background: #17c463; */
   color: #fff;
 }
 
 /* line 12, public/assets/src/scss/components/promo-section/_promo-2.scss */
 .single-promo-card.single-promo-hover:hover span, .single-promo-card.single-promo-hover:hover h5 {
-  color: #fff !important;
+  color: #6730e3 !important;
 }
 
 /* line 17, public/assets/src/scss/components/promo-section/_promo-2.scss */
@@ -22735,6 +22769,23 @@ footer a {
           transform: translateY(-10px);
   -webkit-box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
           box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
+}
+
+/* line 1, public/assets/src/scss/components/promo-section/_promo-2.scss */
+.single-promo-card-ok {
+  min-height: 270px;
+  border-radius: 1rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  background: #97f5b8;
+}
+
+/* line 5, public/assets/src/scss/components/promo-section/_promo-2.scss */
+.single-promo-card-ok.single-promo-hover {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 /* line 1, public/assets/src/scss/components/about-section/_common.scss */

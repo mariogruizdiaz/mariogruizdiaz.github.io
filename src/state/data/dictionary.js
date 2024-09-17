@@ -148,7 +148,8 @@ module.exports = {
                 signUp: 'SignUp',
                 addCompany: 'Add company',
                 profile: 'Profile',
-                login: 'Login'
+                login: 'Login',
+                registerMyBusiness: "Register my business"
             },
         },
         hero: {
@@ -897,7 +898,8 @@ module.exports = {
                 signUp: 'Registrarse',
                 addCompany: 'Agregar empresa',
                 profile: 'Perfil',
-                login: 'Iniciar sesión'
+                login: 'Iniciar sesión',
+                registerMyBusiness: "Registrar mi negocio"
             },
         },
         hero: {

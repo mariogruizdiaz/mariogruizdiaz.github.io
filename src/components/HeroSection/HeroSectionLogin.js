@@ -103,12 +103,14 @@ class LoginComponent extends React.Component {
   getQueryValue() {
     const searchParams = new URLSearchParams(this.props.location.search);
     const from = searchParams.get('from');
+    const from2 = searchParams.get('from2');
     const id = searchParams.get('id');
 
     switch (from) {
       case 'signUp':
+      case 'brands': 
       case 'deletemydata':
-        this.props.history.push(`/${from}`);
+        from2 ? this.props.history.push(`/${from}?from=${from2}`) : this.props.history.push(`/${from}`);
         break;
       case 'audit':
         this.props.history.push(`/${from}/${id}`);
