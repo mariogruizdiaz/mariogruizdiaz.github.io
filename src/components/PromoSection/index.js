@@ -60,12 +60,39 @@ class PromoSection extends React.Component {
 
   }
 
+  getName () {
+    let mail = this.props.security.email;
+    let name = this.props.security.firstName? this.props.security.firstName: null;
+    let lastName = this.props.security.lastName? this.props.security.lastName : null;
+
+    return (name && lastName) ? `${name} ${lastName} ` : mail; 
+  }
+
+  getCompanyName() {
+    return this.props.security.company?.name;
+  }
+
+  shouldCompleteProfile() {
+    let name = this.props.security.firstName? this.props.security.firstName: null;
+    let lastName = this.props.security.lastName? this.props.security.lastName : null;
+
+    return !(name && lastName);
+  }
+
+  shouldCompleteLogo () {
+    return this.props.security.company?.logo.length === 0;
+  }
+
   render() {
     return (
       <React.Fragment>
         <section className="promo-section ptb-0">
             <div className="container">
-              
+              <div className="row justify-content-md-center">
+                <div className={`message-box d-block alert-warning alert`}>
+                    <p className="h5 mb-0">Si te sumas antes del lanzamiento <span>0% de comision</span> durante los primeros 6 meses.</p>
+                  </div>
+                </div>
                 <div className="row justify-content-md-center">
                   {
                     this.props.security.authenticated ? 
@@ -78,7 +105,9 @@ class PromoSection extends React.Component {
                                 <div className="pt-2 pb-3">
                                     <h5>Registrado</h5>
                                     <HowToRegIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="text">Ya estas registrado, felicitaciones!</p>
+                                    <p className="text-left"><span>{this.getName()}</span> te registraste, felicitaciones!</p>
+                                    <p className="text-left"><a href="/#/editProfile?from=brands"> {this.shouldCompleteProfile() ? "Completar Perfil": "Ver Perfil"}</a></p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -94,7 +123,7 @@ class PromoSection extends React.Component {
                                 <div className="pt-2 pb-3">
                                     <h5>Registrarme</h5>
                                     <PersonAddIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="text">Sumate en pocos segundos. {this.props.dictionary.signUp.alreadyHaveAccount}<a href="/#/login?from=brands">{this.props.dictionary.login.login}</a></p>
+                                    <p className="text-left">Sumate en pocos segundos. {this.props.dictionary.signUp.alreadyHaveAccount}<a href="/#/login?from=brands">{this.props.dictionary.login.login}</a></p>
                                 </div>
                             </div>
                             </a>
@@ -112,7 +141,9 @@ class PromoSection extends React.Component {
                                 <div className="pt-2 pb-3">
                                     <h5>Negocio agregado</h5>
                                     <ChecklistIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="text">Ya tenes tu negocio dentro de Adme, felicitaciones!</p>
+                                    <p className="text-left"><span>{this.getCompanyName()}</span>. Ya estas en Adme, felicitaciones!</p>
+                                    <p className="text"><a href="/#/editCompany?from=brands"> {this.shouldCompleteLogo() ? "Cargar logo": "Ver datos de mi negocio"}</a></p>
+                                    
                                 </div>
                             </div>
                         </div>

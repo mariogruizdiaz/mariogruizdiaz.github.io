@@ -22,7 +22,7 @@ class Theme extends Component {
                 <div className="main">
                     <Hero />
                     <AboutAdme />
-                    <Counter />
+                    {/* <Counter /> */}
                     <WorkProcess />
                     <PassiveIncomesAdmeMobile />
                     {/* <AboutUsExt /> */}
