@@ -50,6 +50,10 @@ class EditProfile extends React.Component {
     this.setState(prevState => ({ isEditing: !prevState.isEditing }));
   }
 
+  togglePortal = () => {
+    this.props.history.push('/brands');
+  }
+
   toggleEditCompany = () => {
     this.props.history.push('/editCompany');
   }
@@ -128,6 +132,13 @@ class EditProfile extends React.Component {
     }
 
     return true;
+  }
+
+  getLabel () {
+    const searchParams = new URLSearchParams(this.props.location.search);
+    const from = searchParams.get('from');
+
+    return from ? this.props.dictionary.editProfile.goBackMyPortal : this.props.dictionary.editProfile.myPortal;
   }
 
   render() {
@@ -289,13 +300,24 @@ class EditProfile extends React.Component {
                             >
                               {this.props.dictionary.editProfile.goToCompanyInformation}
                             </Button>}
+                            
                           </CardActions>
+                          <CardActions>
+                          <Button
+                              variant="contained"
+                              color="inherit"
+                              fullWidth
+                              onClick={this.togglePortal}
+                            >
+                              {this.getLabel()}
+                            </Button>
+                            </CardActions>
                         </Collapse>
                       </div>
                     </CardContent>
                   </Card>
                 </div>
-              </div>
+              </div>ß
             </div>
           </section>
         </div>

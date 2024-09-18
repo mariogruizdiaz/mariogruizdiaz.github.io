@@ -37,7 +37,7 @@ class WorkProcess extends React.Component {
                                 <div className="process-icon-item left-shape">
                                     <div className="d-flex align-items-center">
                                         <div className="process-icon mr-4">
-                                            <i className="fas fa-camera color-primary"></i>
+                                            <i className="fas fa-box-open color-primary"></i>
                                         </div>
                                         <div className="process-content text-left">
                                             <h5>Lanzamiento de campaña</h5>
@@ -72,6 +72,8 @@ class WorkProcess extends React.Component {
                                     <div className="d-flex align-items-center">
                                         <div className="process-icon mr-4">
                                             <i className="fas fa-hand-holding-usd color-primary"></i>
+                                            <i className="fas fa-gift color-primary"></i>
+                                            
                                         </div>
                                         <div className="process-content text-left">
                                         <h5>Validacion y monetización</h5>
@@ -84,7 +86,7 @@ class WorkProcess extends React.Component {
                     </div>
                     <div className="col-md-6 col-lg-6">
                         <div className="img-wrap">
-                            <img src="assets/img/adme-mobile-processes-to-brand.png" alt="features" className="img-fluid" />
+                            <img src="assets/img/adme-mobile-processes-to-brand.gif" alt="features" className="img-fluid" />
                         </div>
                     </div>
                 </div>

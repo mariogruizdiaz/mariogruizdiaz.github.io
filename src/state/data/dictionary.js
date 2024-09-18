@@ -93,6 +93,8 @@ module.exports = {
           addCompany: 'Add company',
           goToCompanyInformation: 'Go to Company information',
           saved: 'The changes were saved.',
+          goBackMyPortal: 'Return to my business portal',
+          myPortal: 'Go to my business portal'
         },
         audtiAdvertisemnt: {
           approve: 'Approve',
@@ -149,7 +151,8 @@ module.exports = {
                 addCompany: 'Add company',
                 profile: 'Profile',
                 login: 'Login',
-                registerMyBusiness: "Register my business"
+                registerMyBusiness: "Register my business",
+                myPortal: "My business portal"
             },
         },
         hero: {
@@ -842,7 +845,9 @@ module.exports = {
           cancel: "Cancelar",
           editInformation: "Editar información",
           addCompany: 'Agregar compañía',
-          goToCompanyInformation: 'Ir a datos de la Compañía'
+          goToCompanyInformation: 'Ir a datos de la Compañía',
+          goBackMyPortal: 'Volver al portal de mi negocio',
+          myPortal: 'Ir al portal de mi negocio'
         },
         audtiAdvertisemnt: {
           approve: 'Aprobar',
@@ -899,7 +904,8 @@ module.exports = {
                 addCompany: 'Agregar empresa',
                 profile: 'Perfil',
                 login: 'Iniciar sesión',
-                registerMyBusiness: "Registrar mi negocio"
+                registerMyBusiness: "Registrar mi negocio",
+                myPortal: "Portal de mi negocio"
             },
         },
         hero: {

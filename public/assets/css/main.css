@@ -16837,7 +16837,7 @@ input[type="button"].btn-block {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  min-height: 270px;
+  min-height: 290px;
   padding: 1.25rem;
 }
 
@@ -17536,9 +17536,15 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 /* line 48, node_modules/bootstrap/scss/_alert.scss */
 .alert-success {
-  color: #155724;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-promo {
+  color: #000;
+    background-color: #ffe438;
+    border-color: #c3e6cb;
 }
 
 /* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
@@ -17548,6 +17554,16 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 /* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
 .alert-success .alert-link {
+  color: #0b2e13;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
+.alert-promo hr {
+  border-top-color: #b1dfbb;
+}
+
+/* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
+.alert-promo .alert-link {
   color: #0b2e13;
 }
 
@@ -20191,7 +20207,12 @@ footer a {
 
 .message-box {
   margin-top: 15px;
+  padding: 10px;
   text-align: center;
+}
+
+.message-box span{
+  font-weight: 700;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -22773,7 +22794,7 @@ footer a {
 
 /* line 1, public/assets/src/scss/components/promo-section/_promo-2.scss */
 .single-promo-card-ok {
-  min-height: 270px;
+  min-height: 290px;
   border-radius: 1rem;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -24391,7 +24412,7 @@ input::placeholder {
 /* line 2, public/assets/src/scss/components/single-pages/_404-page.scss */
 .error-content-wrap .notfound-404 {
   position: relative;
-  height: 280px;
+  height: 290px;
   z-index: 2;
   margin-bottom: 30px;
 }
@@ -28899,6 +28920,12 @@ button.bg-dark:focus {
   text-align: justify !important;
 }
 
+.text-justify span {
+  font-weight: 700;
+}
+
+
+
 /* line 12, node_modules/bootstrap/scss/utilities/_text.scss */
 .text-wrap {
   white-space: normal !important;
@@ -28919,6 +28946,10 @@ button.bg-dark:focus {
 /* line 22, node_modules/bootstrap/scss/utilities/_text.scss */
 .text-left {
   text-align: left !important;
+}
+
+.text-left span {
+  font-weight: 700;
 }
 
 /* line 23, node_modules/bootstrap/scss/utilities/_text.scss */
