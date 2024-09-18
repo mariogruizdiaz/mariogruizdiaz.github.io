@@ -122,6 +122,10 @@ class EditCompany extends React.Component {
     this.props.history.push('/editProfile');
   }
 
+  togglePortal = () => {
+    this.props.history.push('/brands');
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     if (this.props.security.company.status !== nextProps.security.company.status) {
       switch (nextProps.security.company.status) {
@@ -195,6 +199,13 @@ class EditCompany extends React.Component {
 
   handleDeletePhoto() {
     this.setState({ photo: "", thumbnail: "" });
+  }
+
+  getLabel () {
+    const searchParams = new URLSearchParams(this.props.location.search);
+    const from = searchParams.get('from');
+
+    return from ? this.props.dictionary.editProfile.goBackMyPortal : this.props.dictionary.editProfile.myPortal;
   }
 
   render() {
@@ -369,6 +380,16 @@ class EditCompany extends React.Component {
                                 {this.props.dictionary.editCompany.goToProfilInformation}
                               </Button>
                           </CardActions>
+                          <CardActions>
+                          <Button
+                              variant="contained"
+                              color="inherit"
+                              fullWidth
+                              onClick={this.togglePortal}
+                            >
+                              {this.getLabel()}
+                            </Button>
+                            </CardActions>
                         </Collapse>
                       </div>
                     </CardContent>
