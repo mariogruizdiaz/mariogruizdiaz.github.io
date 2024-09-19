@@ -163,9 +163,7 @@ class HeroSectionCompanyPage extends React.Component {
                                               {this.props.dictionary.audtiAdvertisemnt.brief}
                                               <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={35} />
                                            </React.Fragment>
-                                           
                                           }
-                                          
                                         </h5>
                                     </div>
                                     <div className="pricing-content">

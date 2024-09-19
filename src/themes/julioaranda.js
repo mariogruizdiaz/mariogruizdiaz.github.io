@@ -5,7 +5,6 @@ import HeaderTeam from "../components/Header/headerTeam";
 import Hero from "../components/HeroSection/HeroSectionInnerPage";
 import Breadcrumb from "../components/Breadcrumb";
 import SingleTeamMember from "../components/TeamMember/teamMemberBasic";
-// import Footer from "../components/Footer/FooterAdmeMobile";
 
 class GastonTheme extends Component {
   render() {

@@ -5,8 +5,12 @@ import HeroSection from "../components/CallToAction/Brands";
 import HeroSectionValueOfService from "../components/HeroSection/HeroSectionValueOfService";
 import AdmeValueProposition from "../components/Features/AdmeValueProposition";
 import WorkProcess from "../components/WorkProcess/toBrands";
+import FooterPortal from "../components/Footer/FooterAdmePortal";
 
 class Theme extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <React.Fragment>
@@ -17,6 +21,7 @@ class Theme extends Component {
           <HeroSectionValueOfService />
           <AdmeValueProposition />
         </div>
+        <FooterPortal withoutNewsletter={true} />
       </React.Fragment>
     );
   }
