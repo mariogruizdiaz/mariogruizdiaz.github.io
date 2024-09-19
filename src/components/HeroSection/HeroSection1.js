@@ -89,13 +89,13 @@ class HeroSection extends React.Component {
                         <div className="hero-slider-content text-white py-5">
                             <h1 className="text-white">{this.props.dictionary.hero.title}</h1>
                             <p className="lead">{this.props.dictionary.hero.subtitle}</p>
-                            <div className="video-promo-content my-5 pb-4">
+                            {/* <div className="video-promo-content my-5 pb-4">
                                 <a href={this.props.dictionary.hero.videoUrl} className="popup-youtube video-play-icon text-center m-auto"><span className="ti-control-play"></span> </a>
-                            </div>
+                            </div> */}
                             <div className="action-btns mt-4 text-center">
                                 <ul className="list-inline">
-                                    {/* <li className="list-inline-item">
-                                        <a href="/#/iosInstallGuide" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
+                                    <li className="list-inline-item">
+                                        <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
                                             <span className="fab fa-apple icon-size-sm mr-3 color-primary"></span>
                                             <div className="download-text text-left">
                                                 <small>{this.props.dictionary.general.downloadFrom}</small>
@@ -104,14 +104,14 @@ class HeroSection extends React.Component {
                                         </a>
                                     </li>
                                     <li className="list-inline-item">
-                                        <a href="/#/androidInstallGuide" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
+                                        <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
                                             <span className="fab fa-google-play icon-size-sm mr-3 color-primary"></span>
                                             <div className="download-text text-left">
                                                 <small>{this.props.dictionary.general.downloadFrom}</small>
                                                 <h5 className="mb-0">Google Play</h5>
                                             </div>
                                         </a>
-                                    </li> */}
+                                    </li>
                                 </ul>
                             </div>
                         </div>

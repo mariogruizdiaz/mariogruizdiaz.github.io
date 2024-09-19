@@ -3,8 +3,12 @@ import React, { Component } from "react";
 import HeroSection from "../components/CallToAction/DownloadExt";
 import Index from "../components/Features";
 import HeaderAudit from "../components/Header/headerAudit";
+import FooterDownload from "../components/Footer/FooterDownload";
 
 class Login extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <React.Fragment>
@@ -12,7 +16,8 @@ class Login extends Component {
           <HeaderAudit />
           <HeroSection />
           <Index />
-        </div>  
+        </div> 
+         <FooterDownload withoutNewsletter={true} /> 
       </React.Fragment>
     );
   }
