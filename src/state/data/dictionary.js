@@ -259,8 +259,11 @@ module.exports = {
             },
             products: {
                 title: "Products",
+                title2: "web portal",
                 p1: "Adme Mobile App",
                 p2: "Launch a campaign",
+                p3: "adme.com.ar",
+                p4: "Social media"
             },
             company: {
                 title: "Company",
@@ -1012,8 +1015,11 @@ module.exports = {
             },
             products: {
                 title: "Productos",
+                title2: "Portal Web",
                 p1: "Adme Mobile App",
                 p2: "Lanzar una campaña",
+                p3: "adme.com.ar",
+                p4: "Redes sociales"
             },
             company: {
                 title: "La empresa",

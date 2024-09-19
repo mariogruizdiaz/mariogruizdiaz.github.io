@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { subscribe } from "../../actions/index";
+import { Button, CardActions } from '@mui/material';
+import { withRouter } from "react-router-dom";
 
 class Footer extends React.Component {
     constructor(props) {
@@ -21,32 +22,15 @@ class Footer extends React.Component {
         this.setState(stateValue);
     }
 
+    handleAddBrand(event) {
+      this.props.history.push('/brands');
+    }
+
     handleSubmit(event) {
-        event.preventDefault();
+        //event.preventDefault();
 
-        window.open(`https://api.whatsapp.com/send?phone=5491135795588&text=Quiero%20sumarme%20a%20Adme.%20Mi%20instagram%20es%20${this.state.email}`, "_blank");
+        window.open(`https://api.whatsapp.com/send?phone=5491135795588&text=Quiero%20sumar%20mi%20negocio%20a%20Adme.%20%C2%BFMe%20podr%C3%ADan%20asistir%3F`, "_blank");
         // get action
-        const subscribeAction = subscribe(this.state);
-
-        // Dispatch the contact from data
-        this.props.dispatch(subscribeAction);
-
-        // added delay to change button text to previous
-        setTimeout(
-            function () {
-                // get action again to update state
-                const subscribeAction = subscribe(this.state);
-
-                // Dispatch the contact from data
-                this.props.dispatch(subscribeAction);
-
-                // clear form data
-                this.setState({
-                    email: ""
-                });
-            }.bind(this),
-            3000
-        );
     }
 
     componentDidMount() {
@@ -69,10 +53,26 @@ class Footer extends React.Component {
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-lg-5">
-                                    <form className="newsletter-form position-relative" method="post" onSubmit={this.handleSubmit}>
-                                        <input value={this.state.email} onChange={e => this.handleFormValueChange("email", e)} type="text" className="input-newsletter form-control" placeholder={this.props.dictionary.footer.subscribe.placeholder} name="email" required="" />
-                                        <button type="submit" className="disabled"><i className="fas fa-paper-plane"></i></button>
-                                    </form>
+                                  <CardActions>
+                                    <Button
+                                      variant="contained"
+                                      color="info"
+                                      fullWidth
+                                      type="button"
+                                      onClick={() => this.handleAddBrand()}
+                                    >
+                                      {this.props.dictionary.header.menu.registerMyBusiness}
+                                    </Button>
+                                    <Button
+                                      variant="contained"
+                                      color="secondary"
+                                      fullWidth
+                                      type="button"
+                                      onClick={() => this.handleSubmit()}
+                                    >
+                                      Contactar un agente
+                                    </Button>
+                                  </CardActions>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@ class Footer extends React.Component {
                                         <h6 className="text-uppercase">{this.props.dictionary.footer.products.title}</h6>
                                         <ul>
                                             <li>
-                                                <a href="#hero" className="page-scroll">{this.props.dictionary.footer.products.p1}</a>
+                                                <a href="/#/download" target="_blank" className="page-scroll">{this.props.dictionary.footer.products.p1}</a>
                                             </li>
                                             <li>
                                                 <a href={`${process.env.PUBLIC_URL}/#brands`}>{this.props.dictionary.footer.products.p2}</a>
@@ -179,4 +179,4 @@ class Footer extends React.Component {
 
 export default connect(state => ({
     dictionary: state.i18n.dictionary
-}))(Footer);
+}))(withRouter(Footer));
