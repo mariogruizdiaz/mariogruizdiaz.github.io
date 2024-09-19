@@ -93,7 +93,7 @@ class FooterDownload extends React.Component {
                                         <h6 className="text-uppercase">{this.props.dictionary.footer.products.title2}</h6>
                                         <ul>
                                             <li>
-                                                <a href={`${process.env.PUBLIC_URL}/#/`} target="_blank" >{this.props.dictionary.footer.products.p3}</a>
+                                                <a href={`${process.env.PUBLIC_URL}/#/`} target="_blank" rel="noopener noreferrer" >{this.props.dictionary.footer.products.p3}</a>
                                             </li>
                                         </ul>
                                     </div>

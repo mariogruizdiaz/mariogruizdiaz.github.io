@@ -95,7 +95,7 @@ class HeroSection extends React.Component {
                             <div className="action-btns mt-4 text-center">
                                 <ul className="list-inline">
                                     <li className="list-inline-item">
-                                        <a target="_blank"  href="https://apps.apple.com/us/app/adme-%24/id1637316014" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
+                                        <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
                                             <span className="fab fa-apple icon-size-sm mr-3 color-primary"></span>
                                             <div className="download-text text-left">
                                                 <small>{this.props.dictionary.general.downloadFrom}</small>
@@ -104,7 +104,7 @@ class HeroSection extends React.Component {
                                         </a>
                                     </li>
                                     <li className="list-inline-item">
-                                        <a target="_blank"  href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
+                                        <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
                                             <span className="fab fa-google-play icon-size-sm mr-3 color-primary"></span>
                                             <div className="download-text text-left">
                                                 <small>{this.props.dictionary.general.downloadFrom}</small>
