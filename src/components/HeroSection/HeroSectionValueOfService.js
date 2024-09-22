@@ -87,25 +87,18 @@ class HeroSection extends React.Component {
                 <div className="row justify-content-center">
                     <div className="col-md-9 col-lg-8">
                         <div className="section-heading text-center mb-5">
-                            <h2 className="text-white">Planes y Precios</h2>
+                            <h2 className="text-white">{this.props.dictionary.brands.plansAndPrices.title}</h2>
                         </div>
                     </div>
                 </div>
                 <div className="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
                     <div className="col-md-12 col-lg-6">
-                      <h3 className="text-white">Flexibilidad y Exclusividad</h3>
+                      <h3 className="text-white">{this.props.dictionary.brands.plansAndPrices.subtitle}</h3>
                         <div className="hero-slider-content text-white py-1">
-                            <p className="text-left">En Adme, entendemos que cada marca es única y por eso, te ofrecemos total libertad para elegir cómo recompensar a los influencers. ¿Preferís pagar en efectivo, o tal vez con productos exclusivos, descuentos o experiencias únicas para ellos? La decisión es tuya.</p>
-                            <p className="text-left">Al unirte a Adme antes de nuestro lanzamiento oficial, te obsequiamos <span>6 meses de creación de campañas gratuitas</span> y acompañamiento personalizado.</p>
-                            <p className="text-left">Durante este tiempo, con Adme, tu inversión en marketing de influencia es 100% para la publicidad y para aquellos que dan vida a tu marca. Unite ahora y sé parte de una nueva era de marketing digital, donde tu inversión tiene un impacto real y directo.</p>
-                            <p>Los costos habituales de Adme son:</p>
-                            <ul className="dot-circle pt-3">
-                                    <li className="text-left">Membresias para campañas de tipo producto/descuento, dependiendo el plan tendras la posbilidad de crear diferentes cantidades de campañas por mes.</li>
-                                </ul>
-                            <div className="action-btns mt-4 text-center">
-                                <ul className="list-inline">
-                                </ul>
-                            </div>
+                            <p className="text-left">{this.props.dictionary.brands.plansAndPrices.paragraph1}</p>
+                            <p className="text-left">{this.props.dictionary.brands.plansAndPrices.paragraph21}<span>{this.props.dictionary.brands.plansAndPrices.paragraph22}</span>{this.props.dictionary.brands.plansAndPrices.paragraph23}</p>
+                            <p className="text-left">{this.props.dictionary.brands.plansAndPrices.paragraph3}</p>
+                            <p className="text-justify"><span>{this.props.dictionary.brands.plansAndPrices.paragraph4}</span></p>
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-6 col-lg-5">

@@ -90,7 +90,7 @@ class PromoSection extends React.Component {
             <div className="container">
               <div className="row justify-content-md-center">
                 <div className={`message-box d-block alert-warning alert`}>
-                    <p className="h5 mb-0">Si te sumas antes del lanzamiento <span>0% de comision</span> durante los primeros 6 meses.</p>
+                    <p className="h5 mb-0">{this.props.dictionary.brands.howTostart.promoPart1}<span>{this.props.dictionary.brands.howTostart.promoPart2}</span>{this.props.dictionary.brands.howTostart.promoPart3}</p>
                   </div>
                 </div>
                 <div className="row justify-content-md-center">
@@ -103,10 +103,10 @@ class PromoSection extends React.Component {
                                     <LooksOneIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Registrado</h5>
+                                    <h5>{this.props.dictionary.brands.howTostart.registerOKTitle}</h5>
                                     <HowToRegIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="text-left"><span>{this.getName()}</span> te registraste, felicitaciones!</p>
-                                    <p className="text-left"><a href="/#/editProfile?from=brands"> {this.shouldCompleteProfile() ? "Completar Perfil": "Ver Perfil"}</a></p>
+                                    <p className="text-left"><span>{this.getName()}</span>{this.props.dictionary.brands.howTostart.registerOKTitle}</p>
+                                      <p className="text-left"><a href="/#/editProfile?from=brands"> {this.shouldCompleteProfile() ? this.props.dictionary.brands.howTostart.registerOkProfileComplete : this.props.dictionary.brands.howTostart.registerOkProfile}</a></p>
                                     
                                 </div>
                             </div>
@@ -115,18 +115,18 @@ class PromoSection extends React.Component {
                     :
                     <div className="col-md-6 col-lg-3">
                         <div className="card border-0 single-promo-card single-promo-hover p-2 mt-4 shadow">
-                            <a href="/#/signUp?from=brands">
+                            
                             <div className="card-body-270">
                                 <div className="pb-2">
                                     <LooksOneIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Registrarme</h5>
+                                    <a href="/#/signUp?from=brands"><h5>{this.props.dictionary.brands.howTostart.registerTitle}</h5></a>
                                     <PersonAddIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="text-left">Sumate en pocos segundos. {this.props.dictionary.signUp.alreadyHaveAccount}<a href="/#/login?from=brands">{this.props.dictionary.login.login}</a></p>
+                                    <p className="text-left">{this.props.dictionary.brands.howTostart.registerSubtitle}</p>
+                                    <p className="text-left">{this.props.dictionary.signUp.alreadyHaveAccount}<a href="/#/login?from=brands">{this.props.dictionary.login.login}</a></p>
                                 </div>
                             </div>
-                            </a>
                         </div>
                     </div>
                   }
@@ -139,10 +139,10 @@ class PromoSection extends React.Component {
                                   <LooksTwoIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Negocio agregado</h5>
+                                    <h5>{this.props.dictionary.brands.howTostart.addCompanyOkTitle}</h5>
                                     <ChecklistIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="text-left"><span>{this.getCompanyName()}</span>. Ya estas en Adme, felicitaciones!</p>
-                                    <p className="text"><a href="/#/editCompany?from=brands"> {this.shouldCompleteLogo() ? "Cargar logo": "Ver datos de mi negocio"}</a></p>
+                                    <p className="text-left"><span>{this.getCompanyName()}</span>{this.props.dictionary.brands.howTostart.addCompanyOkSubtitle}</p>
+                                    <p className="text"><a href="/#/editCompany?from=brands"> {this.shouldCompleteLogo() ? this.props.dictionary.brands.howTostart.addCompanyOkUploadLogo : this.props.dictionary.brands.howTostart.addCompanyOkProfile }</a></p>
                                     
                                 </div>
                             </div>
@@ -151,19 +151,18 @@ class PromoSection extends React.Component {
                     :
                     <div className="col-md-6 col-lg-3">
                         <div className="card border-0 single-promo-card single-promo-hover p-2 mt-4 shadow">
-                            <a href="/#/signUp?from=brands">
+                            
                             <div className="card-body-270">
                                 <div className="pb-2">
                                   <LooksTwoIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                     
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Agregar mi negocio</h5>
+                                    <a href="/#/signUp?from=brands"><h5>{this.props.dictionary.brands.howTostart.addCompanyTitle}</h5></a>
                                     <AddBusinessIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="mb-0">Estas a un paso y segundos de estar listo.</p>
+                                    <p className="mb-0">{this.props.dictionary.brands.howTostart.addCompanySubtitle}</p>
                                 </div>
                             </div>
-                            </a>
                         </div>
                     </div>
                    } 
@@ -176,11 +175,11 @@ class PromoSection extends React.Component {
                                   <Looks3Icon fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Ya tenes campañas</h5>
-                                        <button type="submit" className="btn btn-brand-02" id="btnContactUs" onClick={() => this.handleSubmit()}>
-                                        Chatea con nosotros
-                                        </button>
-                                    <p className="mb-0">Vemos que creaste alguna campaña, queres crear mas?. Contactanos.</p>
+                                    <h5>{this.props.dictionary.brands.howTostart.createCampaignO3Title}</h5>
+                                    <p className="mb-0">{this.props.dictionary.brands.howTostart.createCampaignOk3Subtitle}</p>
+                                     <button type="submit" className="btn btn-brand-02" id="btnContactUs" onClick={() => this.handleSubmit()}>
+                                      {this.props.dictionary.brands.howTostart.chatWhitUs}
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -196,12 +195,11 @@ class PromoSection extends React.Component {
                                     
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Diseña tu campaña</h5>
-                                    
+                                    <h5>{this.props.dictionary.brands.howTostart.createCampaignTitle}</h5>
+                                    <p className="mb-0">{this.props.dictionary.brands.howTostart.createCampaignOk1Subtitle}</p>
                                         <button type="submit" className="btn btn-brand-02" id="btnContactUs" onClick={() => this.handleSubmit()}>
-                                        Chatea con nosotros
+                                        {this.props.dictionary.brands.howTostart.chatWhitUs}
                                         </button>
-                                    <p className="mb-0">Tenes todo listo, para contactar a tu agente y crear tu primer campaña.</p>
                                 </div>
                             </div>
                         </div>
@@ -217,11 +215,12 @@ class PromoSection extends React.Component {
                                     
                                 </div>
                                 <div className="pt-2 pb-3">
-                                    <h5>Diseña tu campaña</h5>
-                                      <button type="submit" className="btn btn-brand-02" id="btnContactUs" onClick={() => this.handleSubmit()}>
-                                        Chatea con nosotros
+                                    <h5>{this.props.dictionary.brands.howTostart.createCampaignTitle}</h5>
+                                    <p className="mb-0">{this.props.dictionary.brands.howTostart.createCampaignOk2Subtitle}</p>
+                                    <br/>
+                                    <button type="submit" className="btn btn-brand-02" id="btnContactUs" onClick={() => this.handleSubmit()}>
+                                        {this.props.dictionary.brands.howTostart.chatWhitUs}
                                       </button>
-                                    <p className="mb-0">Podes contactar a tu agente para que te ayude con el paso 1 y 2 tambien.</p>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +241,7 @@ class PromoSection extends React.Component {
                                       <CampaignSharpIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                   </div>
                                   <div className="pt-2 pb-3">
-                                      <h5>Ir a mis campañas</h5>
+                                      <h5>{this.props.dictionary.brands.howTostart.goToMyCampaigns}</h5>
                                   </div>
                               </div>
                               </a>
