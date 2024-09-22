@@ -15,8 +15,8 @@ class Brands extends React.Component {
                     <div className="col-md-9 col-lg-8">
                         <div className="section-heading text-center text-white">
                           <h2 className="text-white">Adme</h2>
-                          <h3 className="text-white">¿Cómo comenzar?</h3>
-                            <p>Para unirte vos con tu marca a Adme y comenzar a revolucionar tus estrategias de marketing de influencia, sólo sigue estos pasos:</p>
+                          <h3 className="text-white">{this.props.dictionary.brands.howTostart.title}</h3>
+                            <p>{this.props.dictionary.brands.howTostart.stepsDescriptions}</p>
                         </div>
                     </div>
                      <PromoSection />

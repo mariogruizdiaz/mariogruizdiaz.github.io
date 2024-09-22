@@ -96,7 +96,7 @@ const AvatarToggle = props => {
               props.security.company.thumbnail ?
               <Avatar src={props.security.company.thumbnail} />
               :
-              <Avatar {...stringAvatar(`${props.security.firstName} ${props.security.lastName} `)} />
+              <Avatar {...stringAvatar(`${props.security.firstName ? props.security.firstName: 'A'} ${props.security.lastName ? props.security.lastName : 'Z'} `)} />
               :
               <Avatar />
             }
