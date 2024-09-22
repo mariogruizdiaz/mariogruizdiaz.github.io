@@ -341,7 +341,9 @@ module.exports = {
                 title: "Support",
                 s1: "FAQ",
             },
-            rights: "Adme, All rights reserved"
+            rights: "Adme, All rights reserved",
+            contactAgent: 'Contact an agent'
+
         },
         commingSoonInvestors: {
             title: "We're Coming Soon",
@@ -1162,7 +1164,8 @@ module.exports = {
                 title: "Soporte",
                 s1: "FAQ",
             },
-            rights: "Adme, Todos los derechos están reservados"
+            rights: "Adme, Todos los derechos están reservados",
+            contactAgent: 'Contactar un agente'
         },
         commingSoonInvestors: {
             title: "We're Coming Soon",
