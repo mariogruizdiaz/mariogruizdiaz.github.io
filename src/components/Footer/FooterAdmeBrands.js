@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { subscribe } from "../../actions/index";
 import { Button, CardActions } from '@mui/material';
+import { withRouter } from "react-router-dom";
 
 class FooterAdmeBrands extends React.Component {
     constructor(props) {
@@ -13,21 +14,12 @@ class FooterAdmeBrands extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleFormValueChange(inputName, event) {
-        let stateValue = {};
-        stateValue[inputName] =
-            event.target.type === "checkbox"
-                ? event.target.checked
-                : event.target.value;
-        this.setState(stateValue);
-    }
-
     handleAddBrand(event) {
       this.props.history.push('/brands');
     }
 
     handleSubmit(event) {
-        event.preventDefault();
+        //event.preventDefault();
 
         window.open(`https://api.whatsapp.com/send?phone=5491135795588&text=Quiero%20sumar%20mi%20negocio%20a%20Adme.%20%C2%BFMe%20podr%C3%ADan%20asistir%3F`, "_blank");
         // get action
@@ -91,7 +83,7 @@ class FooterAdmeBrands extends React.Component {
                                       type="button"
                                       onClick={() => this.handleSubmit()}
                                     >
-                                      Contactar un agente
+                                      {this.props.dictionary.footer.contactAgent}
                                     </Button>
                                   </CardActions>
                                 </div>
@@ -200,4 +192,4 @@ class FooterAdmeBrands extends React.Component {
 
 export default connect(state => ({
     dictionary: state.i18n.dictionary
-}))(FooterAdmeBrands);
+}))(withRouter(FooterAdmeBrands));

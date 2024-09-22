@@ -13,15 +13,6 @@ class FooterPortal extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleFormValueChange(inputName, event) {
-        let stateValue = {};
-        stateValue[inputName] =
-            event.target.type === "checkbox"
-                ? event.target.checked
-                : event.target.value;
-        this.setState(stateValue);
-    }
-
     handleAddBrand(event) {
       this.props.history.push('/brands');
     }
@@ -70,7 +61,7 @@ class FooterPortal extends React.Component {
                                       type="button"
                                       onClick={() => this.handleSubmit()}
                                     >
-                                      Contactar un agente
+                                      {this.props.dictionary.footer.contactAgent}
                                     </Button>
                                   </CardActions>
                                 </div>
