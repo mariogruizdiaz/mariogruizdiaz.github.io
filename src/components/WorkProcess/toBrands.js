@@ -23,9 +23,9 @@ class WorkProcess extends React.Component {
                 <div className="row justify-content-center">
                     <div className="col-md-9 col-lg-8">
                         <div className="section-heading text-center mb-5">
-                            <h2>¿Cómo funciona?</h2>
+                            <h2>{this.props.dictionary.brands.howToWork.Title}</h2>
                             <p>
-                            {this.props.dictionary.process.subtitle}
+                            {this.props.dictionary.brands.howToWork.subtitle}
                             </p>
                         </div>
                     </div>
@@ -40,8 +40,8 @@ class WorkProcess extends React.Component {
                                             <i className="fas fa-box-open color-primary"></i>
                                         </div>
                                         <div className="process-content text-left">
-                                            <h5>Lanzamiento de campaña</h5>
-                                            <p>Una marca inicia una campaña en Adme, definiendo sus objetivos y el tipo de contenido deseado.</p>
+                                            <h5>{this.props.dictionary.brands.howToWork.step1Title}</h5>
+                                            <p>{this.props.dictionary.brands.howToWork.step1Subtitle}</p>
                                         </div>
                                     </div>
                                     <svg x="0px" y="0px" width="312px" height="130px">
@@ -57,8 +57,8 @@ class WorkProcess extends React.Component {
                                             <i className="fas fa-share-alt color-primary"></i>
                                         </div>
                                         <div className="process-content text-right">
-                                        <h5>Creacion de contenido por los usuarios</h5>
-                                            <p>Los usuarios de Adme crean y comparten contenido que se alinea con la campaña, llegando a sus redes sociales personales.</p>
+                                        <h5>{this.props.dictionary.brands.howToWork.step2Title}</h5>
+                                            <p>{this.props.dictionary.brands.howToWork.step2Subtitle}</p>
                                         </div>
                                     </div>
                                     <svg x="0px" y="0px" width="312px" height="130px">
@@ -76,8 +76,8 @@ class WorkProcess extends React.Component {
                                             
                                         </div>
                                         <div className="process-content text-left">
-                                        <h5>Validacion y monetización</h5>
-                                            <p>Cada publicación es auditada para garantizar su calidad y relevancia, tras lo cual el usuario recibe una compensación.</p>
+                                        <h5>{this.props.dictionary.brands.howToWork.step3Title}</h5>
+                                            <p>{this.props.dictionary.brands.howToWork.step3Subtitle}</p>
                                         </div>
                                     </div>
                                 </div>
