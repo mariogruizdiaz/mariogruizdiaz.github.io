@@ -20,12 +20,12 @@ class Header extends React.Component {
 
 
                             <div className="collapse navbar-collapse h-auto" id="navbarSupportedContent">
-                                <ul className="navbar-nav ml-auto menu">
+                                <ul className="navbar-nav ml-auto menu spanBold">
                                     {
                                         this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCampaings') ?
-                                        <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll">{this.props.dictionary.header.menu.myPortal}</a></li>
+                                        <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll"><span>{this.props.dictionary.header.menu.myPortal}</span></a></li>
                                         :
-                                        <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll">{this.props.dictionary.header.menu.registerMyBusiness}</a></li>
+                                        <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="page-scroll"><span>{this.props.dictionary.header.menu.registerMyBusiness}</span></a></li>
                                     }
                                     <li><a href="#about" className="page-scroll">{this.props.dictionary.header.menu.about}</a></li>
                                     <li><a href="#process" className="page-scroll">{this.props.dictionary.header.menu.process}</a></li>
