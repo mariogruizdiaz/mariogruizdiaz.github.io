@@ -23504,6 +23504,11 @@ footer a {
   color: #434343;
 }
 
+/* line 90, public/assets/src/scss/components/price-section/_price-1.scss */
+.spanBold li span {
+  font-weight: 800;
+}
+
 /* line 97, public/assets/src/scss/components/price-section/_price-1.scss */
 .single-pricing-pack .pricing-content .pricing-feature-list li.text-deem {
   opacity: 0.5;
