@@ -147,7 +147,7 @@ class PromoSection extends React.Component {
                                 <div className="pt-2 pb-3">
                                     <h5>{this.props.dictionary.brands.howTostart.addCompanyOkTitle}</h5>
                                     <ChecklistIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="text-left"><span>{this.getCompanyName()}</span>{this.props.dictionary.brands.howTostart.addCompanyOkSubtitle}</p>
+                                    <p className="text-left"><span>{this.getCompanyName().substring(0, 20)}</span>{this.props.dictionary.brands.howTostart.addCompanyOkSubtitle}</p>
                                     <p className="text"><a href="/#/editCompany?from=brands"> {this.shouldCompleteLogo() ? this.props.dictionary.brands.howTostart.addCompanyOkUploadLogo : this.props.dictionary.brands.howTostart.addCompanyOkProfile }</a></p>
                                     
                                 </div>
