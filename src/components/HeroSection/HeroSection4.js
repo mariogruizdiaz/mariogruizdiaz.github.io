@@ -41,7 +41,7 @@ class HeroSection extends React.Component {
                                     <h1 className="text-white">{this.props.dictionary.investors.hero.title}</h1>
                                     <p className="lead">{this.props.dictionary.investors.hero.subtitle}</p>
                                     <div className="video-promo-content my-5 pb-4">
-                                        <a href={this.props.dictionary.investors.hero.demoURL} className="popup-youtube video-play-icon text-center m-auto"><span className="ti-control-play"></span> </a>
+                                        <a href={this.props.dictionary.investors.hero.demoURL} target="_blank" without rel="noopener noreferrer" className="popup-youtube video-play-icon text-center m-auto"><span className="ti-control-play"></span> </a>
                                     </div>
                                 </div>
                             </div>
