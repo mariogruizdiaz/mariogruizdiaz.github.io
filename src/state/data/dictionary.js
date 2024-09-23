@@ -408,7 +408,7 @@ module.exports = {
             alex: {
                 fullName: "Alexander Paez Yepez",
                 role: "Quality Assurance",
-                roleDescription: "Julio is one of of the people that is creating the new generation of social medias, Adme",
+                roleDescription: "Alex is one of of the people that is creating the new generation of social medias, Adme",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "alex.paez@adme.com.ar",
@@ -454,6 +454,26 @@ module.exports = {
                 email: "nicoas.carosio@adme.com.ar",
                 picturePath: "nico.jpg",
                 linkedinURL: "https://www.linkedin.com/in/nicolas-carosio-13096615/"
+            },
+            jazmin: {
+                fullName: "Jazmin Diaz",
+                role: "Head of Image and Digital Strategy",
+                roleDescription: "Responsible for managing Adme's brand image and designing and executing the social media strategy to engage with the end user. Develops creative campaigns that reflect the brand identity, driving growth and enhancing digital presence. Collaborates on the creation of relevant and engaging content, ensuring key messages effectively reach the target audience. Additionally, manages and optimizes user interaction across various digital platforms, with a focus on improving customer experience and fostering loyalty.",
+                personalityDescription: "",
+                phone: "",
+                email: "jazmin.diaz@adme.com.ar",
+                picturePath: "jazmin.jpg",
+                linkedinURL: ""
+            },
+            luis: {
+                fullName: "Luis, Da Silva",
+                role: "Quality Assurance",
+                roleDescription: "Luis is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "",
+                email: "luis@adme.com.ar",
+                picturePath: "luis.jpg",
+                linkedinURL: "https://www.linkedin.com/in/qaluiscarlosdasilva1/"
             },
         },
         guides: {
@@ -1281,6 +1301,26 @@ module.exports = {
                 email: "nicolas.carosio@adme.com.ar",
                 picturePath: "nico.jpg",
                 linkedinURL: "https://www.linkedin.com/in/nicolas-carosio-13096615/"
+            },
+            jazmin: {
+                fullName: "Jazmin Diaz",
+                role: "Head of Image and Digital Strategy",
+                roleDescription: "Encargada de la imagen de Adme y responsable de diseñar e implementar la estrategia en redes sociales para conectar con el usuario final. Desarrolla campañas creativas que reflejan la identidad de la marca, impulsando su crecimiento y presencia digital. Colabora en la creación de contenidos relevantes y atractivos, asegurando que los mensajes clave lleguen de manera efectiva a la audiencia objetivo. Además, gestiona y optimiza la interacción con los usuarios en diversas plataformas digitales, con un enfoque en mejorar la experiencia del cliente y fomentar la fidelización.",
+                personalityDescription: "",
+                phone: "",
+                email: "jazmin.diaz@adme.com.ar",
+                picturePath: "jazmin.jpg",
+                linkedinURL: ""
+            },
+            luis: {
+                fullName: "Luis, Da Silva",
+                role: "Quality Assurance",
+                roleDescription: "Luis es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme.",
+                personalityDescription: "",
+                phone: "",
+                email: "luis@adme.com.ar",
+                picturePath: "luis.jpg",
+                linkedinURL: "https://www.linkedin.com/in/qaluiscarlosdasilva1/"
             },
         },
         guides: {
