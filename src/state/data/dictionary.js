@@ -463,7 +463,7 @@ module.exports = {
                 phone: "",
                 email: "jazmin.diaz@adme.com.ar",
                 picturePath: "jazmin.jpg",
-                linkedinURL: ""
+                linkedinURL: "https://www.linkedin.com"
             },
             luis: {
                 fullName: "Luis, Da Silva",
@@ -1310,7 +1310,7 @@ module.exports = {
                 phone: "",
                 email: "jazmin.diaz@adme.com.ar",
                 picturePath: "jazmin.jpg",
-                linkedinURL: ""
+                linkedinURL: "https://www.linkedin.com"
             },
             luis: {
                 fullName: "Luis, Da Silva",

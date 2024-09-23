@@ -68,21 +68,6 @@ class TeamMember extends React.Component {
                             </div>
                             <div className="col-md-6 col-lg-4">
                                 <div className="single-team-wrap bg-white text-center border rounded p-4 mt-4">
-                                    <img src={`assets/img/team/${this.props.dictionary.team.alex.picturePath}`} alt="team" width="120" className="img-fluid m-auto pb-4" />
-                                    <div className="team-content">
-                                        <a href="/#teamMember/alex"><h5 className="mb-0">{this.props.dictionary.team.alex.fullName}</h5></a>
-                                        <span>{this.props.dictionary.team.alex.role}</span>
-                                        {/* <p className="mt-3">{this.props.dictionary.team.alex.techRoleDescription}</p> */}
-                                        <ul className="list-inline social-list-default social-color icon-hover-top-bottom">
-                                            <li className="list-inline-item">
-                                                <a className="linkedin" href={this.props.dictionary.team.alex.linkedinURL} target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="single-team-wrap bg-white text-center border rounded p-4 mt-4">
                                     <img src={`assets/img/team/${this.props.dictionary.team.guille.picturePath}`} alt="team" width="120" className="img-fluid m-auto pb-4" />
                                     <div className="team-content">
                                         <a href="/#teamMember/guille"><h5 className="mb-0">{this.props.dictionary.team.guille.fullName}</h5></a>
@@ -102,6 +87,11 @@ class TeamMember extends React.Component {
                                     <div className="team-content">
                                         <a href="/#teamMember/jazmin"><h5 className="mb-0">{this.props.dictionary.team.jazmin.fullName}</h5></a>
                                         <span>{this.props.dictionary.team.jazmin.role}</span>
+                                        <ul className="list-inline social-list-default social-color icon-hover-top-bottom">
+                                            <li className="list-inline-item">
+                                                <a className="linkedin" href={this.props.dictionary.team.jazmin.linkedinURL} target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -114,6 +104,21 @@ class TeamMember extends React.Component {
                                         <ul className="list-inline social-list-default social-color icon-hover-top-bottom">
                                             <li className="list-inline-item">
                                                 <a className="linkedin" href={this.props.dictionary.team.luis.linkedinURL} target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                             <div className="col-md-6 col-lg-4">
+                                <div className="single-team-wrap bg-white text-center border rounded p-4 mt-4">
+                                    <img src={`assets/img/team/${this.props.dictionary.team.alex.picturePath}`} alt="team" width="120" className="img-fluid m-auto pb-4" />
+                                    <div className="team-content">
+                                        <a href="/#teamMember/alex"><h5 className="mb-0">{this.props.dictionary.team.alex.fullName}</h5></a>
+                                        <span>{this.props.dictionary.team.alex.role}</span>
+                                        {/* <p className="mt-3">{this.props.dictionary.team.alex.techRoleDescription}</p> */}
+                                        <ul className="list-inline social-list-default social-color icon-hover-top-bottom">
+                                            <li className="list-inline-item">
+                                                <a className="linkedin" href={this.props.dictionary.team.alex.linkedinURL} target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>
