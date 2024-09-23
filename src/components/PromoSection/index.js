@@ -89,9 +89,15 @@ class PromoSection extends React.Component {
         <section className="promo-section ptb-0">
             <div className="container">
               <div className="row justify-content-md-center">
-                <div className={`message-box d-block alert-warning alert`}>
+                { this.props.security.authenticated && this.props.security.company.id ?
+                  <div className={`message-box d-block alert-success alert`}>
+                    <p className="h5 mb-0">{this.props.dictionary.brands.howTostart.promoOkPart1}<span>{this.props.dictionary.brands.howTostart.promoOkPart2}</span>{this.props.dictionary.brands.howTostart.promoOkPart3}</p>
+                  </div>
+                  :
+                  <div className={`message-box d-block alert-warning alert`}>
                     <p className="h5 mb-0">{this.props.dictionary.brands.howTostart.promoPart1}<span>{this.props.dictionary.brands.howTostart.promoPart2}</span>{this.props.dictionary.brands.howTostart.promoPart3}</p>
                   </div>
+                }
                 </div>
                 <div className="row justify-content-md-center">
                   {

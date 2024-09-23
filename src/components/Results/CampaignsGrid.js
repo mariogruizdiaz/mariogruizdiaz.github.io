@@ -69,6 +69,10 @@ class CampaignsGrid extends Component {
                                                 <div className="card-body">
                                                     <h3 className="h6 mb-2 card-title"><a href="/" onClick={(e) => this.handleClick(e, campaignItem._id)} >{campaignItem[globalModels.campaignFields.name]}</a></h3>
                                                     <div className="post-meta mb-2">
+                                                       <ul className="list-inline meta-list">
+                                                            <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{"Status: " + campaignItem[globalModels.campaignFields.status]} </span>
+                                                            </li>
+                                                        </ul>
                                                         <ul className="list-inline meta-list">
                                                             <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{campaignItem[globalModels.campaignFields.likeCount]} </span>
                                                                 Likes
