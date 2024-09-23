@@ -303,7 +303,8 @@ module.exports = {
         },
         faq: {
             title: "Frequently Asked Queries",
-            subtitle: "We know that it is hard to believe that a social network pays to its users, but Adme does! Still have questions? Contact us",
+            subtitle1: "We know that it is hard to believe that a social network pays to its users, but Adme does!",
+            subtitle2: 'Still have questions? Contact us.',
             q1Question: "May I get paid, but using my usual social networks? 💵",
             q1Answer: "Yes, You have to continue using your usual social networks. Adme is the app that let's you link your accounts from Facebook, Twitter, Instagram (and other in the future) to post in all of them from one single app at once. And receive money if you sponsor the photo with and Advertising Campaign. No matter how many friends/followers you have. For Adme, you are an Influencer!",
             q2Question: "Is the quality of my posts important? ✅ 💰",
@@ -407,7 +408,7 @@ module.exports = {
             alex: {
                 fullName: "Alexander Paez Yepez",
                 role: "Quality Assurance",
-                roleDescription: "Julio is one of of the people that is creating the new generation of social medias, Adme",
+                roleDescription: "Alex is one of of the people that is creating the new generation of social medias, Adme",
                 personalityDescription: "",
                 phone: "+54 911 4085-1807",
                 email: "alex.paez@adme.com.ar",
@@ -453,6 +454,26 @@ module.exports = {
                 email: "nicoas.carosio@adme.com.ar",
                 picturePath: "nico.jpg",
                 linkedinURL: "https://www.linkedin.com/in/nicolas-carosio-13096615/"
+            },
+            jazmin: {
+                fullName: "Jazmin Diaz",
+                role: "Head of Image and Digital Strategy",
+                roleDescription: "Responsible for managing Adme's brand image and designing and executing the social media strategy to engage with the end user. Develops creative campaigns that reflect the brand identity, driving growth and enhancing digital presence. Collaborates on the creation of relevant and engaging content, ensuring key messages effectively reach the target audience. Additionally, manages and optimizes user interaction across various digital platforms, with a focus on improving customer experience and fostering loyalty.",
+                personalityDescription: "",
+                phone: "",
+                email: "jazmin.diaz@adme.com.ar",
+                picturePath: "jazmin.jpg",
+                linkedinURL: "https://www.linkedin.com"
+            },
+            luis: {
+                fullName: "Luis, Da Silva",
+                role: "Quality Assurance",
+                roleDescription: "Luis is one of of the people that is creating the new generation of social medias, Adme",
+                personalityDescription: "",
+                phone: "",
+                email: "luis@adme.com.ar",
+                picturePath: "luis.jpg",
+                linkedinURL: "https://www.linkedin.com/in/qaluiscarlosdasilva1/"
             },
         },
         guides: {
@@ -701,7 +722,8 @@ module.exports = {
             },
             faq: {
                 title: "Frequently Asked Questions",
-                subtitle: "All you need yo know about the problems that we try to solve, how are we achieving this, and other information that any investor would like to know before contacting us.",
+                subtitle1: "All you need yo know about the problems that we try to solve, how are we achieving this, and other information that any investor would like to know before contacting us.",
+                subtitle2: '',
                 item3Question: "How Adme will make money",
                 item3Answer: `Adme is an option for Brands to encourage people, with Ad campaigns, to create posts with related content, and even sponsor the spontaneous photos, that they are posting every day. With Adme, brands will continue having a presence on the same famous social networks but this time by sponsoring content created by the users.
                 Adme is changing the current paradigm as follows:
@@ -1128,8 +1150,9 @@ module.exports = {
             testimonial4Testimony: "",
         },
         faq: {
-            title: "Preguntas Frecuentes",
-            subtitle: "Sabemos que cuesta entender que una red social le pague a sus usuarios, pero es así. Adme lo hace!  Si aún tenés preguntas, contactanos!",
+            title: "Preguntas frecuentes",
+            subtitle1: "Sabemos que cuesta entender que una red social le pague a sus usuarios, pero es así. Adme lo hace!",
+            subtitle2: 'Si aún tenés preguntas, contactanos!',
             q1Question: "¿Me pagan si uso mis redes sociales habituales? 💵",
             q1Answer: "Sí, tenés que seguir usando tus redes sociales habituales. Adme te permite linkear tus cuentas de Facebook e Instagram (y otras en el futuro) para que puedas postear desde una unica app. Ademas de la oportunidad de recibir dinero por esponsorizarlas con campañas publicitarias.",
             q2Question: "¿Es importante la calidad de mis posteos? 💰",
@@ -1278,6 +1301,26 @@ module.exports = {
                 email: "nicolas.carosio@adme.com.ar",
                 picturePath: "nico.jpg",
                 linkedinURL: "https://www.linkedin.com/in/nicolas-carosio-13096615/"
+            },
+            jazmin: {
+                fullName: "Jazmin Diaz",
+                role: "Head of Image and Digital Strategy",
+                roleDescription: "Encargada de la imagen de Adme y responsable de diseñar e implementar la estrategia en redes sociales para conectar con el usuario final. Desarrolla campañas creativas que reflejan la identidad de la marca, impulsando su crecimiento y presencia digital. Colabora en la creación de contenidos relevantes y atractivos, asegurando que los mensajes clave lleguen de manera efectiva a la audiencia objetivo. Además, gestiona y optimiza la interacción con los usuarios en diversas plataformas digitales, con un enfoque en mejorar la experiencia del cliente y fomentar la fidelización.",
+                personalityDescription: "",
+                phone: "",
+                email: "jazmin.diaz@adme.com.ar",
+                picturePath: "jazmin.jpg",
+                linkedinURL: "https://www.linkedin.com"
+            },
+            luis: {
+                fullName: "Luis, Da Silva",
+                role: "Quality Assurance",
+                roleDescription: "Luis es uno de los responsables que está creando ésta nueva generación de redes sociales, Adme.",
+                personalityDescription: "",
+                phone: "",
+                email: "luis@adme.com.ar",
+                picturePath: "luis.jpg",
+                linkedinURL: "https://www.linkedin.com/in/qaluiscarlosdasilva1/"
             },
         },
         guides: {
@@ -1524,7 +1567,7 @@ module.exports = {
                 subtitle: "Los potenciales inversores pueden solicitar un token para acceder a la siguiente informacion:",
             },
             faq: {
-                title: "Preguntas Frecuentes",
+                title: "Preguntas frecuentes",
                 subtitle: "Todo lo que necesita saber sobre los problemas que tratamos de resolver, cómo lo estamos logrando y otra información que a cualquier inversor le gustaría saber antes de contactar con nosotros.",
                 item3Question: "How Adme will make money",
                 item3Answer: `Adme is an option for Brands to encourage people, with Ad campaigns, to create posts with related content, and even sponsor the spontaneous photos, that they are posting every day. With Adme, brands will continue having a presence on the same famous social networks but this time by sponsoring content created by the users.

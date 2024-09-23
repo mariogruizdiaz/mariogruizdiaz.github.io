@@ -22,7 +22,8 @@ class Faq extends React.Component {
                     <div className="col-md-9 col-lg-8">
                         <div className="section-heading text-center mb-5">
                             <h2>{this.props.dictionary.faq.title}</h2>
-                            <p>{this.props.dictionary.faq.subtitle}</p>
+                            <p>{this.props.dictionary.faq.subtitle1}</p>
+                            <p>{this.props.dictionary.faq.subtitle2}</p>
                         </div>
                     </div>
                 </div>
