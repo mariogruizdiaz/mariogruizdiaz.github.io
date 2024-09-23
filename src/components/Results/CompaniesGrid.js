@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { commonStatuses } from "../../state/models/common";
 import * as globalModels from "influencers-models";
+import ImageLoader from "../Loaders/ImageLoader";
 
 class CompaniesGrid extends Component {
     constructor(props) {
@@ -28,7 +29,8 @@ class CompaniesGrid extends Component {
                                         <div className="col-md-6 col-lg-4" key={companyItem[globalModels.companyFields._id]}>
                                             <div className="single-blog-card card gray-light-bg border-0 shadow-sm my-3">
                                                 <div className="blog-img position-relative">
-                                                    <img src={companyItem[globalModels.companyFields.logo]} className="card-img-top" alt="blog" />
+                                                    {/* <img src={companyItem[globalModels.companyFields.logo]} className="card-img-top" alt="blog" /> */}
+                                                    <ImageLoader source={companyItem[globalModels.companyFields.logo]} maxWidth={250} alt="An image" secondaryColor="rgba(255, 255, 255, 1)" color="rgba(150, 41, 230, 1)" />
                                                     <div className="meta-date">
                                                         <strong>Total</strong>
                                                         <small>{

@@ -993,7 +993,7 @@ module.exports = {
             registerOKSubtitle: '¡Te registraste, felicitaciones!',
             registerOkProfileComplete: 'Complete Profile',
             registerOkProfile: 'View Profile',
-            registerSubtitle: 'Join in just a few seconds.',
+            registerSubtitle: 'Sumate en pocos segundos.',
             addCompanyTitle: 'Agregar mi negocio',
             addCompanySubtitle: 'Estás a un paso de estar listo.',
             addCompanyOkTitle: 'Empresa agregada',
