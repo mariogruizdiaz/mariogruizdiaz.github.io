@@ -102,9 +102,11 @@ class Feature extends React.Component {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-5 d-none d-sm-none d-md-block d-lg-block">
-                        <div className="position-relative pb-md-5 py-lg-0">
+                        {/* <div className="position-relative pb-md-5 py-lg-0"> */}
+                          <div className="mask-image">
                             <img alt="placeholder" src="assets/img/app-adme-mobile-image.png" className="img-center img-fluid" />
-                        </div>
+                          </div>
+                        {/* </div> */}
                     </div>
                     <div className="col-lg-4 col-md-12">
                         <div className="row">
