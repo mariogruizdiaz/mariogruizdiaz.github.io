@@ -8,6 +8,9 @@ import TeamMember from "../components/TeamMember";
 import FooterSection from "../components/Footer/FooterAdmeInvestors";
 
 class Theme extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <React.Fragment>

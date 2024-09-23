@@ -303,7 +303,8 @@ module.exports = {
         },
         faq: {
             title: "Frequently Asked Queries",
-            subtitle: "We know that it is hard to believe that a social network pays to its users, but Adme does! Still have questions? Contact us",
+            subtitle1: "We know that it is hard to believe that a social network pays to its users, but Adme does!",
+            subtitle2: 'Still have questions? Contact us.',
             q1Question: "May I get paid, but using my usual social networks? 💵",
             q1Answer: "Yes, You have to continue using your usual social networks. Adme is the app that let's you link your accounts from Facebook, Twitter, Instagram (and other in the future) to post in all of them from one single app at once. And receive money if you sponsor the photo with and Advertising Campaign. No matter how many friends/followers you have. For Adme, you are an Influencer!",
             q2Question: "Is the quality of my posts important? ✅ 💰",
@@ -701,7 +702,8 @@ module.exports = {
             },
             faq: {
                 title: "Frequently Asked Questions",
-                subtitle: "All you need yo know about the problems that we try to solve, how are we achieving this, and other information that any investor would like to know before contacting us.",
+                subtitle1: "All you need yo know about the problems that we try to solve, how are we achieving this, and other information that any investor would like to know before contacting us.",
+                subtitle2: '',
                 item3Question: "How Adme will make money",
                 item3Answer: `Adme is an option for Brands to encourage people, with Ad campaigns, to create posts with related content, and even sponsor the spontaneous photos, that they are posting every day. With Adme, brands will continue having a presence on the same famous social networks but this time by sponsoring content created by the users.
                 Adme is changing the current paradigm as follows:
@@ -1128,8 +1130,9 @@ module.exports = {
             testimonial4Testimony: "",
         },
         faq: {
-            title: "Preguntas Frecuentes",
-            subtitle: "Sabemos que cuesta entender que una red social le pague a sus usuarios, pero es así. Adme lo hace!  Si aún tenés preguntas, contactanos!",
+            title: "Preguntas frecuentes",
+            subtitle1: "Sabemos que cuesta entender que una red social le pague a sus usuarios, pero es así. Adme lo hace!",
+            subtitle2: 'Si aún tenés preguntas, contactanos!',
             q1Question: "¿Me pagan si uso mis redes sociales habituales? 💵",
             q1Answer: "Sí, tenés que seguir usando tus redes sociales habituales. Adme te permite linkear tus cuentas de Facebook e Instagram (y otras en el futuro) para que puedas postear desde una unica app. Ademas de la oportunidad de recibir dinero por esponsorizarlas con campañas publicitarias.",
             q2Question: "¿Es importante la calidad de mis posteos? 💰",
@@ -1524,7 +1527,7 @@ module.exports = {
                 subtitle: "Los potenciales inversores pueden solicitar un token para acceder a la siguiente informacion:",
             },
             faq: {
-                title: "Preguntas Frecuentes",
+                title: "Preguntas frecuentes",
                 subtitle: "Todo lo que necesita saber sobre los problemas que tratamos de resolver, cómo lo estamos logrando y otra información que a cualquier inversor le gustaría saber antes de contactar con nosotros.",
                 item3Question: "How Adme will make money",
                 item3Answer: `Adme is an option for Brands to encourage people, with Ad campaigns, to create posts with related content, and even sponsor the spontaneous photos, that they are posting every day. With Adme, brands will continue having a presence on the same famous social networks but this time by sponsoring content created by the users.
