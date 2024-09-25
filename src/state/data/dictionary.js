@@ -669,7 +669,7 @@ module.exports = {
             },
             company: {
                 hero: {
-                    subtitle: "Activities and results of in Adme"
+                    subtitle: "Activities and results of campaings in Adme"
                 },
 
             },
