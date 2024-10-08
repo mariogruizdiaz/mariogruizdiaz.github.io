@@ -17,7 +17,7 @@ class iOSInstallGuideTheme extends Component {
           <Breadcrumb name={"Install in IPhone"} />
           <IOSInstallGuide />
         </div>
-        <Footer withoutNewsletter={false} />
+        <Footer withoutNewsletter={true} />
       </React.Fragment>
     );
   }

@@ -8,6 +8,14 @@ import moment from "moment";
 import { Redirect } from "react-router-dom";
 import { commonStatuses } from "../../state/models/common";
 import { BulletList } from 'react-content-loader';
+import { withRouter } from "react-router-dom";
+
+const statusDescription = {
+    'Draft': 'Borrador',
+    'OnGoing': 'Activa',
+    'Stopped': 'Frenada',
+    'Finished': 'Finalizada'
+  };
 
 class CampaignsGrid extends Component {
     constructor(props) {
@@ -36,10 +44,7 @@ class CampaignsGrid extends Component {
         const clickedCampaign = this.props.selectedCompany.campaigns.items.find(i => i[globalModels.campaignFields._id] === campaignId);
         this.props.genericAction(actionTypes.SELECT_CAMPAIGN, { ...clickedCampaign });
 
-        this.setState({
-            pathCampain: `/companies/${this.props.selectedCompany._id}/${campaignId}`,
-            redirect: true
-        });
+        this.props.history.push(`/companies/${this.props.selectedCompany._id}/${campaignId}`);
     };
 
     render() {
@@ -54,13 +59,10 @@ class CampaignsGrid extends Component {
                             <div className="row">
                                 {
                                     this.props.selectedCompany && this.props.selectedCompany.campaigns.fetchStatus === commonStatuses.loaded &&
-                                    // this.props.selectedCompany && this.props.selectedCompany.campaigns &&
                                     this.props.selectedCompany.campaigns.items.map((campaignItem, index) => (
                                         <div className="col-md-6 col-lg-4" key={campaignItem._id}>
                                             <div className="single-blog-card card gray-light-bg border-0 shadow-sm my-3">
                                                 <div className="blog-img position-relative" style={{ width: "100%" }}>
-                                                    {/* <img src={this.props.selectedCompany.logo} className="card-img-top" alt="blog" /> */}
-                                                    {/* <ImageLoader source={this.props.selectedCompany.logo} alt="An image" className="card-img-top" secondaryColor="rgba(150, 41, 230, 1)" color="rgba(255, 255, 255, 1)" /> */}
                                                     <div className="meta-date">
                                                         <strong>{moment(campaignItem[globalModels.campaignFields.startDt]).format('MMM')}</strong>
                                                         <small>{moment(campaignItem[globalModels.campaignFields.startDt]).format('YYYY')}</small>
@@ -69,10 +71,7 @@ class CampaignsGrid extends Component {
                                                 <div className="card-body">
                                                     <h3 className="h6 mb-2 card-title"><a href="/" onClick={(e) => this.handleClick(e, campaignItem._id)} >{campaignItem[globalModels.campaignFields.name]}</a></h3>
                                                     <div className="post-meta mb-2">
-                                                       <ul className="list-inline meta-list">
-                                                            <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{"Status: " + campaignItem[globalModels.campaignFields.status]} </span>
-                                                            </li>
-                                                        </ul>
+                                                             <p className="card-text"><i className="fas fa-ad mr-2"></i>{"Estado: " + statusDescription[campaignItem[globalModels.campaignFields.status]]}</p>
                                                         <ul className="list-inline meta-list">
                                                             <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{campaignItem[globalModels.campaignFields.likeCount]} </span>
                                                                 Likes
@@ -80,9 +79,12 @@ class CampaignsGrid extends Component {
                                                             <li className="list-inline-item"><i className="fas fa-comment-alt mr-2"></i><span>{campaignItem[globalModels.campaignFields.commentCount]} </span>
                                                                 Comments
                                                             </li>
+                                                            <li className="list-inline-item"><i className="fas fa-share-alt mr-2"></i><span>{campaignItem[globalModels.campaignFields.sharedCount]} </span>
+                                                                Shared
+                                                            </li>
                                                         </ul>
                                                     </div>
-                                                    <p className="card-text">{`${moment(campaignItem[globalModels.campaignFields.startDt]).format('l')} - ${moment(campaignItem[globalModels.campaignFields.endDt]).format('l')}`}</p>
+                                                    <p className="card-text">{`Creacion: ${moment(campaignItem[globalModels.campaignFields.startDt]).format('l')}`}</p>
                                                     <a href='/' onClick={(e) => this.handleClick(e, campaignItem._id)} className="detail-link">{this.props.dictionary.results.buttons.goToCampaign} <span className="ti-arrow-right"></span></a>
                                                 </div>
                                             </div>
@@ -95,20 +97,17 @@ class CampaignsGrid extends Component {
                                 }
                             </div>
 
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="col-md-12">
                                     <nav className="custom-pagination-nav mt-4">
                                         <ul className="pagination justify-content-center">
                                             <li className="page-item"><a className="page-link page-scroll" href="#main"><span className="ti-angle-left"></span></a></li>
                                             <li className="page-item active"><a className="page-link" href="/#">1</a></li>
-                                            {/* <li className="page-item"><a className="page-link" href="/#">2</a></li>
-                                <li className="page-item"><a className="page-link" href="/#">3</a></li>
-                                <li className="page-item"><a className="page-link" href="/#">4</a></li> */}
                                             <li className="page-item"><a className="page-link page-scroll" href="#main"><span className="ti-angle-right"></span></a></li>
                                         </ul>
                                     </nav>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     }
 
@@ -131,4 +130,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CampaignsGrid);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(CampaignsGrid));

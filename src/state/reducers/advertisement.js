@@ -17,6 +17,7 @@ const initialState = {
       rejectionReason: null,
       creationDt: null,
       advertisementPrice: null,
+      captionIdentifier: null,
       _person: {
         firstName: null,
         lastName: null,
@@ -33,13 +34,16 @@ const initialState = {
         customTagMentionPeoplePrice: null,
         customSealPrice: null,
         customTagMentionMePrice: null,
-        paymentType: null
+        paymentType: null,
+        customPricesEnabled : null,
+        customAdPrice: null,
       }
     }
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.FETCH_ADVERTISEMENT_BY_CODE:
     case actionTypes.FETCH_ADVERTISEMENT: {
       return {
         ...state,
@@ -47,6 +51,7 @@ export default (state = initialState, action) => {
         fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loading],
       };
     }
+    case actionTypes.FETCH_ADVERTISEMENT_BY_CODE_SUCCESS: 
     case actionTypes.FETCH_ADVERTISEMENT_SUCCESS: {
       return {
         _id: action.payload.data[0]._id,
@@ -78,15 +83,26 @@ export default (state = initialState, action) => {
           customTagMentionPeoplePrice: action.payload.data[0]._campaign.customTagMentionPeoplePrice,
           customSealPrice: action.payload.data[0]._campaign.customSealPrice,
           customTagMentionMePrice: action.payload.data[0]._campaign.customTagMentionMePrice,
-          paymentType: action.payload.data[0]._campaign.paymentType
+          paymentType: action.payload.data[0]._campaign.paymentType,
+          customPricesEnabled: action.payload.data[0]._campaign.customPricesEnabled,
+          customAdPrice: action.payload.data[0]._campaign.customAdPrice,
         }
       };
     }
+    case actionTypes.FETCH_ADVERTISEMENT_BY_CODE_UNSUCCESS:
+    case actionTypes.FETCH_ADVERTISEMENT_BY_CODE_FAIL:
     case actionTypes.FETCH_ADVERTISEMENT_UNSUCCESS:
     case actionTypes.FETCH_ADVERTISEMENT_FAIL: {
       return {
         ...initialState.advertisement,
         fetchStatus: commonStatuses.notAvailable,
+        fetchStatusDescription: null,
+      };
+    }
+    case actionTypes.CLEAN_ADVERTISEMENT_BY_CODE: {
+       return {
+        ...initialState.advertisement,
+        fetchStatus: commonStatuses.none,
         fetchStatusDescription: null,
       };
     }

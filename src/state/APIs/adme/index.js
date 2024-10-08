@@ -17,6 +17,7 @@ const endpointMapper = async (type) => {
     case actionTypes.UPDATE_USER: return "updatePersonPrimary";
     case actionTypes.FETCH_ADVERTISEMENT: return "advertisements";
     case actionTypes.UPDATE_ADVERTISEMENT: return "updateAdvertisement";
+    case actionTypes.FETCH_ADVERTISEMENT_BY_CODE: return "advertisements";
     default: return type.toLowerCase();
     }
 };

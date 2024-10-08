@@ -13,6 +13,7 @@ query fetchAdvertisingByCampaignId(
     _id,
     campaignId,
     personId,
+    captionIdentifier,
     campaignName,
     companyName,
     companyLogo,
@@ -136,7 +137,7 @@ query fetchAdvertisingByCampaignId(
   advertisements(
     ${globalModels.advertisementFields._id}: $${globalModels.advertisementFields._id},
     ${globalModels.advertisementFields.companyId}: $${globalModels.advertisementFields.companyId},
-      limit: 1,
+      limit: 1
   ){
     _id,
     campaignId,
@@ -178,6 +179,8 @@ query fetchAdvertisingByCampaignId(
       ${globalModels.campaignFields.customSealPrice},
       ${globalModels.campaignFields.customTagMentionMePrice},
       ${globalModels.campaignFields.paymentType},
+      ${globalModels.campaignFields.customPricesEnabled},
+      ${globalModels.campaignFields.customAdPrice},
     }
   }
 }
@@ -202,8 +205,67 @@ mutation updateAdvertisement(
 }
 `;
 
+const fetchAdvertisementByCodeAndCompanyId = `
+query fetchAdvertisingByCampaignId(
+    $${globalModels.advertisementFields.captionIdentifier}: String!
+    $${globalModels.advertisementFields.companyId}: ID!
+){
+  advertisements(
+    ${globalModels.advertisementFields.captionIdentifier}: $${globalModels.advertisementFields.captionIdentifier},
+    ${globalModels.advertisementFields.companyId}: $${globalModels.advertisementFields.companyId},
+      limit: 1
+  ){
+    _id,
+    campaignId,
+    personId,
+    campaignName,
+    companyName,
+    campaignType,
+    companyId,
+    active,
+    captionIdentifier,
+    multimediaUri,
+    caption,
+    status,
+    rejectionReason,
+    creationDt,
+    budgetFreezed,
+    moneyAvailable,
+    moneyEarned,
+    socialMediaTarget,
+    resources{
+      hashtag{
+        enabled,
+        value
+      }
+    },
+    _person {
+        ${globalModels.personFields.firstName},
+        ${globalModels.personFields.lastName},
+    },
+    _campaign {
+      ${globalModels.campaignFields._id},
+      ${globalModels.campaignFields.name},
+      ${globalModels.campaignFields.brief},
+      ${globalModels.campaignFields.type},
+      ${globalModels.campaignFields.productPaymentDescription},
+      ${globalModels.campaignFields.status},
+      ${globalModels.campaignFields.customProductUsagePrice},
+      ${globalModels.campaignFields.customInsightMultiplier},
+      ${globalModels.campaignFields.customTagMentionPeoplePrice},
+      ${globalModels.campaignFields.customSealPrice},
+      ${globalModels.campaignFields.customTagMentionMePrice},
+      ${globalModels.campaignFields.paymentType},
+      ${globalModels.campaignFields.customPricesEnabled},
+      ${globalModels.campaignFields.customAdPrice},
+    }
+  }
+}
+`;
+
 export default {
     fetchAdvertisingByCampaignId,
     fetchAdvertisementByIdAndCompanyId,
-    updateAdvertisement
+    updateAdvertisement,
+    fetchAdvertisementByCodeAndCompanyId
 };

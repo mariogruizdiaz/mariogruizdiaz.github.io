@@ -23,10 +23,6 @@ class AdvertisementsGrid extends Component {
                             <div className="col-md-9 col-lg-12">
                                 <div className="section-heading text-center mb-4">
                                     <h2>{this.props.dictionary.results.campaign.posts.title}</h2>
-                                    {
-                                        this.props.selectedCampaign[globalModels.campaignFields.brief]
-                                        && <p>{this.props.selectedCampaign[globalModels.campaignFields.brief]}</p>
-                                    }
                                 </div>
                             </div>
                         </div>
@@ -41,20 +37,17 @@ class AdvertisementsGrid extends Component {
                                     
                                 }
                         </div>
-                        <div className="row ptb-100">
+                        {/* <div className="row ptb-100">
                                 <div className="col-md-12">
                                     <nav className="custom-pagination-nav">
                                         <ul className="pagination justify-content-center">
                                             <li className="page-item"><a className="page-link" href="/#"><span className="ti-angle-left"></span></a></li>
                                             <li className="page-item active"><a className="page-link" href="/#">1</a></li>
-                                            {/* <li className="page-item"><a className="page-link" href="/#">2</a></li>
-                                            <li className="page-item"><a className="page-link" href="/#">3</a></li>
-                                            <li className="page-item"><a className="page-link" href="/#">4</a></li> */}
                                             <li className="page-item"><a className="page-link" href="/#"><span className="ti-angle-right"></span></a></li>
                                         </ul>
                                     </nav>
                                 </div>
-                            </div>
+                            </div> */}
                     </div>
                 </div>
             </React.Fragment>

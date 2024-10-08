@@ -4,8 +4,6 @@ import { actionTypes } from "../actionTypes";
 import admeApi from "../APIs/adme";
 import { commonStatuses } from "../models/common";
 import moment from 'moment';
-import { genericAction } from "../actions";
-import * as globalModels from "influencers-models";
 
 
 const apifetchingStatus = (state) => state.basics.api.fetchingStatus;
@@ -56,13 +54,6 @@ function* controlPreRequisites() {
     }
 }
 
-function* fireFetchAdvertisements(action) {
-    yield put(genericAction(actionTypes.FETCH_ADVERTISEMENTS, {[globalModels.advertisementFields.campaignId]: action.payload[globalModels.campaignFields._id]}));
-}
-
-
-
-
 export default function* userIdentity() {
     yield takeLatest(actionTypes.LOGIN, genericMutation);
     yield takeLatest(actionTypes.FETCH_COMPANIES, genericQuery);
@@ -71,13 +62,13 @@ export default function* userIdentity() {
     yield takeLatest(actionTypes.FETCH_ADVERTISEMENTS, genericQuery);
     yield takeEvery(actionTypes.FETCH_POSTS, genericQuery);
     yield takeEvery(actionTypes.FETCH_PERSON_CREDENTIALS, genericQuery);
-    yield takeLatest(actionTypes.SELECT_CAMPAIGN, fireFetchAdvertisements);
     yield takeLatest(actionTypes.FETCH_TERMS_AND_CONDITIONS, genericQuery);
     yield takeLatest(actionTypes.SIGNUP, genericMutation);
     yield takeLatest(actionTypes.CREATE_COMPANY, genericMutation);
     yield takeLatest(actionTypes.UPDATE_COMPANY, genericMutation);
     yield takeLatest(actionTypes.UPDATE_USER, genericMutation);
     yield takeLatest(actionTypes.FETCH_ADVERTISEMENT, genericQuery);
+    yield takeLatest(actionTypes.FETCH_ADVERTISEMENT_BY_CODE, genericQuery);
     yield takeLatest(actionTypes.UPDATE_ADVERTISEMENT, genericQuery);
 
 }

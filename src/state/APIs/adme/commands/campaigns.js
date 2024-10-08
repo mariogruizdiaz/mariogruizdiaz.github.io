@@ -13,6 +13,12 @@ query fetchCampaignsByCompanyId(
     _id,
     name,
     brief,
+    type,
+    productPaymentDescription,
+    customProductUsagePrice,
+    paymentType,
+    stock,
+    customAdPrice
     creationDt,
     startDt,
     endDt,
