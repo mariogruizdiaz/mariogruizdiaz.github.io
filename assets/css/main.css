@@ -3398,6 +3398,40 @@ table {
   color: #6730e3 !important;
 }
 
+.adCode {
+  font-family: 'Courier New', monospace;
+    /* Fuente monoespaciada para mejorar la legibilidad */
+    letter-spacing: 0.3em;
+    /* Ajusta el espacio entre los caracteres */
+    font-size: 16px;
+    /* Tamaño del texto */
+    background-color: #f4f4f4;
+    /* Fondo para diferenciar el código */
+    padding: 10px;
+    /* Espaciado alrededor del código */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    display: inline-block;
+    /* Mantener el formato dentro de una línea */
+}
+
+.code {
+  font-family: 'Courier New', monospace;
+  /* Fuente monoespaciada para mejorar la legibilidad */
+  letter-spacing: 0.3em;
+  /* Ajusta el espacio entre los caracteres */
+  font-size: 16px;
+  /* Tamaño del texto */
+  background-color: #f4f4f4;
+  /* Fondo para diferenciar el código */
+  padding: 10px;
+  /* Espaciado alrededor del código */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  display: inline-block;
+  /* Mantener el formato dentro de una línea */
+}
+
 /* line 4, public/assets/src/scss/objects/_objects.background.scss */
 .color-secondary {
   color: #9629e6 !important;
