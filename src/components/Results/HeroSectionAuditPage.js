@@ -16,7 +16,7 @@ import ExpandableText from '../../state/helpers/expandableText';
 import { SnackbarContext } from '../Toast/SnackbarContext';
 import { actionTypes } from "../../state/actionTypes";
 
-class HeroSectionCompanyPage extends React.Component {
+class HeroSectionAuditPage extends React.Component {
     static contextType = SnackbarContext;
     constructor(props) {
         super(props);
@@ -113,7 +113,8 @@ class HeroSectionCompanyPage extends React.Component {
                                 <div className="popular-price bg-white text-center single-pricing-pack mt-4" color="primary">
                                     <div className="pricing-content">
                                       {
-                                        this.props.advertisement.status === (globalModels.advertisementStatusEnum.WaitingForCustomerAudit || globalModels.advertisementStatusEnum.WaitingForPlatformAudit) ?
+                                        [globalModels.advertisementStatusEnum.WaitingForCustomerAudit, globalModels.advertisementStatusEnum.WaitingForPlatformAudit].includes(this.props.advertisement.status) ?
+                                        this.props.advertisement._campaign.paymentType === globalModels.campaignPaymentTypeEnum.Product ?  
                                           this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising ?
                                             <CardActions>
                                                 <Button fullWidth className="btn btn-brand-02 btn-rounded mb-3" color="primary" disabled={this.props.advertisement.fetchStatus === 'SAVING'} variant="contained" onClick={this.handleApprove}>{this.props.dictionary.audtiAdvertisemnt.approve}</Button>
@@ -123,6 +124,10 @@ class HeroSectionCompanyPage extends React.Component {
                                             <CardActions>
                                                 <Button fullWidth className="btn btn-brand-02 btn-rounded mb-3" color="primary" disabled={this.props.advertisement.fetchStatus === 'SAVING'} variant="contained" onClick={this.handleApprove}>{this.props.dictionary.audtiAdvertisemnt.validate}</Button>
                                             </CardActions>
+                                          :
+                                          <div className={`message-box d-block alert-warning alert`}>
+                                            {this.props.dictionary.audtiAdvertisemnt.pending}
+                                          </div>
                                         :
                                         this.props.advertisement.status === globalModels.advertisementStatusEnum.Approved ? 
                                          <div className={`message-box d-block alert-success alert`}>
@@ -153,10 +158,10 @@ class HeroSectionCompanyPage extends React.Component {
                                     </div>
 
                                     <div className="py-4 border-0 pricing-header">
-                                        <h2 className="text mb-0 color-secondary"> <ExpandableText text={this.props.advertisement.campaignName} maxChars={35} /></h2>
+                                        <h4 className="text mb-0 color-secondary"> <ExpandableText text={this.props.advertisement.campaignName} maxChars={35} /></h4>
                                     </div>
                                     <div className="price-name">
-                                         <h5 className="mb-0 text">
+                                         <h6 className="mb-0 text">
                                           {
                                             this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising &&
                                            <React.Fragment>
@@ -164,15 +169,22 @@ class HeroSectionCompanyPage extends React.Component {
                                               <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={35} />
                                            </React.Fragment>
                                           }
-                                        </h5>
+                                        </h6>
                                     </div>
                                     <div className="pricing-content">
-                                        <ul className="list-unstyled mb-4 pricing-feature-list">
-                                            <li><span>{this.props.dictionary.audtiAdvertisemnt.willBePaidWith}</span> {this.props.advertisement._campaign.productPaymentDescription}</li>
+                                            <ul className="list-unstyled mb-4 pricing-feature-list">
+                                                <li><span>{this.props.dictionary.audtiAdvertisemnt.willBePaidWith}</span> {
+                                                this.props.advertisement._campaign.paymentType === globalModels.campaignPaymentTypeEnum.Product ? this.props.advertisement._campaign.productPaymentDescription : `$${this.props.advertisement._campaign.customAdPrice}`
+                                            }</li>
                                             <li><span>{this.props.dictionary.audtiAdvertisemnt.creation} </span>{moment(this.props.advertisement.creationDt).fromNow()}</li>
                                             <li><span>{this.props.dictionary.audtiAdvertisemnt.campaignType} </span> {`${this.props.advertisement.campaignType}`}</li>
                                             <li><span>{this.props.dictionary.audtiAdvertisemnt.creatorUser}</span> {`${this.props.advertisement._person.firstName} ${this.props.advertisement._person.lastName ? this.props.advertisement._person.lastName : ''}`}</li>
                                         </ul>
+                                       { this.props.advertisement._campaign.paymentType === globalModels.campaignPaymentTypeEnum.Money &&
+                                        <div className={`message-box d-block alert-warning alert`}>
+                                          {"Este anunco se paga con dinero, por tal motivo es auditable solo por Adme"}
+                                        </div>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -253,4 +265,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HeroSectionCompanyPage));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HeroSectionAuditPage));

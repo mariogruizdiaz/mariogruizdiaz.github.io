@@ -25,6 +25,7 @@ const commandCollection = {
     [actionTypes.UPDATE_USER]: security.updatePersonPrimary,
     [actionTypes.FETCH_ADVERTISEMENT]: advertisement.fetchAdvertisementByIdAndCompanyId,
     [actionTypes.UPDATE_ADVERTISEMENT]: advertisement.updateAdvertisement,
+    [actionTypes.FETCH_ADVERTISEMENT_BY_CODE]: advertisement.fetchAdvertisementByCodeAndCompanyId,
 };
 
 export {

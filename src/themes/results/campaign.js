@@ -12,8 +12,14 @@ import { commonStatuses } from "../../state/models/common";
 import Hero404 from "../../components/HeroSection/HeroSection404";
 import { Redirect } from "react-router-dom";
 import { PermissionHelper } from '../../state/helpers/security';
+import { actionTypes } from "../../state/actionTypes";
+import * as globalModels from "influencers-models";
 
 class campaign extends Component {
+
+    componentDidMount() {
+      this.props.genericAction(actionTypes.FETCH_ADVERTISEMENTS, {[globalModels.advertisementFields.campaignId]: this.props.match.params.campaignId});
+    }
     canViewComponent() {
       const { companyId } = this.props.match.params;
       return this.props.security.authenticated && PermissionHelper.canViewComponent(this.props.security.permissions, 'CampaignComponent', companyId, this.props.security.company.id)
@@ -26,7 +32,7 @@ class campaign extends Component {
           
             <div>
                 {
-                    this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loaded &&
+                    this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loaded ?
                     <React.Fragment>
                         <HeaderTeam />
                         <div className="main">
@@ -36,9 +42,8 @@ class campaign extends Component {
                         </div>
                         <FooterAdmeBrands withoutNewsletter={true} />
                     </React.Fragment>
-                }
-                {
-                    this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loading &&
+                :
+                    this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loading ?
                     <React.Fragment>
                         <Facebook
                             foregroundColor="#9629e6"
@@ -48,8 +53,7 @@ class campaign extends Component {
                             }}
                         />
                     </React.Fragment>
-                }
-                {
+                :
                     this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.failed &&
                     <React.Fragment>
                         <HeaderTeam />
