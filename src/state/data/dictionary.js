@@ -1,3 +1,4 @@
+
 module.exports = {
     en: {
         general: {
@@ -99,6 +100,7 @@ module.exports = {
         audtiAdvertisemnt: {
           approve: 'Approve',
           reject: 'Reject',
+          pending: 'Pending advertisement',
           approvedAd: 'Approved advertisement',
           rejectedAd: 'rejected advertisement',
           brief: 'Brief',
@@ -655,11 +657,11 @@ module.exports = {
             companies: {
                 hero: {
                     title: "Launched campaigns by Brands",
-                    subtitle: "Companies usging Adme"
+                    subtitle: "Companies usging Adme",
                 },
                 items: {
                     kpis: {
-                        onGoingTitle: "Active campaigns"
+                        onGoingTitle: "Active campaigns",
                     },
                     buttons: {
                         goToCompaigns: "Go to Campaigns"
@@ -669,19 +671,64 @@ module.exports = {
             },
             company: {
                 hero: {
-                    subtitle: "Activities and results of campaings in Adme"
+                    subtitle: "Activities and results of campaings in Adme",
                 },
 
             },
             campaign: {
                 hero: {
-                    title: "Campaign Results"
+                    title: "Campaign Results", 
+                    state: "State: ",
+                    draft: "Draft",
+                    onGoing: "Active",
+                    stopped: "Stopped",
+                    finished: "Finished",
+                    typeOfCampaign: "Type of campaign: ",
+                    spot: "Spot Campaigns: In this type of campaign, brands provide the content (such as photos or videos) that social media users need to share. This content is automatically posted through the Adme platform on the users' profiles, helping to increase brand visibility through user-generated posts​​.",
+                    sponsorship: "Sponsorship Campaigns: These campaigns sponsor spontaneous moments in users' posts. Brands can leverage users' organic content that aligns with their audience and campaign goals, increasing reach and brand awareness on social media​.",
+                    advertising: "Advertising Campaigns: In this type of campaign, brands set clear guidelines for the content they expect influencers to create. Users must follow the brand’s instructions to ensure that the shared content reflects the brand’s messaging and visual identity​.",
+                    youArePayingPart1: "You are paying for each execution with ",
+                    youArePayingPart21: "money: $",
+                    youArePayingPart22: "the following product: ",
+                    youArePayingWithMoney: "This means you will compensate users with money each time they execute an advertising action through Adme. The payment is made specifically for the ad execution, meaning when the user completes the action required by your advertising campaign.",
+                    youArePayingWitProduct: "In this case, you will offer products, discounts, or other incentives instead of money. The reward will be granted for the ad execution, meaning when the user completes the action specified by your campaign through Adme. ",
+                    youArePayingFooter: "This approach ensures that users are only rewarded when the advertising action has been correctly executed and after the appropriate audit according to the type of campaign.",
+                    advertisingCampaignConditions: {
+                      title: "Advertising campaign conditions",
+                      advertising: "Your campaign is of the Advertising type, which means the necessary conditions for its execution were outlined in the brief. This document includes specific requirements to ensure that the ads created by users align with your brand’s objectives and values.",
+                      sponsorshipTitle: "In Sponsorship campaigns, although spontaneous moments shared by users are encouraged, it is essential to maintain certain quality standards to ensure that the content adequately reflects your brand. The key conditions for content approval include:",
+                      sponsorshipItem1: "Clarity and sharpness: Photos should not be blurry, shaky, or out of focus.",
+                      sponsorshipitem2: "Good lighting: Images should be well-lit to ensure that the main elements are clearly visible.",
+                      spot: "The content for this campaign was provided by your business at the time of its creation. When the user executes the ad, this content will be automatically posted on their social media. Since the user only needs to execute the campaign, they are not subject to an audit, as the photo uploaded by your brand will be automatically published on their profiles. But it is subject to validation."
+                    },
+                    brief: "Brief",
+                    money: "Money available: $",
+                    stock: "Stock available:  ",
+                    of: " of $",
+                    spend: "Spend $:",
+                    stockAvailable: "Stock available ",
+                    audit: {
+                      title: "Audit / validation",
+                      money: "Since this is a campaign that pays with money, in order for the user to receive payment, the execution must pass Adme's audit, which ensures that the content meets the requirements established in your campaign. This includes making sure that the content adheres to the quality standards and the set guidelines.",
+                      product1: "Since this is a campaign that pays with products, discounts, or other incentives instead of money.",
+                      product2: "In this type of campaign, you will be responsible for the audit, verifying that the execution meets your criteria before granting the reward.",
+                      spot: "Since this is a Spot campaign, the executions are not subject to an audit but are subject to validation."
+                    }
                 },
                 posts: {
-                    title: "Social Media Engagement",
+                    title: "List of executions",
                     post: {
                         likesLabel: "Likes",
                         commentsLabel: "Comments",
+                        shareLabel: "Shared",
+                        postsLabel: "Posts",
+                        adCode: "Advertisement code",
+                        adStatusPart1: "State: ",
+                        adStatusPart2: " audit by Adme.",
+                        auditAd: "Audit advertisement",
+                        pending: 'Pending',
+                        rejectedAd: 'Rejected',
+                        approvedAd: 'Approved',
                         seeOnSocialSection: {
                             title: "See this post on Socials"
                         },
@@ -697,6 +744,17 @@ module.exports = {
             buttons: {
                 goToCampaign: "More details",
                 goToFacebook: "See on Facebook"
+            },
+            searcher: {
+              button: "Search for advertisement to audit", 
+              title: "Search for advertisement to audit",
+              label: "Search: The code is 5 characters long",
+              search: "Search",
+              searching: "Searching...",
+              auditLabel: "This ad is paid with money, therefore it is audited exclusively by Adme",
+              auditButton: "Audit Advertisement",
+              goToAd: "See advertisement",
+              nonExistentAd: "The ad does not exist, or it does not belong to your business."
             }
         },
         investors: {
@@ -948,6 +1006,7 @@ module.exports = {
         audtiAdvertisemnt: {
           approve: 'Aprobar',
           reject: 'Rechazar',
+          pending: 'Anuncion pendiente',
           approvedAd: 'Anuncio aprobado',
           rejectedAd: 'Anuncio rechazado',
           brief: 'Instructivo',
@@ -972,8 +1031,8 @@ module.exports = {
           step1Title: 'Descargá la App',
           step1Subtitle: 'Hacé clic en el botón de arriba y comenzá a disfrutar de Adme.',
           step2Title: 'Ingresá un código de referido',
-          step2Subtitle: 'Podés copiar este código o usar el de un amigo/a si ya lo descargó antes.',
-          step3Title: 'Registraté',
+          step2Subtitle: 'Podés copiar este código o usar el de un amigo/a si ya la descargó antes.',
+          step3Title: 'Registrate',
           step3Subtitle: 'Completa la información necesaria para que podamos ofrecerte campañas que se ajusten a tu perfil.',
           step4Title: 'Linkea tus redes sociales',
           step4Subtitle: 'Para publicar en ellas el contenido que desees, de forma automática mediante Adme.',
@@ -1521,13 +1580,58 @@ module.exports = {
             },
             campaign: {
                 hero: {
-                    title: "Resultados de la campaña"
+                    title: "Resultados de la campaña",
+                    state: "estado: ",
+                    draft: "Borrador",
+                    onGoing: "Activa",
+                    stopped: "Pausada",
+                    finished: "Finalizada",
+                    typeOfCampaign: "Tipo de campaña: ",
+                    spot: "Campañas Spot: En este tipo de campaña, las marcas proporcionan directamente el contenido (como fotos o videos) que los usuarios de redes sociales deben compartir. Este contenido se publica automáticamente a través de la plataforma de Adme en los perfiles de los usuarios, ayudando a aumentar la visibilidad de la marca mediante publicaciones generadas por los usuarios​​.",
+                    sponsorship: "Campañas de Sponsorship (Patrocinio): Estas campañas patrocinan momentos espontáneos en las publicaciones de los usuarios. Las marcas pueden aprovechar el contenido orgánico de los usuarios que coincide con su audiencia y objetivos de campaña, aumentando así su alcance y reconocimiento en redes sociales​.",
+                    advertising: "Campañas de Advertising (Publicidad): En este tipo de campaña, las marcas establecen directrices claras sobre el contenido que esperan que los influencers creen. Los usuarios deben seguir las instrucciones de la marca para asegurar que el contenido compartido refleje los mensajes y la identidad visual que busca la campaña​.",
+                    youArePayingPart1: "Estas pagando cada ejecucion con ",
+                    youArePayingPart21: "dinero: $",
+                    youArePayingPart22: "el siguiente producto: ",
+                    youArePayingWithMoney: "Esto significa que compensarás a los usuarios con dinero cada vez que ejecuten una acción publicitaria a través de Adme. El pago se realiza específicamente por la ejecución del anuncio, es decir, cuando el usuario completa la acción requerida por tu campaña publicitaria.",
+                    youArePayingWitProduct: "En este caso, ofrecerás productos, descuentos u otros incentivos en lugar de dinero. La recompensa se otorgará por la ejecución del anuncio, es decir, cuando el usuario cumple con la acción especificada por tu campaña a través de Adme.",
+                    youArePayingFooter: "Este enfoque garantiza que los usuarios solo sean recompensados cuando la acción publicitaria se haya ejecutado correctamente y después de la auditoría correspondiente según el tipo de campaña.",
+                    advertisingCampaignConditions: {
+                      title: "Condiciones de la campaña",
+                      advertising: "Tu campaña es de tipo Advertising, por lo que las condiciones necesarias para su ejecución fueron descritas en el brief. Este documento se completó con los requisitos específicos que aseguran que los anuncios creados por los usuarios se alineen con los objetivos y valores de tu marca. ",
+                      sponsorshipTitle: "En las campañas de tipo Sponsorship, aunque se promueven momentos espontáneos compartidos por los usuarios, es fundamental mantener ciertos estándares de calidad para que el contenido refleje adecuadamente a tu marca. Las condiciones clave para la aprobación de estos contenidos incluyen:",
+                      sponsorshipItem1: "Claridad y nitidez: Las fotos no deben estar borrosas, movidas ni desenfocadas.",
+                      sponsorshipitem2: "Buena iluminación: Las imágenes deben estar bien iluminadas para asegurar que los elementos principales sean claramente visibles.",
+                      spot: "El contenido de esta campaña fue proporcionado por tu negocio al momento de su creación. Cuando el usuario ejecuta el anuncio, este contenido se publicará automáticamente en sus redes sociales. Dado que el usuario solo necesita realizar la ejecución de la campaña, no está sujeto a auditoría, ya que la foto cargada por tu marca se publicará de manera automática en sus perfiles. Pero si esta sujeto a validacion."
+                    },
+                    brief: "Intrucciones (Brief)",
+                    money: "Dinero disponible: $",
+                    stock: "Stock Disponible: ",
+                    of: " de $",
+                    spend: "Gastaste $:",
+                    stockAvailable: "Stock disponible ",
+                    audit: {
+                      title: "Auditoria / validación",
+                      money: "Dado que esta es una campaña que paga con dinero, para que el usuario reciba el cobro, la ejecución debe pasar la auditoría de Adme, la cual se encarga de verificar que el contenido cumple con los requisitos establecidos en tu campaña. Esto incluye asegurarse de que el contenido respete los estándares de calidad y las directrices establecidas.",
+                      product1: "Dado que esta es una campaña que paga con productos, descuentos u otros incentivos en lugar de dinero.",
+                      product2: "En este tipo de campaña, tú serás responsable de la auditoría, verificando que la ejecución cumple con tus criterios antes de otorgar la recompensa.",
+                      spot: "Al ser una campaña de tipo Spot, las ejecuciones no están sujetas a auditoría, pero sí están sujetas a validación."
+                    }
                 },
                 posts: {
-                    title: "Presencia en Redes Sociales",
+                    title: "Listado de ejecuciones",
                     post: {
                         likesLabel: "Me gusta",
                         commentsLabel: "Comentarios",
+                        shareLabel: "Compartido",
+                        postsLabel: "Posts",
+                        adCode: "Código del anuncio",
+                        adStatusPart1: "Estado: ",
+                        adStatusPart2: " de auditoria por Adme.",
+                        auditAd: "Auditar Anuncio",
+                        pending: 'Pendiente',
+                        rejectedAd: 'Rechazado',
+                        approvedAd: 'Aprobado',
                         seeOnSocialSection: {
                             title: "Ver el post en las redes"
                         },
@@ -1543,6 +1647,17 @@ module.exports = {
             buttons: {
                 goToCampaign: "Ver detalles",
                 goToFacebook: "Ver en Facebook"
+            },
+            searcher: {
+              button: "Buscar anuncio para auditar",
+              title: "Buscar anuncio para auditar",
+              label: "Buscar: El codigo es de 5 caracteres",
+              search: "Buscar",
+              searching: "Buscando...",
+              auditLabel: "Este anunco se paga con dinero, por tal motivo es auditable solo por Adme",
+              auditButton: "Auditar Anuncio",
+              goToAd: "Ver anuncio",
+              nonExistentAd: "El anuncio no existe, o no pertenece a tu negocio."
             }
         },
         investors: {

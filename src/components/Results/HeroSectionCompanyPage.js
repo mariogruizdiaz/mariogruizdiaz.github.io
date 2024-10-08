@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import ImageLoader from "../Loaders/ImageLoader";
+import SearchModal from "../../state/helpers/searchModalAdvertisement";
 
 class HeroSectionCompanyPage extends React.Component {
     constructor(props) {
@@ -23,6 +24,7 @@ class HeroSectionCompanyPage extends React.Component {
                 <section className="position-relative feature-section ptb-100 bg-image" image-overlay="9">
                   <div className="background-image-wraper" style={{ backgroundImage: "url(assets/img/cta-bg.jpg)", opacity: 1 }}></div>
                     <div className="container">
+                      <div className="row justify-content-center"><SearchModal /></div>
                         <div className="row align-items-center justify-content-between">
                             
                             <div className="col-md-12 col-lg-6">
@@ -34,25 +36,25 @@ class HeroSectionCompanyPage extends React.Component {
                                     <div className="col-sm-6 col-md-6 col-lg-3">
                                         <div className="text-white p-2 count-data text-center my-3">
                                             <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsOnGoingCount}</h3>
-                                            <span>Active</span>
+                                            <span>{this.props.dictionary.results.campaign.hero.onGoing}</span>
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-3">
                                         <div className="text-white p-2 count-data text-center my-3">
                                             <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsStoppedCount}</h3>
-                                            <span>Finished</span>
+                                            <span>{this.props.dictionary.results.campaign.hero.finished}</span>
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-3">
                                         <div className="text-white p-2 count-data text-center my-3">
                                             <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsFinishedCount}</h3>
-                                            <span>Stopped</span>
+                                            <span>{this.props.dictionary.results.campaign.hero.stopped}</span>
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-3">
                                         <div className="text-white p-2 count-data text-center my-3">
                                             <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsDraftCount}</h3>
-                                            <span>Draft</span>
+                                            <span>{this.props.dictionary.results.campaign.hero.draft}</span>
                                         </div>
                                     </div>
                                   </div>

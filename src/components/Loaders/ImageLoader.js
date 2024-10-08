@@ -9,25 +9,34 @@ class ImageLoader extends Component {
             imageLoaded: false,
             isPortrait: false,
         };
+        this._isMounted = false; // Variable para controlar si el componente está montado
     }
 
     componentDidMount() {
+        this._isMounted = true; // Marca el componente como montado
         const img = new Image();
         img.src = this.props.source;
         img.onload = () => {
-            const isPortrait = img.height > img.width;
-            this.setState({
-                isPortrait: isPortrait,
-                imageLoaded: true,
-            });
+            if (this._isMounted) { // Solo actualiza el estado si el componente sigue montado
+                const isPortrait = img.height > img.width;
+                this.setState({
+                    isPortrait: isPortrait,
+                    imageLoaded: true,
+                });
+            }
         };
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false; // Marca el componente como desmontado
     }
 
     render() {
         const { source, alt, maxWidth, color, secondaryColor } = this.props;
         const { imageLoaded } = this.state;
 
-        const styles = maxWidth === 100 ? {maxWidth: "100px", maxHeight: "100px",  width: "100%", height: "auto", "padding-top": "30%"} : { maxWidth: "500px", maxHeight: "500px", width: "100%", height: "auto", position: "relative" }
+        const styles = maxWidth === 100 ? {maxWidth: "100px", maxHeight: "100px",  width: "100%", height: "auto", paddingTop: "30%"} : { maxWidth: "500px", maxHeight: "500px", width: "100%", height: "auto", position: "relative" };
+        
         return (
             <div style={styles} className={`imageLoader`}>
                 {!imageLoaded && (
