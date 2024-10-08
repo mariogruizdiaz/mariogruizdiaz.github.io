@@ -56,7 +56,19 @@ import Download from "../themes/download";
 class Routes extends React.PureComponent {
     componentDidMount() {
         this.props.genericAction(actionTypes.FETCH_API_REFERENCES, {});
+        this.checkAndClearLocalStorage(); 
     }
+
+    checkAndClearLocalStorage = () => {
+      const currentVersion = "v1.2";  // Cambia este valor cuando hagas cambios importantes
+      const storedVersion = localStorage.getItem('dictionaryVersion')
+      if (storedVersion !== currentVersion) {
+          localStorage.clear();  // Borra todo el localStorage si la versión no coincide
+          localStorage.setItem('dictionaryVersion', currentVersion);  // Guarda la nueva versión
+          window.location.reload();  // Recarga la página para aplicar los cambios
+      }
+    };
+
   render() {
     return (
       <React.Fragment>

@@ -14,13 +14,6 @@ import { SnackbarProvider } from './components/Toast/SnackbarContext';
 // then run the saga
 sagaMiddleware.run(mySaga);
 
-// create store
-// const store = createStore(
-//   Apdash,
-//   composeWithDevTools()
-//   // applyMiddleware(...middleware),
-//   // other store enhancers if any
-// );
 
 function App() {
     return (
