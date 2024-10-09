@@ -12,16 +12,27 @@ sagaMiddleware.run(mySaga);
 function App() {
 
     // Función para revisar y limpiar el localStorage si es necesario
-    const checkAndClearLocalStorage = () => {
-        const currentVersion = "v1.3";  // Cambia este valor cuando hagas cambios importantes
+    const checkAndClearLocalStorage = async () => {
+        const currentVersion = "v1.6";  // Cambia este valor cuando hagas cambios importantes
         const storedVersion = localStorage.getItem('dictionaryVersion');
         
-        // Si la versión almacenada no coincide con la actual, limpia el localStorage
         if (storedVersion !== currentVersion) {
-            console.log("Version mismatch. Clearing localStorage...");
-            localStorage.clear();  // Borra todo el localStorage si la versión no coincide
-            localStorage.setItem('dictionaryVersion', currentVersion);  // Guarda la nueva versión
-            window.location.reload();  // Recarga la página para aplicar los cambios
+            // Pausar la persistencia
+            persistor.pause();
+
+            // Purga del estado persistido
+            await persistor.purge();
+
+            // Limpia el localStorage manualmente
+            localStorage.clear();
+
+            // Guarda la nueva versión en localStorage
+            localStorage.setItem('dictionaryVersion', currentVersion);
+
+            persistor.persist();
+
+            // Despachar una acción de Redux que actualice el estado y fuerce la actualización de componentes
+            store.dispatch({ type: 'RESET_STATE_AFTER_PURGE' });
         }
     };
 

@@ -7,11 +7,22 @@ import security from "./security";
 import termsAndConditions from "./termsAndConditions";
 import advertisement from "./advertisement";
 
-export default combineReducers({
+const appReducer = combineReducers({
     basics,
     companies,
     i18n,
     security,
     termsAndConditions,
-    advertisement
+    advertisement,
 });
+
+// Define un `rootReducer` que maneja la acción de reinicio globalmente
+const rootReducer = (state, action) => {
+    if (action.type === 'RESET_STATE_AFTER_PURGE') {
+        // Resetea todo el estado a `undefined` para reiniciar todos los reducers
+        state = undefined;
+    }
+    return appReducer(state, action);
+};
+
+export default rootReducer;
