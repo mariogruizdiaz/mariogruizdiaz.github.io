@@ -44,7 +44,7 @@ class SearchModal extends Component {
     // Ejecutar búsqueda dentro del modal
     handleModalSearch = () => {
         const { modalSearchQuery } = this.state;
-        if (modalSearchQuery && modalSearchQuery.length === 5) {
+        if (modalSearchQuery && modalSearchQuery.length === 8) {
             this.setState({modalSearchQueryError: false})
             this.props.genericAction(actionTypes.FETCH_ADVERTISEMENT_BY_CODE, {
                 captionIdentifier: modalSearchQuery.toUpperCase(),
@@ -58,12 +58,12 @@ class SearchModal extends Component {
     // Manejar presionar "Enter" en el input de búsqueda
     handleKeyPress = (event) => {
         if (event.key === 'Enter') {
-          if (this.state.modalSearchQuery.length === 5) {
+          if (this.state.modalSearchQuery.length === 8) {
             this.setState({modalSearchQueryError: false})
             this.handleModalSearch();
           } else this.setState({modalSearchQueryError: true})
         }
-        this.state.modalSearchQuery.length === 5 && this.setState({modalSearchQueryError: false});
+        this.state.modalSearchQuery.length === 8 && this.setState({modalSearchQueryError: false});
     };
 
     render() {
@@ -97,7 +97,7 @@ class SearchModal extends Component {
                                 label={this.props.dictionary.results.searcher.label}
                                 variant="outlined"
                                 fullWidth
-                                inputProps={{ maxLength: 5, minLength: 5 }}
+                                inputProps={{ maxLength: 8, minLength: 8 }}
                                 value={modalSearchQuery.toUpperCase()}
                                 error={this.state.modalSearchQueryError}
                                 onChange={(e) => this.setState({ modalSearchQuery: e.target.value })}
