@@ -180,14 +180,15 @@ class HeroSectionCampaignPage extends React.Component {
                                           <h6 className="mb-0 d-inline-block">{this.props.dictionary.results.campaign.hero.audit.title}</h6>
                                       </a>
                                       <div id="collapse5" className="collapse " data-parent="#accordion">
-                                        {this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Spot ?
-                                          <div className="card-body white-bg">
-                                              <p>{this.props.dictionary.results.campaign.hero.audit.spot}</p>
-                                          </div>
-                                        :
+                                        {
                                         this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ?
                                           <div className="card-body white-bg">
                                               <p>{this.props.dictionary.results.campaign.hero.audit.money}</p>
+                                          </div>
+                                        :
+                                        this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Spot ?
+                                          <div className="card-body white-bg">
+                                              <p>{this.props.dictionary.results.campaign.hero.audit.spot}</p>
                                           </div>
                                         :
                                         this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Product &&
