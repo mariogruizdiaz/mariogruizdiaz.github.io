@@ -13,7 +13,7 @@ function App() {
 
     // Función para revisar y limpiar el localStorage si es necesario
     const checkAndClearLocalStorage = () => {
-        const currentVersion = "v1.2";  // Cambia este valor cuando hagas cambios importantes
+        const currentVersion = "v1.3";  // Cambia este valor cuando hagas cambios importantes
         const storedVersion = localStorage.getItem('dictionaryVersion');
         
         // Si la versión almacenada no coincide con la actual, limpia el localStorage
