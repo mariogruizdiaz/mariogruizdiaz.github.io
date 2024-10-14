@@ -717,6 +717,8 @@ module.exports = {
                 },
                 posts: {
                     title: "List of executions",
+                    refresh: "Refresh list",
+                    refreshDescription: "If you have audited, refresh to update the statuses.",
                     post: {
                         likesLabel: "Likes",
                         commentsLabel: "Comments",
@@ -1620,6 +1622,8 @@ module.exports = {
                 },
                 posts: {
                     title: "Listado de ejecuciones",
+                    refresh: "Actualizar lista",
+                    refreshDescription: "Si has auditado, refresca para actualizar los estados.",
                     post: {
                         likesLabel: "Me gusta",
                         commentsLabel: "Comentarios",

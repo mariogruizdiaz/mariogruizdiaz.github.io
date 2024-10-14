@@ -18,6 +18,10 @@ import * as globalModels from "influencers-models";
 class campaign extends Component {
 
     componentDidMount() {
+      this.fetchData();
+    }
+
+    fetchData() {
       this.props.genericAction(actionTypes.FETCH_ADVERTISEMENTS, {[globalModels.advertisementFields.campaignId]: this.props.match.params.campaignId});
     }
     canViewComponent() {
@@ -38,7 +42,7 @@ class campaign extends Component {
                         <div className="main">
                             <Hero pageTitle={"Blog No Sidebar"} />
                             <Breadcrumb name={"Blog No Sidebar"} />
-                            <AdvertisementsGrid isWhite={false}/>
+                            <AdvertisementsGrid isWhite={false} fetchData={()=>this.fetchData()}/>
                         </div>
                         <FooterAdmeBrands withoutNewsletter={true} />
                     </React.Fragment>

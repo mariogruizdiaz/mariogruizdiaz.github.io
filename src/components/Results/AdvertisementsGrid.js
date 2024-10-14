@@ -4,6 +4,7 @@ import { genericAction } from "../../state/actions";
 import { bindActionCreators } from "redux";
 import * as globalModels from "influencers-models";
 import Advertisement from "./Advertisement";
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 class AdvertisementsGrid extends Component {
     constructor(props) {
@@ -23,6 +24,13 @@ class AdvertisementsGrid extends Component {
                             <div className="col-md-9 col-lg-12">
                                 <div className="section-heading text-center mb-4">
                                     <h2>{this.props.dictionary.results.campaign.posts.title}</h2>
+                                    <div className="mb-sm-0 mb-md-3 mb-lg-3">
+                                    <RefreshIcon style={{ cursor: 'pointer' }} onClick={this.props.fetchData} fontSize="large" className="color-secondary mr-4"></RefreshIcon>
+                                    <div className="icon-text">
+                                        <h5 className="mb-2">{this.props.dictionary.results.campaign.posts.refresh}</h5>
+                                        <p>{this.props.dictionary.results.campaign.posts.refreshDescription}</p>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
