@@ -85,7 +85,7 @@ class Feature extends React.Component {
                                     <ContentCopyIcon fontSize="large" className="color-secondary mr-4"></ContentCopyIcon>
                                     <div className="icon-text">
                                         <h5 className="mb-2">{this.props.dictionary.download.step2Title}</h5>
-                                        <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
+                                        <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p>
                                         <p>{this.props.dictionary.download.step2Subtitle}</p>
                                     </div>
                                 </div>
