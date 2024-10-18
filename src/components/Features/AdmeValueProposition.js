@@ -131,7 +131,7 @@ class AdmeValueProposition extends React.Component {
                                     <CreditScoreIcon fontSize="large" className="color-secondary mr-4" />
                                     
                                     <div className="icon-text">
-                                        <h5 className="mb-2">{this.props.dictionary.brands.valueProposition.step5Title}</h5>
+                                        <h5 className="mb-2">{this.props.dictionary.brands.valueProposition.step6Title}</h5>
                                         <p><CardGiftcardIcon fontSize="large" className="color-primary mr-4" />
                                           <MonetizationOnIcon fontSize="large" className="color-primary mr-4" /></p>
                                         <p>{this.props.dictionary.brands.valueProposition.step6Subtitle}</p>
