@@ -89,7 +89,7 @@ class HeroSectionCampaignPage extends React.Component {
                                           </div>}
                                           {this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Sponsorship &&
                                           <div className="card-body white-bg">
-                                              <p>{this.props.dictionary.results.campaign.hero.Sponsorship} </p>
+                                              <p>{this.props.dictionary.results.campaign.hero.sponsorship} </p>
                                           </div>}
                                           {this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Advertising &&
                                           <div className="card-body white-bg">
@@ -116,6 +116,18 @@ class HeroSectionCampaignPage extends React.Component {
                                         
                                       </div>
                                   </div>
+                                  {this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Advertising &&
+                                      <div className="card my-3">
+                                        <a className="card-header collapsed" data-toggle="collapse" href="#collapse3" aria-expanded="false">
+                                            <h6 className="mb-0 d-inline-block">{this.props.dictionary.results.campaign.hero.brief}</h6>
+                                        </a>
+                                        <div id="collapse3" className="collapse " data-parent="#accordion">
+                                            <div className="card-body white-bg">
+                                                  <p>{this.props.selectedCampaign.brief}</p>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    }
                                   <div className="card my-3">
                                       <a className="card-header collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false">
                                           <h6 className="mb-0 d-inline-block">{this.props.dictionary.results.campaign.hero.advertisingCampaignConditions.title}</h6>
@@ -140,18 +152,7 @@ class HeroSectionCampaignPage extends React.Component {
                                           </div>
                                       </div>
                                   </div>
-                                    {this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Advertising &&
-                                      <div className="card my-3">
-                                        <a className="card-header collapsed" data-toggle="collapse" href="#collapse3" aria-expanded="false">
-                                            <h6 className="mb-0 d-inline-block">{this.props.dictionary.results.campaign.hero.brief}</h6>
-                                        </a>
-                                        <div id="collapse3" className="collapse " data-parent="#accordion">
-                                            <div className="card-body white-bg">
-                                                  <p>{this.props.selectedCampaign.brief}</p>
-                                            </div>
-                                        </div>
-                                      </div>
-                                    }
+                                    
                                   <div className="card mt-3">
                                       <a className="card-header collapsed" data-toggle="collapse" href="#collapse4" aria-expanded="false">
                                           <h6 className="mb-0 d-inline-block">
@@ -194,7 +195,7 @@ class HeroSectionCampaignPage extends React.Component {
                                         this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Product &&
                                           <div className="card-body white-bg">
                                               <p>{this.props.dictionary.results.campaign.hero.audit.product1} </p>
-                                              <p>{this.props.dictionary.results.campaign.hero.audit.product2}</p>
+                                              {/* <p>{this.props.dictionary.results.campaign.hero.audit.product2}</p> */}
                                           </div>
                                         }
                                       </div>
