@@ -84,7 +84,7 @@ class CampaignsGrid extends Component {
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <p className="card-text">{`Creacion: ${moment(campaignItem[globalModels.campaignFields.startDt]).format('l')}`}</p>
+                                                    <p className="card-text">{`Creación: ${moment(campaignItem[globalModels.campaignFields.startDt]).format('l')}`}</p>
                                                     <a href='/' onClick={(e) => this.handleClick(e, campaignItem._id)} className="detail-link">{this.props.dictionary.results.buttons.goToCampaign} <span className="ti-arrow-right"></span></a>
                                                 </div>
                                             </div>

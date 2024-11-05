@@ -32,7 +32,7 @@
     "uuid": "10.0.0"
   },
   "scripts": {
-    "start": "cross-env PUBLIC_URL=/ && npm run build && PUBLIC_URL=/ react-scripts start",
+    "start": "cross-env PUBLIC_URL=/ npm run build && cross-env PUBLIC_URL=/ react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "env": "cross-env PUBLIC_URL=/tr echo $PUBLIC_URL",
