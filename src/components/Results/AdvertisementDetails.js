@@ -42,30 +42,33 @@ class AdvertisementDetails extends Component {
 
         return (
           <React.Fragment>
-                        <div className="feature-contents">
+                        {/* <div className="feature-contents">
                             <div className="row align-items-center justify-content-between justify-content-sm-center justify-content-md-center">
                                 <div className="col-4 col-lg-3">
                                     <div className="count-data text-center">
-                                        <h4 className="count-number mb-0 color-primary font-weight-bold">{this.props.ad.likeCount}</h4>
-                                        <span>{this.props.dictionary.results.campaign.posts.post.likesLabel}</span>
+                                        <h5 className="count-number text-left mb-0 color-primary font-weight-bold">{this.props.ad.likeCount}</h5>
+                                        <span className="text-left" >{this.props.dictionary.results.campaign.posts.post.likesLabel}</span>
                                     </div>
                                 </div>
                                 <div className="col-4 col-lg-3">
                                     <div className="count-data text-center">
-                                        <h4 className="count-number mb-0 color-primary font-weight-bold">{this.props.ad.commentCount}</h4>
+                                        <h5 className="count-number text-left mb-0 color-primary font-weight-bold">{this.props.ad.commentCount}</h5>
                                         <span>{this.props.dictionary.results.campaign.posts.post.commentsLabel}</span>
                                     </div>
                                 </div>
                                 <div className="col-4 col-lg-3">
                                     <div className="count-data text-center">
-                                        <h4 className="count-number mb-0 color-primary font-weight-bold">{this.props.ad.sharedCount}</h4>
+                                        <h5 className="count-number text-left mb-0 color-primary font-weight-bold">{this.props.ad.sharedCount}</h5>
                                         <span>{this.props.dictionary.results.campaign.posts.post.shareLabel}</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
             <div className="pricing-content">
                 <ul className="list-unstyled pricing-feature-list">
+                  <li><span>{this.props.dictionary.results.campaign.posts.post.likesLabel}</span> {this.props.ad.likeCount}</li>
+                    <li><span>{this.props.dictionary.results.campaign.posts.post.commentsLabel}</span> {this.props.ad.commentCount}</li>
+                    <li><span>{this.props.dictionary.results.campaign.posts.post.shareLabel}</span> {this.props.ad.sharedCount}</li>
                     <li><span>{this.props.dictionary.audtiAdvertisemnt.creation} </span>{moment(this.props.ad.creationDt).fromNow()}</li>
                     <li><span>{this.props.dictionary.audtiAdvertisemnt.creatorUser}</span> {`${this.props.ad._person.firstName} ${this.props.ad._person.lastName ? this.props.ad._person.lastName : ''}`}</li>
                     <li><span>{this.props.dictionary.results.campaign.posts.post.adCode}</span><span className="h4 adCode"> {` ${this.props.ad.captionIdentifier}`}</span> </li>

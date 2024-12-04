@@ -702,9 +702,9 @@ module.exports = {
                       spot: "The content for this campaign was provided by your business at the time of its creation. When the user executes the ad, this content will be automatically posted on their social media. Since the user only needs to execute the campaign, they are not subject to an audit, as the photo uploaded by your brand will be automatically published on their profiles. But it is subject to validation."
                     },
                     brief: "Brief",
-                    money: "Available money: $",
+                    money: "Available money: ",
                     stock: "Stock of rewards :  ",
-                    of: " of $",
+                    of: " of ",
                     spend: "Spend: ",
                     stockAvailable: "Stock of rewards ",
                     audit: {
@@ -1607,9 +1607,9 @@ module.exports = {
                       spot: "El contenido de esta campaña fue proporcionado por tu negocio al momento de su creación. Cuando el usuario ejecuta el anuncio, este contenido se publicará automáticamente en sus redes sociales. Dado que el usuario solo necesita realizar la ejecución de la campaña, no está sujeto a auditoría, ya que la foto cargada por tu marca se publicará de manera automática en sus perfiles. Pero si esta sujeto a validacion."
                     },
                     brief: "Intrucciones (Brief)",
-                    money: "Dinero disponible: $",
+                    money: "Dinero disponible: ",
                     stock: "Stock disponible: ",
-                    of: " de $",
+                    of: " de ",
                     spend: "Gastaste: ",
                     stockAvailable: "Stock disponible ",
                     audit: {

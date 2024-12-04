@@ -53,10 +53,10 @@ class PromoSection extends React.Component {
         let companyName = this.props.security.company?.name;
         let cellPhone = this.props.security.company?.cellPhone;
         fullName += `El comercio que agregue es: ${companyName}. Y el celular que agregue de contacto es: ${cellPhone}`;
-        if (this.props.companies.selectedCompany.campaigns.items.length) window.open(`https://api.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20cree%20alguna%20campa%C3%B1a%20junto%20a%20Adme%2C%20me%20gustar%C3%ADa%20crear%20otra.%20Muchas%20gracias.${fullName}`, "_blank");
-        else window.open(`https://api.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20agregue%20mi%20comercio%2C%20estoy%20listo%20para%20que%20creemos%20juntos%20mi%20primer%20campa%C3%B1a.%20Quedo%20a%20la%20espera.${fullName}`, "_blank");
-      } else window.open(`https://api.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20tengo%20mi%20usuario%20pero%20aun%20no%20agregue%20mi%20comercio%2C%20me%20podr%C3%ADan%20dar%20soporte.%20Quedo%20a%20la%20espera.${fullName}`, "_blank");
-    } else window.open(`https://api.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20no%20cree%20aun%20mi%20usuario%20ni%20agregue%20mi%20comercio%2C%20podr%C3%ADan%20darme%20soporte.%20Quedo%20a%20la%20espera.`, "_blank");
+        if (this.props.companies.selectedCompany.campaigns.items.length) window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20cree%20alguna%20campa%C3%B1a%20junto%20a%20Adme%2C%20me%20gustar%C3%ADa%20crear%20otra.%20Muchas%20gracias.${fullName}`, "_blank");
+        else window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20agregue%20mi%20comercio%2C%20estoy%20listo%20para%20que%20creemos%20juntos%20mi%20primer%20campa%C3%B1a.%20Quedo%20a%20la%20espera.${fullName}`, "_blank");
+      } else window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20tengo%20mi%20usuario%20pero%20aun%20no%20agregue%20mi%20comercio%2C%20me%20podr%C3%ADan%20dar%20soporte.%20Quedo%20a%20la%20espera.${fullName}`, "_blank");
+    } else window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20no%20cree%20aun%20mi%20usuario%20ni%20agregue%20mi%20comercio%2C%20podr%C3%ADan%20darme%20soporte.%20Quedo%20a%20la%20espera.`, "_blank");
 
   }
 

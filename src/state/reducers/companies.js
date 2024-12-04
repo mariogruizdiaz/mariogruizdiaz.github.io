@@ -109,12 +109,16 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.FETCH_CAMPAIGNS_SUCCESS: {
+            const filteredCampaigns = action.payload.data.filter(
+              (campaign) => campaign.status !== globalModels.campaignStatusEnum.PreDraft && campaign.status !== globalModels.campaignStatusEnum.Draft
+            );
+
             return {
                 ...state,
                 selectedCompany: {
                     ...state.selectedCompany,
                     campaigns: {
-                        items: action.payload.data,
+                        items: filteredCampaigns,
                         pageIndex: -1,
                         fetchStatus: commonStatuses.loaded,
                         fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],

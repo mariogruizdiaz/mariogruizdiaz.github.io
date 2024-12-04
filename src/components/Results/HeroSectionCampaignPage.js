@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import * as globalModels from "influencers-models";
 import SearchModal from "../../state/helpers/searchModalAdvertisement";
+import MoneyFormatter from "../../state/helpers/moneyFormatter";
 
 class HeroSectionCampaignPage extends React.Component {
     constructor(props) {
@@ -155,25 +156,53 @@ class HeroSectionCampaignPage extends React.Component {
                                     
                                   <div className="card mt-3">
                                       <a className="card-header collapsed" data-toggle="collapse" href="#collapse4" aria-expanded="false">
-                                          <h6 className="mb-0 d-inline-block">
+
+                                          {this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ?
+                                            <h6 className="mb-0 d-inline-block">
                                             {
-                                            this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ?
-                                            `${this.props.dictionary.results.campaign.hero.money} ${this.props.selectedCampaign.budgetAvailable} ${this.props.dictionary.results.campaign.hero.of}${this.props.selectedCampaign.investment}`
-                                            :
-                                            `${this.props.dictionary.results.campaign.hero.stock} ${this.props.selectedCampaign.stock}`
+                                            `${this.props.dictionary.results.campaign.hero.money}`
                                             }
-                                            
+                                           
+                                            <MoneyFormatter
+                                              value={this.props.selectedCampaign.budgetAvailable}
+                                              country="ARS"
+                                              locale="es-AR"
+                                            />
+                                            {`${this.props.dictionary.results.campaign.hero.of}`}
+                                             <MoneyFormatter
+                                              value={this.props.selectedCampaign.investment}
+                                              country="ARS"
+                                              locale="es-AR"
+                                            />
                                             </h6>
+                                            :
+                                            <h6 className="mb-0 d-inline-block">
+                                              {`${this.props.dictionary.results.campaign.hero.stock} ${this.props.selectedCampaign.stock}`}
+                                            </h6>
+                                            }
                                       </a>
                                       <div id="collapse4" className="collapse " data-parent="#accordion">
-                                          <div className="card-body white-bg">
-                                              {
-                                            this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ?
-                                            `${this.props.dictionary.results.campaign.hero.spend}${this.props.selectedCampaign.budgetSpent}${this.props.dictionary.results.campaign.hero.of}${this.props.selectedCampaign.investment}`
-                                            :
-                                            `${this.props.dictionary.results.campaign.hero.stockAvailable}${this.props.selectedCampaign.stock}`
-                                            }
-                                          </div>
+                                          {this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ?
+                                            <div className="card-body white-bg">
+                                              {`${this.props.dictionary.results.campaign.hero.spend}`}
+                                               <MoneyFormatter
+                                                value={this.props.selectedCampaign.budgetSpent}
+                                                country="ARS"
+                                                locale="es-AR"
+                                              />
+                                              {`${this.props.dictionary.results.campaign.hero.of}`}
+                                              
+                                               <MoneyFormatter
+                                                value={this.props.selectedCampaign.investment}
+                                                country="ARS"
+                                                locale="es-AR"
+                                              />
+                                            </div>
+                                          : 
+                                            <div className="card-body white-bg">
+                                              {`${this.props.dictionary.results.campaign.hero.stockAvailable}${this.props.selectedCampaign.stock}`}
+                                            </div>
+                                          }
                                       </div>
                                   </div>
                                   <div className="card my-3">
