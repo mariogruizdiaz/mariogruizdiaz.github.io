@@ -36,34 +36,52 @@ class campaign extends Component {
           
             <div>
                 {
-                    this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loaded ?
+                  this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.failed ?
+                    <React.Fragment>
+                        <HeaderTeam />
+                        <Hero404 />
+                    </React.Fragment>
+                :
+                    // this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loaded ?
                     <React.Fragment>
                         <HeaderTeam />
                         <div className="main">
                             <Hero pageTitle={"Blog No Sidebar"} />
                             <Breadcrumb name={"Blog No Sidebar"} />
+                            {this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loaded ?
                             <AdvertisementsGrid isWhite={false} fetchData={()=>this.fetchData()}/>
+                            :
+                            this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loading ?
+                            <React.Fragment>
+                                <Facebook
+                                    foregroundColor="#9629e6"
+                                    backgroundColor="#bf00dc"
+                                    style={{
+                                        margin: "5%"
+                                    }}
+                                />
+                            </React.Fragment>
+                            :
+                            null
+                            }
+                            
                         </div>
                         <FooterAdmeBrands withoutNewsletter={true} />
                     </React.Fragment>
-                :
-                    this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loading ?
-                    <React.Fragment>
-                        <Facebook
-                            foregroundColor="#9629e6"
-                            backgroundColor="#bf00dc"
-                            style={{
-                                margin: "5%"
-                            }}
-                        />
-                    </React.Fragment>
-                :
-                    this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.failed &&
-                    <React.Fragment>
-                        <HeaderTeam />
-                        <Hero404 />
-                    </React.Fragment>
-                }
+                // :
+                //     this.props.selectedCampaign.advertisements.fetchStatus === commonStatuses.loading ?
+                //     <React.Fragment>
+                //         <Facebook
+                //             foregroundColor="#9629e6"
+                //             backgroundColor="#bf00dc"
+                //             style={{
+                //                 margin: "5%"
+                //             }}
+                //         />
+                //     </React.Fragment>
+                //:
+                          }
+                    
             </div>
 
         );

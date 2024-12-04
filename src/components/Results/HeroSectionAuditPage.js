@@ -115,7 +115,7 @@ class HeroSectionAuditPage extends React.Component {
                                       {
                                         [globalModels.advertisementStatusEnum.WaitingForCustomerAudit, globalModels.advertisementStatusEnum.WaitingForPlatformAudit].includes(this.props.advertisement.status) ?
                                         this.props.advertisement._campaign.paymentType === globalModels.campaignPaymentTypeEnum.Product ?  
-                                          this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising ?
+                                        [globalModels.campaignTypeEnum.Advertising, globalModels.campaignTypeEnum.Sponsorship].includes(this.props.advertisement.campaignType) ?
                                             <CardActions>
                                                 <Button fullWidth className="btn btn-brand-02 btn-rounded mb-3" color="primary" disabled={this.props.advertisement.fetchStatus === 'SAVING'} variant="contained" onClick={this.handleApprove}>{this.props.dictionary.audtiAdvertisemnt.approve}</Button>
                                                 <Button fullWidth className="btn btn-outline-brand-02 btn-rounded mb-3" color="error" disabled={this.props.advertisement.fetchStatus === 'SAVING'} variant="contained" onClick={this.handleDecline}>{this.props.dictionary.audtiAdvertisemnt.reject}</Button>

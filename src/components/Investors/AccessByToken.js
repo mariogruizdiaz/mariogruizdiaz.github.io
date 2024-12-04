@@ -158,7 +158,7 @@ class AccessByToken extends Component {
             // // Dispatch the contact from data
             // this.props.dispatch(contactAction);
 
-            window.open(`https://api.whatsapp.com/send?phone=5491131803134&text=Hi!%20I%20am%20${this.state.name}!%20I%20I%20would%20like%20to%20access%20to%20the%20private%20section%20of%20Adme%20project.%20My%20profile%20url%20is%20${this.state.profileURL}`, "_blank");
+            window.open(`https://web.whatsapp.com/send?phone=5491131803134&text=Hi!%20I%20am%20${this.state.name}!%20I%20I%20would%20like%20to%20access%20to%20the%20private%20section%20of%20Adme%20project.%20My%20profile%20url%20is%20${this.state.profileURL}`, "_blank");
 
             // added delay to change button text to previous
             // setTimeout(
