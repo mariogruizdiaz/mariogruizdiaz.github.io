@@ -14,7 +14,7 @@ const MoneyFormatter = ({ value, country, locale }) => {
   const formattedValue = formatter.format(value);
 
   // Dividir la parte entera y los decimales
-  const [integerPart, decimalPart] = formattedValue.split(',');
+  const [integerPart] = formattedValue.split(',');
 
   return (
     <React.Fragment>
