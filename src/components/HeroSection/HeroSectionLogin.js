@@ -165,6 +165,9 @@ class LoginComponent extends React.Component {
                             </InputAdornment>
                           ),
                         }}
+                        inputProps={{
+                          maxLength: 254, // Limita el máximo de caracteres a 15
+                        }}
                       />
                     </div>
                     <div className="form-group">
@@ -188,6 +191,9 @@ class LoginComponent extends React.Component {
                               </IconButton>
                             </InputAdornment>
                           ),
+                        }}
+                        inputProps={{
+                          maxLength: 15, // Limita el máximo de caracteres a 15
                         }}
                       />
                     </div>

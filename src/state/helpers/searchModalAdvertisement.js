@@ -77,9 +77,23 @@ class SearchModal extends Component {
                 </Button>
 
                 <Modal open={modalOpen} onClose={this.handleCloseModal}>
-                    <div className="row align-items-center justify-content-md-center justify-content-center">
-                      <div className="col-lg-4 col-md-6 col-sm-8">
-                          <div className="popular-price bg-white text-center single-pricing-pack mt-4">
+                    <div className="row align-items-center justify-content-md-center justify-content-center" style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            height: "100vh",
+                        }}>
+                      <div className="col-lg-4 col-md-6 col-sm-8" style={{
+                                backgroundColor: "white",
+                                borderRadius: "8px",
+                                maxWidth: "500px",
+                                width: "100%",
+                                maxHeight: "90vh", // Limitar la altura al 90% del viewport
+                                overflowY: "auto", // Habilitar desplazamiento vertical si el contenido es muy largo
+                                padding: "16px",
+                                position: "relative",
+                            }}>
+                          <div className="popular-price bg-white text-center">
                             <IconButton
                                 aria-label="close"
                                 onClick={this.handleCloseModal}
