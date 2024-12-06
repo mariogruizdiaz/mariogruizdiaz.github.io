@@ -100,7 +100,7 @@ class HeroSectionCampaignPage extends React.Component {
                                   </div>
                                   <div className="card my-3">
                                       <a className="card-header collapsed" data-toggle="collapse" href="#collapse1" aria-expanded="true">
-                                          <h6 className="mb-0 d-inline-block">{`${this.props.dictionary.results.campaign.hero.youArePayingPart1} ${this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ? this.props.dictionary.results.campaign.hero.youArePayingPart21 : this.props.dictionary.results.campaign.hero.youArePayingPart22 }` } {this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ? this.props.selectedCampaign.customAdPrice : this.props.selectedCampaign.productPaymentDescription }</h6>
+                                          <h6 className="mb-0 d-inline-block">{`${this.props.dictionary.results.campaign.hero.youArePayingPart1}${this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ? this.props.dictionary.results.campaign.hero.youArePayingPart21 : this.props.dictionary.results.campaign.hero.youArePayingPart22}` }{this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ? this.props.selectedCampaign.customAdPrice : this.props.selectedCampaign.productPaymentDescription }</h6>
                                       </a>
                                       <div id="collapse1" className="collapse " data-parent="#accordion">
                                         {this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money &&
@@ -124,7 +124,20 @@ class HeroSectionCampaignPage extends React.Component {
                                         </a>
                                         <div id="collapse3" className="collapse " data-parent="#accordion">
                                             <div className="card-body white-bg">
-                                                  <p>{this.props.selectedCampaign.brief}</p>
+                                                  <p>{this.props.selectedCampaign.briefToShow}</p>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    }
+                                    {
+                                     this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Spot && this.props.selectedCampaign.briefToShow &&
+                                      <div className="card my-3">
+                                        <a className="card-header collapsed" data-toggle="collapse" href="#collapse3" aria-expanded="false">
+                                            <h6 className="mb-0 d-inline-block">{this.props.dictionary.results.campaign.hero.brief}</h6>
+                                        </a>
+                                        <div id="collapse3" className="collapse " data-parent="#accordion">
+                                            <div className="card-body white-bg">
+                                                  <p>{this.props.selectedCampaign.briefToShow}</p>
                                             </div>
                                         </div>
                                       </div>
@@ -136,19 +149,7 @@ class HeroSectionCampaignPage extends React.Component {
                                       <div id="collapse2" className="collapse " data-parent="#accordion">
                                           <div className="card-body white-bg">
                                               {
-                                                this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Advertising ?
-                                                <p>{this.props.dictionary.results.campaign.hero.advertisingCampaignConditions.advertising}</p>
-                                                :
-                                                this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Spot ?
-                                                <p>{this.props.dictionary.results.campaign.hero.advertisingCampaignConditions.spot}</p>
-                                                :
-                                                this.props.selectedCampaign.type === globalModels.campaignTypeEnum.Sponsorship ?
-                                                <React.Fragment>
-                                                  <p> {this.props.dictionary.results.campaign.hero.advertisingCampaignConditions.sponsorshipTitle}</p>
-                                                  <p> {this.props.dictionary.results.campaign.hero.advertisingCampaignConditions.sponsorshipItem1}</p>
-                                                  <p> {this.props.dictionary.results.campaign.hero.advertisingCampaignConditions.sponsorshipitem2}</p>
-                                                </React.Fragment>
-                                                : null
+                                                this.props.selectedCampaign.termsAndConditionsToShow
                                               }
                                           </div>
                                       </div>
