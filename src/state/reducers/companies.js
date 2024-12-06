@@ -2,6 +2,29 @@ import * as globalModels from "influencers-models";
 import { actionTypes } from "../actionTypes";
 import { commonStatusesDescriptions, commonStatuses } from "../models/common";
 
+const updatePayload = (data) => {
+  // return data.map(item => {
+    const newItem = { ...data };
+    
+    //newItem.paymentType === "Product" ? newItem.productPaymentDescriptionToShow = "product" : newItem.productPaymentDescriptionToShow = "money";
+    if (newItem.brief) {
+      let array = newItem.brief.split("BASESYCONDICIONES");
+      if (array.length === 2) {
+          newItem.briefToShow = array[0];
+          newItem.termsAndConditionsToShow = array[1];
+      } else {
+          newItem.briefToShow = array[0];
+          newItem.termsAndConditionsToShow = array[0];
+      }
+    } else {
+        newItem.briefToShow = "";
+        newItem.termsAndConditionsToShow = "";
+    }
+    
+    return newItem;
+  // });
+}
+
 const initialState = {
     items: [],
     pageIndex: -1,
@@ -142,10 +165,11 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.SELECT_CAMPAIGN: {
+            const updatedfilteredCampaigns = updatePayload(action.payload);
             return {
                 ...state,
                 selectedCampaign: {
-                    ...action.payload,
+                    ...updatedfilteredCampaigns,
                     advertisements: {
                         items: [],
                         pageIndex: -1,
