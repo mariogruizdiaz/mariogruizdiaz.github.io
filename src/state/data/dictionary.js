@@ -1615,7 +1615,7 @@ module.exports = {
                     audit: {
                       title: "Auditoría / validación",
                       money: "Al ser una campaña que paga con dinero, la ejecución debe pasar la auditoría de Adme, que verifica que el contenido cumpla con los requisitos establecidos en tu campaña.",
-                      product1: "Como representante de la marca, sos quien audita el contenido de la publicación ingresando el código en el buscador o escaneando el QR y verificando que la ejecución cumpla con los criterios antes de otorgar la recompensa.",
+                      product1: "Debes validar que efectivamente se haya ejecutado la campaña, ingresando el código en el buscador o scaneando el QR.",
                       product2: "En este tipo de campaña, tú serás responsable de la auditoría, verificando que la ejecución cumple con tus criterios antes de otorgar la recompensa.",
                       spot: "Vos, como representante de la Marca sos quien debe validar que efectivamente se haya ejecutado la campaña, ingresando el código en el buscador o scaneando el QR."
                     }
