@@ -9,7 +9,7 @@ class Download extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: '9CD4CD95',
+      text: '9CD4CD9A',
       copied: false
     };
   }
@@ -79,7 +79,7 @@ class Download extends React.Component {
                             </div>
                             <div className="p-20px">
                                 <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
-                                <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p>
+                                <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p>
                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">{this.props.dictionary.download.download}</a>
                             </div>
                         </div>
@@ -92,7 +92,7 @@ class Download extends React.Component {
                             </div>
                             <div className="p-20px">
                                  <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
-                                <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p>
+                                <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p>
                                 <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">{this.props.dictionary.download.download}</a>
                             </div>
                         </div>
@@ -109,7 +109,7 @@ class Download extends React.Component {
                             </div>
                             <div className="p-20px">
                                  <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
-                                <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon style={{ cursor: 'pointer' }}  onClick={this.copyToClipboard} /></p>
+                                <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon style={{ cursor: 'pointer' }}  onClick={this.copyToClipboard} /></p>
                                 <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">{this.props.dictionary.download.download}</a>
                             </div>
                         </div>
@@ -123,7 +123,7 @@ class Download extends React.Component {
                             </div>
                             <div className="p-20px">
                                  <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
-                                <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
+                                <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
                                 <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">{this.props.dictionary.download.download}</a>
                             </div>
                         </div>
