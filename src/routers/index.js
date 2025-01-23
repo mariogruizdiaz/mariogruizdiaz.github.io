@@ -51,6 +51,7 @@ import BlogSingleRightSidebar from "../themes/blogSingleRightSidebar";
 import AboutUs from "../themes/aboutUs";
 import ContactUs from "../themes/contactUs";
 import Download from "../themes/download";
+import Childsafetystandards from "../themes/childsafetystandards";
 
 
 class Routes extends React.PureComponent {
@@ -77,6 +78,7 @@ class Routes extends React.PureComponent {
             <Route exact path="/companies/:companyId/:campaignId" component={Campaign} />
             <Route exact path="/audit/:advertisementId" component={Audit} />
             <Route exact path="/download" component={Download} />
+            <Route exact path="/childsafetystandards" component={Childsafetystandards} />
             <Route exact path="/theme1" component={Theme1} />
             <Route exact path="/theme2" component={Theme2} />
             <Route exact path="/theme3" component={Theme3} />

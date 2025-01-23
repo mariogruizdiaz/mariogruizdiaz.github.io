@@ -3016,6 +3016,10 @@ table {
   padding: 100px 0;
 }
 
+.ptb-100-header {
+  padding: 100px 0 0 0;
+}
+
 /* line 1, public/assets/src/scss/objects/_objects.custom-padding.scss */
 .ptb-0-100 {
   padding: 0 0 100px 0;
@@ -23100,6 +23104,15 @@ footer a {
   left: 0;
   right: 0;
   bottom: 30%;
+  background: linear-gradient(75deg, #4f1bc5, #7b17c5) !important;
+}
+
+.mask-66 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -50%;
   background: linear-gradient(75deg, #4f1bc5, #7b17c5) !important;
 }
 
