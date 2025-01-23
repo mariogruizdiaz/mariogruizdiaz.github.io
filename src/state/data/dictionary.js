@@ -136,6 +136,24 @@ module.exports = {
           step6Subtitle: 'After posting, you will receive your reward. Depending on the campaign, you’ll be rewarded with money, products, or discounts.',
           download: 'Download'
         },
+        childsafetystandards: {
+          title: 'Child Safety Policy for Adme Corp',
+          titleParagraph1: '1. Commitment Against Child Sexual Exploitation',
+          paragraph1: 'At Adme ($), we are committed to protecting minors and strictly prohibit any content that promotes or tolerates the sexual exploitation of children.',
+          titleParagraph2: '2. Prohibited Content and Behavior',
+          paragraph20: '- Any form of child pornography or sexually explicit material involving minors.',
+          paragraph21: '- Content that promotes, encourages, or depicts sexual activities with minors.',
+          paragraph22: '- Interactions in which an adult attempts to exploit or harm a minor in any way.', 
+          titleParagraph3: '3. Reporting and Complaint Mechanism',
+          paragraph3: 'If you encounter inappropriate content or suspect any behavior that endangers a minor, please report it immediately to our safety team by sending an email to: info@adme.com.ar',
+          titleParagraph4: '4. Investigation and Response',
+          paragraph4: 'Our team will review every report and take immediate action. This may include removing the content, suspending the involved account, and notifying the appropriate legal authorities if necessary.',
+          titleParagraph5: '5. Cooperation with Authorities',
+          paragraph5: 'We work closely with legal authorities whenever a report involves child sexual abuse or exploitation. We provide relevant information in compliance with local and international legislation.',
+          titleParagraph6: '6. Contact',
+          paragraph6: 'For any inquiries or reports related to child safety, please contact us at: info@adme.com.ar',
+          footer: 'Last Updated: 01/25/2025'
+        },
         brands: {
           howTostart: {
             title: 'How to get started?',
@@ -1019,7 +1037,7 @@ module.exports = {
           creatorUser: 'Usuario creador ',
           showSnackbarApproved: 'Se aprobo satisfactoriamente el anuncio.',
           showSnackbarRejected: 'Se rechazo satisfactoriamente el anuncio.',
-          youAreInAudit: 'You are in the Adme audit module',
+          youAreInAudit: 'Estas en el modulo de auditoria',
           areYouSureToReject: '¿Estás seguro de que deseas rechazar este anuncio?'
         },
         download: {
@@ -1043,6 +1061,24 @@ module.exports = {
           step6Title: 'Publicá y recibí tu recompensa',
           step6Subtitle: 'Después de publicar, recibirás tu recompensa. Dependiendo de la campaña, serás recompensado con dinero, productos o descuentos.',
           download: 'Descargar'
+        },
+        childsafetystandards: {
+          title: 'Política de Seguridad Infantil de Adme Corp',
+          titleParagraph1: '1. Compromiso Contra la Explotación Sexual Infantil',
+          paragraph1: 'En Adme ($) estamos comprometidos a proteger a los menores y prohibimos estrictamente cualquier contenido que promueva o tolere la explotación sexual de menores.',
+          titleParagraph2: '2. Contenido y Comportamiento Prohibido',
+          paragraph20: '- Cualquier tipo de pornografía infantil o material sexualmente explícito que involucre menores.',
+          paragraph21: '- Contenido que promueva, aliente o represente actividades sexuales con menores.',
+          paragraph22: '- Interacciones en las que un adulto busque explotar a un menor de cualquier forma.', 
+          titleParagraph3: '3. Reportes y Mecanismo de Denuncia',
+          paragraph3: 'Si encuentras contenido inapropiado o sospechas de comportamientos que pongan en riesgo a un menor, por favor repórtalo inmediatamente a nuestro equipo de seguridad enviando un correo a: info@adme.com.ar',
+          titleParagraph4: '4. Investigación y Respuesta',
+          paragraph4: 'Nuestro equipo revisará cada reporte y tomará medidas de inmediato. Estas pueden incluir la eliminación de contenido, la suspensión de la cuenta involucrada y, de ser necesario, la notificación a las autoridades competentes.',
+          titleParagraph5: '5. Cooperación con Autoridades',
+          paragraph5: 'Trabajamos en conjunto con las autoridades legales cuando un reporte involucra explotación sexual de menores. Facilitamos información relevante conforme a la legislación local e internacional.',
+          titleParagraph6: '6. Contacto',
+          paragraph6: 'Para cualquier duda o denuncia relacionada con la seguridad infantil, por favor contacta a: info@adme.com.ar',
+          footer: 'Última actualización: 01/23/2025'
         },
         brands: {
           howTostart: {
