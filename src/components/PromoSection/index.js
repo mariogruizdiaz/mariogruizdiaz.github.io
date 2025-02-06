@@ -15,7 +15,6 @@ import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import Looks3Icon from '@mui/icons-material/Looks3';
 import CampaignSharpIcon from '@mui/icons-material/CampaignSharp';
 import { Button, Modal, IconButton } from "@mui/material";
-import EditIcon from '@mui/icons-material/Edit';
 import CloseIcon from '@mui/icons-material/Close';
 
 
