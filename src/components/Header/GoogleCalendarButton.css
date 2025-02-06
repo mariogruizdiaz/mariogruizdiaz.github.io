@@ -1,0 +1,29 @@
+/* Estilos personalizados para el botón de Google Calendar */
+.custom-calendar-button #google-calendar-button button {
+  background-color: #a24b99 !important;
+  /* Cambia el color del fondo */
+  color: white !important;
+  /* Cambia el color del texto */
+  font-size: 18px !important;
+  /* Cambia el tamaño de la fuente */
+  padding: 12px 24px !important;
+  /* Ajusta el espacio interno */
+  border: none !important;
+  /* Quita el borde */
+  border-radius: 8px !important;
+  /* Bordes redondeados */
+  cursor: pointer !important;
+  /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease !important;
+  /* Animación al pasar el cursor */
+}
+
+.custom-calendar-button #google-calendar-button button:hover {
+  background-color: #45a049 !important;
+  /* Color al pasar el cursor */
+}
+
+.custom-calendar-button #google-calendar-button button:focus {
+  outline: none !important;
+  /* Elimina el contorno al hacer clic */
+}

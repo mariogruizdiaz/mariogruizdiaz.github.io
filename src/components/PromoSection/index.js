@@ -14,16 +14,29 @@ import LooksOneIcon from '@mui/icons-material/LooksOne';
 import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import Looks3Icon from '@mui/icons-material/Looks3';
 import CampaignSharpIcon from '@mui/icons-material/CampaignSharp';
+import { Button, Modal, IconButton } from "@mui/material";
+import EditIcon from '@mui/icons-material/Edit';
+import CloseIcon from '@mui/icons-material/Close';
+
 
 class PromoSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      modalOpen: false,
       promo: {}
     };
 
     this.props.security.company?.id && this.props.genericAction(actionTypes.FETCH_CAMPAIGNS, { [globalModels.advertisementFields.companyId]: this.props.security.company.id });
   }
+
+    handleCloseModal = () => {
+          this.setState({ modalOpen: false});
+      };
+
+  handleOpenModal = () => {
+    this.setState({ modalOpen: true });
+  };
 
   componentDidUpdate(prevProps) {
     if (prevProps.security !== this.props.security) {
@@ -33,31 +46,10 @@ class PromoSection extends React.Component {
   
 
   componentDidMount() {
-    /**
-     * Your ajax will goes here to get data then call setState
-     */
 
     this.setState({
       promo: _data.promo
     });
-  }
-
-  handleSubmit(event) {
-    if (this.props.security.authenticated){
-      let mail = this.props.security.email;
-      let name = this.props.security.firstName? this.props.security.firstName: null;
-      let lastName = this.props.security.lastName? this.props.security.lastName : null;
-      let fullName = ` Mi mail es: ${mail} ${name ? ` Mi nombre es: ${name} `: ``} ${lastName ? `${lastName}.`: ``}`;
-
-      if (this.props.security.company.id){
-        let companyName = this.props.security.company?.name;
-        let cellPhone = this.props.security.company?.cellPhone;
-        fullName += `El comercio que agregue es: ${companyName}. Y el celular que agregue de contacto es: ${cellPhone}`;
-        if (this.props.companies.selectedCompany.campaigns.items.length) window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20cree%20alguna%20campa%C3%B1a%20junto%20a%20Adme%2C%20me%20gustar%C3%ADa%20crear%20otra.%20Muchas%20gracias.${fullName}`, "_blank");
-        else window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20agregue%20mi%20comercio%2C%20estoy%20listo%20para%20que%20creemos%20juntos%20mi%20primer%20campa%C3%B1a.%20Quedo%20a%20la%20espera.${fullName}`, "_blank");
-      } else window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20ya%20tengo%20mi%20usuario%20pero%20aun%20no%20agregue%20mi%20comercio%2C%20me%20podr%C3%ADan%20dar%20soporte.%20Quedo%20a%20la%20espera.${fullName}`, "_blank");
-    } else window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Hola%2C%20no%20cree%20aun%20mi%20usuario%20ni%20agregue%20mi%20comercio%2C%20podr%C3%ADan%20darme%20soporte.%20Quedo%20a%20la%20espera.`, "_blank");
-
   }
 
   getName () {
@@ -89,15 +81,6 @@ class PromoSection extends React.Component {
         <section className="promo-section ptb-0">
             <div className="container">
               <div className="row justify-content-md-center">
-                {/* { this.props.security.authenticated && this.props.security.company.id ?
-                  <div className={`message-box d-block alert-success alert`}>
-                    <p className="h5 mb-0">{this.props.dictionary.brands.howTostart.promoOkPart1}<span>{this.props.dictionary.brands.howTostart.promoOkPart2}</span>{this.props.dictionary.brands.howTostart.promoOkPart3}</p>
-                  </div>
-                  :
-                  <div className={`message-box d-block alert-warning alert`}>
-                    <p className="h5 mb-0">{this.props.dictionary.brands.howTostart.promoPart1}<span>{this.props.dictionary.brands.howTostart.promoPart2}</span>{this.props.dictionary.brands.howTostart.promoPart3}</p>
-                  </div>
-                } */}
                 </div>
                 <div className="row justify-content-md-center">
                   {
@@ -108,10 +91,10 @@ class PromoSection extends React.Component {
                                 <div className="pb-2">
                                     <LooksOneIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
-                                <div className="pt-2 pb-3">
+                                <div className="pt-2 pb-3" style={{height: 230}}>
                                     <h5>{this.props.dictionary.brands.howTostart.registerOKTitle}</h5>
                                     <HowToRegIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
-                                    <p className="text-left"><span>{this.getName()}</span>{this.props.dictionary.brands.howTostart.registerOKTitle}</p>
+                                    <p className="text-left"><span>{this.getName()}</span></p>
                                       <p className="text-left"><a href="/#/editProfile?from=brands"> {this.shouldCompleteProfile() ? this.props.dictionary.brands.howTostart.registerOkProfileComplete : this.props.dictionary.brands.howTostart.registerOkProfile}</a></p>
                                     
                                 </div>
@@ -126,7 +109,7 @@ class PromoSection extends React.Component {
                                 <div className="pb-2">
                                     <LooksOneIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
-                                <div className="pt-2 pb-3">
+                                <div className="pt-2 pb-3" style={{height: 230}}>
                                     <a href="/#/signUp?from=brands"><h5>{this.props.dictionary.brands.howTostart.registerTitle}</h5></a>
                                     <PersonAddIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                     <p className="text-left">{this.props.dictionary.brands.howTostart.registerSubtitle}</p>
@@ -144,7 +127,7 @@ class PromoSection extends React.Component {
                                 <div className="pb-2">
                                   <LooksTwoIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
-                                <div className="pt-2 pb-3">
+                                <div className="pt-2 pb-3" style={{height: 230}}>
                                     <h5>{this.props.dictionary.brands.howTostart.addCompanyOkTitle}</h5>
                                     <ChecklistIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                     <p className="text-left"><span>{this.getCompanyName().substring(0, 20)}</span>{this.props.dictionary.brands.howTostart.addCompanyOkSubtitle}</p>
@@ -163,7 +146,7 @@ class PromoSection extends React.Component {
                                   <LooksTwoIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                     
                                 </div>
-                                <div className="pt-2 pb-3">
+                                <div className="pt-2 pb-3" style={{height: 230}}>
                                     <a href="/#/signUp?from=brands"><h5>{this.props.dictionary.brands.howTostart.addCompanyTitle}</h5></a>
                                     <AddBusinessIcon color="info" fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                     <p className="mb-0">{this.props.dictionary.brands.howTostart.addCompanySubtitle}</p>
@@ -180,12 +163,13 @@ class PromoSection extends React.Component {
                                 <div className="pb-2">
                                   <Looks3Icon fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                 </div>
-                                <div className="pt-2 pb-3">
+                                <div className="pt-2 pb-3" style={{height: 230}}>
                                     <h5>{this.props.dictionary.brands.howTostart.createCampaignO3Title}</h5>
                                     <p className="mb-0">{this.props.dictionary.brands.howTostart.createCampaignOk3Subtitle}</p>
-                                     <button type="submit" className="btn btn-brand-02" id="btnContactUs" onClick={() => this.handleSubmit()}>
-                                      {this.props.dictionary.brands.howTostart.chatWhitUs}
-                                    </button>
+                                    <br/>
+                                      <Button className="btn text-white btn-rounded mb-3" variant="contained" onClick={this.handleOpenModal}>
+                                          {this.props.dictionary.brands.howTostart.preDesign}
+                                      </Button>
                                 </div>
                             </div>
                         </div>
@@ -200,12 +184,13 @@ class PromoSection extends React.Component {
                                   <Looks3Icon fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                     
                                 </div>
-                                <div className="pt-2 pb-3">
+                                <div className="pt-2 pb-3" style={{height: 230}}>
                                     <h5>{this.props.dictionary.brands.howTostart.createCampaignTitle}</h5>
                                     <p className="mb-0">{this.props.dictionary.brands.howTostart.createCampaignOk1Subtitle}</p>
-                                        <button type="submit" className="btn btn-brand-02" id="btnContactUs" onClick={() => this.handleSubmit()}>
-                                        {this.props.dictionary.brands.howTostart.chatWhitUs}
-                                        </button>
+                                    <br/>
+                                        <Button className="btn text-white btn-rounded mb-3" variant="contained" onClick={this.handleOpenModal}>
+                                         {this.props.dictionary.brands.howTostart.preDesign}
+                                      </Button>
                                 </div>
                             </div>
                         </div>
@@ -220,13 +205,13 @@ class PromoSection extends React.Component {
                                   <Looks3Icon fontSize="large" className="fas fa-concierge-bell icon-size-md color-secondary" />
                                     
                                 </div>
-                                <div className="pt-2 pb-3">
+                                <div className="pt-2 pb-3" style={{height: 230}}>
                                     <h5>{this.props.dictionary.brands.howTostart.createCampaignTitle}</h5>
                                     <p className="mb-0">{this.props.dictionary.brands.howTostart.createCampaignOk2Subtitle}</p>
                                     <br/>
-                                    <button type="submit" className="btn btn-brand-02" id="btnContactUs" onClick={() => this.handleSubmit()}>
-                                        {this.props.dictionary.brands.howTostart.chatWhitUs}
-                                      </button>
+                                    <Button disabled className="btn text-white btn-rounded mb-3" variant="contained" onClick={this.handleOpenModal}>
+                                      {this.props.dictionary.brands.howTostart.preDesign}
+                                  </Button>
                                 </div>
                             </div>
                         </div>
@@ -257,6 +242,37 @@ class PromoSection extends React.Component {
               </div>
             }
         </section>
+                <Modal open={this.state.modalOpen} onClose={this.handleCloseModal}>
+                      <div className="row align-items-center justify-content-md-center justify-content-center" style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            height: "100vh",
+                        }}>
+                      <div style={{
+                                backgroundColor: "white",
+                                borderRadius: "8px",
+                                width: "100%",
+                                maxHeight: "100vh", // Limitar la altura al 90% del viewport
+                                maxWidth: "90vh",
+                                overflowY: "auto", // Habilitar desplazamiento vertical si el contenido es muy largo
+                                padding: "16px",
+                                paddingTop: '45px',
+                                position: "relative",
+                            }}>
+                      <div className="popular-price bg-white text-center">
+                        <IconButton
+                                aria-label="close"
+                                onClick={this.handleCloseModal}
+                                sx={{ position: 'absolute', right: 8, top: 8 }}
+                            >
+                                <CloseIcon />
+                            </IconButton>
+                        <iframe title="form" src="https://docs.google.com/forms/d/e/1FAIpQLSdd-OrkWLhYsScGWYuTYgYVv8mcB3JavOd7DC1mNcEsFWyb3w/viewform?entry.631336208=Maritoooo&embedded=true" width="660" height="700" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                      </div>
+                     </div>
+                     </div>
+                </Modal>
       </React.Fragment>
     );
   }
