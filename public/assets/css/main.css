@@ -16877,6 +16877,7 @@ input[type="button"].btn-block {
           flex: 1 1 auto;
   min-height: 290px;
   padding: 1.25rem;
+  min-height: 270;
 }
 
 .card-body {
@@ -20241,6 +20242,17 @@ footer a {
   background-color: silver;
   border-color: red;
   color: red;
+}
+
+.btn-brand-04 {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.btn-brand-04:hover,
+.btn-brand-04:focus {
+  color: #28a745;
 }
 
 .message-box {
@@ -29290,4 +29302,5 @@ a.text-dark:hover, a.text-dark:focus {
   width: auto;
   height: 100%;
 }
+
 

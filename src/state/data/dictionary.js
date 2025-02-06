@@ -157,7 +157,7 @@ module.exports = {
         brands: {
           howTostart: {
             title: 'How to get started?',
-            stepsDescriptions: 'To link your brand with Adme and start revolutionizing your influencer marketing strategies, simply follow these steps:',
+            stepsDescriptions: 'To link your brand with Adme and start revolutionizing your influencer marketing strategies, simply follow these steps. It is completely free:',
             promo: 'If you join before 11/30, you will enjoy a 0% commission for the first 6 months',
             registerTitle: 'Sign up',
             registerOKTitle: 'Registered',
@@ -174,9 +174,9 @@ module.exports = {
             createCampaignTitle: 'Design campaign',
             createCampaignSubtitle: 'Contact your agent to help you design your campaign.',
             createCampaignO3Title: 'You already have campaigns.',
-            createCampaignOk1Subtitle: 'You’re all set to contact your agent and create your first campaign.',
+            createCampaignOk1Subtitle: 'You’re all set to contact an advisor or you can also:',
             createCampaignOk2Subtitle: 'Contact an agent to shape your campaign or advise you.',
-            createCampaignOk3Subtitle: 'We’ve noticed that you created a campaign. Do you want to create more?',
+            createCampaignOk3Subtitle: 'Do you want to create another one campaign?',
             promoPart1: 'If you join before 11/30, you will enjoy a',
             promoPart2: ' 0% commission ',
             promoPart3: 'for the first 6 months.',
@@ -184,7 +184,8 @@ module.exports = {
             promoOkPart2: ' 0% commission ',
             promoOkPart3: 'on your account for the next 6 months, already activated for your business!',
             goToMyCampaigns: 'Go to my campaigns',
-            chatWhitUs: 'Chat with us',
+            preDesign: 'Pre-design your future campaign',
+            chatWhitUs: 'Contact an advisor',
           },
           howToWork: {
             title: 'How does it work?',
@@ -241,7 +242,8 @@ module.exports = {
                 profile: 'Profile',
                 login: 'Login',
                 registerMyBusiness: "Sign up my business",
-                myPortal: "My business portal"
+                myPortal: "My business portal",
+                myPortalHome: "Main"
             },
         },
         hero: {
@@ -1083,7 +1085,7 @@ module.exports = {
         brands: {
           howTostart: {
             title: '¿Cómo comenzar?',
-            stepsDescriptions: 'Para unir tu marca a Adme y comenzar a revolucionar tus estrategias de marketing de influencia, sólo sigue estos pasos:',
+            stepsDescriptions: 'Para unir tu marca a Adme y comenzar a revolucionar tus estrategias de marketing de influencia, sólo sigue estos pasos. Es completamente gratuito:',
             promo: 'Si te sumas antes del lanzamiento 0% de comision durante los primeros 6 meses.',
             registerTitle: 'Registrarme',
             registerOKTitle: 'Registrado',
@@ -1099,17 +1101,18 @@ module.exports = {
             addCompanyOkProfile: 'Ver datos de mi negocio',
             createCampaignTitle: 'Crear mi campaña',
             createCampaignO3Title: 'Ya tenés campañas',
-            createCampaignOk1Subtitle: 'Tenés todo listo para contactar a tu agente y crear tu primera campaña.',
-            createCampaignOk2Subtitle: 'Contactate con un agente para modelar tu campaña o asesorarte.',
-            createCampaignOk3Subtitle: 'Vemos que creaste una campaña. ¿Querés crear más? Contáctanos.',
-            chatWhitUs: 'Chatea con nosotros',
+            createCampaignOk1Subtitle: 'Tenés todo listo para contactar a un asesor o tambien podes: ',
+            createCampaignOk2Subtitle: 'Contacta un asesor para modelar tu campaña o tambien podes',
+            createCampaignOk3Subtitle: '¿Querés crear otra campaña?',
             promoPart1: 'Si te sumas antes del 30/11 disfrutarás de una',
             promoPart2: ' comisión del 0% ',
             promoPart3: 'durante los primeros 6 meses.',
             promoOkPart1: '¡Disfruta de ',
             promoOkPart2: ' 0% de comisión ',
             promoOkPart3: 'en tu cuenta durante los próximos 6 meses, ya activado para tu negocio!', 
-            goToMyCampaigns: 'Ir a mis campañas'
+            goToMyCampaigns: 'Ir a mis campañas',
+            preDesign: 'Pre-diseña tu futura campaña',
+            chatWhitUs: 'Contacta un asesor',
           },
           howToWork: {
             Title: '¿Cómo funciona?',
@@ -1166,7 +1169,8 @@ module.exports = {
                 profile: 'Perfil',
                 login: 'Iniciar sesión',
                 registerMyBusiness: "Registrar mi negocio",
-                myPortal: "Portal de mi negocio"
+                myPortal: "Portal de mi negocio",
+                myPortalHome: "Principal"
             },
         },
         hero: {
