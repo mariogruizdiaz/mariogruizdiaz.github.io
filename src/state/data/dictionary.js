@@ -1127,11 +1127,11 @@ module.exports = {
           plansAndPrices: {
             title: 'Planes y precios',
             subtitle: 'Flexibilidad y exclusividad',
-            paragraph1: 'En Adme, entendemos que cada marca es única, por lo que te ofrecemos libertad total para elegir cómo recompensar a los influencers. ¿Preferís pagar en efectivo, o con productos exclusivos, descuentos o experiencias únicas? La decisión es tuya.',
-            paragraph21: 'Al unirte a Adme antes de nuestro lanzamiento oficial, disfrutarás de 6 meses de creación de campañas ',
-            paragraph22: 'SIN COMISIONES ',
-            paragraph23: 'y con acompañamiento personalizado. Durante este tiempo, tu inversión en marketing de influencia se destina 100% a la publicidad y a quienes dan vida a tu marca.',
-            paragraph3: 'Dependiendo del plan /tipo de campaña a elegir, se cobrara o no una comisión asignada. Además, tendrás la posibilidad de crear diferentes cantidades de campañas por mes.',
+            paragraph1: 'En Adme, entendemos que cada marca es única, por lo que te ofrecemos libertad total para elegir cómo recompensar a los influencers. ¿Preferís pagar en efectivo,con productos, descuentos o experiencias únicas? La decisión es tuya.',
+            paragraph21: 'Al unirte a Adme, las campañas en las que decidas recompensar con dinero, serán siempre gratuitas: ',
+            paragraph22: 'SIN COSTO DE SERVICIO POR SIEMPRE. ',
+            paragraph23: 'Vos definis el presupuesto de tu campaña una sola vez y Adme se encargará de los pagos a quienes ejecuten tu campaña.',
+            paragraph3: 'Las campañas en las que decidas recompensar con producto/descuento, tampoco tendrán costo de servicio durante los primeros 6 meses tras nuestro lanzamiento. Pasado este período, el costo de servicio será un porcentaje del valor del producto que estés otorgando por cada ejecución.',
             paragraph4: 'Unite ahora y sé parte de una nueva era del marketing digital, donde tu inversión tiene un impacto real y directo.',
           },
           valueProposition: {
