@@ -157,7 +157,7 @@ module.exports = {
         brands: {
           howTostart: {
             title: 'How to get started?',
-            stepsDescriptions: 'To link your brand with Adme and start revolutionizing your influencer marketing strategies, simply follow these steps:',
+            stepsDescriptions: 'To link your brand with Adme and start revolutionizing your influencer marketing strategies, simply follow these steps. It is completely free:',
             promo: 'If you join before 11/30, you will enjoy a 0% commission for the first 6 months',
             registerTitle: 'Sign up',
             registerOKTitle: 'Registered',
@@ -174,9 +174,9 @@ module.exports = {
             createCampaignTitle: 'Design campaign',
             createCampaignSubtitle: 'Contact your agent to help you design your campaign.',
             createCampaignO3Title: 'You already have campaigns.',
-            createCampaignOk1Subtitle: 'You’re all set to contact your agent and create your first campaign.',
+            createCampaignOk1Subtitle: 'You’re all set to contact an advisor or you can also:',
             createCampaignOk2Subtitle: 'Contact an agent to shape your campaign or advise you.',
-            createCampaignOk3Subtitle: 'We’ve noticed that you created a campaign. Do you want to create more?',
+            createCampaignOk3Subtitle: 'Do you want to create another one campaign?',
             promoPart1: 'If you join before 11/30, you will enjoy a',
             promoPart2: ' 0% commission ',
             promoPart3: 'for the first 6 months.',
@@ -184,7 +184,8 @@ module.exports = {
             promoOkPart2: ' 0% commission ',
             promoOkPart3: 'on your account for the next 6 months, already activated for your business!',
             goToMyCampaigns: 'Go to my campaigns',
-            chatWhitUs: 'Chat with us',
+            preDesign: 'Pre-design your future campaign',
+            chatWhitUs: 'Contact an advisor',
           },
           howToWork: {
             title: 'How does it work?',
@@ -241,7 +242,8 @@ module.exports = {
                 profile: 'Profile',
                 login: 'Login',
                 registerMyBusiness: "Sign up my business",
-                myPortal: "My business portal"
+                myPortal: "My business portal",
+                myPortalHome: "Main"
             },
         },
         hero: {
@@ -1083,7 +1085,7 @@ module.exports = {
         brands: {
           howTostart: {
             title: '¿Cómo comenzar?',
-            stepsDescriptions: 'Para unir tu marca a Adme y comenzar a revolucionar tus estrategias de marketing de influencia, sólo sigue estos pasos:',
+            stepsDescriptions: 'Para unir tu marca a Adme y comenzar a revolucionar tus estrategias de marketing de influencia, sólo sigue estos pasos. Es completamente gratuito:',
             promo: 'Si te sumas antes del lanzamiento 0% de comision durante los primeros 6 meses.',
             registerTitle: 'Registrarme',
             registerOKTitle: 'Registrado',
@@ -1099,17 +1101,18 @@ module.exports = {
             addCompanyOkProfile: 'Ver datos de mi negocio',
             createCampaignTitle: 'Crear mi campaña',
             createCampaignO3Title: 'Ya tenés campañas',
-            createCampaignOk1Subtitle: 'Tenés todo listo para contactar a tu agente y crear tu primera campaña.',
-            createCampaignOk2Subtitle: 'Contactate con un agente para modelar tu campaña o asesorarte.',
-            createCampaignOk3Subtitle: 'Vemos que creaste una campaña. ¿Querés crear más? Contáctanos.',
-            chatWhitUs: 'Chatea con nosotros',
+            createCampaignOk1Subtitle: 'Tenés todo listo para contactar a un asesor o tambien podes: ',
+            createCampaignOk2Subtitle: 'Contacta un asesor para modelar tu campaña o tambien podes',
+            createCampaignOk3Subtitle: '¿Querés crear otra campaña?',
             promoPart1: 'Si te sumas antes del 30/11 disfrutarás de una',
             promoPart2: ' comisión del 0% ',
             promoPart3: 'durante los primeros 6 meses.',
             promoOkPart1: '¡Disfruta de ',
             promoOkPart2: ' 0% de comisión ',
             promoOkPart3: 'en tu cuenta durante los próximos 6 meses, ya activado para tu negocio!', 
-            goToMyCampaigns: 'Ir a mis campañas'
+            goToMyCampaigns: 'Ir a mis campañas',
+            preDesign: 'Pre-diseña tu futura campaña',
+            chatWhitUs: 'Contacta un asesor',
           },
           howToWork: {
             Title: '¿Cómo funciona?',
@@ -1124,11 +1127,11 @@ module.exports = {
           plansAndPrices: {
             title: 'Planes y precios',
             subtitle: 'Flexibilidad y exclusividad',
-            paragraph1: 'En Adme, entendemos que cada marca es única, por lo que te ofrecemos libertad total para elegir cómo recompensar a los influencers. ¿Preferís pagar en efectivo, o con productos exclusivos, descuentos o experiencias únicas? La decisión es tuya.',
-            paragraph21: 'Al unirte a Adme antes de nuestro lanzamiento oficial, disfrutarás de 6 meses de creación de campañas ',
-            paragraph22: 'SIN COMISIONES ',
-            paragraph23: 'y con acompañamiento personalizado. Durante este tiempo, tu inversión en marketing de influencia se destina 100% a la publicidad y a quienes dan vida a tu marca.',
-            paragraph3: 'Dependiendo del plan /tipo de campaña a elegir, se cobrara o no una comisión asignada. Además, tendrás la posibilidad de crear diferentes cantidades de campañas por mes.',
+            paragraph1: 'En Adme, entendemos que cada marca es única, por lo que te ofrecemos libertad total para elegir cómo recompensar a los influencers. ¿Preferís pagar en efectivo,con productos, descuentos o experiencias únicas? La decisión es tuya.',
+            paragraph21: 'Al unirte a Adme, las campañas en las que decidas recompensar con dinero, serán siempre gratuitas: ',
+            paragraph22: 'SIN COSTO DE SERVICIO POR SIEMPRE. ',
+            paragraph23: 'Vos definis el presupuesto de tu campaña una sola vez y Adme se encargará de los pagos a quienes ejecuten tu campaña.',
+            paragraph3: 'Las campañas en las que decidas recompensar con producto/descuento, tampoco tendrán costo de servicio durante los primeros 6 meses tras nuestro lanzamiento. Pasado este período, el costo de servicio será un porcentaje del valor del producto que estés otorgando por cada ejecución.',
             paragraph4: 'Unite ahora y sé parte de una nueva era del marketing digital, donde tu inversión tiene un impacto real y directo.',
           },
           valueProposition: {
@@ -1166,7 +1169,8 @@ module.exports = {
                 profile: 'Perfil',
                 login: 'Iniciar sesión',
                 registerMyBusiness: "Registrar mi negocio",
-                myPortal: "Portal de mi negocio"
+                myPortal: "Portal de mi negocio",
+                myPortalHome: "Principal"
             },
         },
         hero: {

@@ -21,7 +21,7 @@ class FooterAdmeInvestors extends React.Component {
     handleSubmit(event) {
         //event.preventDefault();
 
-        window.open(`https://web.whatsapp.com/send?phone=5491135795588&text=Quiero%20sumar%20mi%20negocio%20a%20Adme.%20%C2%BFMe%20podr%C3%ADan%20asistir%3F`, "_blank");
+        window.open(`https://web.whatsapp.com/send?phone=5491170677519&text=Quiero%20sumar%20mi%20negocio%20a%20Adme.%20%C2%BFMe%20podr%C3%ADan%20asistir%3F`, "_blank");
         // get action
         const subscribeAction = subscribe(this.state);
 
