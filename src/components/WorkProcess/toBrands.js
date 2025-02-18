@@ -86,7 +86,7 @@ class WorkProcess extends React.Component {
                     </div>
                     <div className="col-md-6 col-lg-6">
                         <div className="img-wrap">
-                            <img src="assets/img/adme-mobile-processes-to-brand.gif" alt="features" className="img-fluid" />
+                            <img src="assets/img/adme-mobile-processes-to-brand.png" alt="features" className="img-fluid" />
                         </div>
                     </div>
                 </div>

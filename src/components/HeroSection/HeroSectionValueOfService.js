@@ -99,11 +99,15 @@ class HeroSection extends React.Component {
                             <p className="text-left">{this.props.dictionary.brands.plansAndPrices.paragraph21}<span>{this.props.dictionary.brands.plansAndPrices.paragraph22}</span>{this.props.dictionary.brands.plansAndPrices.paragraph23}</p>
                             <p className="text-left">{this.props.dictionary.brands.plansAndPrices.paragraph3}</p>
                             <p className="text-justify"><span>{this.props.dictionary.brands.plansAndPrices.paragraph4}</span></p>
+                             <button type="submit" className="btn btn-brand-04" id="btnContactUs" onClick={() => this.handleSubmit()}>
+                                <span className="ti-headphone-alt color-security mr-3"></span>
+                                {this.props.dictionary.brands.howTostart.planEnterprise}
+                              </button>
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-6 col-lg-5">
                         <div className="img-wrap">
-                            <img width={450} src="assets/img/gratis6meses.png" alt="app" className="img-fluid" />
+                            <img width={450} src={this.props.dictionary.brands.howTostart.img} alt="app" className="img-fluid" />
                         </div>
                     </div>
                 </div>
