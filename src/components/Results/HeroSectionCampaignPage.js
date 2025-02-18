@@ -100,7 +100,13 @@ class HeroSectionCampaignPage extends React.Component {
                                   </div>
                                   <div className="card my-3">
                                       <a className="card-header collapsed" data-toggle="collapse" href="#collapse1" aria-expanded="true">
-                                          <h6 className="mb-0 d-inline-block">{`${this.props.dictionary.results.campaign.hero.youArePayingPart1}${this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ? this.props.dictionary.results.campaign.hero.youArePayingPart21 : this.props.dictionary.results.campaign.hero.youArePayingPart22}` }{this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ? this.props.selectedCampaign.customAdPrice : this.props.selectedCampaign.productPaymentDescription }</h6>
+                                          <h6 className="mb-0 d-inline-block">{`${this.props.dictionary.results.campaign.hero.youArePayingPart1}${this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ? this.props.dictionary.results.campaign.hero.youArePayingPart21 : this.props.dictionary.results.campaign.hero.youArePayingPart22}` }{this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money ? 
+                                          <MoneyFormatter
+                                              value={this.props.selectedCampaign.customAdPrice}
+                                              country="ARS"
+                                              locale="es-AR"
+                                            />
+                                           : this.props.selectedCampaign.productPaymentDescription }</h6>
                                       </a>
                                       <div id="collapse1" className="collapse " data-parent="#accordion">
                                         {this.props.selectedCampaign.paymentType === globalModels.campaignPaymentTypeEnum.Money &&

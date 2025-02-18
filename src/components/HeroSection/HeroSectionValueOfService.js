@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { subscribe } from "../../actions/index";
 import _data from "../../state/data";
 
 class HeroSection extends React.Component {
@@ -12,56 +11,6 @@ class HeroSection extends React.Component {
       disableBtn: false,
       btnText: "Subscribe"
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  changeBtnText = btnText => {
-    this.setState({ btnText });
-  };
-
-  handleFormValueChange(inputName, event) {
-    let stateValue = {};
-    stateValue[inputName] =
-      event.target.type === "checkbox"
-        ? event.target.checked
-        : event.target.value;
-    this.setState(stateValue);
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-
-    // disable the button
-    this.setState({ disableBtn: true });
-
-    // get action
-    const subscribeAction = subscribe(this.state);
-
-    // Dispatch the contact from data
-    this.props.dispatch(subscribeAction);
-
-    // added delay to change button text to previous
-    setTimeout(
-      function() {
-        // enable the button
-        this.setState({ disableBtn: false });
-
-        // change to button name
-        this.changeBtnText("Subscribe");
-
-        // get action again to update state
-        const subscribeAction = subscribe(this.state);
-
-        // Dispatch the contact from data
-        this.props.dispatch(subscribeAction);
-
-        // clear form data
-        this.setState({
-          email: ""
-        });
-      }.bind(this),
-      3000
-    );
   }
 
   componentDidMount() {
@@ -72,6 +21,22 @@ class HeroSection extends React.Component {
     this.setState({
       hero: _data.hero
     });
+  }
+
+    handleSubmit = (event) => {
+    if (this.props.security.authenticated){
+      let mail = this.props.security.email;
+      let name = this.props.security.firstName? this.props.security.firstName: null;
+      let lastName = this.props.security.lastName? this.props.security.lastName : null;
+      let fullName = ` Mi mail es: ${mail} ${name ? ` Mi nombre es: ${name} `: ``} ${lastName ? `${lastName}. `: ``}`;
+
+      if (this.props.security.company.id){
+        let companyName = this.props.security.company?.name;
+        let cellPhone = this.props.security.company?.cellPhone;
+        fullName += `El comercio que agregue es: ${companyName}. Y el celular que agregue de contacto es: ${cellPhone}`;
+        window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola.%20Estoy%20interesado%20que%20saber%20mas%20acerca%20del%20Plan%20empresarial.${fullName}`, "_blank");
+      } else window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola.%20Estoy%20interesado%20que%20saber%20mas%20acerca%20del%20Plan%20empresarial.${fullName}`, "_blank");
+    } else window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola.%20Estoy%20interesado%20que%20saber%20mas%20acerca%20del%20Plan%20empresarial.`, "_blank");
   }
 
   render() {
@@ -99,11 +64,15 @@ class HeroSection extends React.Component {
                             <p className="text-left">{this.props.dictionary.brands.plansAndPrices.paragraph21}<span>{this.props.dictionary.brands.plansAndPrices.paragraph22}</span>{this.props.dictionary.brands.plansAndPrices.paragraph23}</p>
                             <p className="text-left">{this.props.dictionary.brands.plansAndPrices.paragraph3}</p>
                             <p className="text-justify"><span>{this.props.dictionary.brands.plansAndPrices.paragraph4}</span></p>
+                             <button type="submit" className="btn btn-brand-04" id="btnContactUs" onClick={() => this.handleSubmit()}>
+                                <span className="ti-headphone-alt color-security mr-3"></span>
+                                {this.props.dictionary.brands.howTostart.planEnterprise}
+                              </button>
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-6 col-lg-5">
                         <div className="img-wrap">
-                            <img width={450} src="assets/img/gratis6meses.png" alt="app" className="img-fluid" />
+                            <img width={450} src={this.props.dictionary.brands.howTostart.img} alt="app" className="img-fluid" />
                         </div>
                     </div>
                 </div>
@@ -115,5 +84,9 @@ class HeroSection extends React.Component {
 }
 
 export default connect(state => ({
-    dictionary: state.i18n.dictionary
+    dictionary: state.i18n.dictionary,
+    language: state.i18n.language,
+    security: state.security,
+    companies: state.companies,
+    selectedCompany: state.companies.selectedCompany
 }))(HeroSection);
