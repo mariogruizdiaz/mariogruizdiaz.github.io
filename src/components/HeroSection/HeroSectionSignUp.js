@@ -371,7 +371,7 @@ class HeroSection extends React.Component {
                                   endAdornment: (
                                     <InputAdornment position="end">
                                       <IconButton onClick={this.toggleShowPassword}>
-                                        {this.state.showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                                        {this.state.showPassword ? <VisibilityIcon /> : <VisibilityOffIcon /> }
                                       </IconButton>
                                     </InputAdornment>
                                   ),
@@ -401,7 +401,7 @@ class HeroSection extends React.Component {
                                   endAdornment: (
                                     <InputAdornment position="end">
                                       <IconButton onClick={this.toggleShowConfirmPassword}>
-                                        {this.state.showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                                        {this.state.showConfirmPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
                                       </IconButton>
                                     </InputAdornment>
                                   ),

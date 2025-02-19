@@ -187,7 +187,7 @@ class LoginComponent extends React.Component {
                           endAdornment: (
                             <InputAdornment position="end">
                               <IconButton onClick={this.toggleShowPassword}>
-                                {this.state.showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                                {this.state.showPassword ? <VisibilityIcon /> : <VisibilityOffIcon /> }
                               </IconButton>
                             </InputAdornment>
                           ),
