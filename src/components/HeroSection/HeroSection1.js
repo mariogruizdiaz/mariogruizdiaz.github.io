@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { subscribe } from "../../actions/index";
 import _data from "../../state/data";
+import { getMobileOperatingSystem } from '../../state/helpers/openWhatsAppLink';
 
 class HeroSection extends React.Component {
   constructor(props) {
@@ -75,6 +76,7 @@ class HeroSection extends React.Component {
   }
 
   render() {
+    const os = getMobileOperatingSystem();
     return (
       <React.Fragment>
         <section id="hero" className="ptb-100 bg-image overflow-hidden" image-overlay="10">
@@ -89,10 +91,24 @@ class HeroSection extends React.Component {
                         <div className="hero-slider-content text-white py-5">
                             <h1 className="text-white">{this.props.dictionary.hero.title}</h1>
                             <p className="lead">{this.props.dictionary.hero.subtitle}</p>
-                            {/* <div className="video-promo-content my-5 pb-4">
-                                <a href={this.props.dictionary.hero.videoUrl} className="popup-youtube video-play-icon text-center m-auto"><span className="ti-control-play"></span> </a>
-                            </div> */}
-                            <div className="action-btns mt-4 text-center">
+                            {
+                               os === 'Otro' && (
+                              <div className="action-btns mt-4 text-center">
+                                <ul className="list-inline">
+                                    <li className="list-inline-item">
+                                        <div className="download-text text-left">
+                                            <img width={200} src="assets/img/admeDownloadiOS.png" alt="logo" class="img-fluid" />
+                                        </div>
+                                    </li>
+                                    <li className="list-inline-item">
+                                        <img width={200} src="assets/img/admeDownloadAndroid.png" alt="logo" class="img-fluid" />
+                                    </li>
+                                </ul>
+                            </div>)
+                            }
+                            {
+                               os === 'iOS' && (
+                              <div className="action-btns mt-4 text-center">
                                 <ul className="list-inline">
                                     <li className="list-inline-item">
                                         <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
@@ -103,6 +119,13 @@ class HeroSection extends React.Component {
                                             </div>
                                         </a>
                                     </li>
+                                </ul>
+                            </div>)
+                            }
+                            {
+                               os === 'Android' && (
+                              <div className="action-btns mt-4 text-center">
+                                <ul className="list-inline">
                                     <li className="list-inline-item">
                                         <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa" className="d-flex align-items-center app-download-btn btn btn-white btn-rounded">
                                             <span className="fab fa-google-play icon-size-sm mr-3 color-primary"></span>
@@ -113,7 +136,8 @@ class HeroSection extends React.Component {
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>)
+                            }
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-6 col-lg-5">
