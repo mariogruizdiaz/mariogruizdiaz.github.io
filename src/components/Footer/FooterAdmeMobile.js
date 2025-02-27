@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Button, CardActions } from '@mui/material';
 import { withRouter } from "react-router-dom";
+import { openWhatsAppLink } from '../../state/helpers/openWhatsAppLink';
 
 class Footer extends React.Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class Footer extends React.Component {
     handleSubmit(event) {
         //event.preventDefault();
 
-        window.open(`https://web.whatsapp.com/send?phone=5491170677519&text=Quiero%20sumar%20mi%20negocio%20a%20Adme.%20%C2%BFMe%20podr%C3%ADan%20asistir%3F`, "_blank");
+        openWhatsAppLink("/5491170677519", "Quiero sumar mi negocio a Adme. ¿Me podrían asistir?");
         // get action
     }
 

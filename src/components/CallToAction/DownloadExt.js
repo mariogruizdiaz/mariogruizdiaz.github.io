@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 // import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { SnackbarContext } from '../Toast/SnackbarContext';
 import { withRouter } from "react-router-dom";
+import { getMobileOperatingSystem } from '../../state/helpers/openWhatsAppLink';
 
 class Download extends React.Component {
   static contextType = SnackbarContext; 
@@ -13,22 +14,22 @@ class Download extends React.Component {
       copied: false
     };
   }
-  getMobileOperatingSystem = () => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  // getMobileOperatingSystem = () => {
+  //   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // Detecta si es Android
-    if (/android/i.test(userAgent)) {
-      return 'Android';
-    }
+  //   // Detecta si es Android
+  //   if (/android/i.test(userAgent)) {
+  //     return 'Android';
+  //   }
 
-    // Detecta si es iOS
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      return 'iOS';
-    }
+  //   // Detecta si es iOS
+  //   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+  //     return 'iOS';
+  //   }
 
-    // Retorna 'Otro' si no es ni Android ni iOS
-    return 'Otro';
-  };
+  //   // Retorna 'Otro' si no es ni Android ni iOS
+  //   return 'Otro';
+  // };
 
   copyToClipboard = () => {
     navigator.clipboard.writeText(this.state.text)
@@ -52,8 +53,7 @@ class Download extends React.Component {
   }
 
   render() {
-    const os = this.getMobileOperatingSystem();
-    console.log('SISTEMA OPERATIVO', os);
+    const os = getMobileOperatingSystem();
     return (
       <React.Fragment>
         <section className="position-relative overflow-hidden ptb-100">
@@ -81,7 +81,8 @@ class Download extends React.Component {
                                 {/* <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p>  */}
                                  <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p>
                                 {/* <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p> */}
-                               <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">{this.props.dictionary.download.download}</a>
+                               {/* <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">{this.props.dictionary.download.download}</a> */}
+                               <img src="assets/img/admeDownloadiOS.png" alt="logo" class="img-fluid" />
                             </div>
                         </div>
                     </div>
@@ -95,7 +96,8 @@ class Download extends React.Component {
                                  {/* <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p>  */}
                                   <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p>
                                 {/* <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p> */}
-                                <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">{this.props.dictionary.download.download}</a>
+                                {/* <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">{this.props.dictionary.download.download}</a> */}
+                                <img src="assets/img/admeDownloadAndroid.png" alt="logo" class="img-fluid" />
                             </div>
                         </div>
                     </div>

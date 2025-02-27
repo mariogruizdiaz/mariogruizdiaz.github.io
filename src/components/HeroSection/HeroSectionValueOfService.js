@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import _data from "../../state/data";
+import { openWhatsAppLink } from '../../state/helpers/openWhatsAppLink';
 
 class HeroSection extends React.Component {
   constructor(props) {
@@ -23,20 +24,25 @@ class HeroSection extends React.Component {
     });
   }
 
-    handleSubmit = (event) => {
+  handleSubmit = (event) => {
     if (this.props.security.authenticated){
       let mail = this.props.security.email;
-      let name = this.props.security.firstName? this.props.security.firstName: null;
-      let lastName = this.props.security.lastName? this.props.security.lastName : null;
-      let fullName = ` Mi mail es: ${mail} ${name ? ` Mi nombre es: ${name} `: ``} ${lastName ? `${lastName}. `: ``}`;
+      let name = this.props.security.firstName ? this.props.security.firstName : null;
+      let lastName = this.props.security.lastName ? this.props.security.lastName : null;
+      let fullName = `Mi mail es: ${mail}${name ? ` Mi nombre es: ${name} ` : ''}${lastName ? `${lastName}. ` : ''}`;
 
       if (this.props.security.company.id){
         let companyName = this.props.security.company?.name;
         let cellPhone = this.props.security.company?.cellPhone;
-        fullName += `El comercio que agregue es: ${companyName}. Y el celular que agregue de contacto es: ${cellPhone}`;
-        window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola.%20Estoy%20interesado%20que%20saber%20mas%20acerca%20del%20Plan%20empresarial.${fullName}`, "_blank");
-      } else window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola.%20Estoy%20interesado%20que%20saber%20mas%20acerca%20del%20Plan%20empresarial.${fullName}`, "_blank");
-    } else window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola.%20Estoy%20interesado%20que%20saber%20mas%20acerca%20del%20Plan%20empresarial.`, "_blank");
+        fullName += ` El comercio que agregué es: ${companyName}. Y el celular que agregué de contacto es: ${cellPhone}`;
+      }
+      
+      let message = `Hola. Estoy interesado en saber más acerca del Plan empresarial. ${fullName}`;
+      openWhatsAppLink("5491170677519", message);
+    } else {
+      let message = "Hola. Estoy interesado en saber más acerca del Plan empresarial.";
+      openWhatsAppLink("5491170677519", message);
+    }
   }
 
   render() {
