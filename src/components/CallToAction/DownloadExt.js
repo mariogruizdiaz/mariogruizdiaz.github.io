@@ -14,22 +14,6 @@ class Download extends React.Component {
       copied: false
     };
   }
-  // getMobileOperatingSystem = () => {
-  //   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-  //   // Detecta si es Android
-  //   if (/android/i.test(userAgent)) {
-  //     return 'Android';
-  //   }
-
-  //   // Detecta si es iOS
-  //   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-  //     return 'iOS';
-  //   }
-
-  //   // Retorna 'Otro' si no es ni Android ni iOS
-  //   return 'Otro';
-  // };
 
   copyToClipboard = () => {
     navigator.clipboard.writeText(this.state.text)
