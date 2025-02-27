@@ -2,24 +2,29 @@ import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import PromoSection from "../PromoSection";
+import { openWhatsAppLink } from '../../state/helpers/openWhatsAppLink';
 
 class Brands extends React.Component {
 
   handleSubmit = (event) => {
-    if (this.props.security.authenticated){
-      let mail = this.props.security.email;
-      let name = this.props.security.firstName? this.props.security.firstName: null;
-      let lastName = this.props.security.lastName? this.props.security.lastName : null;
-      let fullName = ` Mi mail es: ${mail} ${name ? ` Mi nombre es: ${name} `: ``} ${lastName ? `${lastName}.`: ``}`;
+    const { authenticated, email, firstName, lastName, company } = this.props.security;
+    if (authenticated) {
+      let fullName = `Mi mail es: ${email} ${firstName ? `Mi nombre es: ${firstName}` : ''} ${lastName ? `${lastName}.` : ''}`;
 
-      if (this.props.security.company.id){
-        let companyName = this.props.security.company?.name;
-        let cellPhone = this.props.security.company?.cellPhone;
-        fullName += `El comercio que agregue es: ${companyName}. Y el celular que agregue de contacto es: ${cellPhone}`;
-        if (this.props.companies.selectedCompany.campaigns.items.length) window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola%2C%20ya%20cree%20alguna%20campa%C3%B1a%20junto%20a%20Adme%2C%20me%20gustar%C3%ADa%20crear%20otra.%20Muchas%20gracias.${fullName}`, "_blank");
-        else window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola%2C%20ya%20agregue%20mi%20comercio%2C%20estoy%20listo%20para%20que%20creemos%20juntos%20mi%20primer%20campa%C3%B1a.%20Quedo%20a%20la%20espera.${fullName}`, "_blank");
-      } else window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola%2C%20ya%20tengo%20mi%20usuario%20pero%20aun%20no%20agregue%20mi%20comercio%2C%20me%20podr%C3%ADan%20dar%20soporte.%20Quedo%20a%20la%20espera.${fullName}`, "_blank");
-    } else window.open(`https://web.whatsapp.com/send?phone=/5491170677519&text=Hola%2C%20no%20cree%20aun%20mi%20usuario%20ni%20agregue%20mi%20comercio%2C%20podr%C3%ADan%20darme%20soporte.%20Quedo%20a%20la%20espera.`, "_blank");
+      if (company && company.id) {
+        fullName += ` El comercio que agregué es: ${company.name}. Y el celular que agregué de contacto es: ${company.cellPhone}`;
+        let message = this.props.companies.selectedCompany.campaigns.items.length > 0
+          ? `Hola, ya cree alguna campaña junto a Adme, me gustaría crear otra. Muchas gracias. ${fullName}`
+          : `Hola, ya agregué mi comercio, estoy listo para que creemos juntos mi primer campaña. Quedo a la espera. ${fullName}`;
+        openWhatsAppLink('/5491170677519', message);
+      } else {
+        let message = `Hola, ya tengo mi usuario pero aún no agregué mi comercio, me podrían dar soporte. Quedo a la espera. ${fullName}`;
+        openWhatsAppLink('/5491170677519', message);
+      }
+    } else {
+      let message = `Hola, no creé aún mi usuario ni agregué mi comercio, podrían darme soporte. Quedo a la espera.`;
+      openWhatsAppLink('/5491170677519', message);
+    }
   }
 
   render() {
