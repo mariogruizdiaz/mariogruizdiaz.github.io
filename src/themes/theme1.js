@@ -29,7 +29,7 @@ class Theme extends Component {
                     <Feature />
                     {/* <Screenshots /> */}
                     {/* <Pricing /> */}
-                    <Testimonial />
+                    {/* <Testimonial /> */}
                     <Faq />
                     {/* <TeamMember /> */}
                     {/* <Contact /> */}
