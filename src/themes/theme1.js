@@ -8,7 +8,7 @@ import AboutAdme from "../components/AboutAdme/About";
 import Feature from "../components/Features/FeaturesAdmeMobile";
 import WorkProcess from "../components/WorkProcess";
 import Faq from "../components/Faq/FaqAdmeMobile";
-import Testimonial from "../components/Testimonial";
+// import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer/FooterAdmeMobile";
 import PassiveIncomesAdmeMobile from "../components/PassiveIncomes/PassiveIncomesAdmeMobile";
 
