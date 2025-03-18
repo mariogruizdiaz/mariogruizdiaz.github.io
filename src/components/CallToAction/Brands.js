@@ -22,7 +22,7 @@ class Brands extends React.Component {
         openWhatsAppLink('/5491170677519', message);
       }
     } else {
-      let message = `Hola, no creé aún mi usuario ni agregué mi comercio, podrían darme soporte. Quedo a la espera.`;
+      let message = `Hola, no creé aún mi usuario ni agregué mi comercio, ¿podrían darme soporte?. Quedo a la espera.`;
       openWhatsAppLink('/5491170677519', message);
     }
   }
