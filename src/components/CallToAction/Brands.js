@@ -40,7 +40,7 @@ class Brands extends React.Component {
                           <h3 className="text-white">{this.props.dictionary.brands.howTostart.title}</h3>
                            <p>{this.props.dictionary.brands.howTostart.stepsDescriptions}</p>
                            <div style={{ display: "inline-flex"}}> {/* Ajusta aquí para centrar verticalmente los elementos */}
-                              <p style={{ marginRight: 20, marginTop: 12 }}>{`¿Tenes algunas preguntas antes de comenzar? `}</p>
+                              <p style={{ marginRight: 20, marginTop: 12 }}>{this.props.dictionary.brands.howTostart.questionBeforeToStart}</p>
                               <button type="submit" className="btn btn-brand-04" id="btnContactUs" onClick={() => this.handleSubmit()}>
                                 <span className="ti-headphone-alt color-security mr-3"></span>
                                 {this.props.dictionary.brands.howTostart.chatWhitUs}
