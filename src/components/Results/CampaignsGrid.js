@@ -8,7 +8,7 @@ import moment from "moment";
 import { Redirect } from "react-router-dom";
 import { commonStatuses } from "../../state/models/common";
 import { BulletList } from 'react-content-loader';
-import { withRouter } from "react-router-dom";
+import { withRouter } from "react-router";
 
 const statusDescription = {
     'Draft': 'Borrador',
@@ -36,6 +36,8 @@ class CampaignsGrid extends Component {
         if (this.state !== nextState) {
             return true;
         }
+        if (this.props.language !== nextProps.language) return true;
+
         return false;
     }
 
@@ -48,6 +50,7 @@ class CampaignsGrid extends Component {
     };
 
     render() {
+        moment.locale(this.props.language);
         if (this.state.redirect) {
             return <Redirect to={this.state.pathCampain} />;
         }
@@ -71,9 +74,12 @@ class CampaignsGrid extends Component {
                                                 <div className="card-body">
                                                     <h3 className="h6 mb-2 card-title"><a href="/" onClick={(e) => this.handleClick(e, campaignItem._id)} >{campaignItem[globalModels.campaignFields.name]}</a></h3>
                                                     <div className="post-meta mb-2">
-                                                             <p className="card-text"><i className="fas fa-ad mr-2"></i>{"Estado: " + statusDescription[campaignItem[globalModels.campaignFields.status]]}</p>
+                                                             <p className="card-text"><i className="fas fa-ad mr-2"></i>{this.props.dictionary.results.buttons.state + statusDescription[campaignItem[globalModels.campaignFields.status]]}</p>
                                                         <ul className="list-inline meta-list">
-                                                            <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{campaignItem[globalModels.campaignFields.likeCount]} </span>
+                                                          <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{campaignItem[globalModels.campaignFields.engagementReal]} </span>
+                                                                {this.props.dictionary.results.buttons.engagment}
+                                                            </li>
+                                                            {/* <li className="list-inline-item"><i className="fas fa-heart mr-2"></i><span>{campaignItem[globalModels.campaignFields.likeCount]} </span>
                                                                 Likes
                                                             </li>
                                                             <li className="list-inline-item"><i className="fas fa-comment-alt mr-2"></i><span>{campaignItem[globalModels.campaignFields.commentCount]} </span>
@@ -81,10 +87,10 @@ class CampaignsGrid extends Component {
                                                             </li>
                                                             <li className="list-inline-item"><i className="fas fa-share-alt mr-2"></i><span>{campaignItem[globalModels.campaignFields.sharedCount]} </span>
                                                                 Shared
-                                                            </li>
+                                                            </li> */}
                                                         </ul>
                                                     </div>
-                                                    <p className="card-text">{`Creación: ${moment(campaignItem[globalModels.campaignFields.startDt]).format('l')}`}</p>
+                                                    <p className="card-text">{`${this.props.dictionary.results.buttons.creation} ${moment(campaignItem[globalModels.campaignFields.startDt]).format('l')}`}</p>
                                                     <a href='/' onClick={(e) => this.handleClick(e, campaignItem._id)} className="detail-link">{this.props.dictionary.results.buttons.goToCampaign} <span className="ti-arrow-right"></span></a>
                                                 </div>
                                             </div>
@@ -119,6 +125,7 @@ class CampaignsGrid extends Component {
 
 function mapStateToProps(state) {
     return {
+        language: state.i18n.language,
         dictionary: state.i18n.dictionary,
         selectedCompany: state.companies.selectedCompany
     };
@@ -130,4 +137,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(CampaignsGrid));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CampaignsGrid));

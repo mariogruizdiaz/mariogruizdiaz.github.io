@@ -769,7 +769,10 @@ module.exports = {
             },
             buttons: {
                 goToCampaign: "More details",
-                goToFacebook: "See on Facebook"
+                goToFacebook: "See on Facebook",
+                engagment: 'Amount of engagement',
+                state: 'State: ',
+                creation: 'Creation: '
             },
             searcher: {
               button: "Search for an advertisement to audit", 
@@ -1698,7 +1701,10 @@ module.exports = {
             },
             buttons: {
                 goToCampaign: "Ver detalles",
-                goToFacebook: "Ver en Facebook"
+                goToFacebook: "Ver en Facebook",
+                engagment: 'Cantidad de interacciones',
+                state: 'Estado: ',
+                creation: 'Creación: '
             },
             searcher: {
               button: "Buscar anuncio para auditar",
