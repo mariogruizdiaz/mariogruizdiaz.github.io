@@ -4,7 +4,6 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { genericAction } from "../state/actions";
 import { bindActionCreators } from "redux";
-import { actionTypes } from "../state/actionTypes";
 
 // importing all the themes
 import Theme1 from "../themes/theme1";
@@ -55,67 +54,63 @@ import Childsafetystandards from "../themes/childsafetystandards";
 
 
 class Routes extends React.PureComponent {
-    componentDidMount() {
-        this.props.genericAction(actionTypes.FETCH_API_REFERENCES, {});
+    render() {
+        return (
+            <React.Fragment>
+                <Router basename={process.env.PUBLIC_URL}>
+                    <Switch>
+                        <Route exact path="/" component={Theme1} />
+                        <Route exact path="/gastonruizdiaz" component={GastonRuizDiaz} />
+                        <Route exact path="/julioaranda" component={JulioAranda} />
+                        <Route exact path="/teamMember/:memberKey" component={TeamMember} />
+                        <Route exact path="/team" component={Team} />
+                        <Route exact path="/guides" component={Guides} />
+                        <Route exact path="/iOSInstallGuide" component={iOSInstallGuide} />
+                        <Route exact path="/androidInstallGuide" component={androidInstallGuide} />
+                        <Route exact path="/companies" component={Companies} />
+                        <Route exact path="/deletemydata" component={DeleteMyData} />
+                        <Route exact path="/companies/:companyId" component={Company} />
+                        <Route exact path="/companies/:companyId/:campaignId" component={Campaign} />
+                        <Route exact path="/audit/:advertisementId" component={Audit} />
+                        <Route exact path="/download" component={Download} />
+                        <Route exact path="/childsafetystandards" component={Childsafetystandards} />
+                        <Route exact path="/theme1" component={Theme1} />
+                        <Route exact path="/theme2" component={Theme2} />
+                        <Route exact path="/theme3" component={Theme3} />
+                        <Route exact path="/theme4" component={Theme4} />
+                        <Route exact path="/theme5" component={Theme5} />
+                        <Route exact path="/theme6" component={Theme6} />
+                        <Route exact path="/theme7" component={Theme7} />
+                        <Route exact path="/theme8" component={Theme8} />
+                        <Route exact path="/theme9" component={Theme9} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/signup" component={SignUp} />
+                        <Route exact path="/editProfile" component={EditProfile} />
+                        <Route exact path="/editCompany" component={EditCompany} />
+                        <Route exact path="/resetPassword" component={ResetPassword} />
+                        {/* <Route exact path="/faq" component={Faq} /> */}
+                        <Route exact path="/404" component={NotFound} />
+                        <Route exact path="/comingSoon" component={ComingSoon} />
+                        <Route exact path="/brands" component={Brands} />
+                        <Route exact path="/comingSoonInvestors" component={ComingSoonInvestors} />
+                        <Route exact path="/investors" component={Investors} />
+                        <Route exact path="/web3" component={Web3} />
+                        <Route exact path="/thankYou" component={ThankYou} />
+                        <Route exact path="/team" component={Team} />
+                        <Route exact path="/singleTeam" component={SingleTeam} />
+                        <Route exact path="/blogDefault" component={BlogDefault} />
+                        <Route exact path="/blogNoSidebar" component={BlogNoSidebar} />
+                        <Route exact path="/blogLeftSidebar" component={BlogLeftSidebar} />
+                        <Route exact path="/blogRightSidebar" component={BlogRightSidebar} />
+                        <Route exact path="/blogSingleLeftSidebar" component={BlogSingleLeftSidebar} />
+                        <Route exact path="/blogSingleRightSidebar" component={BlogSingleRightSidebar} />
+                        <Route exact path="/aboutUs" component={AboutUs} />
+                        <Route exact path="/contactUs" component={ContactUs} />
+                    </Switch>
+                </Router>
+            </React.Fragment>
+        );
     }
-
-  render() {
-    return (
-      <React.Fragment>
-        <Router basename={process.env.PUBLIC_URL}>
-          <Switch>
-            <Route exact path="/" component={Theme1} />
-            <Route exact path="/gastonruizdiaz" component={GastonRuizDiaz} />
-            <Route exact path="/julioaranda" component={JulioAranda} />
-            <Route exact path="/teamMember/:memberKey" component={TeamMember} />
-            <Route exact path="/team" component={Team} />
-            <Route exact path="/guides" component={Guides} />
-            <Route exact path="/iOSInstallGuide" component={iOSInstallGuide} />
-            <Route exact path="/androidInstallGuide" component={androidInstallGuide} />
-            <Route exact path="/companies" component={Companies} />
-            <Route exact path="/deletemydata" component={DeleteMyData} />
-            <Route exact path="/companies/:companyId" component={Company} />
-            <Route exact path="/companies/:companyId/:campaignId" component={Campaign} />
-            <Route exact path="/audit/:advertisementId" component={Audit} />
-            <Route exact path="/download" component={Download} />
-            <Route exact path="/childsafetystandards" component={Childsafetystandards} />
-            <Route exact path="/theme1" component={Theme1} />
-            <Route exact path="/theme2" component={Theme2} />
-            <Route exact path="/theme3" component={Theme3} />
-            <Route exact path="/theme4" component={Theme4} />
-            <Route exact path="/theme5" component={Theme5} />
-            <Route exact path="/theme6" component={Theme6} />
-            <Route exact path="/theme7" component={Theme7} />
-            <Route exact path="/theme8" component={Theme8} />
-            <Route exact path="/theme9" component={Theme9} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={SignUp} />
-            <Route exact path="/editProfile" component={EditProfile} />
-            <Route exact path="/editCompany" component={EditCompany} />
-            <Route exact path="/resetPassword" component={ResetPassword} />
-            {/* <Route exact path="/faq" component={Faq} /> */}
-            <Route exact path="/404" component={NotFound} />
-            <Route exact path="/comingSoon" component={ComingSoon} />
-            <Route exact path="/brands" component={Brands} />
-            <Route exact path="/comingSoonInvestors" component={ComingSoonInvestors} />
-            <Route exact path="/investors" component={Investors} />
-            <Route exact path="/web3" component={Web3} />
-            <Route exact path="/thankYou" component={ThankYou} />
-            <Route exact path="/team" component={Team} />
-            <Route exact path="/singleTeam" component={SingleTeam} />
-            <Route exact path="/blogDefault" component={BlogDefault} />
-            <Route exact path="/blogNoSidebar" component={BlogNoSidebar} />
-            <Route exact path="/blogLeftSidebar" component={BlogLeftSidebar} />
-            <Route exact path="/blogRightSidebar" component={BlogRightSidebar} />
-            <Route exact path="/blogSingleLeftSidebar" component={BlogSingleLeftSidebar} />
-            <Route exact path="/blogSingleRightSidebar" component={BlogSingleRightSidebar} />
-            <Route exact path="/aboutUs" component={AboutUs} />
-            <Route exact path="/contactUs" component={ContactUs} />
-          </Switch>
-        </Router>
-      </React.Fragment>
-    );
-  }
 }
 
 function mapStateToProps(state) {
