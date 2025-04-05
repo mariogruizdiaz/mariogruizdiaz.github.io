@@ -1,20 +1,18 @@
 // import { select } from "redux-saga/effects";
 import { graphQL } from "../connectors";
 import { commandCollection } from "./commands";
+import { select } from "redux-saga/effects";
 
-// const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
-// const apiReferences = (state) => state.basics.api;
-const apiUrl = process.env.REACT_APP_ENV === 'production' ? 'https://api-prod.adme.com.ar/graphql' : 'https://api-qa.adme.com.ar/graphql';
-// const apiUrl = process.env.REACT_APP_ENV === 'production' ? 'https://api-prod.adme.com.ar/graphql' : 'http://localhost:4003/graphql';
+const clusterSelector = (state) => state.basics.api.url;
+
+
+
 
 const genericResolver = function* genericResolver(action) {
     try {
-      
-        // let apiRefs = yield select(apiReferences);
+        const apiURL = yield select(clusterSelector);
         const command = commandCollection[action.type];
-        console.log('command', action.type, 'action.payload', action.payload);
-        // const response = yield graphQL.executeCommand(`http://${apiRefs.host}:${apiRefs.port}/graphql`, command, action.payload);
-        const response = yield graphQL.executeCommand(apiUrl, command, action.payload);
+        const response = yield graphQL.executeCommand(apiURL, command, action.payload);
         return response;
     } catch (e) {
         console.log(`Error executing command: ${action.type}`);
@@ -22,66 +20,6 @@ const genericResolver = function* genericResolver(action) {
         throw e;
     }
 };
-
-// const genericSubscriber = (action, command) => fork(function* () {
-//     const subscriptionId = `${action.model}_${action.payload._id}`;
-//     try {
-//         let lastTask;
-//         activeSoubcriptions[subscriptionId] = yield graphQL.subscribe(yield generics.genericSubscriptionCommand(action.model), action.payload, command.endpointName);
-      
-//         while (activeSoubcriptions[subscriptionId]) {
-//             const newData = yield take(activeSoubcriptions[subscriptionId]);
-//             if (lastTask != null) {
-//                 yield cancel(lastTask); // cancel is no-op if the task has already terminated
-//             }
-//             lastTask = yield fork(dispatchAction, {subsecuentAction: command.onNewData, payload: {data: JSON.parse(newData.data)}});
-//         }
-//     } catch (e) {
-//         console.log(`Error executing command: ${subscriptionId}`);
-//         console.log(e);
-//         throw e;
-//     }
-// });
-
-// const genericUnsubscriber = (action) => fork(function* () {
-//     const subscriptionId = `${action.model}_${action.payload._id}`;
-//     try {
-//         activeSoubcriptions[subscriptionId].close(); // Unsubscribe 
-//         delete activeSoubcriptions[subscriptionId];
-//     } catch (e) {
-//         console.log(`Error unsubscribing ${subscriptionId}`, e);
-//         throw e;
-//     }
-    
-// });
-
-// const unsubscribeAll = () => fork(function* () {
-//     try {
-//         const subscriptionsIds = Object.keys(activeSoubcriptions);
-//         subscriptionsIds.forEach(subscriptionId => {
-//             activeSoubcriptions[subscriptionId].close();
-//             delete activeSoubcriptions[subscriptionId];
-            
-//         }); 
-//     } catch (e) {
-//         console.log(`Error Unsubscribing all`, e);
-//         throw e;
-//     }
-    
-// });
-
-// function* dispatchAction(params) {
-//     try {
-//         yield sleep(3000);
-//         yield put(yield params.subsecuentAction(params.payload));
-//     } catch (e) {
-//         console.log("New data arrived, but got error dispatching it", e);
-//     } finally {
-//         if (yield cancelled()) {
-//             console.log("cancelled!");
-//         }
-//     }
-// }
 
 export {
     genericResolver
