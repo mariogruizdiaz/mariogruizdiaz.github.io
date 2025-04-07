@@ -107,8 +107,17 @@ function* handleClusterUpdateSaga(action) {
     }
 }
 
+function* waitForRehydrate() {
+    // Opcional: Si ya se encuentra rehidratado el estado, no se espera
+    const rehydrated = yield select(state => state._persist && state._persist.rehydrated);
+    if (!rehydrated) {
+        yield take('persist/REHYDRATE');
+    }
+}
+
 // Saga raíz que arranca las demás
 export default function* cluster() {
+    yield call(waitForRehydrate);
     yield fork(loadInitialClusterConfigSaga);
     yield fork(firebaseConfigListenerSaga);
     yield takeLatest(actionTypes.CLUSTER_UPDATE_DETECTED, handleClusterUpdateSaga);
