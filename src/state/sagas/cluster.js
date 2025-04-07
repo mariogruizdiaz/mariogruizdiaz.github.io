@@ -83,7 +83,7 @@ function* loadInitialClusterConfigSaga() {
             case "qa":
                 yield put(
                     genericAction(actionTypes.SET_CLUSTER_CONFIG, {
-                        url: 'https://adme-qa.adme.com.ar/graphql',
+                        url: 'https://api-qa.adme.com.ar/graphql',
                     })
                 );
                 break;
