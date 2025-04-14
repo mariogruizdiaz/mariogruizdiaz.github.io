@@ -113,7 +113,7 @@ function* waitForRehydrate() {
     if (!rehydrated) {
         yield race({
             rehydrate: take('persist/REHYDRATE'),
-            timeout: delay(2000)
+            timeout: delay(1000)
         });
     }
 }
@@ -123,5 +123,6 @@ export default function* cluster() {
     yield call(waitForRehydrate);
     yield fork(loadInitialClusterConfigSaga);
     yield fork(firebaseConfigListenerSaga);
+    yield takeLatest('persist/REHYDRATE', loadInitialClusterConfigSaga);
     yield takeLatest(actionTypes.CLUSTER_UPDATE_DETECTED, handleClusterUpdateSaga);
 }
