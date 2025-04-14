@@ -1,5 +1,5 @@
 import { eventChannel } from "redux-saga";
-import { put, take, call, select, takeLatest, fork } from "redux-saga/effects";
+import { put, take, call, select, takeLatest, fork, race, delay } from "redux-saga/effects";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import { actionTypes } from "../actionTypes";
@@ -83,7 +83,7 @@ function* loadInitialClusterConfigSaga() {
             case "qa":
                 yield put(
                     genericAction(actionTypes.SET_CLUSTER_CONFIG, {
-                        url: 'https://adme-qa.adme.com.ar/graphql',
+                        url: 'https://api-qa.adme.com.ar/graphql',
                     })
                 );
                 break;
@@ -111,7 +111,10 @@ function* waitForRehydrate() {
     // Opcional: Si ya se encuentra rehidratado el estado, no se espera
     const rehydrated = yield select(state => state._persist && state._persist.rehydrated);
     if (!rehydrated) {
-        yield take('persist/REHYDRATE');
+        yield race({
+            rehydrate: take('persist/REHYDRATE'),
+            timeout: delay(2000)
+        });
     }
 }
 
