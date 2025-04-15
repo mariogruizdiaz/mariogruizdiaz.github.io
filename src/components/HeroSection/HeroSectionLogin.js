@@ -82,7 +82,7 @@ class LoginComponent extends React.Component {
 
     if (!this.state.errors.hasErrors) {
       this.props.genericAction(actionTypes.LOGIN, { 
-        email: this.state.email, 
+        email: this.state.email.toLowerCase(), 
         password: this.state.password 
       });
     } else {
