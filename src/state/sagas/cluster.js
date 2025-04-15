@@ -46,7 +46,7 @@ function* firebaseConfigListenerSaga() {
             // Se valida que la nueva configuración tenga el atributo "url"
             if (newConfig && newConfig.url) {
                 const currentCluster = yield select(clusterSelector);
-                if (newConfig.url !== currentCluster.url) {
+                if (`https://${newConfig.url}/graphql` !== currentCluster.url) {
                     yield put(
                         genericAction(actionTypes.CLUSTER_UPDATE_DETECTED, {
                             url: `https://${newConfig.url}/graphql`,
