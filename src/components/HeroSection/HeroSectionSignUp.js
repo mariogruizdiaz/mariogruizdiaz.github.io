@@ -138,7 +138,7 @@ class HeroSection extends React.Component {
 
   createUser = async () => {
     await this.props.genericAction(actionTypes.SIGNUP, {
-      [globalModels.personFields.email]: this.state.email,
+      [globalModels.personFields.email]: this.state.email.toLowerCase(),
       [globalModels.personFields.password]: this.state.password,
     });
   }
