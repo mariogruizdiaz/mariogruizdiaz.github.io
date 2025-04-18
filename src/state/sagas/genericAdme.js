@@ -70,5 +70,6 @@ export default function* userIdentity() {
     yield takeLatest(actionTypes.FETCH_ADVERTISEMENT, genericQuery);
     yield takeLatest(actionTypes.FETCH_ADVERTISEMENT_BY_CODE, genericQuery);
     yield takeLatest(actionTypes.UPDATE_ADVERTISEMENT, genericQuery);
+    yield takeLatest(actionTypes.TRACK_APP_DOWNLOAD, genericMutation);
 
 }
