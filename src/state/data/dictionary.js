@@ -138,6 +138,10 @@ module.exports = {
           step6Subtitle: 'After posting, you will receive your reward. Depending on the campaign, you’ll be rewarded with money, products, or discounts.',
           download: 'Download'
         },
+        downloadAppRedirector: {
+            title: 'Redirecting to the store...',
+            subtitle: 'Thanks for the interest in Adme 🙌',
+        },
         childsafetystandards: {
           title: 'Child Safety Policy for Adme Corp',
           titleParagraph1: '1. Commitment Against Child Sexual Exploitation',
@@ -1072,6 +1076,10 @@ module.exports = {
           step6Title: 'Publicá y recibí tu recompensa',
           step6Subtitle: 'Después de publicar, recibirás tu recompensa. Dependiendo de la campaña, serás recompensado con dinero, productos o descuentos.',
           download: 'Descargar'
+        },
+        downloadAppRedirector: {
+            title: 'Redireccionando al store...',
+            subtitle: 'Gracias por tu interés en Adme 🙌',
         },
         childsafetystandards: {
           title: 'Política de Seguridad Infantil de Adme Corp',

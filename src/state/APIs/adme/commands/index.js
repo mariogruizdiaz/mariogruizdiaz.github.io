@@ -5,6 +5,7 @@ import post from "./post";
 import person_credential from "./person_credential";
 import security from "./security";
 import termsAndConditionsHistoric from "./termsAndConditionsHistoric";
+import event from "./event";
 import { actionTypes } from "../../../actionTypes";
 
 
@@ -26,6 +27,7 @@ const commandCollection = {
     [actionTypes.FETCH_ADVERTISEMENT]: advertisement.fetchAdvertisementByIdAndCompanyId,
     [actionTypes.UPDATE_ADVERTISEMENT]: advertisement.updateAdvertisement,
     [actionTypes.FETCH_ADVERTISEMENT_BY_CODE]: advertisement.fetchAdvertisementByCodeAndCompanyId,
+    [actionTypes.TRACK_APP_DOWNLOAD]: event.trackEvent,
 };
 
 export {
