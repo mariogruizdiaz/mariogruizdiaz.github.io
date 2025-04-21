@@ -63,10 +63,11 @@ class DownloadAppRedirector extends React.Component {
             }
 
             if (storeUrl) {
-                window.open(storeUrl, '_blank', 'noopener,noreferrer');
+                //window.open(storeUrl, '_blank', 'noopener,noreferrer');
+                window.location.href = storeUrl;
             }
 
-            window.location.href = pageSource;
+            //window.location.href = pageSource;
 
             this.setState({ redirected: true });
         }
