@@ -16,6 +16,7 @@ class DownloadAppRedirector extends React.Component {
             countdown: 5
         };
         this.countdownInterval = null;
+        this.redirectInterval = null;
     }
 
     async componentDidMount() {
@@ -58,7 +59,7 @@ class DownloadAppRedirector extends React.Component {
         }, 1000);
 
         // Redirigir después de 5 segundos
-        setInterval(() => {
+        this.redirectInterval = setInterval(() => {
           if (!this.state.redirected) {
               let storeUrl = null;
 
@@ -75,7 +76,10 @@ class DownloadAppRedirector extends React.Component {
 
               this.setState({ redirected: true });
           }
-          else window.location.href = pageSource;
+          else {
+            clearInterval(this.redirectInterval);
+            window.location.href = pageSource;
+          };
         }, 5000);
     }
 
