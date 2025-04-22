@@ -139,7 +139,7 @@ module.exports = {
           download: 'Download'
         },
         downloadAppRedirector: {
-            title: 'Redirecting to the store...',
+            title: 'Redirecting to the store: ',
             subtitle: 'Thanks for the interest in Adme 🙌',
         },
         childsafetystandards: {
@@ -1078,7 +1078,7 @@ module.exports = {
           download: 'Descargar'
         },
         downloadAppRedirector: {
-            title: 'Redireccionando al store...',
+            title: 'Redireccionando al store: ',
             subtitle: 'Gracias por tu interés en Adme 🙌',
         },
         childsafetystandards: {
