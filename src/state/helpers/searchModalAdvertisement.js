@@ -51,9 +51,32 @@ class SearchModal extends Component {
                 [globalModels.advertisementFields.companyId]: this.props.security.company.id,
             });
         } else {this.setState({modalSearchQueryError: true})}
-
         
     };
+
+    splitBrief = () => {
+      console.log('llego hasta aca')
+      const brief = this.props.advertisement._campaign.brief;
+      const result = {
+        brief: null,
+        termsAndConditions: null
+      }
+
+      if (brief) {
+        const splitKey = "BASESYCONDICIONES";
+        if (brief.includes(splitKey)) {
+          const parts = brief.split(splitKey);
+          result.brief = parts[0].trim();
+          result.termsAndConditions = parts[1]?.trim() || null;
+
+        } else {
+          result.brief = brief.trim();
+          result.termsAndConditions = null;
+        }
+      }
+
+      return result;
+    }
 
     // Manejar presionar "Enter" en el input de búsqueda
     handleKeyPress = (event) => {
@@ -69,6 +92,7 @@ class SearchModal extends Component {
     render() {
         const { advertisement } = this.props;
         const { modalOpen, modalSearchQuery } = this.state;
+        const result = advertisement._id && this.splitBrief();
 
         return (
             <React.Fragment>
@@ -159,9 +183,20 @@ class SearchModal extends Component {
                                          <h6 className="mb-0 text">
                                           {
                                             this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising &&
+                                            result.brief &&
                                            <React.Fragment>
                                               {this.props.dictionary.audtiAdvertisemnt.brief}
-                                              <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={35} />
+                                              <ExpandableText text={result.brief || ""} maxChars={35} />
+                                           </React.Fragment>
+                                          }
+                                          {
+                                            this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising &&
+                                           result.termsAndConditions &&
+                                            <React.Fragment>
+                                            <div className="pricing-content">
+                                              {this.props.dictionary.audtiAdvertisemnt.termsAndConditions}
+                                              <span><ExpandableText text={result.termsAndConditions || ""} maxChars={35} /></span>
+                                              </div>
                                            </React.Fragment>
                                           }
                                         </h6>
