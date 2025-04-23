@@ -25,7 +25,9 @@ class HeroSectionAuditPage extends React.Component {
             hero: {},
             isOpen: false,
             loading: false,  // Estado para la máscara de carga
-            resultStatus: 'rejected'  // Estado para el resultado de aprobación/rechazo
+            resultStatus: 'rejected' , // Estado para el resultado de aprobación/rechazo
+            brief: null,
+            termsAndConditions: null
         };
 
         this.handleImageClick = this.handleImageClick.bind(this);
@@ -42,6 +44,33 @@ class HeroSectionAuditPage extends React.Component {
 
     componentDidMount() {
         this.resizeImage();
+        this.splitBrief();
+    }
+
+    splitBrief = () => {
+      const brief = this.props.advertisement._campaign.brief;
+
+      if (brief) {
+        const splitKey = "BASESYCONDICIONES";
+        if (brief.includes(splitKey)) {
+          const parts = brief.split(splitKey);
+          this.setState({
+            brief: parts[0].trim(),
+            termsAndConditions: parts[1]?.trim() || null
+          });
+        } else {
+          this.setState({
+            brief: brief.trim(),
+            termsAndConditions: null
+          });
+        }
+      } else {
+        this.setState({
+          brief: null,
+          termsAndConditions: null
+        });
+      }
+
     }
 
     resizeImage = () => {
@@ -164,9 +193,23 @@ class HeroSectionAuditPage extends React.Component {
                                          <h6 className="mb-0 text">
                                           {
                                             this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising &&
-                                           <React.Fragment>
+                                           this.state.brief &&
+                                            <React.Fragment>
+                                            
                                               {this.props.dictionary.audtiAdvertisemnt.brief}
-                                              <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={35} />
+                                              <ExpandableText text={this.state.brief || ""} maxChars={35} />
+                                              {/* <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={35} /> */}
+                                           </React.Fragment>
+                                          }
+                                          {
+                                            this.props.advertisement.campaignType === globalModels.campaignTypeEnum.Advertising &&
+                                           this.state.termsAndConditions &&
+                                            <React.Fragment>
+                                            <div className="pricing-content">
+                                              {this.props.dictionary.audtiAdvertisemnt.termsAndConditions}
+                                              <span><ExpandableText text={this.state.termsAndConditions || ""} maxChars={35} /></span>
+                                              {/* <ExpandableText text={this.props.advertisement._campaign.brief ? this.props.advertisement._campaign.brief : ""} maxChars={35} /> */}
+                                              </div>
                                            </React.Fragment>
                                           }
                                         </h6>
