@@ -1,5 +1,5 @@
 import { eventChannel } from "redux-saga";
-import { put, take, call, select, takeLatest, fork } from "redux-saga/effects";
+import { put, take, call, select, takeLatest, fork, race, delay } from "redux-saga/effects";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import { actionTypes } from "../actionTypes";
@@ -46,7 +46,7 @@ function* firebaseConfigListenerSaga() {
             // Se valida que la nueva configuración tenga el atributo "url"
             if (newConfig && newConfig.url) {
                 const currentCluster = yield select(clusterSelector);
-                if (newConfig.url !== currentCluster.url) {
+                if (`https://${newConfig.url}/graphql` !== currentCluster.url) {
                     yield put(
                         genericAction(actionTypes.CLUSTER_UPDATE_DETECTED, {
                             url: `https://${newConfig.url}/graphql`,
@@ -111,7 +111,10 @@ function* waitForRehydrate() {
     // Opcional: Si ya se encuentra rehidratado el estado, no se espera
     const rehydrated = yield select(state => state._persist && state._persist.rehydrated);
     if (!rehydrated) {
-        yield take('persist/REHYDRATE');
+        yield race({
+            rehydrate: take('persist/REHYDRATE'),
+            timeout: delay(1000)
+        });
     }
 }
 
@@ -120,5 +123,6 @@ export default function* cluster() {
     yield call(waitForRehydrate);
     yield fork(loadInitialClusterConfigSaga);
     yield fork(firebaseConfigListenerSaga);
+    yield takeLatest('persist/REHYDRATE', loadInitialClusterConfigSaga);
     yield takeLatest(actionTypes.CLUSTER_UPDATE_DETECTED, handleClusterUpdateSaga);
 }

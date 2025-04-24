@@ -18,6 +18,7 @@ const endpointMapper = async (type) => {
     case actionTypes.FETCH_ADVERTISEMENT: return "advertisements";
     case actionTypes.UPDATE_ADVERTISEMENT: return "updateAdvertisement";
     case actionTypes.FETCH_ADVERTISEMENT_BY_CODE: return "advertisements";
+    case actionTypes.TRACK_APP_DOWNLOAD: return "trackEvent";
     default: return type.toLowerCase();
     }
 };
