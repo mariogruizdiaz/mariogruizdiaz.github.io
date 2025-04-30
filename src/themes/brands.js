@@ -6,6 +6,7 @@ import HeroSectionValueOfService from "../components/HeroSection/HeroSectionValu
 import AdmeValueProposition from "../components/Features/AdmeValueProposition";
 import WorkProcess from "../components/WorkProcess/toBrands";
 import FooterPortal from "../components/Footer/FooterAdmePortal";
+import Bullets from "../components/AboutAdme/Bullets";
 
 class Theme extends Component {
   componentDidMount() {
@@ -16,6 +17,7 @@ class Theme extends Component {
       <React.Fragment>
         <HeaderTeam />
         <div className="main">
+          <Bullets />
           <HeroSection />
           <WorkProcess removeTop={true} />
           <HeroSectionValueOfService />

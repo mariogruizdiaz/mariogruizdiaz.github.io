@@ -30,7 +30,7 @@ class Brands extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section className="position-relative overflow-hidden ptb-100">
+        <section id="howToStart" className="position-relative overflow-hidden ptb-100">
             <div className="mask-65"></div>
             <div className="container">
                 <div className="row justify-content-center">
@@ -51,6 +51,7 @@ class Brands extends React.Component {
                         </div>
                     </div>
                      <PromoSection  />
+                     
                 </div>
             </div>
         </section>

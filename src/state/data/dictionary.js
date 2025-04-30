@@ -162,6 +162,20 @@ module.exports = {
           footer: 'Last Updated: 01/25/2025'
         },
         brands: {
+          whatIsAdme: {
+            whatIsAdme: 'What is Adme?',
+            description: 'Adme is the first platform where real people turn your brand into viral word-of-mouth through their social media posts.',
+            bullet1Title: 'Authentic Advertising',
+            bullet1: 'Turn your customers into your best ambassadors by letting them recommend you. Reach new audiences every day with genuine, user-generated content.',
+            bullet2Title: 'Budget Control',
+            bullet2: 'You decide how much to pay for each post and how to do it—whether with money, products, or discounts. Choose the total budget or inventory for your campaign.',
+            bullet3Title: 'Transparent, Real-Time Metrics',
+            bullet3: 'Create campaigns in under 5 minutes and easily track the effectiveness of your online presence in real time.',
+            brands: 'Brands',
+            downloads: 'Downloads',
+            startNow: 'Get started NOW',
+            viewConcept: 'Watch the concept'
+          },
           howTostart: {
             title: 'How to get started?',
             stepsDescriptions: 'To link your brand with Adme and start revolutionizing your influencer marketing strategies, simply follow these steps. It is completely free:',
@@ -1102,6 +1116,20 @@ module.exports = {
           footer: 'Última actualización: 01/23/2025'
         },
         brands: {
+          whatIsAdme: {
+            whatIsAdme: '¿Qué es Adme?',
+            description: 'Adme es la primera plataforma que conecta a las marcas con usuarios de redes sociales, haciendo de sus posteos la mejor publicidad para tu marca: el boca en boca viral.',
+            bullet1Title: 'Publicidad auténtica',
+            bullet1: 'Transformá a tu clientes en tus mejores embajadores siendo ellos los que te recomienden. Alcanzá nuevas audiencias todos los días con contenido genuino.',
+            bullet2Title: 'Control de tu presupuesto',
+            bullet2: 'Definís cuánto pagar por cada publicación y también cómo hacerlo: con dinero, productos o descuentos. Elegí el presupuesto o stock total de tu campaña.',
+            bullet3Title: 'Métricas transparentes y en tiempo real',
+            bullet3: 'Creá campañas en menos de 5 minutos y medí la efectividad de tu presencia online de forma my sencilla y en tiempo real.',
+            brands: 'Marcas',
+            downloads: 'Descargas',
+            startNow: 'Empezá YA',
+            viewConcept: 'Ver concepto'
+          },
           howTostart: {
             title: '¿Cómo comenzar?',
             stepsDescriptions: 'Para unir tu marca a Adme y comenzar a revolucionar tus estrategias de marketing de influencia, sólo sigue estos pasos. Es completamente gratuito:',
