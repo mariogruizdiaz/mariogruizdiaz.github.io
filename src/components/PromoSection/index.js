@@ -77,7 +77,6 @@ class PromoSection extends React.Component {
 
   render() {
     const os = getMobileOperatingSystem();
-    console.log('os', os)
     return (
       <React.Fragment>
         <section className="promo-section ptb-0">
