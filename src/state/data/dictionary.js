@@ -164,7 +164,7 @@ module.exports = {
         brands: {
           whatIsAdme: {
             whatIsAdme: 'What is Adme?',
-            description: 'Adme is the first platform where real people turn your brand into viral word-of-mouth through their social media posts.',
+            description: 'Adme is the first platform that connects your brand with social media users, turning their posts into your most powerful advertising: viral word of mouth.',
             bullet1Title: 'Authentic Advertising',
             bullet1: 'Turn your customers into your best ambassadors by letting them recommend you. Reach new audiences every day with genuine, user-generated content.',
             bullet2Title: 'Budget Control',
@@ -1118,7 +1118,7 @@ module.exports = {
         brands: {
           whatIsAdme: {
             whatIsAdme: '¿Qué es Adme?',
-            description: 'Adme es la primera plataforma que conecta a las marcas con usuarios de redes sociales, haciendo de sus posteos la mejor publicidad para tu marca: el boca en boca viral.',
+            description: 'Adme es la primera plataforma que conecta tu marca con usuarios de redes sociales, transformando sus posteos en la mejor publicidad para vos: el boca a boca viral.',
             bullet1Title: 'Publicidad auténtica',
             bullet1: 'Transformá a tu clientes en tus mejores embajadores siendo ellos los que te recomienden. Alcanzá nuevas audiencias todos los días con contenido genuino.',
             bullet2Title: 'Control de tu presupuesto',
