@@ -1124,7 +1124,7 @@ module.exports = {
             bullet2Title: 'Control de tu presupuesto',
             bullet2: 'Definís cuánto pagar por cada publicación y también cómo hacerlo: con dinero, productos o descuentos. Elegí el presupuesto o stock total de tu campaña.',
             bullet3Title: 'Métricas transparentes y en tiempo real',
-            bullet3: 'Creá campañas en menos de 5 minutos y medí la efectividad de tu presencia online de forma my sencilla y en tiempo real.',
+            bullet3: 'Creá campañas en menos de 5 minutos y medí la efectividad de tu presencia online de forma muy sencilla y en tiempo real.',
             brands: 'Marcas',
             downloads: 'Descargas',
             startNow: 'Empezá YA',
