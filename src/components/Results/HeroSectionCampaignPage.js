@@ -68,13 +68,13 @@ class HeroSectionCampaignPage extends React.Component {
                                             <span>{this.props.dictionary.results.campaign.posts.post.likesLabel}</span>
                                         </div>
                                     </div>
-                                    <div className="col-sm-6 col-md-6 col-lg-3">
+                                    {/* <div className="col-sm-6 col-md-6 col-lg-3">
                                         <div className="text-white p-2 count-data text-center my-3">
                                             <span className="fas fa-share icon-size-lg mb-2"></span>
                                             <h3 className="count-number mb-1 text-white font-weight-bolder">{sharedCount}</h3>
                                             <span>{this.props.dictionary.results.campaign.posts.post.shareLabel}</span>
                                         </div>
-                                    </div>
+                                    </div> */}
                               </div>
                           </div>
                           <div className="col-md-12 col-lg-6">

@@ -66,6 +66,28 @@ function* loadInitialClusterConfigSaga() {
         const environment = process.env.REACT_APP_ENV;
         switch (environment) {
             case "production":
+                // const envPath = "adme-prod";
+                // const response = yield call(
+                //     fetch,
+                //     `https://adme-277711.firebaseio.com/environments/k8s/${envPath}/adme-api.json`
+                // );
+                // const config = yield response.json();
+                // if (config && config.url) {
+                //     yield put(
+                //         genericAction(actionTypes.SET_CLUSTER_CONFIG, {
+                //             url: `https://${config.url}/graphql`,
+                //         })
+                //     );
+                // }
+                break;
+            case "qa":
+                yield put(
+                    genericAction(actionTypes.SET_CLUSTER_CONFIG, {
+                        url: 'https://api-qa.adme.com.ar/graphql',
+                    })
+                );
+                break;
+            default:
                 const envPath = "adme-prod";
                 const response = yield call(
                     fetch,
@@ -79,15 +101,6 @@ function* loadInitialClusterConfigSaga() {
                         })
                     );
                 }
-                break;
-            case "qa":
-                yield put(
-                    genericAction(actionTypes.SET_CLUSTER_CONFIG, {
-                        url: 'https://api-qa.adme.com.ar/graphql',
-                    })
-                );
-                break;
-            default:
                 console.log("Skipping initial cluster config load in non-production environment");
                 return;
 

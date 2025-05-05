@@ -68,7 +68,7 @@ class AdvertisementDetails extends Component {
                 <ul className="list-unstyled pricing-feature-list">
                   <li><span>{this.props.dictionary.results.campaign.posts.post.likesLabel}</span> {this.props.ad.likeCount + this.props.ad.notSponsoredLikeCount}</li>
                     <li><span>{this.props.dictionary.results.campaign.posts.post.commentsLabel}</span> {this.props.ad.commentCount + this.props.ad.notSponsoredCommentCount}</li>
-                    <li><span>{this.props.dictionary.results.campaign.posts.post.shareLabel}</span> {this.props.ad.sharedCount + this.props.ad.notSponsoredSharedCount}</li>
+                    {/* <li><span>{this.props.dictionary.results.campaign.posts.post.shareLabel}</span> {this.props.ad.sharedCount + this.props.ad.notSponsoredSharedCount}</li> */}
                     <li><span>{this.props.dictionary.audtiAdvertisemnt.creation} </span>{moment(this.props.ad.creationDt).fromNow()}</li>
                     <li><span>{this.props.dictionary.audtiAdvertisemnt.creatorUser}</span> {`${this.props.ad._person.firstName} ${this.props.ad._person.lastName ? this.props.ad._person.lastName : ''}`}</li>
                     <li><span>{this.props.dictionary.results.campaign.posts.post.adCode}</span><span className="h4 adCode"> {` ${this.props.ad.captionIdentifier}`}</span> </li>
