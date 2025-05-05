@@ -23,7 +23,7 @@ class HeroSectionCampaignPage extends React.Component {
     render() {
         const likeCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + (item[globalModels.advertisementFields.likeCount] + item[globalModels.advertisementFields.notSponsoredLikeCount]), 0);
         const commentCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + (item[globalModels.advertisementFields.commentCount] + item[globalModels.advertisementFields.notSponsoredCommentCount]), 0);
-        const sharedCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + (item[globalModels.advertisementFields.sharedCount] + item[globalModels.advertisementFields.notSponsoredSharedCount]), 0);
+        //const sharedCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + (item[globalModels.advertisementFields.sharedCount] + item[globalModels.advertisementFields.notSponsoredSharedCount]), 0);
         return (
             <React.Fragment>
                 <section className="page-header-section ptb-100 bg-image" image-overlay="8">
