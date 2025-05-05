@@ -45,7 +45,7 @@ class HeroSectionCompanyPage extends React.Component {
                                             <span>{this.props.dictionary.results.campaign.hero.finished}</span>
                                         </div>
                                     </div>
-                                    <div className="col-sm-6 col-md-6 col-lg-3">
+                                    {/* <div className="col-sm-6 col-md-6 col-lg-3">
                                         <div className="text-white p-2 count-data text-center my-3">
                                             <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsFinishedCount}</h3>
                                             <span>{this.props.dictionary.results.campaign.hero.stopped}</span>
@@ -56,7 +56,7 @@ class HeroSectionCompanyPage extends React.Component {
                                             <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCompany.campaignsDraftCount}</h3>
                                             <span>{this.props.dictionary.results.campaign.hero.draft}</span>
                                         </div>
-                                    </div>
+                                    </div> */}
                                   </div>
                                     </ul>
                                 </div>
