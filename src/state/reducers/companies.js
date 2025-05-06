@@ -46,6 +46,7 @@ const initialState = {
             pageIndex: -1,
             fetchStatus: commonStatuses.none,
             fetchStatusDescription: commonStatusesDescriptions[commonStatuses.none],
+            approvedItems: 0,
         },
         postsByAdvertisementIds: {},
         personCredentialsByAdvertisementIds: {}
@@ -145,6 +146,7 @@ export default (state = initialState, action) => {
                         pageIndex: -1,
                         fetchStatus: commonStatuses.loaded,
                         fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
+
                     }
                 }
             };
@@ -194,6 +196,7 @@ export default (state = initialState, action) => {
             };
         }
         case actionTypes.FETCH_ADVERTISEMENTS_SUCCESS: {
+            const approvedItems = action.payload.data.filter(item => item.status === "Approved").length;
             return {
                 ...state,
                 selectedCampaign: {
@@ -203,6 +206,7 @@ export default (state = initialState, action) => {
                         pageIndex: -1,
                         fetchStatus: commonStatuses.loaded,
                         fetchStatusDescription: commonStatusesDescriptions[commonStatuses.loaded],
+                        approvedItems: approvedItems
                     }
                 }
             };

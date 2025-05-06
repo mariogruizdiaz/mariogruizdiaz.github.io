@@ -23,6 +23,7 @@ class HeroSectionCampaignPage extends React.Component {
     render() {
         const likeCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + (item[globalModels.advertisementFields.likeCount] + item[globalModels.advertisementFields.notSponsoredLikeCount]), 0);
         const commentCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + (item[globalModels.advertisementFields.commentCount] + item[globalModels.advertisementFields.notSponsoredCommentCount]), 0);
+        const enabledStock = this.props.selectedCampaign.advertisements.items.length - this.props.selectedCampaign.advertisements.approvedItems;
         //const sharedCount = this.props.selectedCampaign.advertisements.items.reduce((n, item) => n + (item[globalModels.advertisementFields.sharedCount] + item[globalModels.advertisementFields.notSponsoredSharedCount]), 0);
         return (
             <React.Fragment>
@@ -52,6 +53,13 @@ class HeroSectionCampaignPage extends React.Component {
                                             <span className="fas fa-cloud-upload-alt icon-size-lg mb-2"></span>
                                             <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCampaign.advertisements.items.length}</h3>
                                             <span>{this.props.dictionary.results.campaign.posts.post.postsLabel}</span>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-md-6 col-lg-3">
+                                        <div className="text-white p-2 count-data text-center my-3">
+                                            <span className="fas fa-user-check icon-size-lg mb-2"></span>
+                                            <h3 className="count-number mb-1 text-white font-weight-bolder">{this.props.selectedCampaign.advertisements.approvedItems}</h3>
+                                            <span>{"Aprobados"}</span>
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-3">
@@ -184,7 +192,7 @@ class HeroSectionCampaignPage extends React.Component {
                                             </h6>
                                             :
                                             <h6 className="mb-0 d-inline-block">
-                                              {`${this.props.dictionary.results.campaign.hero.stock} ${this.props.selectedCampaign.stock}`}
+                                              {`${this.props.dictionary.results.campaign.hero.stock} ${this.props.selectedCampaign.stock + enabledStock}`}
                                             </h6>
                                             }
                                       </a>
@@ -207,7 +215,7 @@ class HeroSectionCampaignPage extends React.Component {
                                             </div>
                                           : 
                                             <div className="card-body white-bg">
-                                              {`${this.props.dictionary.results.campaign.hero.stockAvailable}${this.props.selectedCampaign.stock}`}
+                                              {`${this.props.dictionary.results.campaign.hero.stockAvailable}${this.props.selectedCampaign.stock + enabledStock}`}
                                             </div>
                                           }
                                       </div>
