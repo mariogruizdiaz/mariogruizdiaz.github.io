@@ -18,6 +18,7 @@ import * as globalModels from "influencers-models";
 class campaign extends Component {
 
     componentDidMount() {
+      window.scrollTo(0, 0);
       this.fetchData();
     }
 
