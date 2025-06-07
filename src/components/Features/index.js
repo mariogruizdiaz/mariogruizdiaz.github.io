@@ -16,7 +16,7 @@ class Feature extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: '9CD4CD95',
+      text: '9CD4CD97',
       copied: false
     };
   }
@@ -51,13 +51,13 @@ class Feature extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div id="features" className="about-us ptb-0-100 background-shape-img position-relative">
-            <div className="animated-shape-wrap">
+        <div id="features" className="about-us ptb-0-100 position-relative">
+            {/* <div className="animated-shape-wrap">
                     <div className="animated-shape-item"></div>
                     <div className="animated-shape-item"></div>
                     <div className="animated-shape-item"></div>
                     <div className="animated-shape-item"></div>
-                </div>
+                </div> */}
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-9 col-lg-9">
@@ -85,18 +85,18 @@ class Feature extends React.Component {
                                     <ContentCopyIcon fontSize="large" className="color-secondary mr-4"></ContentCopyIcon>
                                     <div className="icon-text">
                                         <h5 className="mb-2">{this.props.dictionary.download.step2Title}</h5>
-                                        {/* <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD95 `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p> */}
-                                        {/* <p>{this.props.dictionary.download.step2Subtitle}</p> */}
-                                        <p>{this.props.dictionary.download.step2SubtitlePreLunch}</p>
+                                        <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD97 `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p>
+                                        <p>{this.props.dictionary.download.step2Subtitle}</p>
+                                        {/* <p>{this.props.dictionary.download.step2SubtitlePreLunch}</p> */}
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <PersonAddIcon fontSize="large" className="color-secondary mr-4"></PersonAddIcon>
+                                    <AddLinkIcon fontSize="large" className="color-secondary mr-4"></AddLinkIcon>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">{this.props.dictionary.download.step3Title}</h5>
-                                        <p>{this.props.dictionary.download.step3Subtitle}</p>
+                                        <h5 className="mb-2">{this.props.dictionary.download.step4Title}</h5>
+                                        <p>{this.props.dictionary.download.step4Subtitle}</p>
                                     </div>
                                 </div>
                             </div>
@@ -111,15 +111,16 @@ class Feature extends React.Component {
                     </div>
                     <div className="col-lg-4 col-md-12">
                         <div className="row">
-                            <div className="col-12">
+                          <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
-                                    <AddLinkIcon fontSize="large" className="color-secondary mr-4"></AddLinkIcon>
+                                    <PersonAddIcon fontSize="large" className="color-secondary mr-4"></PersonAddIcon>
                                     <div className="icon-text">
-                                        <h5 className="mb-2">{this.props.dictionary.download.step4Title}</h5>
-                                        <p>{this.props.dictionary.download.step4Subtitle}</p>
+                                        <h5 className="mb-2">{this.props.dictionary.download.step3Title}</h5>
+                                        <p>{this.props.dictionary.download.step3Subtitle}</p>
                                     </div>
                                 </div>
                             </div>
+                            
                             <div className="col-12">
                                 <div className="d-flex align-items-start mb-sm-0 mb-md-3 mb-lg-3">
                                     <CampaignIcon fontSize="large" className="color-secondary mr-4"></CampaignIcon>
