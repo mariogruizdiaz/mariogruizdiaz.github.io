@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-// import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { SnackbarContext } from '../Toast/SnackbarContext';
 import { withRouter } from "react-router-dom";
 import { getMobileOperatingSystem } from '../../state/helpers/openWhatsAppLink';
@@ -11,7 +11,7 @@ class Download extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: '9CD4CD9A',
+            text: '9CD4CD97',
             copied: false,
         };
     }
@@ -75,9 +75,9 @@ class Download extends React.Component {
                                                     <h5>{this.props.dictionary.download.downloadTitle}</h5>
                                                 </div>
                                                 <div className="p-20px">
-                                                    {/* <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p>  */}
-                                                    <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p>
-                                                    {/* <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p> */}
+                                                    <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
+                                                    {/* <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p> */}
+                                                    <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD97 `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p>
                                                     {/* <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">{this.props.dictionary.download.download}</a> */}
                                                     <img src="assets/img/admeDownloadiOS.png" alt="logo" class="img-fluid" />
                                                 </div>
@@ -90,9 +90,9 @@ class Download extends React.Component {
                                                     <h5>{this.props.dictionary.download.downloadTitle}</h5>
                                                 </div>
                                                 <div className="p-20px">
-                                                    {/* <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p>  */}
-                                                    <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p>
-                                                    {/* <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p> */}
+                                                    <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
+                                                    {/* <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p> */}
+                                                    <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD97 `}<ContentCopyIcon style={{ cursor: 'pointer' }} onClick={this.copyToClipboard} /></p>
                                                     {/* <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">{this.props.dictionary.download.download}</a> */}
                                                     <img src="assets/img/admeDownloadAndroid.png" alt="logo" class="img-fluid" />
                                                 </div>
@@ -109,9 +109,9 @@ class Download extends React.Component {
                                             <h5>{this.props.dictionary.download.downloadTitle}</h5>
                                         </div>
                                         <div className="p-20px">
-                                            {/* <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p>  */}
-                                            <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p>
-                                            {/* <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon style={{ cursor: 'pointer' }}  onClick={this.copyToClipboard} /></p> */}
+                                            <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
+                                            {/* <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p> */}
+                                            <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD97 `}<ContentCopyIcon style={{ cursor: 'pointer' }}  onClick={this.copyToClipboard} /></p>
                                             {/* <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/adme-%24/id1637316014">{this.props.dictionary.download.download}</a> */}
                                             <a className="btn btn-brand-02 btn-sm btn-rounded" href={`/#/downloadAppRedirector?source=PHYSICAL_QR&store=iOS&companyCode=${this.state.companycode}&from=download&prevQuery=${encodeURIComponent(this.state.fullQuery)}`}>{this.props.dictionary.download.download}</a>
                                         </div>
@@ -125,9 +125,9 @@ class Download extends React.Component {
                                             <h5>{this.props.dictionary.download.downloadTitle}</h5>
                                         </div>
                                         <div className="p-20px">
-                                            {/* <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p>  */}
-                                            <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p>
-                                            {/* <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD9A `}<ContentCopyIcon onClick={this.copyToClipboard} /></p> */}
+                                            <p className="m-0px">{this.props.dictionary.download.downloadSubtitle}</p> 
+                                            {/* <p className="m-0px">{this.props.dictionary.download.preLunchdownloadSubtitle}</p> */}
+                                            <p style={{ color: this.state.copied ? 'green' : 'black' }} >{`9CD4CD97 `}<ContentCopyIcon onClick={this.copyToClipboard} /></p>
                                             {/* <a className="btn btn-brand-02 btn-sm btn-rounded" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=ar.com.adme.social.qa">{this.props.dictionary.download.download}</a> */}
                                             <a className="btn btn-brand-02 btn-sm btn-rounded" href={`/#/downloadAppRedirector?source=PHYSICAL_QR&store=Android&companyCode=${this.state.companycode}&from=download&prevQuery=${encodeURIComponent(this.state.fullQuery)}`}>{this.props.dictionary.download.download}</a>
                                         </div>
