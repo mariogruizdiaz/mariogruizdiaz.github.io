@@ -42,7 +42,7 @@ class OpenPostions extends Component {
                                                     <a className="card-header " data-toggle="collapse" href="#collapse0" aria-expanded="false">
                                                         <h6 className="mb-0 d-inline-block">{this.props.dictionary.joinUs.positions.influencer.hiringProcessTitle}</h6>
                                                     </a>
-                                                    <div id="collapse0" className="collapse show" data-parent="#accordion">
+                                                    <div id="collapse0" className="collapse" data-parent="#accordion">
                                                         <div className="card-body white-bg"
                                                             dangerouslySetInnerHTML={{ __html: this.props.dictionary.joinUs.positions.influencer.hiringProcessDetails }}>
                                                         </div>
@@ -73,7 +73,7 @@ class OpenPostions extends Component {
                                                     <a className="card-header " data-toggle="collapse" href="#collapse1" aria-expanded="false">
                                                         <h6 className="mb-0 d-inline-block">{this.props.dictionary.joinUs.positions.brandAmbassador.hiringProcessTitle}</h6>
                                                     </a>
-                                                    <div id="collapse1" className="collapse show" data-parent="#accordion">
+                                                    <div id="collapse1" className="collapse" data-parent="#accordion">
                                                         <div className="card-body white-bg"
                                                             dangerouslySetInnerHTML={{ __html: this.props.dictionary.joinUs.positions.brandAmbassador.hiringProcessDetails }}>
                                                         </div>
