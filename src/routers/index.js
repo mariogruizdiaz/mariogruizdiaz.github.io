@@ -49,6 +49,7 @@ import BlogSingleLeftSidebar from "../themes/blogSingleLeftSidebar";
 import BlogSingleRightSidebar from "../themes/blogSingleRightSidebar";
 import AboutUs from "../themes/aboutUs";
 import ContactUs from "../themes/contactUs";
+import JoinUs from "../themes/joinUs";
 import Download from "../themes/download";
 import DownloadAppRedirector from "../themes/downloadAppRedirector";
 import Childsafetystandards from "../themes/childsafetystandards";
@@ -108,6 +109,7 @@ class Routes extends React.PureComponent {
                         <Route exact path="/blogSingleRightSidebar" component={BlogSingleRightSidebar} />
                         <Route exact path="/aboutUs" component={AboutUs} />
                         <Route exact path="/contactUs" component={ContactUs} />
+                        <Route exact path="/joinUs" component={JoinUs} />
                     </Switch>
                 </Router>
             </React.Fragment>

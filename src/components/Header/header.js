@@ -23,7 +23,6 @@ class Header extends React.Component {
                             <div className="collapse navbar-collapse h-auto" id="navbarSupportedContent">
                               <GoogleCalendarButton />
                                 <ul className="navbar-nav ml-auto menu spanBold">
-                                  
                                     {
                                         this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCampaings') ?
                                         <li><a href={`${process.env.PUBLIC_URL}/#brands`} className="dropdown-toggle"><span>{this.props.dictionary.header.menu.myPortal}</span></a>
@@ -51,7 +50,8 @@ class Header extends React.Component {
                                     <li><a href="#process" className="page-scroll">{this.props.dictionary.header.menu.process}</a></li>
                                     <li><a href="#features" className="page-scroll">{this.props.dictionary.header.menu.features}</a></li>
                                     <li><a href={`${process.env.PUBLIC_URL}/#Investors`} className="page-scroll">{this.props.dictionary.header.menu.investors}</a></li>
-                                    <li><a href={`${process.env.PUBLIC_URL}/#Web3`} className="page-scroll">{this.props.dictionary.header.menu.web3}</a></li>
+                                    {/* <li><a href={`${process.env.PUBLIC_URL}/#Web3`} className="page-scroll">{this.props.dictionary.header.menu.web3}</a></li> */}
+                                    <li><a href={`https://blog.adme.com.ar`} className="page-scroll">Blog</a></li>
                                     {/* {
                                         this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCampaings') &&
                                         (this.props.security.authenticated && this.props.security.permissions.find(item => item === 'readCompanies') ?

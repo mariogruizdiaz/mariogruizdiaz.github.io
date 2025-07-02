@@ -13,239 +13,239 @@ module.exports = {
             UnauthorizedSubtitle: "You do not have permission to access the auditing module. Please contact your account manager if you need access."
         },
         login: {
-          title: "Login your account",
-          email: "Email Address",
-          password: "Password",
-          login: "Login",
-          signing: "Signing...",
-          accountYesOrNot: "Don't have an account? ",
-          register: "Register",
-          loaded: "Loaded",
-          none: "None",
-          loading: "Loading",
-          loginSuccessful: "Login successful. Welcome!",
-          loginError: " Login error!",
-          invalidCredentials: "Invalid credentials",
-          failed: "There was an error in the Login",
-          notAvailable: "Service not available",
-          saving: 'Saving...',
-          saved: 'The changes were saved.',
-          editError: 'There was an error editing your profile.',
+            title: "Login your account",
+            email: "Email Address",
+            password: "Password",
+            login: "Login",
+            signing: "Signing...",
+            accountYesOrNot: "Don't have an account? ",
+            register: "Register",
+            loaded: "Loaded",
+            none: "None",
+            loading: "Loading",
+            loginSuccessful: "Login successful. Welcome!",
+            loginError: " Login error!",
+            invalidCredentials: "Invalid credentials",
+            failed: "There was an error in the Login",
+            notAvailable: "Service not available",
+            saving: 'Saving...',
+            saved: 'The changes were saved.',
+            editError: 'There was an error editing your profile.',
         },
         signUp: {
-          signUp: "Sign Up",
-          email: "Email",
-          password: "Password",
-          specificationPassword: "The password must contain at least: A length between 6 and 15 characters, at least one uppercase letter and one lowercase letter, one number and one special character.",
-          confirmPassword: "Confirm password",
-          loading: "Loading...",
-          uploading: "Uploading ",
-          failed: "There was an error in the Sign Up",
-          notAvailable: "Service not available",
-          none: "None",
-          createYourAccount: "Create your account",
-          addYourCompany: "Add your company",
-          alreadyHaveAccount: "Already have an account? ",
-          existEmail: "The email entered already exists.",
-          existCompanyName: 'The company name already exists.',
-          companyName: 'Company Name *',
-          cellPhone: 'Cell Phone *',
-          uploadLogo: 'Upload Logo (PNG or JPEG)',
-          photoError: 'Please upload a valid image file (PNG or JPEG).',
-          editPhoto: 'Edit photo',
-          deletePhoto: 'Delete photo',
-          iAgree: 'I agree to the ',
-          termsAndConditions: 'Terms & Conditions',
-          shouldAcceptTAndC: 'You should accept terms & conditions',
-          createCompany: 'Create company',
-          signUpSuccessful: "Sign Up successful. Welcome!",
-          signUpError: " Sign Up error!",
-          specificationCellPhone: "No spaces or hyphens allowed.",
-          createCompanySuccessful: 'You have created your company, congratulations!',
-          createCompanyError: 'Error adding your company!'
+            signUp: "Sign Up",
+            email: "Email",
+            password: "Password",
+            specificationPassword: "The password must contain at least: A length between 6 and 15 characters, at least one uppercase letter and one lowercase letter, one number and one special character.",
+            confirmPassword: "Confirm password",
+            loading: "Loading...",
+            uploading: "Uploading ",
+            failed: "There was an error in the Sign Up",
+            notAvailable: "Service not available",
+            none: "None",
+            createYourAccount: "Create your account",
+            addYourCompany: "Add your company",
+            alreadyHaveAccount: "Already have an account? ",
+            existEmail: "The email entered already exists.",
+            existCompanyName: 'The company name already exists.',
+            companyName: 'Company Name *',
+            cellPhone: 'Cell Phone *',
+            uploadLogo: 'Upload Logo (PNG or JPEG)',
+            photoError: 'Please upload a valid image file (PNG or JPEG).',
+            editPhoto: 'Edit photo',
+            deletePhoto: 'Delete photo',
+            iAgree: 'I agree to the ',
+            termsAndConditions: 'Terms & Conditions',
+            shouldAcceptTAndC: 'You should accept terms & conditions',
+            createCompany: 'Create company',
+            signUpSuccessful: "Sign Up successful. Welcome!",
+            signUpError: " Sign Up error!",
+            specificationCellPhone: "No spaces or hyphens allowed.",
+            createCompanySuccessful: 'You have created your company, congratulations!',
+            createCompanyError: 'Error adding your company!'
         },
         editCompany: {
-          saving: 'Saving...',
-          saved: 'The changes were saved.',
-          editError: 'There was an error editing your company.',
-          editTitle: 'Edit company information',
-          title: 'Company information',
-          companyName: 'Company Name',
-          cellPhone: 'Cell Phone',
-          uploadLogo: 'Upload Logo (PNG or JPEG)',
-          photoError: 'Please upload a valid image file (PNG or JPEG).',
-          editPhoto: 'Edit photo',
-          deletePhoto: 'Delete photo',
-          uploading: "Uploading ",
-          save: "Save",
-          cancel: "Cancel",
-          editInformation: 'Edit information',
-          goToProfilInformation: 'go to profile information',
+            saving: 'Saving...',
+            saved: 'The changes were saved.',
+            editError: 'There was an error editing your company.',
+            editTitle: 'Edit company information',
+            title: 'Company information',
+            companyName: 'Company Name',
+            cellPhone: 'Cell Phone',
+            uploadLogo: 'Upload Logo (PNG or JPEG)',
+            photoError: 'Please upload a valid image file (PNG or JPEG).',
+            editPhoto: 'Edit photo',
+            deletePhoto: 'Delete photo',
+            uploading: "Uploading ",
+            save: "Save",
+            cancel: "Cancel",
+            editInformation: 'Edit information',
+            goToProfilInformation: 'go to profile information',
         },
         editProfile: {
-          editTitle: 'Edit user information', 
-          title: 'User information',
-          firstName: 'First name',
-          lastName: 'Last Name',
-          email: 'Email', 
-          save: "Save",
-          cancel: "Cancel",
-          editInformation: 'Edit information',
-          addCompany: 'Add company',
-          goToCompanyInformation: 'Go to Company information',
-          saved: 'The changes were saved.',
-          goBackMyPortal: 'Return to my business portal',
-          myPortal: 'Go to my business portal'
+            editTitle: 'Edit user information',
+            title: 'User information',
+            firstName: 'First name',
+            lastName: 'Last Name',
+            email: 'Email',
+            save: "Save",
+            cancel: "Cancel",
+            editInformation: 'Edit information',
+            addCompany: 'Add company',
+            goToCompanyInformation: 'Go to Company information',
+            saved: 'The changes were saved.',
+            goBackMyPortal: 'Return to my business portal',
+            myPortal: 'Go to my business portal'
         },
         audtiAdvertisemnt: {
-          approve: 'Approve',
-          reject: 'Reject',
-          pending: 'Pending advertisement',
-          approvedAd: 'Approved advertisement',
-          rejectedAd: 'rejected advertisement',
-          brief: 'Brief',
-          termsAndConditions: 'Details and participation conditions',
-          validate: 'Validate',
-          willBePaidWith: 'Ad will be paid with ',
-          creation: 'Creation ', 
-          campaignType: 'Campaign Type ',
-          creatorUser: 'Creator User ',
-          showSnackbarApproved: 'The advertisement was successfully approved.',
-          showSnackbarRejected: 'The advertisement was successfully rejected.',
-          youAreInAudit: 'You are in the Adme audit module',
-          areYouSureToReject: 'Are you sure you want to reject this Advertisement?'
+            approve: 'Approve',
+            reject: 'Reject',
+            pending: 'Pending advertisement',
+            approvedAd: 'Approved advertisement',
+            rejectedAd: 'rejected advertisement',
+            brief: 'Brief',
+            termsAndConditions: 'Details and participation conditions',
+            validate: 'Validate',
+            willBePaidWith: 'Ad will be paid with ',
+            creation: 'Creation ',
+            campaignType: 'Campaign Type ',
+            creatorUser: 'Creator User ',
+            showSnackbarApproved: 'The advertisement was successfully approved.',
+            showSnackbarRejected: 'The advertisement was successfully rejected.',
+            youAreInAudit: 'You are in the Adme audit module',
+            areYouSureToReject: 'Are you sure you want to reject this Advertisement?'
         },
         download: {
-          copiedSuccessful: "Referral code copied!",
-          title: 'In Adme everyone is an influencer',
-          subtitle: 'Adme is the app that connects you with advertising campaigns and lets you earn rewards for participating in them. More than just an app, it’s your portal to a new way of generating content and being rewarded for it.',
-          downloadTitle: 'Discover Adme',
-          downloadSubtitle: 'Use this referral code to create your account:',
-          preLunchdownloadSubtitle: 'We haven\'t launched yet, but don\'t worry, you\'ll find a referral code here as soon as we announce the launch.',
-          bodyTitle: 'How to get started?',
-          bodySubtitle: 'Follow these simple steps to start earning with Adme.',
-          step1Title: 'Download the App',
-          step1Subtitle: 'Click the button above and start enjoying Adme.',
-          step2Title: 'Enter a referral code',
-          step2Subtitle: 'You can either copy this code or use a friend’s code if they’ve already downloaded it.',
-          step2SubtitlePreLunch: 'Once we launch, you’ll see a code that you can copy instantly.',
-          step3Title: 'Sign up',
-          step3Subtitle: 'Fill in the necessary information so we can provide you with campaigns that fit your profile.',
-          step4Title: 'Link your social media accounts',
-          step4Subtitle: 'This way, you´ll be able to automatically post the content you want on them through Adme.',
-          step5Title: 'Select a campaign',
-          step5Subtitle: 'Campaigns may include some guidelines, or allow you to create content freely.',
-          step6Title: 'Publish and receive your reward',
-          step6Subtitle: 'After posting, you will receive your reward. Depending on the campaign, you’ll be rewarded with money, products, or discounts.',
-          download: 'Download'
+            copiedSuccessful: "Referral code copied!",
+            title: 'In Adme everyone is an influencer',
+            subtitle: 'Adme is the app that connects you with advertising campaigns and lets you earn rewards for participating in them. More than just an app, it’s your portal to a new way of generating content and being rewarded for it.',
+            downloadTitle: 'Discover Adme',
+            downloadSubtitle: 'Use this referral code to create your account:',
+            preLunchdownloadSubtitle: 'We haven\'t launched yet, but don\'t worry, you\'ll find a referral code here as soon as we announce the launch.',
+            bodyTitle: 'How to get started?',
+            bodySubtitle: 'Follow these simple steps to start earning with Adme.',
+            step1Title: 'Download the App',
+            step1Subtitle: 'Click the button above and start enjoying Adme.',
+            step2Title: 'Enter a referral code',
+            step2Subtitle: 'You can either copy this code or use a friend’s code if they’ve already downloaded it.',
+            step2SubtitlePreLunch: 'Once we launch, you’ll see a code that you can copy instantly.',
+            step3Title: 'Sign up',
+            step3Subtitle: 'Fill in the necessary information so we can provide you with campaigns that fit your profile.',
+            step4Title: 'Link your social media accounts',
+            step4Subtitle: 'This way, you´ll be able to automatically post the content you want on them through Adme.',
+            step5Title: 'Select a campaign',
+            step5Subtitle: 'Campaigns may include some guidelines, or allow you to create content freely.',
+            step6Title: 'Publish and receive your reward',
+            step6Subtitle: 'After posting, you will receive your reward. Depending on the campaign, you’ll be rewarded with money, products, or discounts.',
+            download: 'Download'
         },
         downloadAppRedirector: {
             title: 'Redirecting to the store: ',
             subtitle: 'Thanks for the interest in Adme 🙌',
         },
         childsafetystandards: {
-          title: 'Child Safety Policy for Adme Corp',
-          titleParagraph1: '1. Commitment Against Child Sexual Exploitation',
-          paragraph1: 'At Adme ($), we are committed to protecting minors and strictly prohibit any content that promotes or tolerates the sexual exploitation of children.',
-          titleParagraph2: '2. Prohibited Content and Behavior',
-          paragraph20: '- Any form of child pornography or sexually explicit material involving minors.',
-          paragraph21: '- Content that promotes, encourages, or depicts sexual activities with minors.',
-          paragraph22: '- Interactions in which an adult attempts to exploit or harm a minor in any way.', 
-          titleParagraph3: '3. Reporting and Complaint Mechanism',
-          paragraph3: 'If you encounter inappropriate content or suspect any behavior that endangers a minor, please report it immediately to our safety team by sending an email to: info@adme.com.ar',
-          titleParagraph4: '4. Investigation and Response',
-          paragraph4: 'Our team will review every report and take immediate action. This may include removing the content, suspending the involved account, and notifying the appropriate legal authorities if necessary.',
-          titleParagraph5: '5. Cooperation with Authorities',
-          paragraph5: 'We work closely with legal authorities whenever a report involves child sexual abuse or exploitation. We provide relevant information in compliance with local and international legislation.',
-          titleParagraph6: '6. Contact',
-          paragraph6: 'For any inquiries or reports related to child safety, please contact us at: info@adme.com.ar',
-          footer: 'Last Updated: 01/25/2025'
+            title: 'Child Safety Policy for Adme Corp',
+            titleParagraph1: '1. Commitment Against Child Sexual Exploitation',
+            paragraph1: 'At Adme ($), we are committed to protecting minors and strictly prohibit any content that promotes or tolerates the sexual exploitation of children.',
+            titleParagraph2: '2. Prohibited Content and Behavior',
+            paragraph20: '- Any form of child pornography or sexually explicit material involving minors.',
+            paragraph21: '- Content that promotes, encourages, or depicts sexual activities with minors.',
+            paragraph22: '- Interactions in which an adult attempts to exploit or harm a minor in any way.',
+            titleParagraph3: '3. Reporting and Complaint Mechanism',
+            paragraph3: 'If you encounter inappropriate content or suspect any behavior that endangers a minor, please report it immediately to our safety team by sending an email to: info@adme.com.ar',
+            titleParagraph4: '4. Investigation and Response',
+            paragraph4: 'Our team will review every report and take immediate action. This may include removing the content, suspending the involved account, and notifying the appropriate legal authorities if necessary.',
+            titleParagraph5: '5. Cooperation with Authorities',
+            paragraph5: 'We work closely with legal authorities whenever a report involves child sexual abuse or exploitation. We provide relevant information in compliance with local and international legislation.',
+            titleParagraph6: '6. Contact',
+            paragraph6: 'For any inquiries or reports related to child safety, please contact us at: info@adme.com.ar',
+            footer: 'Last Updated: 01/25/2025'
         },
         brands: {
-          whatIsAdme: {
-            whatIsAdme: 'What is Adme?',
-            description: 'Adme is the first platform that connects your brand with social media users, turning their posts into your most powerful advertising: viral word of mouth.',
-            bullet1Title: 'Authentic Advertising',
-            bullet1: 'Turn your customers into your best ambassadors by letting them recommend you. Reach new audiences every day with genuine, user-generated content.',
-            bullet2Title: 'Budget Control',
-            bullet2: 'You decide how much to pay for each post and how to do it—whether with money, products, or discounts. Choose the total budget or inventory for your campaign.',
-            bullet3Title: 'Transparent, Real-Time Metrics',
-            bullet3: 'Create campaigns in under 5 minutes and easily track the effectiveness of your online presence in real time.',
-            brands: 'Brands',
-            downloads: 'Downloads',
-            startNow: 'Get started NOW',
-            viewConcept: 'Watch the concept'
-          },
-          howTostart: {
-            title: 'How to get started?',
-            stepsDescriptions: 'To link your brand with Adme and start revolutionizing your influencer marketing strategies, simply follow these steps. It is completely free:',
-            questionBeforeToStart: `Do you have any questions before we start? `,
-            promo: 'If you join before 11/30, you will enjoy a 0% commission for the first 6 months',
-            registerTitle: 'Sign up',
-            registerOKTitle: 'Registered',
-            registerOKSubtitle: 'You’ve registered, congratulations!',
-            registerOkProfileComplete: 'Complete Profile',
-            registerOkProfile: 'View Profile',
-            registerSubtitle: 'Join in a few seconds.',
-            addCompanyTitle: 'Add my business',
-            addCompanySubtitle: 'You are just one step away from being ready.',
-            addCompanyOkTitle: 'Company added',
-            addCompanyOkSubtitle: '. You are part of Adme!',
-            addCompanyOkUploadLogo: 'Upload logo',
-            addCompanyOkProfile: 'View my business details',
-            createCampaignTitle: 'Design my campaign',
-            createCampaignSubtitle: 'Contact your agent to help you design your campaign.',
-            createCampaignO3Title: 'You already have campaigns.',
-            createCampaignOk1Subtitle: 'You’re all set to contact an advisor or you can also:',
-            createCampaignOk2Subtitle: 'Contact an agent to shape your campaign or advise you.',
-            createCampaignOk3Subtitle: 'Do you want to create another one campaign?',
-            promoPart2: ' 0% commission ',
-            promoPart3: 'for the first 6 months.',
-            promoOkPart1: 'Enjoy ',
-            promoOkPart2: ' 0% commission ',
-            promoOkPart3: 'on your account for the next 6 months, already activated for your business!',
-            goToMyCampaigns: 'Go to my campaigns',
-            preDesign: 'Pre-design your future campaign',
-            chatWhitUs: 'Contact an advisor',
-            planEnterprise: 'Enterprise Plan contact us',
-            img: 'assets/img/free3months.png'
-          },
-          howToWork: {
-            Title: 'How does it work?',
-            subtitle: 'Adme connects you with people who can genuinely promote your products and services through their social media networks.',
-            step1Title: 'Campaign launch',
-            step1Subtitle: 'Launch a campaign on Adme, defining your objectives and the type of content you want.',
-            step2Title: 'Content creation by users',
-            step2Subtitle: 'Adme users create and share content aligned with your campaign, reaching their personal social networks.',
-            step3Title: 'Validation and reward',
-            step3Subtitle: 'Each post is audited to ensure its quality and relevance, after which the user receives their reward.',
-          },
-          plansAndPrices: {
-            title: 'Plans and prices',
-            subtitle: 'Flexibility and Exclusivity',
-            paragraph1: 'At Adme, we understand that each brand is unique, which is why we offer you total freedom to choose how to reward influencers. Do you prefer to pay in cash, or with exclusive products, discounts, or unique experiences? The choice is yours.',
-            paragraph21: 'By joining Adme, the campaigns where you choose to reward with money will always be free: ',
-            paragraph22: 'NO SERVICE FEES EVER. ',
-            paragraph23: 'You set your campaign´s budget just once, and Adme will handle the payments to those who execute your campaign.',
-            paragraph3: 'Campaigns where you choose to reward with a product or discount will also have no service fees during the first 3 months after our launch. After this period, the service fee will be a percentage of the product’s value you’re offering for execution.',
-            paragraph4: 'Join now and be part of a new era in digital marketing, where your investment has a real and direct impact.',
-          },
-          valueProposition: {
-            title: 'Our value proposition',
-            subtitle: 'For brands, Adme represents an opportunity to access genuine and diverse content, expanding their reach and impact on social media. Through our platform, brands can:',
-            step1Title: 'Launch advertising campaigns',
-            step1Subtitle: 'Your campaigns will be designed just once, quickly and with assistance.',
-            step2Title: 'Be advertised on social media with authentic content',
-            step2Subtitle: 'Your brand will receive original content generated and shared on their networks by those who use your products.',
-            step3Title: 'Reach those who do not yet consume the brand',
-            step3Subtitle: 'Every user who has the Adme app downloaded will discover your brand, as they will see your campaign ready to launch.',
-            step4Title: 'Connect with a wide network of influencers and users',
-            step4Subtitle: 'At Adme, anyone can be an influencer, from those who already monetize their content to those who have not yet done so.',
-            step5Title: 'Monitor your campaigns in real time',
-            step5Subtitle: 'With Adme, you will have full access to all the information about your campaigns.',
-            step6Title: 'Control how to reward influencers',
-            step6Subtitle: 'Decide what and how much you want to offer for each piece of content created, whether in money, products, or discounts.',
-          }
+            whatIsAdme: {
+                whatIsAdme: 'What is Adme?',
+                description: 'Adme is the first platform that connects your brand with social media users, turning their posts into your most powerful advertising: viral word of mouth.',
+                bullet1Title: 'Authentic Advertising',
+                bullet1: 'Turn your customers into your best ambassadors by letting them recommend you. Reach new audiences every day with genuine, user-generated content.',
+                bullet2Title: 'Budget Control',
+                bullet2: 'You decide how much to pay for each post and how to do it—whether with money, products, or discounts. Choose the total budget or inventory for your campaign.',
+                bullet3Title: 'Transparent, Real-Time Metrics',
+                bullet3: 'Create campaigns in under 5 minutes and easily track the effectiveness of your online presence in real time.',
+                brands: 'Brands',
+                downloads: 'Downloads',
+                startNow: 'Get started NOW',
+                viewConcept: 'Watch the concept'
+            },
+            howTostart: {
+                title: 'How to get started?',
+                stepsDescriptions: 'To link your brand with Adme and start revolutionizing your influencer marketing strategies, simply follow these steps. It is completely free:',
+                questionBeforeToStart: `Do you have any questions before we start? `,
+                promo: 'If you join before 11/30, you will enjoy a 0% commission for the first 6 months',
+                registerTitle: 'Sign up',
+                registerOKTitle: 'Registered',
+                registerOKSubtitle: 'You’ve registered, congratulations!',
+                registerOkProfileComplete: 'Complete Profile',
+                registerOkProfile: 'View Profile',
+                registerSubtitle: 'Join in a few seconds.',
+                addCompanyTitle: 'Add my business',
+                addCompanySubtitle: 'You are just one step away from being ready.',
+                addCompanyOkTitle: 'Company added',
+                addCompanyOkSubtitle: '. You are part of Adme!',
+                addCompanyOkUploadLogo: 'Upload logo',
+                addCompanyOkProfile: 'View my business details',
+                createCampaignTitle: 'Design my campaign',
+                createCampaignSubtitle: 'Contact your agent to help you design your campaign.',
+                createCampaignO3Title: 'You already have campaigns.',
+                createCampaignOk1Subtitle: 'You’re all set to contact an advisor or you can also:',
+                createCampaignOk2Subtitle: 'Contact an agent to shape your campaign or advise you.',
+                createCampaignOk3Subtitle: 'Do you want to create another one campaign?',
+                promoPart2: ' 0% commission ',
+                promoPart3: 'for the first 6 months.',
+                promoOkPart1: 'Enjoy ',
+                promoOkPart2: ' 0% commission ',
+                promoOkPart3: 'on your account for the next 6 months, already activated for your business!',
+                goToMyCampaigns: 'Go to my campaigns',
+                preDesign: 'Pre-design your future campaign',
+                chatWhitUs: 'Contact an advisor',
+                planEnterprise: 'Enterprise Plan contact us',
+                img: 'assets/img/free3months.png'
+            },
+            howToWork: {
+                Title: 'How does it work?',
+                subtitle: 'Adme connects you with people who can genuinely promote your products and services through their social media networks.',
+                step1Title: 'Campaign launch',
+                step1Subtitle: 'Launch a campaign on Adme, defining your objectives and the type of content you want.',
+                step2Title: 'Content creation by users',
+                step2Subtitle: 'Adme users create and share content aligned with your campaign, reaching their personal social networks.',
+                step3Title: 'Validation and reward',
+                step3Subtitle: 'Each post is audited to ensure its quality and relevance, after which the user receives their reward.',
+            },
+            plansAndPrices: {
+                title: 'Plans and prices',
+                subtitle: 'Flexibility and Exclusivity',
+                paragraph1: 'At Adme, we understand that each brand is unique, which is why we offer you total freedom to choose how to reward influencers. Do you prefer to pay in cash, or with exclusive products, discounts, or unique experiences? The choice is yours.',
+                paragraph21: 'By joining Adme, the campaigns where you choose to reward with money will always be free: ',
+                paragraph22: 'NO SERVICE FEES EVER. ',
+                paragraph23: 'You set your campaign´s budget just once, and Adme will handle the payments to those who execute your campaign.',
+                paragraph3: 'Campaigns where you choose to reward with a product or discount will also have no service fees during the first 3 months after our launch. After this period, the service fee will be a percentage of the product’s value you’re offering for execution.',
+                paragraph4: 'Join now and be part of a new era in digital marketing, where your investment has a real and direct impact.',
+            },
+            valueProposition: {
+                title: 'Our value proposition',
+                subtitle: 'For brands, Adme represents an opportunity to access genuine and diverse content, expanding their reach and impact on social media. Through our platform, brands can:',
+                step1Title: 'Launch advertising campaigns',
+                step1Subtitle: 'Your campaigns will be designed just once, quickly and with assistance.',
+                step2Title: 'Be advertised on social media with authentic content',
+                step2Subtitle: 'Your brand will receive original content generated and shared on their networks by those who use your products.',
+                step3Title: 'Reach those who do not yet consume the brand',
+                step3Subtitle: 'Every user who has the Adme app downloaded will discover your brand, as they will see your campaign ready to launch.',
+                step4Title: 'Connect with a wide network of influencers and users',
+                step4Subtitle: 'At Adme, anyone can be an influencer, from those who already monetize their content to those who have not yet done so.',
+                step5Title: 'Monitor your campaigns in real time',
+                step5Subtitle: 'With Adme, you will have full access to all the information about your campaigns.',
+                step6Title: 'Control how to reward influencers',
+                step6Subtitle: 'Decide what and how much you want to offer for each piece of content created, whether in money, products, or discounts.',
+            }
         },
         header: {
             menu: {
@@ -352,14 +352,14 @@ module.exports = {
             subtitle2: "If you have any questions, we're here to help. Send us a message!",
             q1Question: "Do I have to pay to use the app? 🙌",
             q1Answer: "Adme is 100% free, because the only goal is for you to earn products or money with your content and with the content your referrals generate.",
-            q2Question:"Can I earn money with my social media? 💵",
+            q2Question: "Can I earn money with my social media? 💵",
             q2Answer: "Yes, by linking Adme to your Instagram account, you can post photos just like you normally do — but with the chance to earn money for it. Adme automatically publishes your content to your social media with the @ and # of each advertising campaign",
             q3Question: "What's the purpose of the referral code? 🏂",
             q3Answer: "To sign up for Adme, you need a referral code. And then as a user, you'll also have your own code, which allows you to earn 5% of the earnings your referrals generate through their activity on the app. Once you have your code, share it with friends, at gatherings, or post it on your social media.",
             q4Question: "What kind of content can I create? 📸",
             q4Answer: "Every post is different, that's why Adme offers three types of campaigns for different moments and ways to share. You can snap a photo based on campaign guidelines, match a spontaneous pic to an available campaign, or post brand-created content.",
             q5Question: "Do \"likes\" or reactions on my photos make a difference? ❤️",
-            q5Answer: "Absolutely! With Adme, you earn not just for posting, but also for how well your content performs. The more engagement your post gets — likes, comments, and interactions — the more you can earn",          
+            q5Answer: "Absolutely! With Adme, you earn not just for posting, but also for how well your content performs. The more engagement your post gets — likes, comments, and interactions — the more you can earn",
             q6Question: "How do I receive my rewards? 🤝",
             q6Answer: "You can earn rewards in the form of products or discounts in real time. You can also receive cash rewards through monthly payments sent to the account you've set up in your user profile.",
         },
@@ -384,7 +384,8 @@ module.exports = {
                 title: "Company",
                 section1: "About Us",
                 section2: "Community",
-                section3: "Invest in Adme"
+                section3: "Invest in Adme",
+                section4: "Work with us"
             },
             support: {
                 title: "Support",
@@ -405,7 +406,7 @@ module.exports = {
             placeholder: "Enter your email",
         },
         team: {
-            sections : {
+            sections: {
                 cofounders: {
                     title: "Our Founders",
                     subtitle: "Fun, creativity from the impediments, failing early to reach success, are some of the values that the Ruiz Diaz brothers, our founders, promote and that justify Adme being so disruptive for the advertising market on social networks."
@@ -534,7 +535,7 @@ module.exports = {
                     smallCard: {
                         title: "Install adme app in iPhone",
                         subtitle: "Step by Step instalation guide to start using adme app in iPhone.",
-                        
+
                     },
                     step1: {
                         title: "1. Download TestFlight ",
@@ -626,7 +627,7 @@ module.exports = {
                     smallCard: {
                         title: "Install adme app in Android.",
                         subtitle: "Step by Step instalation guide to start using adme app in Android.",
-                        
+
                     },
                     step1: {
                         title: "1. Download Adme from Play Store.",
@@ -720,7 +721,7 @@ module.exports = {
             },
             campaign: {
                 hero: {
-                    title: "Campaign Results", 
+                    title: "Campaign Results",
                     state: "State: ",
                     draft: "Draft",
                     onGoing: "Active",
@@ -737,12 +738,12 @@ module.exports = {
                     youArePayingWitProduct: "You will reward users with products, discounts, or promotions.",
                     youArePayingFooter: "This approach ensures that users are only rewarded when the advertising action has been correctly executed and after the appropriate audit according to the type of campaign.",
                     advertisingCampaignConditions: {
-                      title: "Terms and Conditions",
-                      advertising: "Your campaign is of the Advertising type, which means the necessary conditions for its execution were outlined in the brief. This document includes specific requirements to ensure that the ads created by users align with your brand’s objectives and values.",
-                      sponsorshipTitle: "In Sponsorship campaigns, although spontaneous moments shared by users are encouraged, it is essential to maintain certain quality standards to ensure that the content adequately reflects your brand. The key conditions for content approval include:",
-                      sponsorshipItem1: "Clarity and sharpness: Photos should not be blurry, shaky, or out of focus.",
-                      sponsorshipitem2: "Good lighting: Images should be well-lit to ensure that the main elements are clearly visible.",
-                      spot: "The content for this campaign was provided by your business at the time of its creation. When the user executes the ad, this content will be automatically posted on their social media. Since the user only needs to execute the campaign, they are not subject to an audit, as the photo uploaded by your brand will be automatically published on their profiles. But it is subject to validation."
+                        title: "Terms and Conditions",
+                        advertising: "Your campaign is of the Advertising type, which means the necessary conditions for its execution were outlined in the brief. This document includes specific requirements to ensure that the ads created by users align with your brand’s objectives and values.",
+                        sponsorshipTitle: "In Sponsorship campaigns, although spontaneous moments shared by users are encouraged, it is essential to maintain certain quality standards to ensure that the content adequately reflects your brand. The key conditions for content approval include:",
+                        sponsorshipItem1: "Clarity and sharpness: Photos should not be blurry, shaky, or out of focus.",
+                        sponsorshipitem2: "Good lighting: Images should be well-lit to ensure that the main elements are clearly visible.",
+                        spot: "The content for this campaign was provided by your business at the time of its creation. When the user executes the ad, this content will be automatically posted on their social media. Since the user only needs to execute the campaign, they are not subject to an audit, as the photo uploaded by your brand will be automatically published on their profiles. But it is subject to validation."
                     },
                     brief: "Brief",
                     money: "Available money: ",
@@ -751,11 +752,11 @@ module.exports = {
                     spend: "Spend: ",
                     stockAvailable: "Stock of rewards ",
                     audit: {
-                      title: "Audit / validation",
-                      money: "Since this is a money-paid campaign, the execution must pass Adme's audit. Adme is responsible for verifying that the content meets the requirements -Since this is a money-paid campaign, the execution must pass Adme's audit. Adme verifies that the content meets the campaign's requirements.",
-                      product1: "As the brand representative, you are the one who audits the post content by entering the code in the search bar or scanning the QR code. This allows you to verify that the execution meets the criteria before granting the reward.",
-                      product2: "In this type of campaign, you will be responsible for the audit, verifying that the execution meets your criteria before granting the reward.",
-                      spot: "Since this is a Spot campaign, the executions are not subject to an audit but are subject to validation."
+                        title: "Audit / validation",
+                        money: "Since this is a money-paid campaign, the execution must pass Adme's audit. Adme is responsible for verifying that the content meets the requirements -Since this is a money-paid campaign, the execution must pass Adme's audit. Adme verifies that the content meets the campaign's requirements.",
+                        product1: "As the brand representative, you are the one who audits the post content by entering the code in the search bar or scanning the QR code. This allows you to verify that the execution meets the criteria before granting the reward.",
+                        product2: "In this type of campaign, you will be responsible for the audit, verifying that the execution meets your criteria before granting the reward.",
+                        spot: "Since this is a Spot campaign, the executions are not subject to an audit but are subject to validation."
                     }
                 },
                 posts: {
@@ -794,15 +795,15 @@ module.exports = {
                 creation: 'Creation: '
             },
             searcher: {
-              button: "Search for an advertisement to audit", 
-              title: "Search for an advertisement to audit",
-              label: "Search: The code is 8 characters long",
-              search: "Search",
-              searching: "Searching...",
-              auditLabel: "This ad is paid with money, therefore it is audited exclusively by Adme",
-              auditButton: "Audit Advertisement",
-              goToAd: "See advertisement",
-              nonExistentAd: "The ad does not exist, or it does not belong to your business."
+                button: "Search for an advertisement to audit",
+                title: "Search for an advertisement to audit",
+                label: "Search: The code is 8 characters long",
+                search: "Search",
+                searching: "Searching...",
+                auditLabel: "This ad is paid with money, therefore it is audited exclusively by Adme",
+                auditButton: "Audit Advertisement",
+                goToAd: "See advertisement",
+                nonExistentAd: "The ad does not exist, or it does not belong to your business."
             }
         },
         investors: {
@@ -923,7 +924,7 @@ module.exports = {
                 tokenRequestButtonLabel: "Request",
                 tokenRequestButtonInProgressLabel: "Requesting...",
             }
-            
+
         },
         web3: {
             hero: {
@@ -950,6 +951,67 @@ module.exports = {
             confirmButton: "Delete",
             placeholder: "Write DELETE here",
             confirmMessage: "The request was successfully sent. Your account and all related data will be delete in 72hs."
+        },
+        joinUs: {
+            heroTitle: "Be Part of the Adme Revolution",
+            heroSubtitle: "🚀 Be part of the movement reshaping digital marketing. Connect, create, and grow with us as we take your talent and our community to the next level. Your opportunity starts now! ✨",
+            positions: {
+                influencer: {
+                    title: "We Are Looking for Content Creators for Adme",
+                    description: "<p>🔥 <strong>Ready to make waves in digital marketing?</strong> At <strong>Adme</strong>, we’re on a mission to revolutionize the way brands connect with audiences — and we want YOU to be part of it!</p><p>Join Jazmín and an inspiring team of creators bringing fresh, authentic voices to Instagram and beyond. Whether you’re just starting out or already building your influence, we have <strong>multiple open positions</strong> waiting for your unique style.</p><h5>Who should apply?</h5><ul><li>🌟 Creators passionate about storytelling and content that truly connects.</li><li>🚀 Emerging talents eager to grow and make an impact in the influencer world.</li><li>🎯 Anyone ready to create genuine, engaging posts that resonate with a vibrant, young audience.</li></ul><p>At Adme, every post counts. We pay for quality content that sparks engagement, and as you prove your impact, you’ll unlock more exciting opportunities to grow your reach — locally, continent-wide, and worldwide.</p>",
+                    hiringProcessTitle: "How to apply?",
+                    hiringProcessDetails: `
+                            <h5>How to join the movement?</h5>
+                                <ul>
+                                <li>🎥 Record two videos and upload them to the cloud:
+                                    <ul>
+                                    <li>⏱ 1. Tell us in under one minute why you want to be part of Adme.</li>
+                                    <li>🎬 2. Recreate or put your spin on an example video from Jazmín’s Instagram.</li>
+                                    </ul>
+                                </li>
+                                <li>📧 Send the links along with your social profiles (Instagram, Facebook, etc.) to <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a>.</li>
+                                </ul>
+                                <p>We’ll review every application and get back to you within a week. If selected, we’ll set up a meeting to dive into your first brief and kickstart this exciting journey.</p>
+                                <p><strong>Become part of Adme’s global revolution and let your voice be heard! 🌍🚀</strong></p>
+                                
+                                `,
+                    date: "July 1, 2025",
+                    tags: "Content Creator | Influencer",
+                    positionsAvailable: "10 open positions"
+                },
+                brandAmbassador: {
+                    title: "🚀 Become a Brand Ambassador at Adme and Grow This Revolution! 🌟",
+                    description: `
+                        <p>Are you already creating content for brands? Do you work with agencies, or are you part of brand communities that could join Adme? Then this opportunity is for you.</p>
+                        <p>At <strong>Adme</strong>, we’re looking for <strong>Brand Ambassadors</strong> with real networks and the passion to connect brands and agencies to our revolutionary platform. Whether you’re an influencer, work with agencies, or even a brand connected to other brands — join us and be part of the community that’s changing the game!</p>
+                        <h5>Who are we inviting to join?</h5>
+                        <ul>
+                            <li>✨ You create content for brands and want to help convince them to join Adme.</li>
+                            <li>🤝 You work with agencies that could benefit from being part of our platform.</li>
+                            <li>🏢 You’re a brand involved in communities or networks of other brands interested in new opportunities.</li>
+                            <li>🌍 You have contacts with the potential to grow this amazing network.</li>
+                        </ul>
+                        <p>This is your chance to collaborate with Adme, earn real rewards, and boost your visibility.</p>
+                        <h5>What do we offer? 🎁</h5>
+                        <ul>
+                            <li>💸 <strong>15% commission</strong> on the budget of the first 3 campaigns of each brand or agency you bring.</li>
+                            <li>📣 Special mentions on our official Instagram accounts to boost your profile and accelerate your reach.</li>
+                            <li>🎉 10 referral credits to kickstart your network growth.</li>
+                            <li>🎟️ Priority access to exclusive events and training sessions to boost your growth.</li>
+                            <li>🏆 Bonuses for milestones reached: extra rewards for bringing active brands.</li>
+                        </ul>
+                        `,
+                    hiringProcessTitle: "How to apply? ✉️",
+                    hiringProcessDetails: `
+                        <p>Send an email to <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> with your Instagram, Facebook, and any other social profiles you have. Tell us why you believe you’d be a great brand ambassador for Adme.</p>
+                        <p>From there, we’ll get in touch to build a personalized strategy and start bringing brands and agencies into this great revolution.</p>
+                        <p><strong>Join us and let’s make history together! 💥</strong></p>
+                        `,
+                    date: "July 1, 2025",
+                    tags: "Brand Ambassador | Partnerships",
+                    positionsAvailable: "Multiple openings"
+                }
+            }
         }
     },
     es: {
@@ -964,241 +1026,241 @@ module.exports = {
             UnauthorizedTitle: "No autorizado",
             UnauthorizedSubtitle: "No tienes permiso para acceder al módulo de auditoría. Por favor, contacta al administrador de tu cuenta si necesitas acceso."
         },
-       login: {
-          title: "Ingresa a tu cuenta",
-          email: "Correo electrónico",
-          password: "Contraseña",
-          login: "Ingresa",
-          signing: "Ingresando...",
-          accountYesOrNot: "¿No tenés una cuenta? ",
-          register: "Registrate",
-          invalidCredentials: "Credenciales invalidas",
-          failed: "Hubo un error en el ingreso",
-          loaded: "Cargado",
-          loading: "Cargando",
-          notAvailable: "Servicio no disponible",
-          none: "Ninguno",
-          loginSuccessful: "Ingreso satisfactorio. Bienvenido!",
-          loginError: "Error al ingresar!",
-          saving: 'Guardando...',
-          saved: 'Los cambios fueron guardados.',
-          editError: 'Se produjo un error al editar tu perfil.'
+        login: {
+            title: "Ingresa a tu cuenta",
+            email: "Correo electrónico",
+            password: "Contraseña",
+            login: "Ingresa",
+            signing: "Ingresando...",
+            accountYesOrNot: "¿No tenés una cuenta? ",
+            register: "Registrate",
+            invalidCredentials: "Credenciales invalidas",
+            failed: "Hubo un error en el ingreso",
+            loaded: "Cargado",
+            loading: "Cargando",
+            notAvailable: "Servicio no disponible",
+            none: "Ninguno",
+            loginSuccessful: "Ingreso satisfactorio. Bienvenido!",
+            loginError: "Error al ingresar!",
+            saving: 'Guardando...',
+            saved: 'Los cambios fueron guardados.',
+            editError: 'Se produjo un error al editar tu perfil.'
         },
         signUp: {
-          signUp: "registrate",
-          email: "Correo electrónico",
-          password: "Contraseña",
-          specificationPassword: "La contraseña debe contener: entre 6 y 15 caracteres, al menos una letra mayúscula, una  minúscula, un número y un caracter especial.",
-          confirmPassword: "Confirmar contraseña",
-          loading: "Cargando...",
-          uploading: "Subiendo ",
-          failed: "Hubo un error en la registración",
-          notAvailable: "Servicio no disponible",
-          none: "None",
-          alreadyHaveAccount: "¿Ya tienes una cuenta? ",
-          createYourAccount: "Crea tu cuenta",
-          addYourCompany: "Agrega tu compañía",
-          existEmail: "El correo ingresado ya existe.",
-          existCompanyName: 'El nombre de compañía ya existe.',
-          companyName: 'Nombre compañía *',
-          cellPhone: 'Celular *',
-          uploadLogo: 'Cargar Logo (PNG o JPEG)',
-          photoError: 'Cargue un archivo de imagen valido (PNG o JPEG).',
-          editPhoto: 'Editar foto',
-          deletePhoto: 'Eliminar foto',
-          iAgree: 'Acepto los ',
-          termsAndConditions: 'Términos y Condiciones',
-          shouldAcceptTAndC: 'Debes aceptar Términos y Condiciones',
-          createCompany: 'Crear la compañía',
-          signUpSuccessful: "Registro satisfactorio. Bienvenido!",
-          signUpError: "Error al crear la cuenta",
-          specificationCellPhone:  "No se permiten espacios ni guiones.",
-          createCompanySuccessful: 'Creaste tu compañía, felicitaciones!',
-          createCompanyError: 'Error al agregar tu compañía'
+            signUp: "registrate",
+            email: "Correo electrónico",
+            password: "Contraseña",
+            specificationPassword: "La contraseña debe contener: entre 6 y 15 caracteres, al menos una letra mayúscula, una  minúscula, un número y un caracter especial.",
+            confirmPassword: "Confirmar contraseña",
+            loading: "Cargando...",
+            uploading: "Subiendo ",
+            failed: "Hubo un error en la registración",
+            notAvailable: "Servicio no disponible",
+            none: "None",
+            alreadyHaveAccount: "¿Ya tienes una cuenta? ",
+            createYourAccount: "Crea tu cuenta",
+            addYourCompany: "Agrega tu compañía",
+            existEmail: "El correo ingresado ya existe.",
+            existCompanyName: 'El nombre de compañía ya existe.',
+            companyName: 'Nombre compañía *',
+            cellPhone: 'Celular *',
+            uploadLogo: 'Cargar Logo (PNG o JPEG)',
+            photoError: 'Cargue un archivo de imagen valido (PNG o JPEG).',
+            editPhoto: 'Editar foto',
+            deletePhoto: 'Eliminar foto',
+            iAgree: 'Acepto los ',
+            termsAndConditions: 'Términos y Condiciones',
+            shouldAcceptTAndC: 'Debes aceptar Términos y Condiciones',
+            createCompany: 'Crear la compañía',
+            signUpSuccessful: "Registro satisfactorio. Bienvenido!",
+            signUpError: "Error al crear la cuenta",
+            specificationCellPhone: "No se permiten espacios ni guiones.",
+            createCompanySuccessful: 'Creaste tu compañía, felicitaciones!',
+            createCompanyError: 'Error al agregar tu compañía'
         },
         editCompany: {
-          saving: 'Guardando...',
-          saved: 'Los cambios fueron guardados.',
-          editError: 'Se produjo un error al editar tu compañía.',
-          editTitle: 'Editar datos de la Compañía',
-          title: 'Datos de la Compañía',
-          companyName: 'Nombre de compañía',
-          cellPhone: 'Celular',
-          uploadLogo: 'Cargar Logo (PNG o JPEG)',
-          photoError: 'Cargue un archivo de imagen valido (PNG o JPEG).',
-          editPhoto: 'Editar foto',
-          deletePhoto: 'Eliminar foto',
-          uploading: "Subiendo ",
-          save: "Guardar",
-          cancel: "Cancelar",
-          editInformation: "Editar información",
-          goToProfilInformation: "Ir a información de perfil",
+            saving: 'Guardando...',
+            saved: 'Los cambios fueron guardados.',
+            editError: 'Se produjo un error al editar tu compañía.',
+            editTitle: 'Editar datos de la Compañía',
+            title: 'Datos de la Compañía',
+            companyName: 'Nombre de compañía',
+            cellPhone: 'Celular',
+            uploadLogo: 'Cargar Logo (PNG o JPEG)',
+            photoError: 'Cargue un archivo de imagen valido (PNG o JPEG).',
+            editPhoto: 'Editar foto',
+            deletePhoto: 'Eliminar foto',
+            uploading: "Subiendo ",
+            save: "Guardar",
+            cancel: "Cancelar",
+            editInformation: "Editar información",
+            goToProfilInformation: "Ir a información de perfil",
         },
         editProfile: {
-          saving: 'Guardando...',
-          saved: 'Los cambios fueron guardados.',
-          editError: 'Se produjo un error al editar tu perfil.',
-          editTitle: 'Editar información de usuario', 
-          title: 'Información de usuario',
-          firstName: 'Nombre',
-          lastName: 'Apellido',
-          email: 'Email', 
-          save: "Guardar",
-          cancel: "Cancelar",
-          editInformation: "Editar información",
-          addCompany: 'Agregar compañía',
-          goToCompanyInformation: 'Ir a datos de la Compañía',
-          goBackMyPortal: 'Volver al portal de mi negocio',
-          myPortal: 'Ir al portal de mi negocio'
+            saving: 'Guardando...',
+            saved: 'Los cambios fueron guardados.',
+            editError: 'Se produjo un error al editar tu perfil.',
+            editTitle: 'Editar información de usuario',
+            title: 'Información de usuario',
+            firstName: 'Nombre',
+            lastName: 'Apellido',
+            email: 'Email',
+            save: "Guardar",
+            cancel: "Cancelar",
+            editInformation: "Editar información",
+            addCompany: 'Agregar compañía',
+            goToCompanyInformation: 'Ir a datos de la Compañía',
+            goBackMyPortal: 'Volver al portal de mi negocio',
+            myPortal: 'Ir al portal de mi negocio'
         },
         audtiAdvertisemnt: {
-          approve: 'Aprobar',
-          reject: 'Rechazar',
-          pending: 'Anuncio pendiente',
-          approvedAd: 'Anuncio aprobado',
-          rejectedAd: 'Anuncio rechazado',
-          brief: 'Instructivo',
-          termsAndConditions: 'Detalles y condiciones de participación',
-          validate: 'Validar',
-          willBePaidWith: 'El anuncio se pagará con ',
-          creation: 'Creación ',
-          campaignType: 'Tipo de campaña ',
-          creatorUser: 'Usuario creador ',
-          showSnackbarApproved: 'Se aprobo satisfactoriamente el anuncio.',
-          showSnackbarRejected: 'Se rechazo satisfactoriamente el anuncio.',
-          youAreInAudit: 'Estas en el modulo de auditoria',
-          areYouSureToReject: '¿Estás seguro de que deseas rechazar este anuncio?'
+            approve: 'Aprobar',
+            reject: 'Rechazar',
+            pending: 'Anuncio pendiente',
+            approvedAd: 'Anuncio aprobado',
+            rejectedAd: 'Anuncio rechazado',
+            brief: 'Instructivo',
+            termsAndConditions: 'Detalles y condiciones de participación',
+            validate: 'Validar',
+            willBePaidWith: 'El anuncio se pagará con ',
+            creation: 'Creación ',
+            campaignType: 'Tipo de campaña ',
+            creatorUser: 'Usuario creador ',
+            showSnackbarApproved: 'Se aprobo satisfactoriamente el anuncio.',
+            showSnackbarRejected: 'Se rechazo satisfactoriamente el anuncio.',
+            youAreInAudit: 'Estas en el modulo de auditoria',
+            areYouSureToReject: '¿Estás seguro de que deseas rechazar este anuncio?'
         },
         download: {
-          copiedSuccessful: "Código de referido copiado!",
-          title: 'En Adme todos son influencers',
-          subtitle: 'Adme es la aplicación que te conecta con campañas publicitarias y te permite ganar recompensas por participar en ellas. Más que una simple app, es tu portal hacia una nueva forma de generar contenido y ser recompensado por ello.',
-          downloadTitle: 'Descubrí Adme',
-          downloadSubtitle: 'Usá este código de referido para crear tu cuenta:',
-          preLunchdownloadSubtitle: 'Aún no hemos lanzado, pero no te preocupes, aquí encontrarás un código de referido disponible apenas anunciemos el lanzamiento.',
-          bodyTitle: '¿Cómo empezar?',
-          bodySubtitle: 'Sigue estos simples pasos para comenzar a ganar a través de Adme',
-          step1Title: 'Descargá la App',
-          step1Subtitle: 'Hacé clic en el botón de arriba y empezá a disfrutar de Adme.',
-          step2Title: 'Ingresá un código de referido',
-          step2Subtitle: 'Podés copiar este código o usar el de un amigo/a que ya la haya descargado.',
-          step2SubtitlePreLunch: 'Cuando lancemos, verás un código que vas a poder copiar al instante.',
-          step3Title: 'Completa tu perfil',
-          step3Subtitle: 'Completá todos los campos para crear tu perfil hasta ver que se habilite el botón a la home. Ahí verás las campañas que se ajusten a tu perfil.',
-          step4Title: 'Linkeá tu instagram',
-          step4Subtitle: 'De este modo, podrás publicar automáticamente en ella el contenido que desees mediante Adme.',
-          step5Title: 'Seleccioná una campaña',
-          step5Subtitle: 'Las campañas pueden incluir algunas indicaciones o permitirte crear contenido libremente.',
-          step6Title: 'Publicá y recibí tu recompensa',
-          step6Subtitle: 'Después de publicar, recibirás tu recompensa. Dependiendo de la campaña, serás recompensado con dinero, productos o descuentos.',
-          download: 'Descargar'
+            copiedSuccessful: "Código de referido copiado!",
+            title: 'En Adme todos son influencers',
+            subtitle: 'Adme es la aplicación que te conecta con campañas publicitarias y te permite ganar recompensas por participar en ellas. Más que una simple app, es tu portal hacia una nueva forma de generar contenido y ser recompensado por ello.',
+            downloadTitle: 'Descubrí Adme',
+            downloadSubtitle: 'Usá este código de referido para crear tu cuenta:',
+            preLunchdownloadSubtitle: 'Aún no hemos lanzado, pero no te preocupes, aquí encontrarás un código de referido disponible apenas anunciemos el lanzamiento.',
+            bodyTitle: '¿Cómo empezar?',
+            bodySubtitle: 'Sigue estos simples pasos para comenzar a ganar a través de Adme',
+            step1Title: 'Descargá la App',
+            step1Subtitle: 'Hacé clic en el botón de arriba y empezá a disfrutar de Adme.',
+            step2Title: 'Ingresá un código de referido',
+            step2Subtitle: 'Podés copiar este código o usar el de un amigo/a que ya la haya descargado.',
+            step2SubtitlePreLunch: 'Cuando lancemos, verás un código que vas a poder copiar al instante.',
+            step3Title: 'Completa tu perfil',
+            step3Subtitle: 'Completá todos los campos para crear tu perfil hasta ver que se habilite el botón a la home. Ahí verás las campañas que se ajusten a tu perfil.',
+            step4Title: 'Linkeá tu instagram',
+            step4Subtitle: 'De este modo, podrás publicar automáticamente en ella el contenido que desees mediante Adme.',
+            step5Title: 'Seleccioná una campaña',
+            step5Subtitle: 'Las campañas pueden incluir algunas indicaciones o permitirte crear contenido libremente.',
+            step6Title: 'Publicá y recibí tu recompensa',
+            step6Subtitle: 'Después de publicar, recibirás tu recompensa. Dependiendo de la campaña, serás recompensado con dinero, productos o descuentos.',
+            download: 'Descargar'
         },
         downloadAppRedirector: {
             title: 'Redireccionando al store: ',
             subtitle: 'Gracias por tu interés en Adme 🙌',
         },
         childsafetystandards: {
-          title: 'Política de Seguridad Infantil de Adme Corp',
-          titleParagraph1: '1. Compromiso Contra la Explotación Sexual Infantil',
-          paragraph1: 'En Adme ($) estamos comprometidos a proteger a los menores y prohibimos estrictamente cualquier contenido que promueva o tolere la explotación sexual de menores.',
-          titleParagraph2: '2. Contenido y Comportamiento Prohibido',
-          paragraph20: '- Cualquier tipo de pornografía infantil o material sexualmente explícito que involucre menores.',
-          paragraph21: '- Contenido que promueva, aliente o represente actividades sexuales con menores.',
-          paragraph22: '- Interacciones en las que un adulto busque explotar a un menor de cualquier forma.', 
-          titleParagraph3: '3. Reportes y Mecanismo de Denuncia',
-          paragraph3: 'Si encuentras contenido inapropiado o sospechas de comportamientos que pongan en riesgo a un menor, por favor repórtalo inmediatamente a nuestro equipo de seguridad enviando un correo a: info@adme.com.ar',
-          titleParagraph4: '4. Investigación y Respuesta',
-          paragraph4: 'Nuestro equipo revisará cada reporte y tomará medidas de inmediato. Estas pueden incluir la eliminación de contenido, la suspensión de la cuenta involucrada y, de ser necesario, la notificación a las autoridades competentes.',
-          titleParagraph5: '5. Cooperación con Autoridades',
-          paragraph5: 'Trabajamos en conjunto con las autoridades legales cuando un reporte involucra explotación sexual de menores. Facilitamos información relevante conforme a la legislación local e internacional.',
-          titleParagraph6: '6. Contacto',
-          paragraph6: 'Para cualquier duda o denuncia relacionada con la seguridad infantil, por favor contacta a: info@adme.com.ar',
-          footer: 'Última actualización: 01/23/2025'
+            title: 'Política de Seguridad Infantil de Adme Corp',
+            titleParagraph1: '1. Compromiso Contra la Explotación Sexual Infantil',
+            paragraph1: 'En Adme ($) estamos comprometidos a proteger a los menores y prohibimos estrictamente cualquier contenido que promueva o tolere la explotación sexual de menores.',
+            titleParagraph2: '2. Contenido y Comportamiento Prohibido',
+            paragraph20: '- Cualquier tipo de pornografía infantil o material sexualmente explícito que involucre menores.',
+            paragraph21: '- Contenido que promueva, aliente o represente actividades sexuales con menores.',
+            paragraph22: '- Interacciones en las que un adulto busque explotar a un menor de cualquier forma.',
+            titleParagraph3: '3. Reportes y Mecanismo de Denuncia',
+            paragraph3: 'Si encuentras contenido inapropiado o sospechas de comportamientos que pongan en riesgo a un menor, por favor repórtalo inmediatamente a nuestro equipo de seguridad enviando un correo a: info@adme.com.ar',
+            titleParagraph4: '4. Investigación y Respuesta',
+            paragraph4: 'Nuestro equipo revisará cada reporte y tomará medidas de inmediato. Estas pueden incluir la eliminación de contenido, la suspensión de la cuenta involucrada y, de ser necesario, la notificación a las autoridades competentes.',
+            titleParagraph5: '5. Cooperación con Autoridades',
+            paragraph5: 'Trabajamos en conjunto con las autoridades legales cuando un reporte involucra explotación sexual de menores. Facilitamos información relevante conforme a la legislación local e internacional.',
+            titleParagraph6: '6. Contacto',
+            paragraph6: 'Para cualquier duda o denuncia relacionada con la seguridad infantil, por favor contacta a: info@adme.com.ar',
+            footer: 'Última actualización: 01/23/2025'
         },
         brands: {
-          whatIsAdme: {
-            whatIsAdme: '¿Qué es Adme?',
-            description: 'Adme es la primera plataforma que conecta tu marca con usuarios de redes sociales, transformando sus posteos en la mejor publicidad para vos: el boca a boca viral.',
-            bullet1Title: 'Publicidad auténtica',
-            bullet1: 'Transformá a tu clientes en tus mejores embajadores siendo ellos los que te recomienden. Alcanzá nuevas audiencias todos los días con contenido genuino.',
-            bullet2Title: 'Control de tu presupuesto',
-            bullet2: 'Definís cuánto pagar por cada publicación y también cómo hacerlo: con dinero, productos o descuentos. Elegí el presupuesto o stock total de tu campaña.',
-            bullet3Title: 'Métricas transparentes y en tiempo real',
-            bullet3: 'Creá campañas en menos de 5 minutos y medí la efectividad de tu presencia online de forma muy sencilla y en tiempo real.',
-            brands: 'Marcas',
-            downloads: 'Descargas',
-            startNow: 'Empezá YA',
-            viewConcept: 'Ver concepto'
-          },
-          howTostart: {
-            title: '¿Cómo comenzar?',
-            stepsDescriptions: 'Para unir tu marca a Adme y comenzar a revolucionar tus estrategias de marketing de influencia, sólo sigue estos pasos. Es completamente gratuito:',
-            questionBeforeToStart: `¿Tenés algunas preguntas antes de comenzar? `,
-            promo: 'Si te sumas antes del lanzamiento 0% de comision durante los primeros 6 meses.',
-            registerTitle: 'Registrarme',
-            registerOKTitle: 'Registrado',
-            registerOKSubtitle: '¡Te registraste, felicitaciones!',
-            registerOkProfileComplete: 'Complete Profile',
-            registerOkProfile: 'View Profile',
-            registerSubtitle: 'Sumate en pocos segundos.',
-            addCompanyTitle: 'Agregar mi negocio',
-            addCompanySubtitle: 'Estás a un paso de estar listo.',
-            addCompanyOkTitle: 'Empresa agregada',
-            addCompanyOkSubtitle: '. ¡Ya sos parte de Adme!',
-            addCompanyOkUploadLogo: 'Cargar logo',
-            addCompanyOkProfile: 'Ver datos de mi negocio',
-            createCampaignTitle: 'Crear mi campaña',
-            createCampaignO3Title: 'Ya tenés campañas',
-            createCampaignOk1Subtitle: 'Tenés todo listo para contactar a un asesor o tambien podes: ',
-            createCampaignOk2Subtitle: 'Contactá a un asesor para modelar tu campaña o también podés',
-            createCampaignOk3Subtitle: '¿Querés crear otra campaña?',
-            promoPart2: ' comisión del 0% ',
-            promoPart3: 'durante los primeros 6 meses.',
-            promoOkPart1: '¡Disfruta de ',
-            promoOkPart2: ' 0% de comisión ',
-            promoOkPart3: 'en tu cuenta durante los próximos 6 meses, ya activado para tu negocio!', 
-            goToMyCampaigns: 'Ir a mis campañas',
-            preDesign: 'Pre-diseñá tu futura campaña',
-            chatWhitUs: 'Contactá un asesor',
-            planEnterprise: 'Plan empresarial contactanos',
-            img: 'assets/img/gratis3meses.png'
-          },
-          howToWork: {
-            Title: '¿Cómo funciona?',
-            subtitle: 'Adme te conecta con personas que pueden promocionar genuinamente tus productos y servicios a través de sus redes sociales.',
-            step1Title: 'Lanzamiento de campaña',
-            step1Subtitle: 'Inicia una campaña en Adme, definiendo tus objetivos y el tipo de contenido que deseas.',
-            step2Title: 'Usuarios crean contenido',
-            step2Subtitle: 'Los usuarios de Adme crean y comparten contenido alineado con tu campaña, que llega a sus redes sociales personales.',
-            step3Title: 'Validación y compensación',
-            step3Subtitle: 'Cada publicación es auditada para garantizar su calidad y relevancia, tras lo cual el usuario recibe su recompensa.',
-          },
-          plansAndPrices: {
-            title: 'Planes y precios',
-            subtitle: 'Flexibilidad y exclusividad',
-            paragraph1: 'En Adme, entendemos que cada marca es única, por eso te ofrecemos libertad total para elegir cómo recompensar a los influencers. ¿Preferís pagar en efectivo,con productos, descuentos o experiencias únicas? La decisión es tuya.',
-            paragraph21: 'Al unirte a Adme, las campañas en las que decidas recompensar con dinero serán siempre gratuitas: ',
-            paragraph22: 'SIN COSTO DE SERVICIO POR SIEMPRE. ',
-            paragraph23: 'Vos definís el presupuesto de tu campaña una sola vez, y Adme se encargará de realizar los pagos a quienes ejecuten tu campaña.',
-            paragraph3: 'Las campañas en las que decidas recompensar con un producto/descuento, tampoco tendrán costo de servicio durante los primeros 3 meses tras nuestro lanzamiento. Pasado este período, el costo de servicio será un porcentaje del valor del producto que estés otorgando por cada ejecución.',
-            paragraph4: 'Unite ahora y sé parte de una nueva era del marketing digital, donde tu inversión tiene un impacto real y directo.',
-          },
-          valueProposition: {
-            title: 'Nuestra propuesta de valor',
-            subtitle: 'Para las marcas, Adme representa una oportunidad de acceder a contenido genuino y diverso, ampliando su alcance e impacto en las redes sociales. A través de nuestra plataforma, las marcas pueden',
-            step1Title: 'Lanzar campañas publicitarias',
-            step1Subtitle: 'Tus campañas serán diseñadas una sola vez, de forma rápida y asistida.',
-            step2Title: 'Ser publicitadas en las redes con contenido auténtico',
-            step2Subtitle: 'Tu marca obtendrá contenido original, generado y compartido en sus redes por quienes utilizan tus productos.',
-            step3Title: 'Alcanzar a quienes aún no consumen tu marca',
-            step3Subtitle: 'Todo usuario que tenga la app de Adme descargada descubrirá tu marca, porque verá tu campaña lista para ejecutar.',
-            step4Title: 'Conectar con una amplia red de influencers y usuarios',
-            step4Subtitle: 'En Adme, todos pueden ser influencers, desde aquellos que ya monetizan su contenido hasta quienes aún no lo han hecho.',
-            step5Title: 'Monitorear tus campañas en tiempo real',
-            step5Subtitle: 'Con Adme, tendrás acceso completo a toda la información sobre tus campañas.',
-            step6Title: 'Controlar la manera de recompensar a los influencers',
-            step6Subtitle: 'Decidí qué y cuánto querés ofrecer por cada contenido creado por tus influencers, ya sea dinero, productos o descuentos.',
-          }
+            whatIsAdme: {
+                whatIsAdme: '¿Qué es Adme?',
+                description: 'Adme es la primera plataforma que conecta tu marca con usuarios de redes sociales, transformando sus posteos en la mejor publicidad para vos: el boca a boca viral.',
+                bullet1Title: 'Publicidad auténtica',
+                bullet1: 'Transformá a tu clientes en tus mejores embajadores siendo ellos los que te recomienden. Alcanzá nuevas audiencias todos los días con contenido genuino.',
+                bullet2Title: 'Control de tu presupuesto',
+                bullet2: 'Definís cuánto pagar por cada publicación y también cómo hacerlo: con dinero, productos o descuentos. Elegí el presupuesto o stock total de tu campaña.',
+                bullet3Title: 'Métricas transparentes y en tiempo real',
+                bullet3: 'Creá campañas en menos de 5 minutos y medí la efectividad de tu presencia online de forma muy sencilla y en tiempo real.',
+                brands: 'Marcas',
+                downloads: 'Descargas',
+                startNow: 'Empezá YA',
+                viewConcept: 'Ver concepto'
+            },
+            howTostart: {
+                title: '¿Cómo comenzar?',
+                stepsDescriptions: 'Para unir tu marca a Adme y comenzar a revolucionar tus estrategias de marketing de influencia, sólo sigue estos pasos. Es completamente gratuito:',
+                questionBeforeToStart: `¿Tenés algunas preguntas antes de comenzar? `,
+                promo: 'Si te sumas antes del lanzamiento 0% de comision durante los primeros 6 meses.',
+                registerTitle: 'Registrarme',
+                registerOKTitle: 'Registrado',
+                registerOKSubtitle: '¡Te registraste, felicitaciones!',
+                registerOkProfileComplete: 'Complete Profile',
+                registerOkProfile: 'View Profile',
+                registerSubtitle: 'Sumate en pocos segundos.',
+                addCompanyTitle: 'Agregar mi negocio',
+                addCompanySubtitle: 'Estás a un paso de estar listo.',
+                addCompanyOkTitle: 'Empresa agregada',
+                addCompanyOkSubtitle: '. ¡Ya sos parte de Adme!',
+                addCompanyOkUploadLogo: 'Cargar logo',
+                addCompanyOkProfile: 'Ver datos de mi negocio',
+                createCampaignTitle: 'Crear mi campaña',
+                createCampaignO3Title: 'Ya tenés campañas',
+                createCampaignOk1Subtitle: 'Tenés todo listo para contactar a un asesor o tambien podes: ',
+                createCampaignOk2Subtitle: 'Contactá a un asesor para modelar tu campaña o también podés',
+                createCampaignOk3Subtitle: '¿Querés crear otra campaña?',
+                promoPart2: ' comisión del 0% ',
+                promoPart3: 'durante los primeros 6 meses.',
+                promoOkPart1: '¡Disfruta de ',
+                promoOkPart2: ' 0% de comisión ',
+                promoOkPart3: 'en tu cuenta durante los próximos 6 meses, ya activado para tu negocio!',
+                goToMyCampaigns: 'Ir a mis campañas',
+                preDesign: 'Pre-diseñá tu futura campaña',
+                chatWhitUs: 'Contactá un asesor',
+                planEnterprise: 'Plan empresarial contactanos',
+                img: 'assets/img/gratis3meses.png'
+            },
+            howToWork: {
+                Title: '¿Cómo funciona?',
+                subtitle: 'Adme te conecta con personas que pueden promocionar genuinamente tus productos y servicios a través de sus redes sociales.',
+                step1Title: 'Lanzamiento de campaña',
+                step1Subtitle: 'Inicia una campaña en Adme, definiendo tus objetivos y el tipo de contenido que deseas.',
+                step2Title: 'Usuarios crean contenido',
+                step2Subtitle: 'Los usuarios de Adme crean y comparten contenido alineado con tu campaña, que llega a sus redes sociales personales.',
+                step3Title: 'Validación y compensación',
+                step3Subtitle: 'Cada publicación es auditada para garantizar su calidad y relevancia, tras lo cual el usuario recibe su recompensa.',
+            },
+            plansAndPrices: {
+                title: 'Planes y precios',
+                subtitle: 'Flexibilidad y exclusividad',
+                paragraph1: 'En Adme, entendemos que cada marca es única, por eso te ofrecemos libertad total para elegir cómo recompensar a los influencers. ¿Preferís pagar en efectivo,con productos, descuentos o experiencias únicas? La decisión es tuya.',
+                paragraph21: 'Al unirte a Adme, las campañas en las que decidas recompensar con dinero serán siempre gratuitas: ',
+                paragraph22: 'SIN COSTO DE SERVICIO POR SIEMPRE. ',
+                paragraph23: 'Vos definís el presupuesto de tu campaña una sola vez, y Adme se encargará de realizar los pagos a quienes ejecuten tu campaña.',
+                paragraph3: 'Las campañas en las que decidas recompensar con un producto/descuento, tampoco tendrán costo de servicio durante los primeros 3 meses tras nuestro lanzamiento. Pasado este período, el costo de servicio será un porcentaje del valor del producto que estés otorgando por cada ejecución.',
+                paragraph4: 'Unite ahora y sé parte de una nueva era del marketing digital, donde tu inversión tiene un impacto real y directo.',
+            },
+            valueProposition: {
+                title: 'Nuestra propuesta de valor',
+                subtitle: 'Para las marcas, Adme representa una oportunidad de acceder a contenido genuino y diverso, ampliando su alcance e impacto en las redes sociales. A través de nuestra plataforma, las marcas pueden',
+                step1Title: 'Lanzar campañas publicitarias',
+                step1Subtitle: 'Tus campañas serán diseñadas una sola vez, de forma rápida y asistida.',
+                step2Title: 'Ser publicitadas en las redes con contenido auténtico',
+                step2Subtitle: 'Tu marca obtendrá contenido original, generado y compartido en sus redes por quienes utilizan tus productos.',
+                step3Title: 'Alcanzar a quienes aún no consumen tu marca',
+                step3Subtitle: 'Todo usuario que tenga la app de Adme descargada descubrirá tu marca, porque verá tu campaña lista para ejecutar.',
+                step4Title: 'Conectar con una amplia red de influencers y usuarios',
+                step4Subtitle: 'En Adme, todos pueden ser influencers, desde aquellos que ya monetizan su contenido hasta quienes aún no lo han hecho.',
+                step5Title: 'Monitorear tus campañas en tiempo real',
+                step5Subtitle: 'Con Adme, tendrás acceso completo a toda la información sobre tus campañas.',
+                step6Title: 'Controlar la manera de recompensar a los influencers',
+                step6Subtitle: 'Decidí qué y cuánto querés ofrecer por cada contenido creado por tus influencers, ya sea dinero, productos o descuentos.',
+            }
         },
         header: {
             menu: {
@@ -1310,10 +1372,10 @@ module.exports = {
             q3Question: "¿Para qué sirve el código de referido? 🏂",
             q3Answer: "Para registrarte en Adme necesitas un código de referido. A su vez, vos como usuario tendrás tu propio código que te permitirá mediante el sistema de referidos, ganar el 5% de las ganancias que tus referidos obtengan por su actividad en la aplicación. Cuando tengas tu código, compartilo con amigos, en reuniones o publicalo en tus redes!.",
             q4Question: "¿Qué tipo de contenido puedo crear? 📸",
-            q4Answer: "Como cada publicación es única, en Adme ofrecemos tres tipos de campañas pensadas para distintos momentos y formas de compartir. Podés elegir entre sacarte una foto siguiendo directivas de una campaña o asociar una foto totalmente espontánea a una campaña disponible. También publicar contenido creado por las marcas.",           
+            q4Answer: "Como cada publicación es única, en Adme ofrecemos tres tipos de campañas pensadas para distintos momentos y formas de compartir. Podés elegir entre sacarte una foto siguiendo directivas de una campaña o asociar una foto totalmente espontánea a una campaña disponible. También publicar contenido creado por las marcas.",
             q5Question: "¿Importa si mis fotos reciben reacciones? ❤️",
             q5Answer: "Sí! ya que Adme no solo te paga por publicar fotos en tu red social, sino que también te paga por el éxito que éstas tengan entre tus amigos y seguidores. Cada comentario, \"like\" o interacción vale!",
-           q6Question: "¿Cómo recibo mis recompensas? 🤝",
+            q6Question: "¿Cómo recibo mis recompensas? 🤝",
             q6Answer: "Podés obtener recompensas en productos o descuentos en tiempo real. O también recompensas en dinero a través de pagos mensuales a la cuenta que hayas configurado en tu perfil de usuario.",
         },
         footer: {
@@ -1337,7 +1399,8 @@ module.exports = {
                 title: "La empresa",
                 section1: "Nosotros",
                 section2: "La Comunidad",
-                section3: "Invierte en Adme"
+                section3: "Invierte en Adme",
+                section4: "Trabaja con nosotros"
             },
             support: {
                 title: "Soporte",
@@ -1357,7 +1420,7 @@ module.exports = {
             placeholder: "Ingresá tu email",
         },
         team: {
-            sections : {
+            sections: {
                 cofounders: {
                     title: "Nuestros fundadores",
                     subtitle: "Diversión, creatividad desde los impedimentos, fallar temprano para llegar al éxito; son algunos de los valores que los hermanos Ruiz Diaz, nuestros fundadores, fomentan y que justifican que Adme sea tan disruptivo para el mercado de la publicidad en redes sociales"
@@ -1486,7 +1549,7 @@ module.exports = {
                     smallCard: {
                         title: "Instalación de Adme en iPhone",
                         subtitle: "Guía paso a paso para poder instalar la app en tu iPhone",
-                        
+
                     },
                     step1: {
                         title: "1. Descarga TestFlight",
@@ -1535,7 +1598,7 @@ module.exports = {
                             a: "Tocá el botón \"Sign Up\".",
                             b: "Ingresá el siguiente código \"9CD4CD95\" y toca el botón \"next\".",
                             c: "Define un e-mail.",
-                            d: "Ingresa una password para Adme. (Min. 6 caracteres. Debe contener al menos una letra mayúscula, una minúscula y hasta dos números consecutivos)" 
+                            d: "Ingresa una password para Adme. (Min. 6 caracteres. Debe contener al menos una letra mayúscula, una minúscula y hasta dos números consecutivos)"
                         }
                     },
                     step6: {
@@ -1578,7 +1641,7 @@ module.exports = {
                     smallCard: {
                         title: "Instalación de Adme en Android",
                         subtitle: "Guía paso a paso para poder instalar la app en tu Android",
-                        
+
                     },
                     step1: {
                         title: "1. Descargar la app desde el Play Store",
@@ -1688,12 +1751,12 @@ module.exports = {
                     youArePayingWitProduct: "Recompensarás a los usuarios con productos, descuentos, promociones u otros incentivos.",
                     youArePayingFooter: "Este enfoque garantiza que los usuarios solo sean recompensados cuando la acción publicitaria se haya ejecutado correctamente y después de la auditoría correspondiente según el tipo de campaña.",
                     advertisingCampaignConditions: {
-                      title: "Bases y condiciones",
-                      advertising: "Tu campaña es de tipo Advertising, por lo que las condiciones necesarias para su ejecución fueron descritas en el brief. Este documento se completó con los requisitos específicos que aseguran que los anuncios creados por los usuarios se alineen con los objetivos y valores de tu marca. ",
-                      sponsorshipTitle: "En las campañas de tipo Sponsorship, aunque se promueven momentos espontáneos compartidos por los usuarios, es fundamental mantener ciertos estándares de calidad para que el contenido refleje adecuadamente a tu marca. Las condiciones clave para la aprobación de estos contenidos incluyen:",
-                      sponsorshipItem1: "Claridad y nitidez: Las fotos no deben estar borrosas, movidas ni desenfocadas.",
-                      sponsorshipitem2: "Buena iluminación: Las imágenes deben estar bien iluminadas para asegurar que los elementos principales sean claramente visibles.",
-                      spot: "El contenido de esta campaña fue proporcionado por tu negocio al momento de su creación. Cuando el usuario ejecuta el anuncio, este contenido se publicará automáticamente en sus redes sociales. Dado que el usuario solo necesita realizar la ejecución de la campaña, no está sujeto a auditoría, ya que la foto cargada por tu marca se publicará de manera automática en sus perfiles. Pero si esta sujeto a validacion."
+                        title: "Bases y condiciones",
+                        advertising: "Tu campaña es de tipo Advertising, por lo que las condiciones necesarias para su ejecución fueron descritas en el brief. Este documento se completó con los requisitos específicos que aseguran que los anuncios creados por los usuarios se alineen con los objetivos y valores de tu marca. ",
+                        sponsorshipTitle: "En las campañas de tipo Sponsorship, aunque se promueven momentos espontáneos compartidos por los usuarios, es fundamental mantener ciertos estándares de calidad para que el contenido refleje adecuadamente a tu marca. Las condiciones clave para la aprobación de estos contenidos incluyen:",
+                        sponsorshipItem1: "Claridad y nitidez: Las fotos no deben estar borrosas, movidas ni desenfocadas.",
+                        sponsorshipitem2: "Buena iluminación: Las imágenes deben estar bien iluminadas para asegurar que los elementos principales sean claramente visibles.",
+                        spot: "El contenido de esta campaña fue proporcionado por tu negocio al momento de su creación. Cuando el usuario ejecuta el anuncio, este contenido se publicará automáticamente en sus redes sociales. Dado que el usuario solo necesita realizar la ejecución de la campaña, no está sujeto a auditoría, ya que la foto cargada por tu marca se publicará de manera automática en sus perfiles. Pero si esta sujeto a validacion."
                     },
                     brief: "Intrucciones (Brief)",
                     money: "Dinero disponible: ",
@@ -1702,11 +1765,11 @@ module.exports = {
                     spend: "Gastaste: ",
                     stockAvailable: "Stock disponible ",
                     audit: {
-                      title: "Auditoría / validación",
-                      money: "Al ser una campaña que paga con dinero, la ejecución debe pasar la auditoría de Adme, que verifica que el contenido cumpla con los requisitos establecidos en tu campaña.",
-                      product1: "Debés validar que efectivamente se haya ejecutado la campaña, ingresando el código en el buscador o scaneando el QR.",
-                      product2: "En este tipo de campaña, tú serás responsable de la auditoría, verificando que la ejecución cumple con tus criterios antes de otorgar la recompensa.",
-                      spot: "Debés validar que efectivamente se haya ejecutado la campaña, ingresando el código en el buscador o scaneando el QR."
+                        title: "Auditoría / validación",
+                        money: "Al ser una campaña que paga con dinero, la ejecución debe pasar la auditoría de Adme, que verifica que el contenido cumpla con los requisitos establecidos en tu campaña.",
+                        product1: "Debés validar que efectivamente se haya ejecutado la campaña, ingresando el código en el buscador o scaneando el QR.",
+                        product2: "En este tipo de campaña, tú serás responsable de la auditoría, verificando que la ejecución cumple con tus criterios antes de otorgar la recompensa.",
+                        spot: "Debés validar que efectivamente se haya ejecutado la campaña, ingresando el código en el buscador o scaneando el QR."
                     }
                 },
                 posts: {
@@ -1745,15 +1808,15 @@ module.exports = {
                 creation: 'Creación: '
             },
             searcher: {
-              button: "Buscar anuncio para auditar",
-              title: "Buscar anuncio para auditar",
-              label: "Buscar: El código es de 8 caracteres",
-              search: "Buscar",
-              searching: "Buscando...",
-              auditLabel: "Este anuncio se paga con dinero, por tal motivo es auditable sólo por Adme",
-              auditButton: "Auditar Anuncio",
-              goToAd: "Ver anuncio",
-              nonExistentAd: "El anuncio no existe, o no pertenece a tu negocio."
+                button: "Buscar anuncio para auditar",
+                title: "Buscar anuncio para auditar",
+                label: "Buscar: El código es de 8 caracteres",
+                search: "Buscar",
+                searching: "Buscando...",
+                auditLabel: "Este anuncio se paga con dinero, por tal motivo es auditable sólo por Adme",
+                auditButton: "Auditar Anuncio",
+                goToAd: "Ver anuncio",
+                nonExistentAd: "El anuncio no existe, o no pertenece a tu negocio."
             }
         },
         investors: {
@@ -1899,6 +1962,67 @@ module.exports = {
             confirmButton: "Eliminar",
             placeholder: "Escriba ELIMINAR aqui",
             confirmMessage: "La solicitud fué enviada satisfactoriamente. Los datos serán tendrán efecto en 72hs."
+        },
+        joinUs: {
+            heroTitle: "Únete a la Revolución Adme",
+            heroSubtitle: "🚀 Forma parte del cambio que está transformando el marketing digital. Conecta, crea y crece con nosotros para llevar tu talento y nuestra comunidad a un nuevo nivel. ¡Tu oportunidad comienza aquí! ✨",
+            positions: {
+                influencer: {
+                    title: "Buscamos Creadores de Contenido para Adme",
+                    description: "<p>🔥 <strong>¿Listo para revolucionar el marketing digital?</strong> En <strong>Adme</strong> estamos transformando la forma en que las marcas conectan con sus audiencias — ¡y queremos que TÚ seas parte!</p><p>Únete a Jazmín y a un equipo inspirador de creadores que llevan voces frescas y auténticas a Instagram y más allá. Ya sea que estés comenzando o construyendo tu influencia, tenemos <strong>varias posiciones abiertas</strong> para que muestres tu estilo único.</p><h5>¿Quién debería postularse?</h5><ul><li>🌟 Creadores apasionados por contar historias y generar contenido que realmente conecte.</li><li>🚀 Talentos emergentes con ganas de crecer y dejar huella en el mundo influencer.</li><li>🎯 Cualquier persona lista para crear posts genuinos y atractivos que resuenen con un público joven y vibrante.</li></ul><p>En Adme, cada post cuenta. Pagamos por contenido de calidad que genera engagement, y a medida que demuestres tu impacto, desbloquearás más oportunidades para crecer — a nivel local, continental y mundial.</p>",
+                    hiringProcessTitle: "¿Cómo aplicar?",
+                    hiringProcessDetails: `<h5>¿Cómo sumarte a este movimiento?</h5>
+                                            <ul>
+                                            <li>🎥 Graba dos videos y súbelos a la nube:
+                                                <ul>
+                                                <li>⏱ 1. Cuéntanos en menos de un minuto por qué quieres ser parte de Adme.</li>
+                                                <li>🎬 2. Replica o dale tu toque a un video ejemplo que te daremos de Instagram de Jazmín.</li>
+                                                </ul>
+                                            </li>
+                                            </ul>
+                                            <li>📧 Envía los links junto con tus perfiles en redes sociales (Instagram, Facebook, etc.) a <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a>.</li>
+                                            </ul>
+                                            <p>Revisaremos todas las postulaciones y te responderemos en una semana. Si quedas seleccionado, coordinaremos una reunión para comenzar con tu primer encargo y arrancar esta aventura.</p>
+                                            <p><strong>¡Sé parte de la revolución global de Adme y deja que tu voz se escuche! 🌍🚀</strong></p>
+                                            `,
+                    date: "1 de Julio, 2025",
+                    tags: "Creador de Contenido | Influencer",
+                    positionsAvailable: "10 posiciones abiertas"
+                },
+
+                brandAmbassador: {
+                    title: "🚀 Sé Embajador de Marcas en Adme y Haz Crecer Esta Revolución! 🌟",
+                    description: `
+                        <p>¿Ya creas contenido para marcas? ¿Trabajas con agencias o eres parte de comunidades de marcas que podrían sumarse a Adme? Entonces esta oportunidad es para ti.</p>
+                        <p>En <strong>Adme</strong>, buscamos <strong>Embajadores de Marcas</strong> con redes reales y pasión por conectar marcas y agencias con nuestra plataforma revolucionaria. Ya seas influencer, trabajes con agencias o incluso seas una marca conectada con otras, ¡únete a la comunidad que está cambiando las reglas del juego!</p>
+                        <h5>¿A quién invitamos a sumarse?</h5>
+                        <ul>
+                            <li>✨ Creas contenido para marcas y quieres ayudarnos a convencerlas de sumarse a Adme.</li>
+                            <li>🤝 Trabajas con agencias que podrían beneficiarse de nuestra plataforma.</li>
+                            <li>🏢 Eres una marca que participa en comunidades o redes interesadas en nuevas oportunidades.</li>
+                            <li>🌍 Tienes contactos con potencial para hacer crecer esta increíble red.</li>
+                        </ul>
+                        <p>Esta es tu oportunidad de colaborar con Adme, ganar recompensas reales y aumentar tu visibilidad.</p>
+                        <h5>¿Qué ofrecemos? 🎁</h5>
+                        <ul>
+                            <li>💸 <strong>15% de comisión</strong> sobre el presupuesto de las primeras 3 campañas de cada marca o agencia que traigas.</li>
+                            <li>📣 Menciones especiales en nuestras cuentas oficiales de Instagram para potenciar tu perfil y acelerar tu alcance.</li>
+                            <li>🎉 10 referidos de regalo para impulsar tu red desde el comienzo.</li>
+                            <li>🎟️ Acceso prioritario a eventos exclusivos y capacitaciones para potenciar tu crecimiento.</li>
+                            <li>🏆 Bonos por metas alcanzadas: premios extra por traer marcas activas.</li>
+                        </ul>
+                        `,
+                    hiringProcessTitle: "¿Cómo aplicar? ✉️",
+                    hiringProcessDetails: `
+                        <p>Envía un correo a <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> con tus perfiles de Instagram, Facebook y otras redes. Cuéntanos por qué crees que serías un gran embajador de marcas para Adme.</p>
+                        <p>Desde ahí, nos pondremos en contacto para crear una estrategia personalizada y empezar a sumar marcas y agencias a esta gran revolución.</p>
+                        <p><strong>¡Únete y hagamos historia juntos! 💥</strong></p>
+                        `,
+                    date: "1 de Julio, 2025",
+                    tags: "Embajador de Marca | Alianzas",
+                    positionsAvailable: "Varias posiciones abiertas"
+                }
+            }
         }
     }
 };
