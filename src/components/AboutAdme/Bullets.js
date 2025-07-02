@@ -49,13 +49,13 @@ class Bullets extends React.Component {
                 <div className="row justify-content-center">
                                 <div className="col-4 col-lg-3 border-right">
                                     <div className="count-data text-center">
-                                        <h4 className="mb-0 color-primary font-weight-bold">+20</h4>
+                                        <h4 className="mb-0 color-primary font-weight-bold">+200</h4>
                                         <span>{this.props.dictionary.brands.whatIsAdme.brands}</span>
                                     </div>
                                 </div>
                                 <div className="col-4 col-lg-3 border-right">
                                     <div className="count-data text-center">
-                                      <h4 className="mb-0 color-primary font-weight-bold">+5.000</h4>
+                                      <h4 className="mb-0 color-primary font-weight-bold">+10.000</h4>
                                         <span>{this.props.dictionary.brands.whatIsAdme.downloads}</span>
                                     </div>
                                 </div>

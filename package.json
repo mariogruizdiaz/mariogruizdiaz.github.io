@@ -13,6 +13,7 @@
     "@mui/icons-material": "5.15.20",
     "@mui/material": "5.16.0",
     "bootstrap": "4.6.0",
+    "caniuse-lite": "^1.0.30001726",
     "cross-env": "7.0.3",
     "firebase": "10.12.2",
     "graphql": "16.3.0",
