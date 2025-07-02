@@ -82,7 +82,7 @@ class Footer extends React.Component {
                                 <div className="list-inline social-list-default background-color social-hover-2 mt-2">
                                     <li className="list-inline-item"><a className="instagram" href="https://www.instagram.com/admecorp/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
                                     <li className="list-inline-item"><a className="facebook" href="https://www.facebook.com/Adme.And.Payme" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
-                                    <li className="list-inline-item"><a className="linkedin" href="https://www.linkedin.com/company/advertiseme" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in" target="_blank" rel="noopener noreferrer"></i></a></li>
+                                    <li className="list-inline-item"><a className="linkedin" href="https://www.linkedin.com/company/admecorp" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in" target="_blank" rel="noopener noreferrer"></i></a></li>
                                 </div>
                             </div>
                             <div className="col-md-12 col-lg-8">
@@ -129,6 +129,9 @@ class Footer extends React.Component {
                                             </li>
                                             <li>
                                                 <a href={`${process.env.PUBLIC_URL}/#comingSoonInvestors`}>{this.props.dictionary.footer.company.section3}</a>
+                                            </li>
+                                             <li>
+                                                <a href={`${process.env.PUBLIC_URL}/#joinUs`}>{this.props.dictionary.footer.company.section4}</a>
                                             </li>
                                         </ul>
                                     </div>
