@@ -977,7 +977,7 @@ module.exports = {
                                 <li>🎥 Record two videos and upload them to the cloud:
                                     <ul>
                                     <li>🕒 1. Tell us in under one minute why you want to be part of Adme.</li>
-                                    <li>🎬 2. Use this sample video as inspiration — replicate it or make it your own.</li>
+                                    <li>🎬 2. Use <a href="https://adme.com.ar/assets/img/videoJazDeEjemplo.mp4" target="_blank" rel="noopener noreferrer">this sample video</a> as inspiration — replicate it or make it your own.</li>
                                     </ul>
                                 </li>
                                 <li>📧 Send the links along with your social profiles (Instagram, TikTok, Facebook, etc.) to <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> with the reference “Inf #014” and your name in the subject line.</li>
@@ -1005,7 +1005,7 @@ module.exports = {
                         <h5>What do we offer? 🎁</h5>
                         <ul>
                             <li>💸 <strong>15% commission</strong> on the budget of the first 3 campaigns of each brand or agency you bring.</li>
-                            <li>💰 <strong>$100.000</strong> for every brand or agency you refer that’s interested in joining our platform.</li>
+                            <li>💰 <strong>$100.000</strong> for every brand or agency that attends a meeting with us interested in joining Adme.</li>
                             <li>📣 Special mentions on our official Instagram accounts to boost your profile and accelerate your reach.</li>
                             <li>🎉 10 referral credits to kickstart your network growth.</li>
                             <li>🎟️ Priority access to exclusive events and training sessions to boost your growth.</li>
@@ -1997,7 +1997,7 @@ module.exports = {
                                             <li>🎥 Grabá dos videos y subilos a la nube:
                                                 <ul>
                                                 <li>🕒1. Contanos en menos de un minuto por qué querés ser parte de Adme.</li>
-                                                <li>🎬2. Replicá o dale tu toque, a este video ejemplo: VER CONCEPTO</li>
+                                                <li>🎬2. Replicá o dale tu toque, a <a href="https://adme.com.ar/assets/img/videoJazDeEjemplo.mp4" target="_blank" rel="noopener noreferrer">este video ejemplo</a></li>
                                                 </ul>
                                             </li>
                                             </ul>
@@ -2022,10 +2022,10 @@ module.exports = {
                             <li>🏢 Representas a una marca que participa en comunidades o redes interesada en nuevas oportunidades.</li>
                             <li>🌍 Tenés contactos con potencial para hacer crecer esta increíble red.</li>
                         </ul>
-                        <h5>¿Qué ofrecemos? 🎁</h5>
+                        <h5>¿Qué ofrecemos?💰 🎁</h5>
                         <ul>
+                            <li>💰 <strong>$100.000</strong> por cada marca o agencia que llegue a una reunión con nosotros interesada en sumarse a Adme.</li>
                             <li>💸 <strong>15% de comisión</strong> sobre el presupuesto de las primeras 3 campañas de cada marca o agencia que traigas.</li>
-                            <li>💰 <strong>$100.000</strong> por cada marca o agencia que acerques interesada en sumarse a nuestra plataforma.</li>
                             <li>📣 Menciones especiales en nuestra cuenta oficial de Instagram para potenciar tu perfil y acelerar tu alcance.</li>
                             <li>🎉 10 referidos de regalo para impulsar tu red desde el comienzo.</li>
                             <li>🎟️ Acceso prioritario a eventos exclusivos y capacitaciones para potenciar tu crecimiento.</li>
