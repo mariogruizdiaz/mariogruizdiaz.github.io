@@ -957,21 +957,32 @@ module.exports = {
             heroSubtitle: "🚀 Be part of the movement reshaping digital marketing. Connect, create, and grow with us as we take your talent and our community to the next level. Your opportunity starts now! ✨",
             positions: {
                 influencer: {
-                    title: "We Are Looking for Content Creators for Adme",
-                    description: "<p>🔥 <strong>Ready to make waves in digital marketing?</strong> At <strong>Adme</strong>, we’re on a mission to revolutionize the way brands connect with audiences — and we want YOU to be part of it!</p><p>Join Jazmín and an inspiring team of creators bringing fresh, authentic voices to Instagram and beyond. Whether you’re just starting out or already building your influence, we have <strong>multiple open positions</strong> waiting for your unique style.</p><h5>Who should apply?</h5><ul><li>🌟 Creators passionate about storytelling and content that truly connects.</li><li>🚀 Emerging talents eager to grow and make an impact in the influencer world.</li><li>🎯 Anyone ready to create genuine, engaging posts that resonate with a vibrant, young audience.</li></ul><p>At Adme, every post counts. We pay for quality content that sparks engagement, and as you prove your impact, you’ll unlock more exciting opportunities to grow your reach — locally, continent-wide, and worldwide.</p>",
+                    title: "Inf #014 We Are Looking for Content Creators for Adme",
+                    description: `<p><strong>Ready to make waves in digital marketing?</strong> At <strong>Adme</strong>, we’re on a mission to revolutionize the way brands connect with audiences — and we want YOU to be part of it!</p><p>We’re looking for creative, fresh voices with strong video communication skills to join Jazmín and our community team. Help us tell the world what Adme is, share how it’s evolving, communicate key updates, and inspire both users and brands to join the platform. Whether you’re an experienced UGC creator looking to grow or just starting to build your influence, we have <strong>several open roles</strong> where you can showcase your unique style.</p>
+                    <h5>Who should apply?</h5>
+                    <ul>
+                    <li>🌟 Creators passionate about storytelling and content that truly connects.</li>
+                    <li>🚀 Emerging talents eager to grow and make an impact in the influencer world.</li>
+                    <li>🎯 Anyone ready to create genuine, engaging posts that resonate with a vibrant, young audience.</li>
+                    </ul>
+                    <h5>What do we offer? 🎁</h5>
+                    <ul>
+                        <li>💸 Payment per content piece (reel, story, post, etc.)</li>
+                        <li>💰 Bonuses for content that generates new leads.</li>
+                        <li>📢 Opportunity to become a recurring Adme creator.</li>
+                    </ul>`,
                     hiringProcessTitle: "How to apply?",
                     hiringProcessDetails: `
-                            <h5>How to join the movement?</h5>
                                 <ul>
                                 <li>🎥 Record two videos and upload them to the cloud:
                                     <ul>
-                                    <li>⏱ 1. Tell us in under one minute why you want to be part of Adme.</li>
-                                    <li>🎬 2. Recreate or put your spin on an example video from Jazmín’s Instagram.</li>
+                                    <li>🕒 1. Tell us in under one minute why you want to be part of Adme.</li>
+                                    <li>🎬 2. Use <a href="https://adme.com.ar/assets/img/videoJazDeEjemplo.mp4" target="_blank" rel="noopener noreferrer">this sample video</a> as inspiration — replicate it or make it your own.</li>
                                     </ul>
                                 </li>
-                                <li>📧 Send the links along with your social profiles (Instagram, Facebook, etc.) to <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a>.</li>
+                                <li>📧 Send the links along with your social profiles (Instagram, TikTok, Facebook, etc.) to <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> with the reference “Inf #014” and your name in the subject line.</li>
                                 </ul>
-                                <p>We’ll review every application and get back to you within a week. If selected, we’ll set up a meeting to dive into your first brief and kickstart this exciting journey.</p>
+                                <p>We’ll review every application and get back to you within a week. If you´re selected, we’ll set up a meeting to dive into your first brief and kickstart this exciting journey.</p>
                                 <p><strong>Become part of Adme’s global revolution and let your voice be heard! 🌍🚀</strong></p>
                                 
                                 `,
@@ -980,30 +991,29 @@ module.exports = {
                     positionsAvailable: "10 open positions"
                 },
                 brandAmbassador: {
-                    title: "🚀 Become a Brand Ambassador at Adme and Grow This Revolution! 🌟",
+                    title: "Emb #011 Become a Brand Ambassador at Adme and grow this Revolution!",
                     description: `
                         <p>Are you already creating content for brands? Do you work with agencies, or are you part of brand communities that could join Adme? Then this opportunity is for you.</p>
                         <p>At <strong>Adme</strong>, we’re looking for <strong>Brand Ambassadors</strong> with real networks and the passion to connect brands and agencies to our revolutionary platform. Whether you’re an influencer, work with agencies, or even a brand connected to other brands — join us and be part of the community that’s changing the game!</p>
                         <h5>Who are we inviting to join?</h5>
                         <ul>
-                            <li>✨ You create content for brands and want to help convince them to join Adme.</li>
+                            <li>✨ You create content for brands and want to help us bring them to Adme.</li>
                             <li>🤝 You work with agencies that could benefit from being part of our platform.</li>
                             <li>🏢 You’re a brand involved in communities or networks of other brands interested in new opportunities.</li>
                             <li>🌍 You have contacts with the potential to grow this amazing network.</li>
                         </ul>
-                        <p>This is your chance to collaborate with Adme, earn real rewards, and boost your visibility.</p>
                         <h5>What do we offer? 🎁</h5>
                         <ul>
                             <li>💸 <strong>15% commission</strong> on the budget of the first 3 campaigns of each brand or agency you bring.</li>
+                            <li>💰 <strong>$100.000</strong> for every brand or agency that attends a meeting with us interested in joining Adme.</li>
                             <li>📣 Special mentions on our official Instagram accounts to boost your profile and accelerate your reach.</li>
                             <li>🎉 10 referral credits to kickstart your network growth.</li>
                             <li>🎟️ Priority access to exclusive events and training sessions to boost your growth.</li>
-                            <li>🏆 Bonuses for milestones reached: extra rewards for bringing active brands.</li>
                         </ul>
                         `,
-                    hiringProcessTitle: "How to apply? ✉️",
+                    hiringProcessTitle: "How to apply?",
                     hiringProcessDetails: `
-                        <p>Send an email to <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> with your Instagram, Facebook, and any other social profiles you have. Tell us why you believe you’d be a great brand ambassador for Adme.</p>
+                        <p>Send an email to <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> with the reference “Emb #011” and your name in the subject line, with your Instagram, TikTok, Facebook, and any other social profiles you have. Tell us why you believe you’d be a great brand ambassador for Adme.</p>
                         <p>From there, we’ll get in touch to build a personalized strategy and start bringing brands and agencies into this great revolution.</p>
                         <p><strong>Join us and let’s make history together! 💥</strong></p>
                         `,
@@ -1964,25 +1974,35 @@ module.exports = {
             confirmMessage: "La solicitud fué enviada satisfactoriamente. Los datos serán tendrán efecto en 72hs."
         },
         joinUs: {
-            heroTitle: "Únete a la Revolución Adme",
-            heroSubtitle: "🚀 Forma parte del cambio que está transformando el marketing digital. Conecta, crea y crece con nosotros para llevar tu talento y nuestra comunidad a un nuevo nivel. ¡Tu oportunidad comienza aquí! ✨",
+            heroTitle: "Unite a la Revolución Adme",
+            heroSubtitle: "🚀 Formá parte del cambio que está transformando el marketing digital. Conectá, creá y crecé con nosotros para llevar tu talento y nuestra comunidad a un nuevo nivel. ¡Tu oportunidad comienza acá! ✨",
             positions: {
                 influencer: {
-                    title: "Buscamos Creadores de Contenido para Adme",
-                    description: "<p>🔥 <strong>¿Listo para revolucionar el marketing digital?</strong> En <strong>Adme</strong> estamos transformando la forma en que las marcas conectan con sus audiencias — ¡y queremos que TÚ seas parte!</p><p>Únete a Jazmín y a un equipo inspirador de creadores que llevan voces frescas y auténticas a Instagram y más allá. Ya sea que estés comenzando o construyendo tu influencia, tenemos <strong>varias posiciones abiertas</strong> para que muestres tu estilo único.</p><h5>¿Quién debería postularse?</h5><ul><li>🌟 Creadores apasionados por contar historias y generar contenido que realmente conecte.</li><li>🚀 Talentos emergentes con ganas de crecer y dejar huella en el mundo influencer.</li><li>🎯 Cualquier persona lista para crear posts genuinos y atractivos que resuenen con un público joven y vibrante.</li></ul><p>En Adme, cada post cuenta. Pagamos por contenido de calidad que genera engagement, y a medida que demuestres tu impacto, desbloquearás más oportunidades para crecer — a nivel local, continental y mundial.</p>",
+                    title: "Inf #014 Buscamos Creadores de contenido para Adme",
+                    description: `<p>🔥 <strong>¿Listo para revolucionar el marketing digital?</strong> En <strong>Adme</strong> estamos transformando la forma en que las marcas conectan con sus audiencias — ¡y queremos que VOS seas parte!</p><p> Buscamos personas creativas, frescas, con habilidades para comunicar en video, para sumarse a Jazmín y a nuestro equipo de comunicación. Queremos que nos ayuden a contar qué es Adme, cómo evoluciona, compartir todas las actualizaciones e incentivar a usuarios y marcas a unirse a la plataforma. Ya sea que tenés un camino recorrido y querés crecer como creador UGC, o estás comenzando a construir tu influencia, tenemos <strong>varias posiciones abiertas</strong> para que muestres tu estilo único.</p>
+                    <h5>¿Quién debería postularse?</h5>
+                    <ul>
+                        <li>🌟 Creadores apasionados por contar historias y generar contenido que realmente conecte.</li>
+                        <li>🚀 Talentos emergentes con ganas de crecer y dejar huella en el mundo influencer.</li>
+                        <li>🎯 Cualquier persona lista para crear posts genuinos y atractivos que resuenen con un público joven y vibrante.</li>
+                    </ul>
+                    <h5>¿Qué ofrecemos? 🎁</h5>
+                    <ul>
+                        <li>💸 Pago por contenido (por reel, historia, posteo, etc.)</li>
+                        <li>💰 Bonificaciones por contenido que genere nuevos leads.</li>
+                        <li>📢 Posibilidad de ser creador recurrente de Adme.</li>
+                    </ul>`,
                     hiringProcessTitle: "¿Cómo aplicar?",
-                    hiringProcessDetails: `<h5>¿Cómo sumarte a este movimiento?</h5>
-                                            <ul>
-                                            <li>🎥 Graba dos videos y súbelos a la nube:
+                    hiringProcessDetails: ` <ul>
+                                            <li>🎥 Grabá dos videos y subilos a la nube:
                                                 <ul>
-                                                <li>⏱ 1. Cuéntanos en menos de un minuto por qué quieres ser parte de Adme.</li>
-                                                <li>🎬 2. Replica o dale tu toque a un video ejemplo que te daremos de Instagram de Jazmín.</li>
+                                                <li>🕒1. Contanos en menos de un minuto por qué querés ser parte de Adme.</li>
+                                                <li>🎬2. Replicá o dale tu toque, a <a href="https://adme.com.ar/assets/img/videoJazDeEjemplo.mp4" target="_blank" rel="noopener noreferrer">este video ejemplo</a></li>
                                                 </ul>
                                             </li>
                                             </ul>
-                                            <li>📧 Envía los links junto con tus perfiles en redes sociales (Instagram, Facebook, etc.) a <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a>.</li>
-                                            </ul>
-                                            <p>Revisaremos todas las postulaciones y te responderemos en una semana. Si quedas seleccionado, coordinaremos una reunión para comenzar con tu primer encargo y arrancar esta aventura.</p>
+                                            <p>Envía los links junto con tus perfiles en redes sociales (Instagram, TikTok, Facebook, etc.) a <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> con la referencia Inf #014 y tu nombre en el asunto.<p>
+                                            <p>Revisaremos todas las postulaciones y te responderemos en una semana. Si quedas seleccionada/o, coordinaremos una reunión para comenzar con tu primer encargo y arrancar esta aventura.</p>
                                             <p><strong>¡Sé parte de la revolución global de Adme y deja que tu voz se escuche! 🌍🚀</strong></p>
                                             `,
                     date: "1 de Julio, 2025",
@@ -1991,32 +2011,31 @@ module.exports = {
                 },
 
                 brandAmbassador: {
-                    title: "🚀 Sé Embajador de Marcas en Adme y Haz Crecer Esta Revolución! 🌟",
+                    title: "Emb #011 Sé Embajador o Embajadora de marcas en Adme y hacé crecer esta Revolución! 🌟",
                     description: `
-                        <p>¿Ya creas contenido para marcas? ¿Trabajas con agencias o eres parte de comunidades de marcas que podrían sumarse a Adme? Entonces esta oportunidad es para ti.</p>
-                        <p>En <strong>Adme</strong>, buscamos <strong>Embajadores de Marcas</strong> con redes reales y pasión por conectar marcas y agencias con nuestra plataforma revolucionaria. Ya seas influencer, trabajes con agencias o incluso seas una marca conectada con otras, ¡únete a la comunidad que está cambiando las reglas del juego!</p>
+                        <p>¿Ya creás contenido para marcas? ¿Trabajás con agencias o sos parte de comunidades de marcas que podrían sumarse a Adme? Entonces esta oportunidad es para vos.</p>
+                        <p>En <strong>Adme</strong>, buscamos <strong>Embajadores y Embajadoras de marcas</strong> con redes y pasión por conectar marcas y agencias con nuestra plataforma revolucionaria. Ya seas influencer, trabajes con agencias o incluso seas una marca conectada con otras, ¡unite a la comunidad que está cambiando las reglas del juego!</p>
                         <h5>¿A quién invitamos a sumarse?</h5>
                         <ul>
-                            <li>✨ Creas contenido para marcas y quieres ayudarnos a convencerlas de sumarse a Adme.</li>
-                            <li>🤝 Trabajas con agencias que podrían beneficiarse de nuestra plataforma.</li>
-                            <li>🏢 Eres una marca que participa en comunidades o redes interesadas en nuevas oportunidades.</li>
-                            <li>🌍 Tienes contactos con potencial para hacer crecer esta increíble red.</li>
+                            <li>✨ Creás contenido para marcas y querés ayudarnos a sumarlas a Adme.</li>
+                            <li>🤝 Trabajás con agencias que podrían beneficiarse de nuestra plataforma.</li>
+                            <li>🏢 Representas a una marca que participa en comunidades o redes interesada en nuevas oportunidades.</li>
+                            <li>🌍 Tenés contactos con potencial para hacer crecer esta increíble red.</li>
                         </ul>
-                        <p>Esta es tu oportunidad de colaborar con Adme, ganar recompensas reales y aumentar tu visibilidad.</p>
-                        <h5>¿Qué ofrecemos? 🎁</h5>
+                        <h5>¿Qué ofrecemos?💰 🎁</h5>
                         <ul>
+                            <li>💰 <strong>$100.000</strong> por cada marca o agencia que llegue a una reunión con nosotros interesada en sumarse a Adme.</li>
                             <li>💸 <strong>15% de comisión</strong> sobre el presupuesto de las primeras 3 campañas de cada marca o agencia que traigas.</li>
-                            <li>📣 Menciones especiales en nuestras cuentas oficiales de Instagram para potenciar tu perfil y acelerar tu alcance.</li>
+                            <li>📣 Menciones especiales en nuestra cuenta oficial de Instagram para potenciar tu perfil y acelerar tu alcance.</li>
                             <li>🎉 10 referidos de regalo para impulsar tu red desde el comienzo.</li>
                             <li>🎟️ Acceso prioritario a eventos exclusivos y capacitaciones para potenciar tu crecimiento.</li>
-                            <li>🏆 Bonos por metas alcanzadas: premios extra por traer marcas activas.</li>
                         </ul>
                         `,
                     hiringProcessTitle: "¿Cómo aplicar? ✉️",
                     hiringProcessDetails: `
-                        <p>Envía un correo a <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> con tus perfiles de Instagram, Facebook y otras redes. Cuéntanos por qué crees que serías un gran embajador de marcas para Adme.</p>
+                        <p>Enviá un correo a <a href="mailto:gaston@adme.com.ar">gaston@adme.com.ar</a> con la referencia Emb #011 y tu nombre en el asunto. Compartinos tus perfiles de Instagram, Facebook, TikTok o las redes que uses. Contanos por qué creés que serías un gran Embajador de marcas para Adme.</p>
                         <p>Desde ahí, nos pondremos en contacto para crear una estrategia personalizada y empezar a sumar marcas y agencias a esta gran revolución.</p>
-                        <p><strong>¡Únete y hagamos historia juntos! 💥</strong></p>
+                        <p><strong>¡Unite y hagamos historia juntos! 💥</strong></p>
                         `,
                     date: "1 de Julio, 2025",
                     tags: "Embajador de Marca | Alianzas",
